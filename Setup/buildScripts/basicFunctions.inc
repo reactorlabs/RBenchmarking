@@ -1,10 +1,6 @@
 #!/bin/bash
 
-pushd `dirname $0` > /dev/null
-SCRIPT_PATH=`pwd`
-popd > /dev/null
-
-MY_PATH=`dirname ${BASH_SOURCE[0]}`
+MY_PATH="$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )"
 
 source $MY_PATH/config.inc
 
@@ -46,10 +42,34 @@ function get_web_getter() {
 function check_for_tools() {
   INFO -n 'Tools: '
   for tool in $@; do
-    if [ -x `type -t $tool` ]; then
-      WARN -n No $tool
+    EXISTS=false
+    if [ ! -z `type -t $tool` ]; then
+	EXISTS=true
     else
+      	if [ ! -z `which pip` ]; then
+          if [ ! -z "$(pip freeze | grep -i $tool)" ]; then
+	    EXISTS=true
+          fi
+        fi
+    fi
+
+    if $EXISTS; then
       INFO -n "$tool "
+    else
+      WARN -n "No $tool "
+    fi
+  done
+  OK ok.
+}
+
+function check_for_libs() {
+  INFO -n 'Libs: '
+  for lib in $@; do
+    OUTPUT=$(ldconfig -p | grep $lib)
+    if [ -x "$OUTPUT" ]; then
+      WARN -n "No $lib "
+    else
+      INFO -n "$lib "
     fi
   done
   OK ok.

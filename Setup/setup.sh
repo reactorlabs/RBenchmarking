@@ -1,15 +1,23 @@
 #!/bin/bash
 set -e # make script fail on first error
-SCRIPT_PATH=`dirname $0`
-BUILDSCRIPTS=$SCRIPT_PATH/buildScripts
-source $BUILDSCRIPTS/basicFunctions.inc
+
+SCRIPT_PATH="$( cd "$(dirname "$0")" ; pwd -P )"
+BUILD_SCRIPTS=$SCRIPT_PATH/buildScripts
+
+source $BUILD_SCRIPTS/basicFunctions.inc
 
 ## Check for requirements
-check_for_tools git ant make mv uname cc c++
+check_for_tools git ant make mv uname cc c++ rebench
+check_for_libs libpcre libbz2 libcurl libreadline
 check_for_node    "non-fatal"
 
-$BUILDSCRIPTS/build-r.sh "$RIR_NAME" "https://github.com/reactorlabs/rir.git"
+if [ ! -d "$IMPLEMENTATIONS_PATH" ]
+then
+        mkdir "$IMPLEMENTATIONS_PATH"
+fi
+
+#$BUILD_SCRIPTS/build-r.sh "$RIR_NAME" "https://github.com/reactorlabs/rir.git"
 #$BUILDSCRIPTS/build-pharo.sh
-#$BUILDSCRIPTS/build-benchmarks.sh
+$BUILD_SCRIPTS/build-benchmarks.sh
 
 OK done.

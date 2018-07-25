@@ -3,6 +3,9 @@ This repository aims at providing all the necessary stuff for benchmarking RIR a
 # Setup
 To setup the repository for running the benchmarks just run: `Setup/setup.sh`
 
+# Update
+To update the repository (including the benchmarks and implementations) run: `Setup/update.sh`
+
 # Benchmarks
 We use a harness for benchmarking complying with the format of the [are-we-fast suite](https://github.com/smarr/are-we-fast-yet). 
 

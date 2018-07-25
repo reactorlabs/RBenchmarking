@@ -8,4 +8,4 @@ To run all the benchmarks: `rebench rebench.conf`
 
 To run only RIR benchmarks: `rebench rebench.conf vm:RIR`
 
-For more details on *ReBench* [see to its official documentation](http://rebench.readthedocs.io/) 
+For more details on *ReBench* [see its official documentation](http://rebench.readthedocs.io/) 

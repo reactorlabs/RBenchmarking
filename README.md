@@ -1,4 +1,4 @@
-This repository aims at providing all the necessary stuff for benchmarking RIR and compare it to other (language) implementations.
+This repository aims at providing all the necessary stuff for benchmarking RIR and compare it to other (language) implementations. To make the benchmarking reproducible we resort on [ReBench](https://github.com/smarr/ReBench/). We report the results in the web by using [codespeed](https://github.com/tobami/codespeed).
 
 # Setup
 To setup the repository for running the benchmarks just run: `Setup/setup.sh`

@@ -24,4 +24,3 @@ INFO Compiling $NAME
 cmake .; make setup; make
 OK $NAME Compilation Completed.
 popd > /dev/null
-OK R Build Completed

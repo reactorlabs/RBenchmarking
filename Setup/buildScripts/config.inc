@@ -8,6 +8,7 @@ then
 fi
 
 RIR_NAME="RIR"
+RIR_BRANCH="master"
 IMPLEMENTATIONS_PATH="$ROOT_PATH/Implementations"
 DATA_DIR=$ROOT_PATH/Data
 BENCHMARKS_DIR=$ROOT_PATH/Benchmarks

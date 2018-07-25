@@ -16,7 +16,7 @@ then
         mkdir "$IMPLEMENTATIONS_PATH"
 fi
 
-$BUILD_SCRIPTS/build-r.sh "$RIR_NAME" "https://github.com/reactorlabs/rir.git"
+$BUILD_SCRIPTS/build-r.sh "$RIR_NAME" "https://github.com/reactorlabs/rir.git" "$RIR_BRANCH"
 #$BUILDSCRIPTS/build-pharo.sh
 $BUILD_SCRIPTS/build-benchmarks.sh
 

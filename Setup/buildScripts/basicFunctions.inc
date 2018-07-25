@@ -119,6 +119,7 @@ function check_for_graalvm() {
 
 
 function checkout() {
+  INFO "Checking out $2"
 	if [[ ! -d $1 || ! -d "$1/.git" ]]
   then
     if [ ! -d $1 ]

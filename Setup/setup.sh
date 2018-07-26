@@ -7,7 +7,7 @@ BUILD_SCRIPTS=$SCRIPT_PATH/buildScripts
 source $BUILD_SCRIPTS/basicFunctions.inc
 
 ## Check for requirements
-check_for_tools git ant make mv uname cc c++ rebench
+check_for_tools git ant make mv uname cc c++ rebench pdflatex
 check_for_libs libpcre libbz2 libcurl libreadline
 check_for_node    "non-fatal"
 

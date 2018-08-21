@@ -154,30 +154,33 @@ function checkout() {
 }
 
 function update_git_repo() {
-  #default remote = origin
-  if [ ! -z $2 ]
-  then
-    remote=$2
-  else
-    remote="origin"
-  fi
-
   if [ -d $1 ]
   then
     pushd $1
+    INFO Updating git repository: $reponame
     reponame=`git remote show $2 | grep Fetch | cut -d ' ' -f 5`
     branchname=`git branch | grep \* | cut -d ' ' -f 2`
-    INFO Updating git repository $reponame branch $branchname
-    echo git pull $remote $branchname
-    git pull $remote $branchname
-    INFO Updating submodules
-    load_submodule
-    if [ -f Makefile ]
+    output=`git remote -v update 2>&1 | grep $branchname | grep "up to date"`
+    
+    if [ -z "output" ]
     then
-      INFO Compiling
-      JIT=1 make clean; JIT=1 make
+      dirty=1
+    else
+      dirty=0
     fi
-    popd > /dev/null
+    
+    if [ -z "$dirty" ]
+    then
+      if [ -z "$2" ]
+      then
+        git pull origin $branchname
+      else
+        git checkout "$2"
+      fi    
+      INFO Updating submodules
+      load_submodule
+      popd > /dev/null
+    fi
     OK done
   fi
 } 
@@ -246,6 +249,10 @@ function buildBench {
   OK $1 Benchmarks Build Completed. 
   
 } 
+
+timestamp() {
+  date "+%Y%m%d-%H%M"
+}
 
 pushd () {
     command pushd "$@" > /dev/null

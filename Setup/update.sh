@@ -14,16 +14,13 @@ BRANCH=$1
 git checkout $1
 git pull origin $1
 
-INFO "Updating $RIR_NAME"
-    pushd $IMPLEMENTATIONS_PATH/R/$RIR_NAME
-    git pull origin $RIR_BRANCH
-    tools/sync.sh --vanilla
-    make
-    popd > /dev/null
-OK $NAME Update Completed.
+$SCRIPT_PATH/updateR.sh
+R_UPDATED=$?
 
-INFO "UPDATING Benchmarks"
+INFO "Updating Benchmarks"
     pushd $BENCHMARKS_DIR/AreWeFast
     git pull origin RBenchs    
     popd > /dev/null
 OK "Benchmarks Update Completed." 
+
+exit $R_UPDATED

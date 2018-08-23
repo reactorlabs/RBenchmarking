@@ -1,5 +1,6 @@
 #!/bin/bash
-#set -e # make script fail on first error
+set -e # make script fail on first error
+
 SCRIPT_PATH="$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )"
 if [ ! -d $SCRIPT_PATH ]; then
     echo "Could not determine absolute dir of $0"

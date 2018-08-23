@@ -17,6 +17,8 @@ popd > /dev/null
 #sudo env "PATH=$PATH" rebench rebench.conf --commit-id=$COMMIT --branch=$BRANCH --environment="PragueDesktop"
 
 TIMESTAMP=$(timestamp)
+
+pushd $SCRIPT_PATH/../
 rebench rebench.conf --commit-id=$COMMIT --branch=$BRANCH --environment="PragueDesktop"
 
 if [ ! -d $DATA_DIR ]
@@ -24,3 +26,5 @@ then
     mkdir $DATA_DIR
 fi 
 mv $DATA_FILENAME $DATA_DIR/$DATA_FILENAME-$TIMESTAMP
+
+popd > /dev/null

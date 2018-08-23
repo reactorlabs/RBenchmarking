@@ -10,9 +10,11 @@ fi
 BUILDSCRIPTS=$SCRIPT_PATH/buildScripts
 source $BUILDSCRIPTS/basicFunctions.inc
 
-BRANCH=$1
-git checkout $1
-git pull origin $1
+INFO "Updating Benchmarking Setup"
+    pushd $SCRIPT_PATH/../
+    git pull origin master
+    popd > /dev/null
+OK "Benchmarks Update Completed." 
 
 $SCRIPT_PATH/updateR.sh
 R_UPDATED=$?

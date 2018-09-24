@@ -31,7 +31,7 @@ doRuns <- function(name, iterations, benchmarkParameter, innerIterations) {
         endTime <- Sys.time()
         runTime <- (as.numeric(endTime) - as.numeric(startTime)) * 1000000
 
-        cat(name, ": iterations: 1, runtime: ", round(runTime), "us\n", sep = "")
+        cat(name, ": iterations=1 runtime: ", round(runTime), "us\n", sep = "")
         total <- total + runTime
     }
     total
@@ -50,10 +50,10 @@ run <- function(args) {
     
     total <- as.numeric(doRuns(name, numIterations, benchmarkParameter, innerIterations));
     cat(name, ": ",
-        "iterations: ", numIterations, ", ",
-        "average: ", round(total / numIterations), "us, ",
+        "iterations=", numIterations, "; ",
+        "average: ", round(total / numIterations), " us; ",
         "total: ", round(total), "us\n\n", sep="")
-    # cat("Total runtime: ", total, "us\n\n", sep="")
+    #cat("Total runtime: ", total, "us\n\n", sep="")
 }
 
 printUsage <- function() {

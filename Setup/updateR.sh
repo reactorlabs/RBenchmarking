@@ -14,11 +14,11 @@ source $BUILDSCRIPTS/basicFunctions.inc
 INFO "Updating $RIR_NAME"
     update_git_repo $IMPLEMENTATIONS_PATH/R/$RIR_NAME
     R_UPDATED=$dirty
-    if [ $R_UPDATED = "1" ] 
+    if [ "$R_UPDATED" = "1" ] 
     then
         pushd $IMPLEMENTATIONS_PATH/R/$RIR_NAME
         tools/sync.sh --vanilla
-        cmake .; make; make vanilla-gnur
+        cmake .; make clean; make; make vanilla-gnur
         popd > /dev/null
     fi
 OK $RIR_NAME Update Completed.

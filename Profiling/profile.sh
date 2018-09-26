@@ -11,7 +11,7 @@ ROOT_PATH="$SCRIPT_PATH/.."
 BUILDSCRIPTS_PATH="$ROOT_PATH"/Setup/buildScripts
 source $BUILDSCRIPTS_PATH/basicFunctions.inc
 BENCHMARKS_PATH="$ROOT_PATH"/Benchmarks
-RIR_PATH=$ROOT_PATH/Implementations/R/RIR/
+RIR_PATH=$ROOT_PATH/Implementations/R/RIR
 VANILLA_PATH=$RIR_PATH/external/vanilla-r
 R_CMD="bin/R"
 
@@ -26,7 +26,7 @@ BENCH_NAME=$(basename $BENCH_FULLPATH)
 
 ## Copy the benchmark and enable the profiler
 cp "$BENCHMARKS_PATH/$BENCH_FULLPATH" .
-sed -i .bak "/execute <- function(/a\\
+sed -i.bak "/execute <- function(/a\\
 Rprof(filename = \"$BENCH_NAME-prof\", interval = 0.02)
 " $BENCH_NAME
 rm $BENCH_NAME.bak
@@ -40,6 +40,6 @@ R_ENABLE_JIT=3 "$RIR_PATH/$R_CMD" -e "source(\"$SCRIPT_PATH/$BENCH_NAME\"); exec
 mv "$BENCH_NAME-prof" "$BENCH_NAME-profPIR"
 
 ## Run the benchmark with C profiling (callgrind)
-R_ENABLE_JIT=3 "$VANILLA_PATH/$R_CMD" --slave -e "source("$BENCH_NAME"); execute($2)" -d "valgrind --tool=callgrind"
-R_ENABLE_JIT=3 "$RIR_PATH/$R_CMD" --slave -e "source("$BENCH_NAME"); execute($2)" -d "valgrind --tool=callgrind"
+R_ENABLE_JIT=3 "$VANILLA_PATH/$R_CMD" --slave -e "source(\"$SCRIPT_PATH/$BENCH_NAME\"); execute($2)" -d "valgrind --tool=callgrind"
+R_ENABLE_JIT=3 "$RIR_PATH/$R_CMD" --slave -e "source(\"$SCRIPT_PATH/$BENCH_NAME\"); execute($2)" -d "valgrind --tool=callgrind"
 

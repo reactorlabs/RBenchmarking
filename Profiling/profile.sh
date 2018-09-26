@@ -15,8 +15,8 @@ RIR_PATH=$ROOT_PATH/Implementations/R/RIR
 VANILLA_PATH=$RIR_PATH/external/vanilla-r
 R_CMD="bin/R"
 
-if [ "$#" -ne 2 ]; then
-    ERR "The scripts expects two argument: the name of the benchmark to be profiled and the size of the benchmark"
+if [ "$#" < 2 ]; then
+    ERR "The scripts expects at least two arguments: the name of the benchmark to be profiled and the size of the benchmark"
     exit 1
 fi
 
@@ -40,6 +40,8 @@ R_ENABLE_JIT=3 "$RIR_PATH/$R_CMD" -e "source(\"$SCRIPT_PATH/$BENCH_NAME\"); exec
 mv "$BENCH_NAME-prof" "$BENCH_NAME-profPIR"
 
 ## Run the benchmark with C profiling (callgrind)
-R_ENABLE_JIT=3 "$VANILLA_PATH/$R_CMD" --slave -e "source(\"$SCRIPT_PATH/$BENCH_NAME\"); execute($2)" -d "valgrind --tool=callgrind"
-R_ENABLE_JIT=3 "$RIR_PATH/$R_CMD" --slave -e "source(\"$SCRIPT_PATH/$BENCH_NAME\"); execute($2)" -d "valgrind --tool=callgrind"
-
+if [ "$3" == "+cprof" ]
+then
+    R_ENABLE_JIT=3 "$VANILLA_PATH/$R_CMD" --slave -e "source(\"$SCRIPT_PATH/$BENCH_NAME\"); execute($2)" -d "valgrind --tool=callgrind"
+    R_ENABLE_JIT=3 "$RIR_PATH/$R_CMD" --slave -e "source(\"$SCRIPT_PATH/$BENCH_NAME\"); execute($2)" -d "valgrind --tool=callgrind"
+fi

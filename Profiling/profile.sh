@@ -13,7 +13,7 @@ source $BUILDSCRIPTS_PATH/basicFunctions.inc
 BENCHMARKS_PATH="$ROOT_PATH"/Benchmarks
 RIR_PATH=$ROOT_PATH/Implementations/R/RIR/
 VANILLA_PATH=$RIR_PATH/external/vanilla-r
-
+R_CMD="bin/R"
 
 if [ "$#" -ne 2 ]; then
     ERR "The scripts expects two argument: the name of the benchmark to be profiled and the size of the benchmark"
@@ -31,12 +31,15 @@ Rprof(filename = \"$BENCH_NAME-prof\", interval = 0.02)
 " $BENCH_NAME
 rm $BENCH_NAME.bak
 
-## Run the benchmark with profiling enabled
-R_ENABLE_JIT=3 "$VANILLA_PATH"/bin/R -e "source(\"$SCRIPT_PATH/$BENCH_NAME\"); execute($2)"
+## Run the benchmark with R profiling enabled
+R_ENABLE_JIT=3 "$VANILLA_PATH/$R_CMD" -e "source(\"$SCRIPT_PATH/$BENCH_NAME\"); execute($2)"
 mv "$BENCH_NAME-prof" "$BENCH_NAME-profVanilla"
-R_ENABLE_JIT=3 PIR_ENABLE=off "$RIR_PATH"/bin/R -e "source(\"$SCRIPT_PATH/$BENCH_NAME\"); execute($2)"
+R_ENABLE_JIT=3 PIR_ENABLE=off "$RIR_PATH/$R_CMD" -e "source(\"$SCRIPT_PATH/$BENCH_NAME\"); execute($2)"
 mv "$BENCH_NAME-prof" "$BENCH_NAME-profRIR"
-R_ENABLE_JIT=3 "$RIR_PATH"/bin/R -e "source(\"$SCRIPT_PATH/$BENCH_NAME\"); execute($2)"
+R_ENABLE_JIT=3 "$RIR_PATH/$R_CMD" -e "source(\"$SCRIPT_PATH/$BENCH_NAME\"); execute($2)"
 mv "$BENCH_NAME-prof" "$BENCH_NAME-profPIR"
 
+## Run the benchmark with C profiling (callgrind)
+R_ENABLE_JIT=3 "$VANILLA_PATH/$R_CMD" --slave -e "source("$BENCH_NAME"); execute($2)" -d "valgrind --tool=callgrind"
+R_ENABLE_JIT=3 "$RIR_PATH/$R_CMD" --slave -e "source("$BENCH_NAME"); execute($2)" -d "valgrind --tool=callgrind"
 

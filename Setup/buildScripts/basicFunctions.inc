@@ -158,18 +158,17 @@ function update_git_repo() {
   then
     pushd $1
     INFO Updating git repository: $reponame
-    reponame=`git remote show $2 | grep Fetch | cut -d ' ' -f 5`
-    branchname=`git branch | grep \* | cut -d ' ' -f 2`
-    output=`git remote -v update 2>&1 | grep $branchname | grep "up to date"`
     
-    if [ -z "output" ]
+    output=`git status -uno | grep "behind" || echo "UPDATED"`
+    
+    if [ "$output" != "UPDATED" ]
     then
       dirty=1
     else
       dirty=0
     fi
     
-    if [ -z "$dirty" ]
+    if [ $dirty ]
     then
       if [ -z "$2" ]
       then

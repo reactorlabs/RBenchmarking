@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e # make script fail on first error
 
 SCRIPT_PATH="$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )"
 if [ ! -d $SCRIPT_PATH ]; then
@@ -7,11 +6,15 @@ if [ ! -d $SCRIPT_PATH ]; then
     echo "Maybe accessed with symlink"
 fi
 
+BUILDSCRIPTS=$SCRIPT_PATH/../Setup/buildScripts
+source $BUILDSCRIPTS/basicFunctions.inc
 
 $SCRIPT_PATH/../Setup/update.sh
 R_UPDATED=$?
 
-if [ $R_UPDATED = "1" ]
+if [ "$R_UPDATED" = "1" ]
 then
     $SCRIPT_PATH/runAndPublish.sh
+else
+    WARN "RIR has not changed. Benchmarks were not run!"
 fi

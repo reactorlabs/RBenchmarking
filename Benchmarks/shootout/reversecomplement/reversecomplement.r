@@ -15,22 +15,21 @@ comp_map <- NULL
 comp_map[codes] <- complements
 comp_map[tolower(codes)] <- complements
 
-reversecomplement_naive <- function(args) {
-    f <- file(args[[1]], "r")
+reversecomplement <- function(args) {
+    in_filename = args[[1]]
+    f <- file(in_filename, "r")
     while (length(s <- readLines(f, n=1, warn=FALSE))) {
         codes <- strsplit(s, split="")[[1]]
         if (codes[[1]] == '>')
             cat(s, "\n", sep="")
         else {
-	    for (j in 1:length(codes))
-	        codes[[j]] <- comp_map[[codes[[j]]]]
-            cat(paste(codes, collapse=""), "\n", sep="")
+            cat(paste(comp_map[codes], collapse=""), "\n", sep="")
         }
     }
     close(f)
 }
 
 execute <- function(n) {
-    file <- paste("fasta", n, ".txt", sep="")
-    reversecomplement_naive(file)
+    file <- paste("fasta/fasta", n, ".txt", sep="")
+    reversecomplement(file)
 }

@@ -27,7 +27,7 @@ BENCH_NAME=$(basename $BENCH_FULLPATH)
 ## Copy the benchmark and enable the profiler
 cp "$BENCHMARKS_PATH/$BENCH_FULLPATH" .
 sed -i.bak "/execute <- function(/a\\
-Rprof(filename = \"$BENCH_NAME-prof\", interval = 0.02)
+Rprof(filename = \"$BENCH_NAME-prof\", interval = 0.02, line.profiling = TRUE, memory.profiling = TRUE)
 " $BENCH_NAME
 rm $BENCH_NAME.bak
 

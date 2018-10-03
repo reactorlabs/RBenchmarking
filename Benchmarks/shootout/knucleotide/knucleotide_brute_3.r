@@ -8,25 +8,25 @@
 gen_freq <- function(seq, frame) {
     frame <- frame - 1L
     ns <- nchar(seq) - frame
-    freqs <- integer(0)
+    n <- 0L
+    cap <- 16L
+    freqs <- integer(cap)
     for (i in 1:ns) {
         subseq = substr(seq, i, i + frame)
-        cnt <- attr(freqs, subseq)
-        if (is.null(cnt)) cnt <- 0L
-        attr(freqs, subseq) <- cnt + 1L
-    }
-    return(freqs)
-}
+ 	 #if (subseq %in% names(freqs))
+ 	 #    cnt <- freqs[[subseq]]
+	 cnt <- freqs[subseq]
+	 if (is.na(cnt)) {
+         #else {
+            cnt <- 0L
+            # ensure O(N) resizing (instead of O(N^2))
+            n <- n + 1L
 
-gen_freq <- function(seq, frame) { # CTK: duplicate method
-    frame <- frame - 1L
-    ns <- nchar(seq) - frame
-    freqs <- integer(0)
-    for (i in 1:ns) {
-        subseq = substr(seq, i, i + frame)
-        cnt <- attr(freqs, subseq)  # CTK: adding exact=TRUE would massively improve performance
-        if (is.null(cnt)) cnt <- 0L
-        attr(freqs, subseq) <- cnt + 1L
+	    #CTK - this optimization has no (positive) effect because the expanded space does not
+            #CTK   have the names we will need; it has a detrimental effect, instead (even with GNU-R)
+            freqs[[cap <- if (cap < n) 2L * cap else cap]] <- 0L
+        }
+        freqs[[subseq]] <- cnt + 1L
     }
     return(freqs)
 }
@@ -34,24 +34,34 @@ gen_freq <- function(seq, frame) { # CTK: duplicate method
 sort_seq <- function(seq, len) {
     cnt_map <- gen_freq(seq, len)
     #print(cnt_map)
-    attrs <- attributes(cnt_map)
-    fs <- unlist(attrs, use.names=FALSE)
-    seqs <- toupper(paste(names(attrs)))
+
+    #CTK needed these changes to make the benchmark work in GNU-R
+    #CTK attrs <- attributes(cnt_map)
+    #CTK fs <- unlist(attrs, use.names=FALSE)
+    #CTK seqs <- toupper(paste(names(attrs)))
+
+    #CTK --- added lines starting from here
+    fs <- cnt_map[cnt_map > 0]
+    seqs <- toupper(paste(names(fs)))
+    #CTK --- end of added lines
+
     inds <- order(-fs, seqs)
     #cat(paste(seqs[inds], fs[inds], collapse="\n"), "\n")
-    #cat(paste.(seqs[inds], 100 * fs[inds] / sum(fs), collapse="\n", digits=3),
+#    cat(paste.(seqs[inds], 100 * fs[inds] / sum(fs), collapse="\n", digits=3),
     cat(paste(seqs[inds], 100 * fs[inds] / sum(fs), collapse="\n"),
         "\n")
 }
 
 find_seq <- function(seq, s) {
     cnt_map <- gen_freq(seq, nchar(s))
-    if (!is.null(cnt <- attr(cnt_map, s)))
+
+#CTK    if (!is.null(cnt <- attr(cnt_map, s)))
+    if (!is.na(cnt <- cnt_map[s]))
         return(cnt)
     return(0L)
 }
 
-knucleotide_brute <- function(args) {
+knucleotide_brute_3 <- function(args) {
     in_filename = args[[1]]
     f <- file(in_filename, "r")
     while (length(line <- readLines(f, n=1, warn=FALSE))) {
@@ -75,7 +85,6 @@ knucleotide_brute <- function(args) {
     }
     length(str_buf) <- n
     close(f)
-
     seq <- paste(str_buf, collapse="")
 
     for (frame in 1:2)
@@ -99,6 +108,6 @@ paste. <- function (..., digits=16, sep=" ", collapse=NULL) {
 }
 
 execute <- function(n) {
-    file <- paste("fasta", n, ".txt", sep="")
-    knucleotide_brute(file)
+    file <- paste("fasta/fasta", n, ".txt", sep="")
+    knucleotide_brute_3(file)
 }

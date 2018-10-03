@@ -83,6 +83,6 @@ paste. <- function (..., digits=16, sep=" ", collapse=NULL) {
 }
 
 execute <- function(n) {
-    file <- paste("fasta", n, ".txt", sep="")
+    file <- paste("fasta/fasta", n, ".txt", sep="")
     knucleotide(file)
 }

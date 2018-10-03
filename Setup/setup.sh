@@ -1,9 +1,13 @@
 #!/bin/bash
 set -e # make script fail on first error
 
-SCRIPT_PATH="$( cd "$(dirname "$0")" ; pwd -P )"
-BUILD_SCRIPTS=$SCRIPT_PATH/buildScripts
+SCRIPT_PATH="$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )"
+if [ ! -d $SCRIPT_PATH ]; then
+    echo "Could not determine absolute dir of $0"
+    echo "Maybe accessed with symlink"
+fi
 
+BUILD_SCRIPTS=$SCRIPT_PATH/buildScripts
 source $BUILD_SCRIPTS/basicFunctions.inc
 
 ## Check for requirements

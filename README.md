@@ -18,4 +18,4 @@ We report the results in the web by using [codespeed](https://github.com/tobami/
 # Run the benchmarks
 To run all the benchmarks: `rebench rebench.conf`
 To run only RIR benchmarks: `rebench rebench.conf vm:RIR`
-For more details on *ReBench* [see its official documentation](http://rebench.readthedocs.io/)
+For more details on *ReBench* [follow its documentation](http://rebench.readthedocs.io/)

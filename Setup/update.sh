@@ -19,10 +19,4 @@ OK "Benchmarks Update Completed."
 $SCRIPT_PATH/updateR.sh
 R_UPDATED=$?
 
-INFO "Updating Benchmarks"
-    pushd $BENCHMARKS_DIR/AreWeFast
-    git pull origin RBenchs    
-    popd > /dev/null
-OK "Benchmarks Update Completed." 
-
 exit $R_UPDATED

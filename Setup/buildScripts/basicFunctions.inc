@@ -160,15 +160,13 @@ function update_git_repo() {
     INFO Updating git repository: $reponame
     
     output=`git status -uno | grep "behind" || echo "UPDATED"`
-    
     if [ "$output" != "UPDATED" ]
     then
       dirty=1
     else
       dirty=0
     fi
-    
-    if [ $dirty ]
+    if [ "$dirty" -eq 1 ]
     then
       if [ -z "$2" ]
       then
@@ -178,8 +176,8 @@ function update_git_repo() {
       fi    
       INFO Updating submodules
       load_submodule
-      popd > /dev/null
     fi
+    popd > /dev/null
     OK done
   fi
 } 

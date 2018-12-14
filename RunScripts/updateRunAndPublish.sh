@@ -9,10 +9,11 @@ fi
 BUILDSCRIPTS=$SCRIPT_PATH/../Setup/buildScripts
 source $BUILDSCRIPTS/basicFunctions.inc
 
+export PATH="$PATH:/usr/local/bin" 
+
 $SCRIPT_PATH/../Setup/update.sh
 R_UPDATED=$?
-
-if [ "$R_UPDATED" = "1" ]
+if [ "$R_UPDATED" -eq 1 ]
 then
     $SCRIPT_PATH/runAndPublish.sh
 else

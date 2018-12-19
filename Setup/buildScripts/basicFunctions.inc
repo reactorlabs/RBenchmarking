@@ -159,6 +159,7 @@ function update_git_repo() {
     pushd $1
     INFO Updating git repository: $reponame
     
+    git fetch
     output=`git status -uno | grep "behind" || echo "UPDATED"`
     if [ "$output" != "UPDATED" ]
     then

@@ -26,6 +26,6 @@ fi
 checkout $IMPLEMENTATIONS_PATH/R/$NAME $REPO_URL $BRANCH
 pushd $IMPLEMENTATIONS_PATH/R/$NAME
 INFO Compiling $NAME
-cmake .; make setup; make; make vanilla-gnur
+cmake -DCMAKE_BUILD_TYPE=release .; make setup; make; make vanilla-gnur
 OK $NAME Compilation Completed.
 popd > /dev/null

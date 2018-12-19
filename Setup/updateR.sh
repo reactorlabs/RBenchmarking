@@ -10,7 +10,6 @@ fi
 BUILDSCRIPTS=$SCRIPT_PATH/buildScripts
 source $BUILDSCRIPTS/basicFunctions.inc
 
-
 INFO "Updating $RIR_NAME"
     update_git_repo $IMPLEMENTATIONS_PATH/R/$RIR_NAME
     R_UPDATED="$dirty"
@@ -18,7 +17,7 @@ INFO "Updating $RIR_NAME"
     then
         pushd $IMPLEMENTATIONS_PATH/R/$RIR_NAME
         tools/sync.sh --vanilla
-        cmake .; make clean; make; make vanilla-gnur
+        cmake -DCMAKE_BUILD_TYPE=release .; make clean; make; make vanilla-gnur
         popd > /dev/null
     fi
 OK "$RIR_NAME Update Completed."

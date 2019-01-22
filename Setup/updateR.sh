@@ -17,7 +17,7 @@ INFO "Updating $RIR_NAME"
     then
         pushd $IMPLEMENTATIONS_PATH/R/$RIR_NAME
         tools/sync.sh --vanilla
-        cmake -DCMAKE_BUILD_TYPE=release .; make clean; make; make vanilla-gnur
+        cmake -DCMAKE_BUILD_TYPE=release .; make clean; make setup; make; make vanilla-gnur
         popd > /dev/null
     fi
 OK "$RIR_NAME Update Completed."

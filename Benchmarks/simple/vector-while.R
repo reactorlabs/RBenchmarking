@@ -1,6 +1,6 @@
 execute <- function(n=25000) {
   x <- vector(length=n)
-  i <- 0
+  i <- 1
   while (i < n) {
     x[[i]] <- i
     i <- i + 1

@@ -1,0 +1,19 @@
+> library(utils); summaryRprof("empty-for.R-prof")
+$by.self
+          self.time self.pct total.time total.pct
+"execute"      1.96    95.15       2.06    100.00
+":"            0.10     4.85       0.10      4.85
+
+$by.total
+          total.time total.pct self.time self.pct
+"execute"       2.06    100.00      1.96    95.15
+":"             0.10      4.85      0.10     4.85
+
+$sample.interval
+[1] 0.02
+
+$sampling.time
+[1] 2.06
+
+> 
+> 

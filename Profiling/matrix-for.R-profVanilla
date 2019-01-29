@@ -1,0 +1,17 @@
+> library(utils); summaryRprof("matrix-for.R-prof")
+$by.self
+[1] self.time  self.pct   total.time total.pct 
+<0 rows> (or 0-length row.names)
+
+$by.total
+[1] total.time total.pct  self.time  self.pct  
+<0 rows> (or 0-length row.names)
+
+$sample.interval
+[1] 0.02
+
+$sampling.time
+[1] 0
+
+> 
+> 

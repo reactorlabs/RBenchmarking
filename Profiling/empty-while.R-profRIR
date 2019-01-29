@@ -1,0 +1,17 @@
+> library(utils); summaryRprof("empty-while.R-prof")
+$by.self
+          self.time self.pct total.time total.pct
+"execute"      1.32      100       1.32       100
+
+$by.total
+          total.time total.pct self.time self.pct
+"execute"       1.32       100      1.32      100
+
+$sample.interval
+[1] 0.02
+
+$sampling.time
+[1] 1.32
+
+> 
+> 

@@ -1,4 +1,4 @@
-execute <- function(n=1000) {
+execute <- function(n=100) {
   x <- matrix(nrow=n, ncol=n)
   i <- 1
   while (i < n) {

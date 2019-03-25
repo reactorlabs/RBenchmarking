@@ -8,13 +8,14 @@ fi
 
 ROOT_PATH="$SCRIPT_PATH/.."
 BENCHMARKS_PATH="$ROOT_PATH"/Benchmarks
-OUT_PATH="$SCRIPT_PATH/Benchmarks.csv"
 
 if [ "$#" -lt 1 ]; then
     ERR "The script expects at least one argument: the name of the benchmark directory to be profiled"
     exit 1
 fi
 
-echo "Time (s),Bytecode,AST,RIR,PIR" > "$OUT_PATH"
-find $BENCHMARKS_PATH/$1 -name "*.R" -type f -exec ./profile-local.sh {} $2 $3 \;
+OUT_PATH="$SCRIPT_PATH/Benchmarks_$1.csv"
+
+echo "Time (s),Local RIR,Master RIR,GNUR" > "$OUT_PATH"
+find $BENCHMARKS_PATH/$1 -name "*.[Rr]" -type f -exec ./profile-local.sh {} $* \;
 

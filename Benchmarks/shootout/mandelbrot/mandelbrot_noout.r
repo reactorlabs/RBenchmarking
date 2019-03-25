@@ -30,6 +30,6 @@ mandelbrot_noout <- function(args) {
     }
 }
 
-execute <- function(n) {
+execute <- function(n=200) {
     mandelbrot_noout(n)
 }

@@ -104,6 +104,6 @@ nbody <- function(args) {
     cat(energy(), "\n")
 }
 
-execute <- function(n) {
+execute <- function(n=1000) {
     nbody(n)
 }

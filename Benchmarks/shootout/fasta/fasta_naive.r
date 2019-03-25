@@ -93,6 +93,6 @@ fasta_naive <- function(args) {
     random_fasta(homosapiens, 5L * n)
 }
 
-execute <- function(n) {
+execute <- function(n=1000) {
     fasta_naive(n)
 }

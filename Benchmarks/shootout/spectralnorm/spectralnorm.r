@@ -48,6 +48,6 @@ spectralnorm <- function(args) {
     u
 }
 
-execute <- function(n) {
+execute <- function(n=100) {
     spectralnorm(n)
 }

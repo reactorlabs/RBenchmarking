@@ -40,6 +40,6 @@ spectralnorm_naive <- function(args) {
     cat(sqrt(sum(u * v) / sum(v * v)), "\n")
 }
 
-execute <- function(n=100) {
+execute <- function(n) {
     spectralnorm_naive(n)
 }

@@ -15,6 +15,6 @@ spectralnorm_math <- function(args) {
     cat(sqrt(max(eigen(t(m) %*% m)$val)), "\n")
 }
 
-execute <- function(n=100) {
+execute <- function(n) {
     spectralnorm_math(n)
 }

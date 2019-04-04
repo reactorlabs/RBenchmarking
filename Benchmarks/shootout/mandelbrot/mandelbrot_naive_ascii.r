@@ -36,6 +36,6 @@ mandelbrot_naive_ascii <- function(args) {
 }
 
 
-execute <- function(n=200) {
+execute <- function(n) {
     mandelbrot_naive_ascii(n)
 }

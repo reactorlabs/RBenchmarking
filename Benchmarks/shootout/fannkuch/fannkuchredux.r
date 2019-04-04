@@ -70,6 +70,6 @@ fannkuchredux <- function(args) {
     cat("Pfannkuchen(", n, ") = ", fannkuch(n), "\n", sep="")
 }
 
-execute <- function(n=12) {
+execute <- function(n) {
     fannkuchredux(n)
 }

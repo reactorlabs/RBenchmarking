@@ -101,6 +101,6 @@ fasta_3 <- function(args) {
 }
 
 
-execute <- function(n=1000) {
+execute <- function(n) {
     fasta_3(n)
 }

@@ -28,6 +28,6 @@ spectralnorm_alt_2 <- function(args) {
     cat(sqrt(sum(u * v) / sum(v * v)), "\n")
 }
 
-execute <- function(n=100) {
+execute <- function(n) {
     spectralnorm_alt_2(n)
 }

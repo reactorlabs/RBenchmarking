@@ -107,6 +107,6 @@ nbody_3 <- function(args) {
 }
 
 
-execute <- function(n=1000) {
+execute <- function(n) {
     nbody_3(n)
 }

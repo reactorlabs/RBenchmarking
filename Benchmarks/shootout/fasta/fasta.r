@@ -85,6 +85,6 @@ fasta <- function(args) {
     random_fasta(homosapiens, 5L * n)
 }
 
-execute <- function(n=1000) {
+execute <- function(n) {
     fasta(n)
 }

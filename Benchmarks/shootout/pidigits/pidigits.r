@@ -397,6 +397,6 @@ pidigits <- function(args) {
     }
 }
 
-execute <- function(n=100) {
+execute <- function(n) {
     pidigits(n)
 }

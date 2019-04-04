@@ -32,6 +32,6 @@ mandelbrot <- function(args) {
     }
 }
 
-execute <- function(n=500) {
+execute <- function(n) {
     mandelbrot(n)
 }

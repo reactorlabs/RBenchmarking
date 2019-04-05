@@ -39,7 +39,7 @@ run <- function(args) {
     name <- args[[1]]
     numIterations <- strtoi(args[[2]])
 
-    source(file.path(".", paste(tolower(name), ".R", sep="")))
+    source(file.path(".", paste(tolower(name), ".r", sep="")))
     
     total <- as.numeric(doRuns(name, numIterations));
     cat(name, ": ",

@@ -3,7 +3,7 @@ verifyResult <- function(x, ...) {
     UseMethod("verifyResult", x)
 }
 
-verifyResult.default <- function(result) {
+verifyResult.default <- function(result, benchmarkParameter) {
     TRUE
 }
 
@@ -11,16 +11,16 @@ innerBenchmarkLoop <- function(x, ...) {
     UseMethod("innerBenchmarkLoop", x)
 }
 
-innerBenchmarkLoop.default <- function(class) {
-    verifyResult(execute())
+innerBenchmarkLoop.default <- function(class, benchmarkParameter) {
+    verifyResult(execute(benchmarkParameter), benchmarkParameter)
 }
 
-doRuns <- function(name, iterations) {
+doRuns <- function(name, iterations, benchmarkParameter) {
     total <- 0
     class(name) <- tolower(name)
     for (i in 1:iterations) {
         startTime <- Sys.time()
-        if (!innerBenchmarkLoop(name)) {
+        if (!innerBenchmarkLoop(name, benchmarkParameter)) {
             stop("Benchmark failed with incorrect result")
         }
         endTime <- Sys.time()
@@ -33,15 +33,16 @@ doRuns <- function(name, iterations) {
 }
 
 run <- function(args) {
-    if (length(args) != 2)
+    if (length(args) != 3)
         stop(printUsage())
 
     name <- args[[1]]
     numIterations <- strtoi(args[[2]])
+    benchmarkParameter <- strtoi(args[[3]])
 
     source(file.path(".", paste(tolower(name), ".r", sep="")))
     
-    total <- as.numeric(doRuns(name, numIterations));
+    total <- as.numeric(doRuns(name, numIterations, benchmarkParameter));
     cat(name, ": ",
         "iterations=", numIterations, "; ",
         "average: ", round(total / numIterations), " us; ",

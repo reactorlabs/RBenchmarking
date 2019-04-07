@@ -1,4 +1,4 @@
-execute <- function(n=200000) {
+execute <- function(n) {
   x <- vector(length=n)
   i <- 1
   while (i < n) {

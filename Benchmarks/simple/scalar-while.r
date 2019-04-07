@@ -1,4 +1,4 @@
-execute <- function(n=1000000) {
+execute <- function(n) {
   x <- 0
   i <- 0
   while (i < n) {

@@ -1,4 +1,4 @@
-execute <- function(n=100000) {
+execute <- function(n) {
   a <- 0
   b <- 0
   c <- 0

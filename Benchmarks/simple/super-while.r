@@ -1,5 +1,5 @@
 x <- 0
-execute <- function(n=2000000) {
+execute <- function(n) {
   while (x < n) {
     x <<- x + 1
   }

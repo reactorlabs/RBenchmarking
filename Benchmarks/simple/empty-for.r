@@ -1,4 +1,4 @@
-execute <- function(n=1000000) {
+execute <- function(n) {
   for (i in 1:n) {
     
   }

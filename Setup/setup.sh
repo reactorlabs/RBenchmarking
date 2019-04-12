@@ -12,7 +12,7 @@ source $BUILD_SCRIPTS/basicFunctions.inc
 
 ## Check for requirements
 check_for_tools git ant make mv uname cc c++ rebench pdflatex
-check_for_libs libpcre libbz2 libcurl libreadline
+check_for_libs pcre bz2 curl readline
 check_for_node    "non-fatal"
 
 if [ ! -d "$IMPLEMENTATIONS_PATH" ]

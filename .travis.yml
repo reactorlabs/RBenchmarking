@@ -1,0 +1,83 @@
+language: cpp
+
+matrix:
+  include:
+
+    # macOS clang
+    - os: osx
+      compiler: clang
+
+    - env:
+
+addons:
+  apt:
+    packages:
+      - texlive-latex-extra
+      - texlive-latex-base
+      - texlive-fonts-recommended
+      - texlive-fonts-extra
+      - texlive-latex-recommended
+      - texlive-font-utils
+      - dvipng
+      - cm-super
+      - bison
+      - ca-certificates-java
+      - java-common
+      - libbison-dev
+      - libcairo-script-interpreter2
+      - libcairo2-dev
+      - libjbig-dev
+      - libmime-charset-perl
+      - libpango1.0-dev
+      - libpcsclite1
+      - libpixman-1-dev
+      - libsombok3
+      - libtext-unidecode-perl
+      - libtiff5-dev
+      - libtiffxx5
+      - libunicode-linebreak-perl
+      - libxcb-render0-dev
+      - libxcb-shm0-dev
+      - libxml-libxml-perl
+      - libxml-namespacesupport-perl
+      - libxml-sax-base-perl
+      - libxml-sax-perl
+      - mpack
+      - openjdk-11-jre
+      - openjdk-11-jre-headless
+      - texinfo
+      - g++-7
+      - xdg-utils
+      - gfortran-7
+      - subversion
+      - make
+      - r-base-dev
+      - liblzma-dev
+      - sed
+      - binutils
+      - curl
+      - cmake
+      - rsync
+      - xorg-dev
+      - valgrind
+      - cppcheck
+      - xvfb
+      - xauth
+      - xfonts-base
+      - tk-dev
+    sources:
+      - ubuntu-toolchain-r-test
+
+before_script:
+  - Setup/setup.sh
+
+script:
+  - ./Setup/runScripts/run.sh rebench.conf Implementations/R/RIR Benchmarks -it 2 -wu 0 -Sv
+  
+cache:
+  ccache: true
+  apt: true
+  directories:
+    - external
+    # cache homebrew formulas
+    - /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core

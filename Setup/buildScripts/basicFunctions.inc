@@ -64,9 +64,19 @@ function check_for_tools() {
 
 function check_for_libs() {
   INFO -n 'Libs: '
+  if [ "$(uname -s)" = 'Linux' ]; then
+    set -- "${@/#/lib}"
+  else
+    set -- "${@/#/-l}"
+  fi
+  
   for lib in $@; do
-    OUTPUT=$(ldconfig -p | grep $lib)
-    if [ -x "$OUTPUT" ]; then
+    if [ "$(uname -s)" = 'Linux' ]; then
+      OUTPUT=$(ldconfig -p | grep $lib)
+    else
+      OUTPUT=$((ld $lib 2>&1 | grep -v "not found") || true) 
+    fi
+    if [ -z "$OUTPUT" ]; then
       WARN -n "No $lib "
     else
       INFO -n "$lib "

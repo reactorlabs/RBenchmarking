@@ -19,7 +19,7 @@ popd > /dev/null
 TIMESTAMP=$(timestamp)
 
 pushd $SCRIPT_PATH/../
-rebench rebench.conf --commit-id=$COMMIT --branch=$BRANCH --environment="PragueDesktop"
+./Setup/runScripts/run.sh rebench.conf Implementations/R/RIR Benchmarks/ --commit-id=$COMMIT --branch=$BRANCH --environment="PragueDesktop"
 
 if [ ! -d $DATA_DIR ]
 then

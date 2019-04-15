@@ -10,6 +10,17 @@ fi
 BUILD_SCRIPTS=$SCRIPT_PATH/buildScripts
 source $BUILD_SCRIPTS/basicFunctions.inc
 
+if [ "$1" == "--installRebench" ]
+then
+    ## We use a patched version that supports the usage of env variables
+    ## in commands. Otherwise pip install --user ReBench
+    git clone https://github.com/charig/ReBench.git -b envVarsSupport
+    pushd ReBench > /dev/null
+    pip install --user .
+    popd > /dev/null
+fi
+
+
 ## Check for requirements
 check_for_tools git ant make mv uname cc c++ rebench pdflatex
 check_for_libs pcre bz2 curl readline

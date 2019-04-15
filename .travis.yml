@@ -82,6 +82,7 @@ before_script:
   - export CC=$CC_OVERRIDE
   - ${CXX} --version
   - ${CC} --version
+  - export PATH=$HOME/.local/bin:$PATH
   - Setup/setup.sh --installRebench
 
 script:

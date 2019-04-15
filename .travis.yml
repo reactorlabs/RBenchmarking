@@ -82,7 +82,7 @@ before_script:
   - export CC=$CC_OVERRIDE
   - ${CXX} --version
   - ${CC} --version
-  - export PATH=$HOME/.local/bin:$PATH
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then export PATH=$HOME/Library/Python/2.7/bin:$PATH; else export PATH=$HOME/.local/bin:$PATH; fi
   - Setup/setup.sh --installRebench
 
 script:

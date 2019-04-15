@@ -1,6 +1,9 @@
-x <- 0
 execute <- function(n) {
-  while (x < n) {
-    x <<- x + 1
+  x <- 0
+  f <- function() {
+    while (x < n) {
+      x <<- x + 1
+    }
   }
+  f()
 }

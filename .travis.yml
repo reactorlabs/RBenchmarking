@@ -74,6 +74,11 @@ addons:
       - ubuntu-toolchain-r-test
 
 before_script:
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install gcc ccache; brew link --overwrite gcc; export PATH="/usr/local/opt/ccache/libexec:$PATH"; fi
+  - export CXX=$CXX_OVERRIDE
+  - export CC=$CC_OVERRIDE
+  - ${CXX} --version
+  - ${CC} --version
   - Setup/setup.sh --installRebench
 
 script:

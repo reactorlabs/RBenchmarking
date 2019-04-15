@@ -8,6 +8,9 @@ matrix:
 
     # macOS clang
     - os: osx
+      env:
+        - CXX_OVERRIDE=clang++
+        - CC_OVERRIDE=clang
       compiler: clang
 
     - env:

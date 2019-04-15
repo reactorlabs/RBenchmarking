@@ -85,7 +85,7 @@ before_script:
   - Setup/setup.sh --installRebench
 
 script:
-  - ./Setup/runScripts/run.sh rebench.conf Implementations/R/RIR Benchmarks -it 2 -wu 0 -Sv
+  - ./Setup/run.sh rebench.conf Implementations/R/RIR Benchmarks -it 2 -wu 0 -Sv
   
 cache:
   ccache: true

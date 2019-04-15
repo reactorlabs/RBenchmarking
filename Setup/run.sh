@@ -21,7 +21,7 @@ if [ "$(uname -s)" = 'Linux' ]; then
 else
   REBENCH=$(realpath $1)
   RIR_VM=$(realpath $2)
-  GNU_VM=$(realpath -f $3)
+  GNU_VM=$(realpath $3)
   BENCHS_PATH=$(realpath $4)
 fi
 

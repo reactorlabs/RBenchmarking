@@ -1,5 +1,5 @@
 #!/bin/bash
-#set -e # make script fail on first error
+set -e # make script fail on first error
 SCRIPT_PATH="$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )"
 if [ ! -d $SCRIPT_PATH ]; then
     echo "Could not determine absolute dir of $0"
@@ -14,12 +14,10 @@ COMMIT=`git rev-parse HEAD`
 BRANCH=`git symbolic-ref --short HEAD`
 popd > /dev/null
 
-#sudo env "PATH=$PATH" rebench rebench.conf --commit-id=$COMMIT --branch=$BRANCH --environment="PragueDesktop"
-
 TIMESTAMP=$(timestamp)
 
 pushd $SCRIPT_PATH/../
-rebench rebench.conf --commit-id=$COMMIT --branch=$BRANCH --environment="PragueDesktop"
+./Setup/run.sh rebench.conf Implementations/R/RIR Implementations/R/RIR/external/vanilla-r Benchmarks/ e:PIR e:RIR e:GNU-R --commit-id=$COMMIT --branch=$BRANCH --environment="PragueDesktop"
 
 if [ ! -d $DATA_DIR ]
 then

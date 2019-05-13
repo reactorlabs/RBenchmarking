@@ -50,20 +50,6 @@ shift
 shift
 shift
 
-if [[ "$1" == "--save" ]]; then
-  shift
-  if [[ ! -z $1 && -d $2 ]]; then
-    FILE_TO_SAVE_NAME="$1"
-    DIR_TO_SAVE_MEASUREMENTS="$2"
-    shift
-    shift
-  else  
-    echo "When using the --save option the first two subsequent arguments 
-    must be the filename with the output measurements and a valid directory where to copy them"
-    exit 1
-  fi
-fi
-
 pushd . > /dev/null
 
 TMPDIR=$(mktemp -d /tmp/rbench.XXXXXX)
@@ -75,7 +61,6 @@ sed -i.bak "s+%%GNU_VM%%+$GNU_VM+" rebench.conf
 sed -i.bak "s+%%BENCHMARKS_PATH%%+$BENCHS_PATH+" rebench.conf
 
 rebench rebench.conf "$@"
-cp "$FILE_TO_SAVE_NAME" "$DIR_TO_SAVE_MEASUREMENTS/$FILE_TO_SAVE_NAME"
 RES=$?
 
 popd > /dev/null

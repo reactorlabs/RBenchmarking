@@ -17,12 +17,12 @@ popd > /dev/null
 TIMESTAMP=$(timestamp)
 
 pushd $SCRIPT_PATH/../
-./Setup/run.sh rebench.conf Implementations/R/RIR Implementations/R/RIR/external/vanilla-r Benchmarks/ e:PIR e:RIR e:GNU-R --commit-id=$COMMIT --branch=$BRANCH --environment="PragueDesktop"
 
 if [ ! -d $DATA_DIR ]
 then
     mkdir $DATA_DIR
 fi 
-mv $DATA_FILENAME $DATA_DIR/$DATA_FILENAME-$TIMESTAMP
+
+./Setup/run.sh rebench.conf Implementations/R/RIR Implementations/R/RIR/external/vanilla-r Benchmarks/ e:PIR e:RIR e:GNU-R --save $DATA_FILENAME $DATA_DIR --commit-id=$COMMIT --branch=$BRANCH --environment="PragueDesktop"
 
 popd > /dev/null

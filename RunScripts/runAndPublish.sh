@@ -23,6 +23,6 @@ then
     mkdir $DATA_DIR
 fi 
 
-./Setup/run.sh rebench.conf Implementations/R/RIR Implementations/R/RIR/external/vanilla-r Benchmarks/ e:PIR e:RIR e:GNU-R --commit-id=$COMMIT --branch=$BRANCH --environment="PragueDesktop" -df "$DATA_FILENAME/$DATA_DIR"
+./Setup/run.sh rebench.conf Implementations/R/RIR Implementations/R/RIR/external/vanilla-r Benchmarks/ e:PIR e:RIR e:GNU-R --commit-id=$COMMIT --branch=$BRANCH --environment="PragueDesktop" -df "$DATA_DIR/$DATA_FILENAME"
 
 popd > /dev/null

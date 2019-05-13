@@ -52,9 +52,9 @@ shift
 
 if [[ "$1" == "--save" ]]; then
   shift
-  if [[ -z $1 && -d $2 ]]; then
-    FILE_TO_SAVE_NAME = "$1"
-    DIR_TO_SAVE_MEASUREMENTS = "$2"
+  if [[ ! -z $1 && -d $2 ]]; then
+    FILE_TO_SAVE_NAME="$1"
+    DIR_TO_SAVE_MEASUREMENTS="$2"
     shift
     shift
   else  

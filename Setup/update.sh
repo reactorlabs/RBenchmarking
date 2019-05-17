@@ -16,7 +16,17 @@ INFO "Updating Benchmarking Setup"
     popd > /dev/null
 OK "Benchmarks Update Completed." 
 
-$SCRIPT_PATH/updateR.sh
-R_UPDATED=$?
+if [[ "$1" == "--docker" ]]; then
+    COMMIT_ID=`git ls-remote https://github.com/reactorlabs/rir HEAD | cut -f1`
+    PREVIOUS_COMMIT_ID=`head -1 "$DATA_PATH/$LAST_COMMIT_FILENAME"`
+    if [[ "$COMMIT_ID" != "PREVIOUS_COMMIT_ID" ]]; then
+        R_UPDATED=1
+    else
+        R_UPDATED=0
+    fi
+else
+    $SCRIPT_PATH/updateR.sh
+    R_UPDATED=$?
+fi
 
 exit $R_UPDATED

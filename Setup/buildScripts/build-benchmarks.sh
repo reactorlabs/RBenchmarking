@@ -9,10 +9,10 @@ fi
 source $SCRIPT_PATH/basicFunctions.inc
 
 INFO Building Benchmarks
-if [ ! -d $BENCHMARKS_DIR ]
+if [ ! -d $BENCHMARKS_PATH ]
 then
-  mkdir $BENCHMARKS_DIR
+  mkdir $BENCHMARKS_PATH
 fi
 
-#checkout $BENCHMARKS_DIR/AreWeFast "https://github.com/charig/are-we-fast-yet.git" "RBenchs" "benchmarks"
+#checkout $BENCHMARKS_PATH/AreWeFast "https://github.com/charig/are-we-fast-yet.git" "RBenchs" "benchmarks"
 OK Benchmarks Build Completed.

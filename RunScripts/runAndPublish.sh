@@ -34,7 +34,7 @@ fi
 TIMESTAMP=$(timestamp)
 pushd $SCRIPT_PATH/../
 
-OPTIONS_PREFIX="$REBENCH_CONF_PATH $BENCHS_PATH $RIR_BUILD_PATH $GNU_R_PATH -S --commit-id=$COMMIT --branch=$BRANCH --environment=PragueDesktop -df $PERSIST_IN-$TIMESTAMP"
+OPTIONS_PREFIX="$REBENCH_CONF_PATH $BENCHS_PATH $RIR_BUILD_PATH $GNU_R_PATH --commit-id=$COMMIT --branch=$BRANCH --environment=PragueDesktop -df $PERSIST_IN-$TIMESTAMP"
 
 if [[ "$1" == "--docker" ]]; then
     OPTIONS_DOCKER_RIR="$OPTIONS_PREFIX e:PIR e:RIR"

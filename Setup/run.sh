@@ -6,7 +6,9 @@ if [ ! -d $SCRIPT_PATH ]; then
   echo "Could not determine absolute dir of $0"
   echo "Maybe accessed with symlink"
 fi
-BENCHMARKS="$SCRIPT_PATH"
+
+BUILD_SCRIPTS=$SCRIPT_PATH/buildScripts
+source $BUILD_SCRIPTS/basicFunctions.inc
 
 # Find abs path in MacOS
 realpath() {

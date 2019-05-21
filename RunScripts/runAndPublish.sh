@@ -44,7 +44,7 @@ if [[ "$1" == "--docker" ]]; then
     # Then use the GNU-R container to run the benchmarks for GNU-R
     `docker run -t -v "$ROOT_PATH:$DOCKER_OUT_VOL_NAME" "registry.gitlab.com/rirvm/rir_mirror/benchmark-baseline" /opt/rbenchmarking/Setup/run.sh $OPTIONS_DOCKER_GNU`
 else
-    OPTIONS_PRG="$OPTIONS_PREFIX"
+    OPTIONS_PRG="$OPTIONS_PREFIX e:GNU-R e:PIR e:RIR"
     ./Setup/run.sh $OPTIONS_PRG
 fi
 

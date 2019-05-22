@@ -34,17 +34,18 @@ fi
 TIMESTAMP=$(timestamp)
 pushd $SCRIPT_PATH/../
 
-OPTIONS_PREFIX="$REBENCH_CONF_PATH $BENCHS_PATH $RIR_BUILD_PATH $GNU_R_PATH --commit-id=$COMMIT --branch=$BRANCH --environment=PragueDesktop -df $PERSIST_IN-$TIMESTAMP"
+PATH_OPTIONS="$REBENCH_CONF_PATH $BENCHS_PATH $RIR_BUILD_PATH $GNU_R_PATH"
+REBENCH_OPTIONS="--commit-id=$COMMIT --branch=$BRANCH --environment=PragueDesktop -df $PERSIST_IN-$TIMESTAMP"
 
 if [[ "$1" == "--docker" ]]; then
-    OPTIONS_DOCKER_RIR="$OPTIONS_PREFIX e:PIR e:RIR"
+    OPTIONS_DOCKER_RIR="$PATH_OPTIONS e:PIR e:RIR $REBENCH_OPTIONS"
     # First use the RIR container to run the benchmarks for RIR and PIR
     `docker run -t -v "$ROOT_PATH:$DOCKER_OUT_VOL_NAME" "registry.gitlab.com/rirvm/rir_mirror/benchmark:$COMMIT" /opt/rbenchmarking/Setup/run.sh $OPTIONS_DOCKER_RIR`
-    OPTIONS_DOCKER_GNU="$OPTIONS_PREFIX e:GNU-R"
+    OPTIONS_DOCKER_GNU="$PATH_OPTIONS e:GNU-R $REBENCH_OPTIONS"
     # Then use the GNU-R container to run the benchmarks for GNU-R
     `docker run -t -v "$ROOT_PATH:$DOCKER_OUT_VOL_NAME" "registry.gitlab.com/rirvm/rir_mirror/benchmark-baseline" /opt/rbenchmarking/Setup/run.sh $OPTIONS_DOCKER_GNU`
 else
-    OPTIONS_PRG="$OPTIONS_PREFIX e:GNU-R e:PIR e:RIR"
+    OPTIONS_PRG="$PATH_OPTIONS e:GNU-R e:PIR e:RIR $REBENCH_OPTIONS"
     ./Setup/run.sh $OPTIONS_PRG
 fi
 

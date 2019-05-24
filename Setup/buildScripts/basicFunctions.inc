@@ -258,6 +258,10 @@ function buildBench {
   
 } 
 
+get_container_version() {
+  curl -s ${DOCKER_CONTAINER_URL} | ruby -e 'require("json"); puts JSON.parse(ARGF.read)["digest"]'
+}
+
 timestamp() {
   date "+%Y%m%d-%H%M"
 }

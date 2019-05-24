@@ -17,9 +17,14 @@ INFO "Updating Benchmarking Setup"
 OK "Benchmarks Update Completed." 
 
 if [[ "$1" == "--docker" ]]; then
-    COMMIT_ID=`git ls-remote https://github.com/reactorlabs/rir HEAD | cut -f1`
-    PREVIOUS_COMMIT_ID=`head -1 "$DATA_PATH/$LAST_COMMIT_FILENAME"`
-    if [[ "$COMMIT_ID" != "PREVIOUS_COMMIT_ID" ]]; then
+    CONTAINER_ID=`get_container_version`
+    if [[ -z $CONTAINER_ID ]]; then
+        echo get_container_version
+        ERR "There is no master container in the registry"
+        exit 0
+    fi
+    PREVIOUS_CONTAINER_ID=`head -1 "$DATA_PATH/$LAST_CONTAINER_FILENAME"`
+    if [[ "$CONTAINER_ID" != "$PREVIOUS_CONTAINER_ID" ]]; then
         R_UPDATED=1
     else
         R_UPDATED=0

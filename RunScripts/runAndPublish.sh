@@ -52,12 +52,12 @@ if [[ "$1" == "--docker" ]]; then
     OPTIONS_DOCKER_RIR="$PATH_OPTIONS e:PIR e:RIR $REBENCH_OPTIONS"
     # First use the RIR container to run the benchmarks for RIR and PIR
     `docker run --privileged=true -v "$ROOT_PATH:$DOCKER_OUT_VOL_NAME" "registry.gitlab.com/rirvm/rir_mirror/benchmark:master" /opt/rbenchmarking/Setup/run.sh $OPTIONS_DOCKER_RIR`
-    OPTIONS_DOCKER_GNU="$PATH_OPTIONS e:GNU-R $REBENCH_OPTIONS"
+    OPTIONS_DOCKER_GNU="$PATH_OPTIONS e:GNU-R e:FASTR $REBENCH_OPTIONS"
     # Then use the GNU-R container to run the benchmarks for GNU-R
     `docker run --privileged=true -v "$ROOT_PATH:$DOCKER_OUT_VOL_NAME" "registry.gitlab.com/rirvm/rir_mirror/benchmark-baseline" /opt/rbenchmarking/Setup/run.sh $OPTIONS_DOCKER_GNU`
     echo "$CONTAINER_ID" > "$DATA_PATH/$LAST_CONTAINER_FILENAME"
 else
-    OPTIONS_PRG="$PATH_OPTIONS e:GNU-R e:PIR e:RIR $REBENCH_OPTIONS"
+    OPTIONS_PRG="$PATH_OPTIONS e:GNU-R e:PIR e:RIR e:FASTR $REBENCH_OPTIONS"
     ./Setup/run.sh $OPTIONS_PRG
 fi
 

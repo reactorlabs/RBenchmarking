@@ -14,6 +14,7 @@ if [[ "$1" == "--docker" ]]; then
     RIR_PATH="$DOCKER_ROOT_PATH/rir"
     RIR_BUILD_PATH="$RIR_PATH/build/release"
     GNU_R_PATH="$RIR_PATH/external/custom-r"
+    FASTR_PATH="$DOCKER_ROOT_PATH/graal"
     BENCHS_PATH="$DOCKER_ROOT_PATH/rbenchmarking/Benchmarks"
     PERSIST_IN="$DOCKER_DATA_PATH/$DATA_FILENAME"
     BRANCH="master"
@@ -24,6 +25,7 @@ else
     RIR_PATH="$IMPLEMENTATIONS_PATH/R/RIR"
     RIR_BUILD_PATH="$RIR_PATH"
     GNU_R_PATH="$RIR_PATH/external/vanilla-r"
+    FASTR_PATH="$IMPLEMENTATIONS_PATH/graal"
     BENCHS_PATH="$ROOT_PATH/Benchmarks"
     PERSIST_IN="$DATA_PATH/$DATA_FILENAME" 
     pushd "$RIR_PATH"
@@ -43,13 +45,12 @@ if [[ "$1" == "--docker" ]]; then
     COMMIT=$(head -n 1 $DATA_PATH/$CURRENT_COMMIT_FILENAME)
 fi
 
-PATH_OPTIONS="$REBENCH_CONF_PATH $BENCHS_PATH $RIR_BUILD_PATH $GNU_R_PATH"
+PATH_OPTIONS="$REBENCH_CONF_PATH $BENCHS_PATH $RIR_BUILD_PATH $GNU_R_PATH $FASTR_PATH"
 REBENCH_OPTIONS="--commit-id=$COMMIT --branch=$BRANCH --environment=PragueDesktop -df $PERSIST_IN-$TIMESTAMP"
 
 if [[ "$1" == "--docker" ]]; then
     OPTIONS_DOCKER_RIR="$PATH_OPTIONS e:PIR e:RIR $REBENCH_OPTIONS"
     # First use the RIR container to run the benchmarks for RIR and PIR
-    #echo "docker run --privileged=true -v $ROOT_PATH:$DOCKER_OUT_VOL_NAME registry.gitlab.com/rirvm/rir_mirror/benchmark:master /opt/rbenchmarking/Setup/run.sh $OPTIONS_DOCKER_RIR"
     `docker run --privileged=true -v "$ROOT_PATH:$DOCKER_OUT_VOL_NAME" "registry.gitlab.com/rirvm/rir_mirror/benchmark:master" /opt/rbenchmarking/Setup/run.sh $OPTIONS_DOCKER_RIR`
     OPTIONS_DOCKER_GNU="$PATH_OPTIONS e:GNU-R $REBENCH_OPTIONS"
     # Then use the GNU-R container to run the benchmarks for GNU-R

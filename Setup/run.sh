@@ -26,11 +26,15 @@ if [[ ! -d "$2" ]]; then
 fi
 
 if [[ ! -d "$3" ]]; then
-  WARN "$RIR_VM does not exist: beware that if you want to run benchmarks for RIR it will fail"
+  WARN "RIR VM dir does not exist: beware that if you want to run benchmarks for RIR it will fail"
 fi
 
 if [[ ! -d "$4" ]]; then
-  WARN "$$GNU_VM does not exist: beware that if you want to run benchmarks for GNU-R it will fail"
+  WARN "GNU VM dir does not exist: beware that if you want to run benchmarks for GNU-R it will fail"
+fi
+
+if [[ ! -d "$5" ]]; then
+  WARN "FASTR dir does not exist: beware that if you want to run benchmarks for GNU-R it will fail"
 fi
 
 if [ "$(uname -s)" = 'Linux' ]; then
@@ -42,6 +46,9 @@ if [ "$(uname -s)" = 'Linux' ]; then
   if [[ -d "$4" ]]; then
     GNU_VM=$(readlink -f $4)
   fi
+  if [[ -d "$5" ]]; then
+    FASTR_VM=$(readlink -f $5)
+  fi
 else
   REBENCH=$(realpath $1)
   BENCHS_PATH=$(realpath $2)
@@ -51,6 +58,9 @@ else
   if [[ -d "$4" ]]; then
     GNU_VM=$(realpath $4)
   fi
+  if [[ -d "$5" ]]; then
+    FASTR_VM=$(realpath $5)
+  fi
 fi
 
 
@@ -58,11 +68,10 @@ shift
 shift
 shift
 shift
-
-pushd . > /dev/null
+shift
 
 TMPDIR=$(mktemp -d /tmp/rbench.XXXXXX)
-cd $TMPDIR
+pushd $TMPDIR
 
 cp "$REBENCH" .
 if [[ ! -z $RIR_VM ]]; then
@@ -70,6 +79,9 @@ if [[ ! -z $RIR_VM ]]; then
 fi 
 if [[ ! -z $GNU_VM ]]; then
   sed -i.bak "s+%%GNU_VM%%+$GNU_VM+" rebench.conf
+fi
+if [[ ! -z $FASTR_VM ]]; then
+  sed -i.bak "s+%%FASTR_VM%%+$FASTR_VM+" rebench.conf
 fi
 sed -i.bak "s+%%BENCHMARKS_PATH%%+$BENCHS_PATH+" rebench.conf
 

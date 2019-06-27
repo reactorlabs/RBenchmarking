@@ -34,7 +34,7 @@ if [[ ! -d "$4" ]]; then
 fi
 
 if [[ ! -d "$5" ]]; then
-  WARN "FASTR dir does not exist: beware that if you want to run benchmarks for GNU-R it will fail"
+  WARN "FASTR dir does not exist: beware that if you want to run benchmarks for FAST-R it will fail"
 fi
 
 if [ "$(uname -s)" = 'Linux' ]; then

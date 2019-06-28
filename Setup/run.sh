@@ -12,63 +12,59 @@ source $BUILD_SCRIPTS/basicFunctions.inc
 
 # Find abs path in MacOS
 realpath() {
-    [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
+    if [ "$(uname -s)" = 'Linux' ]; then
+      echo $(readlink -f $1)
+    else
+      [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
+    fi
 }
 
-if [[ ! -f "$1" ]]; then
+if [[ -f "$1" ]]; then
+  REBENCH=$(realpath $1)
+  shift
+else
   echo "First parameter must specify a rebench configuration file"
   exit 1
 fi
 
-if [[ ! -d "$2" ]]; then
-  echo "$BENCHS_PATH does not exist"
+if [[ -d "$1" ]]; then
+  BENCHS_PATH=$(realpath $1)
+  shift
+else
+  echo "Benchmarks path does not exist"
   exit 1
 fi
 
-if [[ ! -d "$3" ]]; then
+if [[ -d "$1" && $# -gt 1 ]]; then
+  RIR_VM=$(realpath $1)
+  shift
+else
   WARN "RIR VM dir does not exist: beware that if you want to run benchmarks for RIR it will fail"
 fi
 
-if [[ ! -d "$4" ]]; then
+if [[ -d "$1" && $# -gt 1 ]]; then
+  GNU_VM=$(realpath $1)
+  shift
+else
   WARN "GNU VM dir does not exist: beware that if you want to run benchmarks for GNU-R it will fail"
 fi
 
-if [[ ! -d "$5" ]]; then
+if [[ -d "$1" && $# -gt 1 ]]; then
+  FASTR_VM=$(realpath $1)
+  shift
+else
   WARN "FASTR dir does not exist: beware that if you want to run benchmarks for FAST-R it will fail"
 fi
 
-if [ "$(uname -s)" = 'Linux' ]; then
-  REBENCH=$(readlink -f $1)
-  BENCHS_PATH=$(readlink -f $2)
-  if [[ -d "$3" ]]; then
-    RIR_VM=$(readlink -f $3)
-  fi
-  if [[ -d "$4" ]]; then
-    GNU_VM=$(readlink -f $4)
-  fi
-  if [[ -d "$5" ]]; then
-    FASTR_VM=$(readlink -f $5)
-  fi
-else
-  REBENCH=$(realpath $1)
-  BENCHS_PATH=$(realpath $2)
-  if [[ -d "$3" ]]; then
-    RIR_VM=$(realpath $3)
-  fi
-  if [[ -d "$4" ]]; then
-    GNU_VM=$(realpath $4)
-  fi
-  if [[ -d "$5" ]]; then
-    FASTR_VM=$(realpath $5)
-  fi
+if [[ $# -gt 1 ]]; then
+  echo expected 1 argument but got "$@", did you forget to quote rebench args?
 fi
-
-
-shift
-shift
-shift
-shift
-shift
+if [[ $# -eq 0 ]]; then
+  echo missing rebench args
+fi
+if [[ $# -ne 1 ]]; then
+  exit 1
+fi
 
 TMPDIR=$(mktemp -d /tmp/rbench.XXXXXX)
 pushd $TMPDIR
@@ -85,7 +81,7 @@ if [[ ! -z $FASTR_VM ]]; then
 fi
 sed -i.bak "s+%%BENCHMARKS_PATH%%+$BENCHS_PATH+" rebench.conf
 
-rebench rebench.conf "$@"
+rebench rebench.conf $1
 RES=$?
 
 popd

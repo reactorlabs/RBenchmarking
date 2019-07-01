@@ -10,12 +10,9 @@ fi
 RIR_NAME="RIR"
 RIR_BRANCH="master"
 DATA_DIR_NAME="Data"
-DATA_FILENAME="areWeFast.data"
 DOCKER_OUT_VOL_NAME="/output"
 LAST_CONTAINER_FILENAME=".lastMeasure"
 CURRENT_COMMIT_FILENAME=".currentCommit"
-REBENCH_FILENAME="rebench.conf"
-CONTAINER_COMMIT_FILENAME="/opt/rir_version"
 
 # Paths
 IMPLEMENTATIONS_PATH="$ROOT_PATH/Implementations"

@@ -36,7 +36,7 @@ REBENCH_OPTIONS="--commit-id=$COMMIT --branch=$BRANCH --environment=PragueDeskto
 
 # First use the RIR container to run the benchmarks for RIR and PIR
 docker run --privileged=true -v "$ROOT_PATH:$DOCKER_OUT_VOL_NAME" $RIR_CONTAINER \
-  $RUN $PATH_OPTIONS $RIR_BUILD_PATH "e:PIR e:RIR $REBENCH_OPTIONS"
+  $RUN $PATH_OPTIONS $RIR_BUILD_PATH "e:PIR e:RIR e:PIR-NATIVE $REBENCH_OPTIONS"
 
 # Then use the GNU-R container to run the benchmarks for GNU-R
 # NOTE: the "." instead of RIR_BUILD_PATH is a hack since no built version of rir exists in the baseline container

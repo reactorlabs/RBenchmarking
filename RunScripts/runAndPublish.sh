@@ -32,7 +32,7 @@ COMMIT=$(docker run $RIR_CONTAINER cat /opt/rir_version)
 echo "Commit $COMMIT"
 
 PATH_OPTIONS="$REBENCH_CONF_PATH $BENCHS_PATH"
-REBENCH_OPTIONS="--commit-id=$COMMIT --branch=$BRANCH --environment=PragueDesktopASDF -df $PERSIST_IN-$TIMESTAMP"
+REBENCH_OPTIONS="--commit-id=$COMMIT --branch=$BRANCH --environment=PragueDesktop -df $PERSIST_IN-$TIMESTAMP"
 
 # First use the RIR container to run the benchmarks for RIR and PIR
 docker run --privileged=true -v "$ROOT_PATH:$DOCKER_OUT_VOL_NAME" $RIR_CONTAINER \

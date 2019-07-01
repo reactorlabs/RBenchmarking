@@ -11,11 +11,11 @@ source $BUILDSCRIPTS/basicFunctions.inc
 
 export PATH="$PATH:/usr/local/bin" 
 
-$SCRIPT_PATH/../Setup/update.sh "$1"
+$SCRIPT_PATH/../Setup/update.sh
 
 R_UPDATED=$?
 if [[ ! "$R_UPDATED" -eq 0 ]]; then
-    "$SCRIPT_PATH/runAndPublish.sh" "$1"    
+    "$SCRIPT_PATH/runAndPublish.sh"
 else
     WARN "RIR has not changed. Benchmarks were not run!"
 fi

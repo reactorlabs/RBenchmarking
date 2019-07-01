@@ -16,22 +16,17 @@ INFO "Updating Benchmarking Setup"
     popd > /dev/null
 OK "Benchmarks Update Completed." 
 
-if [[ "$1" == "--docker" ]]; then
-    CONTAINER_ID=`get_container_version`
-    if [[ -z $CONTAINER_ID ]]; then
-        echo get_container_version
-        ERR "There is no master container in the registry"
-        exit 0
-    fi
-    PREVIOUS_CONTAINER_ID=`head -1 "$DATA_PATH/$LAST_CONTAINER_FILENAME"`
-    if [[ "$CONTAINER_ID" != "$PREVIOUS_CONTAINER_ID" ]]; then
-        R_UPDATED=1
-    else
-        R_UPDATED=0
-    fi
+CONTAINER_ID=`get_container_version`
+if [[ -z $CONTAINER_ID ]]; then
+    echo get_container_version
+    ERR "There is no master container in the registry"
+    exit 0
+fi
+PREVIOUS_CONTAINER_ID=`head -1 "$DATA_PATH/$LAST_CONTAINER_FILENAME"`
+if [[ "$CONTAINER_ID" != "$PREVIOUS_CONTAINER_ID" ]]; then
+    R_UPDATED=1
 else
-    $SCRIPT_PATH/updateR.sh
-    R_UPDATED=$?
+    R_UPDATED=0
 fi
 
 exit $R_UPDATED

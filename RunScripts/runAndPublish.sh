@@ -31,8 +31,12 @@ RUN="/opt/rbenchmarking/Setup/run.sh"
 COMMIT=$(docker run $RIR_CONTAINER cat /opt/rir_version)
 echo "Commit $COMMIT"
 
+if [[ -z "$REBENCH_ENV" ]]; then
+  echo "Rebench environment missing, results will not be sent to speedcenter"
+fi
+
 PATH_OPTIONS="$REBENCH_CONF_PATH $BENCHS_PATH"
-REBENCH_OPTIONS="--commit-id=$COMMIT --branch=$BRANCH --environment=PragueDesktop -df $PERSIST_IN-$TIMESTAMP"
+REBENCH_OPTIONS="--commit-id=$COMMIT --branch=$BRANCH --environment=$REBENCH_ENV -df $PERSIST_IN-$TIMESTAMP"
 
 # First use the RIR container to run the benchmarks for RIR and PIR
 docker run --privileged=true -v "$ROOT_PATH:$DOCKER_OUT_VOL_NAME" $RIR_CONTAINER \

@@ -32,7 +32,7 @@ COMMIT=$(docker run $RIR_CONTAINER cat /opt/rir_version)
 echo "Commit $COMMIT"
 
 if [[ -z "$REBENCH_ENV" ]]; then
-  echo "Rebench environment missing, results will not be sent to speedcenter"
+  echo "Rebench environment missing. Results will not be sent to speedcenter"
 fi
 
 PATH_OPTIONS="$REBENCH_CONF_PATH $BENCHS_PATH"

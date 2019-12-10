@@ -12,6 +12,6 @@ execute <- function(n) {
   a = 1:n
   b = 1:n
   for (i in 1:10) {
-    convolve(a,b)
+    cat(convolve(a,b))
   }
 }

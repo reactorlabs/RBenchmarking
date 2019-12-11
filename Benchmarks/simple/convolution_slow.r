@@ -13,9 +13,12 @@ onvolveSlow <- function(x,y) {
 }
 
 execute <- function(n) {
-  a = 1:n
-  b = 1:n
+  a <- 1:n
+  b <- 1:n
+  checksum <- 0
   for (i in 1:10) {
-    cat(convolve(a,b)[[n]])
+    checksum <- checksum + convolve(a,b)[[n]]
   }
+  cat("Convolution ", n, " " , checksum, ": ")
+  checksum
 }

@@ -40,7 +40,7 @@ run <- function(args) {
     numIterations <- strtoi(args[[2]])
     benchmarkParameter <- strtoi(args[[3]])
 
-    source(file.path(".", paste(tolower(name), ".r", sep="")))
+    source(file.path(".", paste(name, ".r", sep="")))
     
     total <- as.numeric(doRuns(name, numIterations, benchmarkParameter));
     cat(name, ": ",

@@ -19,6 +19,7 @@ doRuns <- function(name, iterations, benchmarkParameter) {
     total <- 0
     class(name) <- tolower(name)
     for (i in 1:iterations) {
+        gc()
         startTime <- Sys.time()
         if (!innerBenchmarkLoop(name, benchmarkParameter)) {
             stop("Benchmark failed with incorrect result")

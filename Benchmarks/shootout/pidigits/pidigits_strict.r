@@ -106,15 +106,24 @@ rir.markFunction(cmp_elem, DepromisedArgs=TRUE)
 cmp_mag <- function(x, y) {
     x_len = length(x)
     y_len = length(y)
-    if (x_len < y_len) return(-1L)
-    if (x_len > y_len) return(1L)
-    for (i in 1:x_len)
+
+    
+    if (x_len < y_len) {  
+        return(-1L)
+    }
+    if (x_len > y_len) {
+        return(1L)
+    }
+  
+    for (i in 1:x_len) {
         if (c <- cmp_elem(x[[i]], y[[i]]))
-	    return(c)
+	        return(c)
+    }
     return(0L)
 }
-#rir.compile(cmp_mag)
-#rir.markFunction(cmp_mag, DepromisedArgs=TRUE)
+
+rir.compile(cmp_mag)
+rir.markFunction(cmp_mag, DepromisedArgs=TRUE)
 # Error in sub_mag(mag(x), mag(y)) : 
 #   attempt to select less than one element in integerOneIndex
 
@@ -212,12 +221,15 @@ add <- function(x, y) {
         return(c(x[[1]], add_mag(mag(x), mag(y))))
 
     c <- cmp_mag(mag(x), mag(y))
+  
     if (c == 0L)
         return(zero)
-    if (c > 0L)
+    if (c > 0L) {
         result_mag <- sub_mag(mag(x), mag(y))
-    else
+    }
+    else {
         result_mag <- sub_mag(mag(y), mag(x))
+    }
     return(c(sign_prod(c, x[[1]]),
              strip_leading_zero_elems(result_mag)))
 }
@@ -226,34 +238,44 @@ rir.markFunction(add, DepromisedArgs=TRUE)
 
 
 sub_mag <- function(big, little) {
+    
+    
     big_len = length(big)
     little_len = length(little)
     result <- integer(big_len)
     big_index <- big_len
     little_index <- little_len
+
+        
     difference <- 0L
 
+   
     # subtract common parts of both numbers
     while (little_index > 0L) {
+
         difference <- (big[[big_index]] - little[[little_index]] +
                        if (difference < 0L) -1L else 0L)
+   
         result[[big_index]] <- difference %% elem_max
         big_index <- big_index - 1L
         little_index <- little_index - 1L
     }
 
+ 
     # subtract remainder of longer number while borrow propagates
     borrow <- if (difference < 0L) -1 else 0L
     while (big_index > 0L && borrow) {
         borrow <- (result[[big_index]] <- big[[big_index]] - 1L) == -1L
         big_index <- big_index - 1L
     }
+ 
 
     # copy remainder of the longer number
     while (big_index > 0L) {
         result[[big_index]] <- big[[big_index]]
         big_index <- big_index - 1L
     }
+
 
     return(result)
 }
@@ -272,10 +294,15 @@ sub <- function(x, y) {
     c <- cmp_mag(mag(x), mag(y))
     if (c == 0L)
         return(zero)
-    if (c > 0L)
+    if (c > 0L) {
+       
         result_mag <- sub_mag(mag(x), mag(y))
-    else
+
+    }
+    else {
+      
         result_mag <- sub_mag(mag(y), mag(x))
+    }
     return(c(sign_prod(c, x[[1]]),
              strip_leading_zero_elems(result_mag)))
 }
@@ -503,5 +530,4 @@ rir.markFunction(pidigits, DepromisedArgs=TRUE)
 execute <- function(n) {
     pidigits(n)
 }
-
 

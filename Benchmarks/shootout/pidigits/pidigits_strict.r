@@ -453,9 +453,9 @@ rir.markFunction(log10_mag, DepromisedArgs=TRUE)
 
 
 bigint_pow10 <- function(n) c(1L, as.integer(10^(n %% elem_digits)), rep.int(0L, n %/% elem_digits))
-#rir.compile(bigint_pow10)   
-#rir.markFunction(bigint_pow10, DepromisedArgs=TRUE)
-# MANGLE ERROR
+rir.compile(bigint_pow10)   
+rir.markFunction(bigint_pow10, DepromisedArgs=TRUE)
+
 
 # Misc functions
 sign_prod <- function(x, y) (x == y) - (x != y)

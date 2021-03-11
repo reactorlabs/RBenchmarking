@@ -407,8 +407,9 @@ newKccaObject <- function(x, family, centers, group=NULL, simple=FALSE,
 
     z
 }
-rir.compile(newKccaObject)
-rir.markFunction(newKccaObject, DepromisedArgs=TRUE)
+#rir.compile(newKccaObject)
+#rir.markFunction(newKccaObject, DepromisedArgs=TRUE)
+# k not found
 
 newKccasimpleObject <- function(x, family, centers, group=NULL,
                                 distmat=NULL, ...)
@@ -435,8 +436,11 @@ newKccasimpleObject <- function(x, family, centers, group=NULL,
         cldist=cldist,
         ...)
 }
-rir.compile(newKccasimpleObject)
-rir.markFunction(newKccasimpleObject, DepromisedArgs=TRUE)
+#rir.compile(newKccasimpleObject)
+#rir.markFunction(newKccasimpleObject, DepromisedArgs=TRUE)
+#Error in initialize(value, ...) : object 'k' not found
+#Calls: run ... newKccasimpleObject -> new -> initialize -> initialize
+#Execution halted
 
 
 flexclust_kcca <-

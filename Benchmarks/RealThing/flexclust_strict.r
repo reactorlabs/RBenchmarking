@@ -12,8 +12,7 @@ list2object = function(from, to){
     names(from) = s[p]
     do.call("new", c(from, Class=to))
 }
-rir.compile(list2object)
-rir.markFunction(list2object, DepromisedArgs=TRUE)
+list2object <- rir.annotateDepromised(list2object)
 
 
 setClass("ModelEnv",
@@ -115,8 +114,7 @@ clusinfo <- function(cluster, cldist, simple=FALSE)
     }
     clusinfo
 }
-rir.compile(clusinfo)
-rir.markFunction(clusinfo, DepromisedArgs=TRUE)
+clusinfo <- rir.annotateDepromised(clusinfo)
 
 
 simple2kcca <- function(x, from, group=NULL, distmat=NULL)
@@ -154,8 +152,7 @@ simple2kcca <- function(x, from, group=NULL, distmat=NULL)
 
     z
 }
-rir.compile(simple2kcca)
-rir.markFunction(simple2kcca, DepromisedArgs=TRUE)
+simple2kcca <- rir.annotateDepromised(simple2kcca)
 
 computeClusterSim <- function(distmat, cluster)
 {
@@ -180,8 +177,7 @@ computeClusterSim <- function(distmat, cluster)
     diag(z) <- 1
     z
 }
-rir.compile(computeClusterSim)
-rir.markFunction(computeClusterSim, DepromisedArgs=TRUE)
+computeClusterSim <- rir.annotateDepromised(computeClusterSim)
 
 distEuclidean <- function(x, centers)
 {
@@ -194,8 +190,7 @@ distEuclidean <- function(x, centers)
     }
     z
 }
-rir.compile(distEuclidean)
-rir.markFunction(distEuclidean, DepromisedArgs=TRUE)
+distEuclidean <- rir.annotateDepromised(distEuclidean)
 
 
 kccaFamily <- function(which=NULL, dist=NULL,
@@ -278,8 +273,7 @@ kccaFamily <- function(which=NULL, dist=NULL,
 
     z
 }
-rir.compile(kccaFamily)
-rir.markFunction(kccaFamily, DepromisedArgs=TRUE)
+kccaFamily <- rir.annotateDepromised(kccaFamily)
 
 
 FAMILY_CLUSTER_ALLCENT <- expression({
@@ -342,8 +336,7 @@ minSumClusters <- function(cluster, group, distmat)
     }
     z
 }
-rir.compile(minSumClusters)
-rir.markFunction(minSumClusters, DepromisedArgs=TRUE)
+minSumClusters <- rir.annotateDepromised(minSumClusters)
 
 
 initCenters <- function(x, k, family, control)
@@ -374,8 +367,7 @@ initCenters <- function(x, k, family, control)
     }
     list(centers=centers, cluster=cluster, k=k)
 }
-rir.compile(initCenters)
-rir.markFunction(initCenters, DepromisedArgs=TRUE)
+initCenters <- rir.annotateDepromised(initCenters)
 
 
 kmeanspp <- function(x, k, family)
@@ -389,8 +381,7 @@ kmeanspp <- function(x, k, family)
     }
     centers
 }
-rir.compile(kmeanspp)
-rir.markFunction(kmeanspp, DepromisedArgs=TRUE)
+kmeanspp <- rir.annotateDepromised(kmeanspp)
 
 
 newKccaObject <- function(x, family, centers, group=NULL, simple=FALSE,
@@ -531,17 +522,14 @@ function (x, k, family = kccaFamily("kmeans"), weights = NULL,
         z@data <- ModelEnvMatrix(designMatrix = x)
     z
 }
-rir.compile(flexclust_kcca)
-rir.markFunction(flexclust_kcca, DepromisedArgs=TRUE)
+flexclust_kcca <- rir.annotateDepromised(flexclust_kcca)
 
 
 flexclust <- function(k) {
    km <- flexclust_kcca(data, k=k, control=list(initcent="kmeanspp", iter.max=10000))
    sum(km@cldist[,1]**2)
 }
-rir.compile(flexclust)
-rir.markFunction(flexclust, DepromisedArgs=TRUE)
-
+flexclust <- rir.annotateDepromised(flexclust)
 
 execute <- function(n) {
   set.seed(42)

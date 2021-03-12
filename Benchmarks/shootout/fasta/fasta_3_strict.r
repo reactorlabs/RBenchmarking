@@ -10,9 +10,7 @@ myrandom <- function(m) {
     myrandom_last <<- (myrandom_last * 3877L + 29573L) %% 139968L
     return(m * myrandom_last / 139968)
 }
-
-rir.compile(myrandom)
-rir.markFunction(myrandom, DepromisedArgs=TRUE)
+myrandom <- rir.annotateDepromised(myrandom)
 
 
 alu <- paste(
@@ -64,8 +62,7 @@ repeat_fasta <- function(s, count) {
         count <- count - line
     }
 }
-rir.compile(repeat_fasta)
-rir.markFunction(repeat_fasta, DepromisedArgs=TRUE)
+repeat_fasta <- rir.annotateDepromised(repeat_fasta)
 
 random_fasta <- function(genelist, count) {
     psum = cumsum(genelist[1,])
@@ -96,8 +93,7 @@ random_fasta <- function(genelist, count) {
     }
 
 }
-rir.compile(random_fasta)
-rir.markFunction(random_fasta, DepromisedArgs=TRUE)
+random_fasta <- rir.annotateDepromised(random_fasta)
 
 
 fasta_3 <- function(args) {
@@ -109,8 +105,7 @@ fasta_3 <- function(args) {
     cat(">THREE Homo sapiens frequency\n")
     random_fasta(homosapiens, 5L * n)
 }
-rir.compile(fasta_3)
-rir.markFunction(fasta_3, DepromisedArgs=TRUE)
+fasta_3 <- rir.annotateDepromised(fasta_3)
 
 execute <- function(n) {
     fasta_3(n)

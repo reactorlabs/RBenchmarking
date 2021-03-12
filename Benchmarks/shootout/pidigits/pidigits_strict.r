@@ -1,3 +1,10 @@
+cat <- rir.annotateDepromised(cat)
+paste <- rir.annotateDepromised(paste)
+nchar <- rir.annotateDepromised(nchar)
+substr <- rir.annotateDepromised(substr)
+
+
+
 
 # Constructors and string conversion functions
 
@@ -12,12 +19,11 @@ elem_max = 10000
 elem_digits = as.integer(log10(elem_max))
 
 signum <- function(v) v[[1]]
-rir.compile(signum)
-rir.markFunction(signum, DepromisedArgs=TRUE)
+signum <- rir.annotateDepromised(signum)
 
 mag <- function(v) v[2:length(v)]
-rir.compile(mag)
-rir.markFunction(mag, DepromisedArgs=TRUE)
+mag <- rir.annotateDepromised(mag)
+
 
 
 str_to_mag <- function(s) {
@@ -27,8 +33,7 @@ str_to_mag <- function(s) {
                 return(substr(s, i, nchar(s)))
         return("")
     }
-    rir.compile(strip_leading_zeros)
-    rir.markFunction(strip_leading_zeros, DepromisedArgs=TRUE)
+    strip_leading_zeros <- rir.annotateDepromised(strip_leading_zeros)
 
 
     len = nchar(s <- strip_leading_zeros(s))
@@ -44,8 +49,8 @@ str_to_mag <- function(s) {
     }
     return(sapply(chunks, as.integer))
 }
-rir.compile(str_to_mag)
-rir.markFunction(str_to_mag, DepromisedArgs=TRUE)
+str_to_mag <- rir.annotateDepromised(str_to_mag)
+
 
 
 bigint <- function(s, i=NA) {
@@ -61,8 +66,7 @@ bigint <- function(s, i=NA) {
         }
     return(c(if (length(mag)) sgn else 0L, mag))
 }
-rir.compile(bigint)
-rir.markFunction(bigint, DepromisedArgs=TRUE)
+bigint <- rir.annotateDepromised(bigint)
 
 
 to_int <- function(x) {
@@ -72,8 +76,7 @@ to_int <- function(x) {
             ret <- ret * elem_max + x[[i]]
     return(x[[1]] * ret)
 }
-rir.compile(to_int)
-rir.markFunction(to_int, DepromisedArgs=TRUE)
+to_int <- rir.annotateDepromised(to_int)
 
 mag_to_str <- function(x) {
     len = length(x)
@@ -84,8 +87,7 @@ mag_to_str <- function(x) {
                 x[[1]],
                 sapply(x[2:length(x)], function(e) zeropad(e, elem_digits)))))
 }
-rir.compile(mag_to_str)
-rir.markFunction(mag_to_str, DepromisedArgs=TRUE)
+mag_to_str <- rir.annotateDepromised(mag_to_str)
 
 
 to_str <- function(x) {
@@ -93,15 +95,13 @@ to_str <- function(x) {
         return("0")
     return(paste(sep="", if (x[[1]] < 0L) '-' else '', mag_to_str(mag(x))))
 }
-rir.compile(to_str)
-rir.markFunction(to_str, DepromisedArgs=TRUE)
+to_str <- rir.annotateDepromised(to_str)
 
 
 # Comparison functions
 
 cmp_elem <- function(x, y) (x > y) - (x < y)
-rir.compile(cmp_elem)
-rir.markFunction(cmp_elem, DepromisedArgs=TRUE)
+cmp_elem <- rir.annotateDepromised(cmp_elem)
 
 cmp_mag <- function(x, y) {
     x_len = length(x)
@@ -121,11 +121,7 @@ cmp_mag <- function(x, y) {
     }
     return(0L)
 }
-
-rir.compile(cmp_mag)
-rir.markFunction(cmp_mag, DepromisedArgs=TRUE)
-# Error in sub_mag(mag(x), mag(y)) : 
-#   attempt to select less than one element in integerOneIndex
+cmp_mag <- rir.annotateDepromised(cmp_mag)
 
 
 cmp <- function(x, y) {
@@ -138,32 +134,25 @@ cmp <- function(x, y) {
     }
     return((x_sign > y_sign) - (x_sign < y_sign))
 }
-rir.compile(cmp)
-rir.markFunction(cmp, DepromisedArgs=TRUE)
+cmp <- rir.annotateDepromised(cmp)
 
 eq <- function(x, y) cmp(x, y) == 0L
-rir.compile(eq)
-rir.markFunction(eq, DepromisedArgs=TRUE)
+eq <- rir.annotateDepromised(eq)
 
 ne <- function(x, y) cmp(x, y) != 0L
-rir.compile(ne)
-rir.markFunction(ne, DepromisedArgs=TRUE)
+ne <- rir.annotateDepromised(ne)
 
 le <- function(x, y) cmp(x, y) <= 0L
-rir.compile(le)
-rir.markFunction(le, DepromisedArgs=TRUE)
+le <- rir.annotateDepromised(le)
 
 lt <- function(x, y) cmp(x, y) < 0L
-rir.compile(lt)
-rir.markFunction(lt, DepromisedArgs=TRUE)
+lt <- rir.annotateDepromised(lt)
 
 ge <- function(x, y) cmp(x, y) >= 0L
-rir.compile(ge)
-rir.markFunction(ge, DepromisedArgs=TRUE)
+ge <- rir.annotateDepromised(ge)
 
 gt <- function(x, y) cmp(x, y) > 0L
-rir.compile(gt)
-rir.markFunction(gt, DepromisedArgs=TRUE)
+gt <- rir.annotateDepromised(gt)
 
 
 # Arithmetic operations
@@ -208,8 +197,7 @@ add_mag <- function(x, y) {
         return(c(0x01L, result))
     return(result)
 }
-rir.compile(add_mag)
-rir.markFunction(add_mag, DepromisedArgs=TRUE)
+add_mag <- rir.annotateDepromised(add_mag)
 
 
 add <- function(x, y) {
@@ -233,8 +221,7 @@ add <- function(x, y) {
     return(c(sign_prod(c, x[[1]]),
              strip_leading_zero_elems(result_mag)))
 }
-rir.compile(add)
-rir.markFunction(add, DepromisedArgs=TRUE)
+add <- rir.annotateDepromised(add)
 
 
 sub_mag <- function(big, little) {
@@ -279,9 +266,8 @@ sub_mag <- function(big, little) {
 
     return(result)
 }
-rir.compile(sub_mag)
-rir.markFunction(sub_mag, DepromisedArgs=TRUE)
-#attempt to select less than one elemen
+sub_mag <- rir.annotateDepromised(sub_mag)
+
 
 sub <- function(x, y) {
     if (y[[1]] == 0L)
@@ -306,13 +292,11 @@ sub <- function(x, y) {
     return(c(sign_prod(c, x[[1]]),
              strip_leading_zero_elems(result_mag)))
 }
-rir.compile(sub)
-rir.markFunction(sub, DepromisedArgs=TRUE)
+sub <- rir.annotateDepromised(sub)
 
 
 negate <- function(x) c(-x[[1]], x[2:length(x)])
-rir.compile(negate)
-rir.markFunction(negate, DepromisedArgs=TRUE)
+negate <- rir.annotateDepromised(negate)
 
 
 multiply_mag <- function(x, y) {
@@ -348,8 +332,7 @@ multiply_mag <- function(x, y) {
     }
     return(c)
 }
-rir.compile(multiply_mag)
-rir.markFunction(multiply_mag, DepromisedArgs=TRUE)
+multiply_mag <- rir.annotateDepromised(multiply_mag)
 
 
 mul <- function(x, y) {
@@ -359,8 +342,7 @@ mul <- function(x, y) {
     return(c(sign_prod(x[[1]], y[[1]]),
             strip_leading_zero_elems(multiply_mag(mag(x), mag(y)))))
 }
-rir.compile(mul)
-rir.markFunction(mul, DepromisedArgs=TRUE)
+mul <- rir.annotateDepromised(mul)
 
 
 div_mag <- function(x_mag, y_mag) {
@@ -395,8 +377,7 @@ div_mag <- function(x_mag, y_mag) {
     }
     return(mag(lo))
 }
-rir.compile(div_mag)
-rir.markFunction(div_mag, DepromisedArgs=TRUE)
+div_mag <- rir.annotateDepromised(div_mag)
 
 
 div <- function(x, y) {
@@ -410,8 +391,7 @@ div <- function(x, y) {
         return(zero)
     return(c(sign_prod(x[[1]], y[[1]]), div_mag(mag(x), mag(y))))
 }
-rir.compile(div)
-rir.markFunction(div, DepromisedArgs=TRUE)
+substr <- rir.annotateDepromised(substr)
 
 
 # Helper arithmetic functions
@@ -434,8 +414,7 @@ div2_mag <- function(x) {
     }
     return(result)
 }
-rir.compile(div2_mag)
-rir.markFunction(div2_mag, DepromisedArgs=TRUE)
+div2_mag <- rir.annotateDepromised(div2_mag)
 
 
 div2 <- function(x) {
@@ -443,24 +422,20 @@ div2 <- function(x) {
         return(zero)
     return(c(x[[1]], div2_mag(mag(x))))
 }
-rir.compile(div2)
-rir.markFunction(div2, DepromisedArgs=TRUE)
+div2 <- rir.annotateDepromised(div2)
 
 
 log10_mag <- function(m) elem_digits * (length(m) - 1L) + as.integer(log(m[[1]], 10))
-rir.compile(log10_mag)
-rir.markFunction(log10_mag, DepromisedArgs=TRUE)
+log10_mag <- rir.annotateDepromised(log10_mag)
 
 
 bigint_pow10 <- function(n) c(1L, as.integer(10^(n %% elem_digits)), rep.int(0L, n %/% elem_digits))
-rir.compile(bigint_pow10)   
-rir.markFunction(bigint_pow10, DepromisedArgs=TRUE)
+bigint_pow10 <- rir.annotateDepromised(bigint_pow10)
 
 
 # Misc functions
 sign_prod <- function(x, y) (x == y) - (x != y)
-rir.compile(sign_prod)
-rir.markFunction(sign_prod, DepromisedArgs=TRUE)
+sign_prod <- rir.annotateDepromised(sign_prod)
 
 
 strip_leading_zero_elems <- function(x) {
@@ -469,14 +444,12 @@ strip_leading_zero_elems <- function(x) {
             return(x[i:length(x)])
     return(zero_mag)
 }
-rir.compile(strip_leading_zero_elems)
-rir.markFunction(strip_leading_zero_elems, DepromisedArgs=TRUE)
+strip_leading_zero_elems <- rir.annotateDepromised(strip_leading_zero_elems)
 
 
 zeropad <- function(s, n)
     paste(sep="", paste(collapse="", rep('0', max(0L, n - nchar(s)))), s)
-rir.compile(zeropad)
-rir.markFunction(zeropad, DepromisedArgs=TRUE)
+zeropad <- rir.annotateDepromised(zeropad)
 
 
 # PIDIGITS program
@@ -501,7 +474,8 @@ pidigits <- function(args) {
         a <- mul(a, k1_big)
         d <- mul(d, k1_big)
         if (ge(a, n)) {
-            n3a <- add(mul(n, THREE), a)
+            xx <- mul(n, THREE)
+            n3a <- add(xx, a)
             t <- div(n3a, d)
 	    td = mul(t, d)
             u <- add(sub(n3a, td), n)
@@ -523,8 +497,7 @@ pidigits <- function(args) {
         }
     }
 }
-rir.compile(pidigits)
-rir.markFunction(pidigits, DepromisedArgs=TRUE)
+pidigits <- rir.annotateDepromised(pidigits)
 
 
 execute <- function(n) {

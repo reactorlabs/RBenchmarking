@@ -12,13 +12,11 @@ tree <- function(item, depth) {
         tree(2L * item - 1L, depth - 1L),
         tree(2L * item, depth - 1L)))
 }
-rir.compile(tree)
-rir.markFunction(tree, DepromisedArgs=TRUE)
+tree <- rir.annotateDepromised(tree)
 
 check <- function(tree)
     if(is.na(tree[[2]][[1]])) tree[[1]] else tree[[1]] + check(tree[[2]]) - check(tree[[3]])
-rir.compile(check)
-rir.markFunction(check, DepromisedArgs=TRUE)
+check <- rir.annotateDepromised(check)
 
 
 binarytrees_2 <- function(args) {
@@ -45,8 +43,7 @@ binarytrees_2 <- function(args) {
     cat(sep="", "long lived tree of depth ", max_depth, "\t check: ", 
         check(long_lived_tree), "\n")
 }
-rir.compile(binarytrees_2)
-rir.markFunction(binarytrees_2, DepromisedArgs=TRUE)
+binarytrees_2 <- rir.annotateDepromised(binarytrees_2)
 
 
 

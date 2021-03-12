@@ -67,8 +67,7 @@ repeat_fasta <- function(s, count) {
 	count <- count - line
     }
 }
-rir.compile(repeat_fasta)
-rir.markFunction(repeat_fasta, DepromisedArgs=TRUE)
+repeat_fasta <- rir.annotateDepromised(repeat_fasta)
 
 
 random_fasta <- function(genelist, count) {
@@ -102,8 +101,7 @@ random_fasta <- function(genelist, count) {
 	count <- count - line
     }
 }
-rir.compile(random_fasta)
-rir.markFunction(random_fasta, DepromisedArgs=TRUE)
+random_fasta <- rir.annotateDepromised(random_fasta)
 
 
 fastaredux_naive <- function(args) {

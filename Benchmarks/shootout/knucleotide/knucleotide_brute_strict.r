@@ -17,8 +17,7 @@ gen_freq <- function(seq, frame) {
     }
     return(freqs)
 }
-rir.compile(gen_freq)
-rir.markFunction(gen_freq, DepromisedArgs=TRUE)
+gen_freq <- rir.annotateDepromised(gen_freq)
 
 
 gen_freq <- function(seq, frame) { # CTK: duplicate method
@@ -33,8 +32,7 @@ gen_freq <- function(seq, frame) { # CTK: duplicate method
     }
     return(freqs)
 }
-rir.compile(gen_freq)
-rir.markFunction(gen_freq, DepromisedArgs=TRUE)
+gen_freq <- rir.annotateDepromised(gen_freq)
 
 
 sort_seq <- function(seq, len) {
@@ -49,8 +47,7 @@ sort_seq <- function(seq, len) {
     cat(paste(seqs[inds], 100 * fs[inds] / sum(fs), collapse="\n"),
         "\n")
 }
-rir.compile(sort_seq)
-rir.markFunction(sort_seq, DepromisedArgs=TRUE)
+sort_seq <- rir.annotateDepromised(sort_seq)
 
 
 find_seq <- function(seq, s) {
@@ -59,8 +56,7 @@ find_seq <- function(seq, s) {
         return(cnt)
     return(0L)
 }
-rir.compile(find_seq)
-rir.markFunction(find_seq, DepromisedArgs=TRUE)
+find_seq <- rir.annotateDepromised(find_seq)
 
 
 knucleotide_brute <- function(args) {
@@ -95,9 +91,7 @@ knucleotide_brute <- function(args) {
     for (s in c("GGT", "GGTA", "GGTATT", "GGTATTTTAATT", "GGTATTTTAATTTATAGT"))
         cat(find_seq(seq, tolower(s)), sep="\t", s, "\n")
 }
-rir.compile(knucleotide_brute)
-rir.markFunction(knucleotide_brute, DepromisedArgs=TRUE)
-
+knucleotide_brute <- rir.annotateDepromised(knucleotide_brute)
 
 paste. <- function (..., digits=16, sep=" ", collapse=NULL) {
     args <- list(...)

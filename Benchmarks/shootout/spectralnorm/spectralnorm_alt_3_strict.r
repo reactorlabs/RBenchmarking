@@ -10,8 +10,7 @@ spectralnorm_alt_3 <- function(args) {
     options(digits=10)
 
     eval_A <- function(i, j) eval_A_cache[[i, j]]
-    rir.compile(eval_A)
-    rir.markFunction(eval_A, DepromisedArgs=TRUE)
+    eval_A <- rir.annotateDepromised(eval_A)
 
     eval_A_times_u <- function(u) {
         #    eval_A_mat <- outer(seq(n), seq(n), FUN=eval_A)
@@ -21,8 +20,7 @@ spectralnorm_alt_3 <- function(args) {
                 eval_A_mat[[i, j]] <- eval_A(i, j)
         return(u %*% t(eval_A_mat))
     }
-    rir.compile(eval_A_times_u)
-    rir.markFunction(eval_A_times_u, DepromisedArgs=TRUE)
+    eval_A_times_u <- rir.annotateDepromised(eval_A_times_u)
 
 
     eval_At_times_u <- function(u) {
@@ -33,13 +31,11 @@ spectralnorm_alt_3 <- function(args) {
                 eval_At_mat[[i, j]] <- eval_A(i, j)
         return(u %*% eval_At_mat)
     }
-    rir.compile(eval_At_times_u)
-    rir.markFunction(eval_At_times_u, DepromisedArgs=TRUE)
+    eval_At_times_u <- rir.annotateDepromised(eval_At_times_u)
 
 
     eval_AtA_times_u <- function(u) eval_At_times_u(eval_A_times_u(u))
-    rir.compile(eval_AtA_times_u)
-    rir.markFunction(eval_AtA_times_u, DepromisedArgs=TRUE)
+    eval_AtA_times_u <- rir.annotateDepromised(eval_AtA_times_u)
 
     eval_A_cache <- matrix(0, n, n)
         for (i in 1:n)
@@ -54,8 +50,7 @@ spectralnorm_alt_3 <- function(args) {
 
     cat(sqrt(sum(u * v) / sum(v * v)), "\n")
 }
-rir.compile(spectralnorm_alt_3)
-rir.markFunction(spectralnorm_alt_3, DepromisedArgs=TRUE)
+spectralnorm_alt_3 <- rir.annotateDepromised(spectralnorm_alt_3)
 
 
 execute <- function(n) {

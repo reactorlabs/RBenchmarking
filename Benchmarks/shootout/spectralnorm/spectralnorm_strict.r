@@ -10,8 +10,8 @@ spectralnorm <- function(args) {
     options(digits=10)
 
     eval_A <- function(i, j) 1 / ((i + j) * (i + j + 1) / 2 + i + 1)
-    rir.compile(eval_A)
-    rir.markFunction(eval_A, DepromisedArgs=TRUE)
+    eval_A <- rir.annotateDepromised(eval_A)
+
 
     eval_A_times_u <- function(u) {
         ret <- double(n)
@@ -23,8 +23,7 @@ spectralnorm <- function(args) {
         }
         return(ret)
     }
-    rir.compile(eval_A_times_u)
-    rir.markFunction(eval_A_times_u, DepromisedArgs=TRUE)
+    eval_A_times_u <- rir.annotateDepromised(eval_A_times_u)
 
     eval_At_times_u <- function(u) {
         ret <- double(n)
@@ -36,12 +35,11 @@ spectralnorm <- function(args) {
         }
         return(ret)
     }
-    rir.compile(eval_At_times_u)
-    rir.markFunction(eval_At_times_u, DepromisedArgs=TRUE)
+    eval_At_times_u <- rir.annotateDepromised(eval_At_times_u)
+
 
     eval_AtA_times_u <- function(u) eval_At_times_u(eval_A_times_u(u))
-    rir.compile(eval_AtA_times_u)
-    rir.markFunction(eval_AtA_times_u, DepromisedArgs=TRUE)
+    eval_AtA_times_u <- rir.annotateDepromised(eval_AtA_times_u)
 
 
     n1 <- n - 1
@@ -59,8 +57,7 @@ spectralnorm <- function(args) {
 #    sqrt(sum(u * v) / sum(v * v))    
     u
 }
-rir.compile(spectralnorm)
-rir.markFunction(spectralnorm, DepromisedArgs=TRUE)
+spectralnorm <- rir.annotateDepromised(spectralnorm)
 
 
 execute <- function(n) {

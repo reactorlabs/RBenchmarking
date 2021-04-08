@@ -13,7 +13,19 @@ innerBenchmarkLoop <- function(x, ...) {
 
 innerBenchmarkLoop.default <- function(class, benchmarkParameter, innerIterations) {
     for (i in 1:innerIterations) {
-        if (!verifyResult(execute(benchmarkParameter), benchmarkParameter)) {
+        
+        .Call("rirResetCreatedPromises")
+        .Call("rirResetForcedPromisesInterpreter")
+        .Call("rirResetInlinedPromises")
+        
+        result <- execute(benchmarkParameter)
+        recordTime(
+            class, 
+            .Call("rirCreatedPromises"), 
+            .Call("rirForcedPromisesInterpreter"), 
+            .Call("rirInlinedPromises"))
+
+        if (!verifyResult(result, benchmarkParameter)) {
             return(FALSE)
         }
     }
@@ -21,19 +33,38 @@ innerBenchmarkLoop.default <- function(class, benchmarkParameter, innerIteration
 }
 
 doRuns <- function(name, iterations, benchmarkParameter, innerIterations) {
+
+   
+
+
+    recordTime <<- function(benchmarkName, createdPromises, forcedInterpreter, inlinedPromises){
+        line <- paste(benchmarkName, ",", createdPromises,",", forcedInterpreter, ",", createdPromises - forcedInterpreter, ",", inlinedPromises)
+        write(line, file = "/home/skrynski/benchmarks/dataPromises",
+        append = TRUE)
+
+    }
+
+   
     total <- 0
     class(name) <- tolower(name)
     for (i in 1:iterations) {
+        
+
         startTime <- Sys.time()
+
         if (!innerBenchmarkLoop(name, benchmarkParameter, innerIterations)) {
             stop("Benchmark failed with incorrect result")
         }
+       
         endTime <- Sys.time()
         runTime <- (as.numeric(endTime) - as.numeric(startTime)) * 1000000
 
         cat(name, ": iterations=1 runtime: ", round(runTime), "us\n", sep = "")
         total <- total + runTime
+        
     }
+   
+
     total
 }
 

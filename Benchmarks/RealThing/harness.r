@@ -34,7 +34,7 @@ doRuns <- function(name, iterations, benchmarkParameter) {
    
      recordTime <<- function(benchmarkName, createdPromises, forcedInterpreter, inlinedPromises){
         line <- paste(benchmarkName, ",", createdPromises,",", forcedInterpreter, ",", createdPromises - forcedInterpreter, ",", inlinedPromises)
-        write(line, file = "/home/skrynski/benchmarks/dataPromises",
+        write(line, file = "˜/dataPromises",
         append = TRUE)
 
     }

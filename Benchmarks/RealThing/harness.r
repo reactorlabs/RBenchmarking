@@ -15,14 +15,17 @@ innerBenchmarkLoop.default <- function(class, benchmarkParameter) {
 
     .Call("rirResetCreatedPromises")
     .Call("rirResetForcedPromisesInterpreter")
-    .Call("rirResetInlinedPromises")
+    .Call("rirResetAddedForces")
+    .Call("rirResetForcedAndInlined")
 
     result <- execute(benchmarkParameter)
     recordTime(
             class, 
             .Call("rirCreatedPromises"), 
             .Call("rirForcedPromisesInterpreter"), 
-            .Call("rirInlinedPromises"))   
+            .Call("rirAddedForces"),
+            .Call("rirForcedAndInlined")
+            )   
 
     verifyResult(result, benchmarkParameter)
 }
@@ -31,10 +34,13 @@ doRuns <- function(name, iterations, benchmarkParameter) {
 
 
 
-   
-     recordTime <<- function(benchmarkName, createdPromises, forcedInterpreter, inlinedPromises){
-        line <- paste(benchmarkName, ",", createdPromises,",", forcedInterpreter, ",", createdPromises - forcedInterpreter, ",", inlinedPromises)
-        write(line, file = "˜/dataPromises",
+  
+    recordTime <<- function(benchmarkName, createdPromises, forcedInterpreter, addedForces, forcedAndInlined){
+        line <- paste(benchmarkName, ",", createdPromises,",", 
+                forcedInterpreter, ",", createdPromises - forcedInterpreter,
+                 ",", addedForces, ",", forcedAndInlined)
+        
+        write(line, file = "~/dataPromises",
         append = TRUE)
 
     }

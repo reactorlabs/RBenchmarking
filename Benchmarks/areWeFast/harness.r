@@ -1,32 +1,25 @@
 innerBenchmarkLoop.default <- function(class, iterations) {
 
-  .Call("rirResetCreatedPromises")
-  .Call("rirResetCreatedPromisesAST")
-  .Call("rirResetInlinedPromises")
-  
 
   for (i in 1:iterations) {
 
-
     if (!verifyResult(execute(), iterations)) {
         return(FALSE)
-      }
+    }
 
   }
 
-  recordMeasurement(
-  
-      .Call("rirCreatedPromises"), 
-      .Call("rirCreatedPromisesAST"),
-      .Call("rirInlinedPromises")
-      )
-
-
+ 
   return(TRUE)
 }
 
 innerBenchmarkLoop <- function(x, ...) {
+
+
   UseMethod("innerBenchmarkLoop", x)
+
+  
+
 }
 
 
@@ -39,7 +32,7 @@ doRuns <- function(name, iterations, innerIterations) {
             
 
         line <- paste(suite, benchmarkName,paste(suite,benchmarkName, sep="/"),
-          createdPromises,createdPromisesAST, inlinedPromises, sep=",")     
+            createdPromises,createdPromisesAST, inlinedPromises, sep=",")     
         write(line, file = "~/dataPromises",
         append = TRUE)
 
@@ -49,10 +42,26 @@ doRuns <- function(name, iterations, innerIterations) {
   total <- 0
   class(name) = tolower(name)
   for (i in 1:iterations) {
+    
     startTime =  Sys.time()
+
+    .Call("rirResetCreatedPromises")
+    .Call("rirResetCreatedPromisesAST")
+    .Call("rirResetInlinedPromises")
+  
+
     if (!innerBenchmarkLoop(name, innerIterations)) {
+      
       stop ("Benchmark failed with incorrect result")
     }
+
+     recordMeasurement(
+  
+      .Call("rirCreatedPromises"), 
+      .Call("rirCreatedPromisesAST"),
+      .Call("rirInlinedPromises")
+      )
+    
     endTime <- Sys.time()
     runTime = (as.numeric(endTime) - as.numeric(startTime)) * 1000000 
 

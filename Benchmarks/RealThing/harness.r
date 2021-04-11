@@ -37,7 +37,7 @@ doRuns <- function(name, iterations, benchmarkParameter) {
 
     recordMeasurement <<- function(createdPromises,createdPromisesAST, inlinedPromises){
 
-            suite <- "real_thing"
+            suite <- paste("real_thing", if (grepl("strict", name)) "_annotations" else "", sep="")
             benchmarkName <- tail(strsplit(name, "/")[[1]], n=1)
                 
 

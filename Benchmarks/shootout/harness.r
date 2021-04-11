@@ -12,15 +12,54 @@ innerBenchmarkLoop <- function(x, ...) {
 }
 
 innerBenchmarkLoop.default <- function(class, benchmarkParameter, innerIterations) {
+    
+    
+    
     for (i in 1:innerIterations) {
-        if (!verifyResult(execute(benchmarkParameter), benchmarkParameter)) {
+        
+        .Call("rirResetCreatedPromises")
+        .Call("rirResetCreatedPromisesAST")
+        .Call("rirResetInlinedPromises")
+    
+       
+        
+        result <- execute(benchmarkParameter)
+        recordMeasurement(
+            .Call("rirCreatedPromises"),
+            .Call("rirCreatedPromisesAST"),
+            .Call("rirInlinedPromises")
+            
+            )
+
+
+        if (!verifyResult(result, benchmarkParameter)) {
             return(FALSE)
         }
     }
     return(TRUE)
 }
 
+
+
+
 doRuns <- function(name, iterations, benchmarkParameter, innerIterations) {
+ 
+    recordMeasurement <<- function(createdPromises,createdPromisesAST, inlinedPromises){
+
+        suite <- "shootout"
+        benchmarkName <- tail(strsplit(name, "/")[[1]], n=1)
+            
+
+        line <- paste(suite,  benchmarkName, paste(suite,benchmarkName, sep="/"), 
+          createdPromises, createdPromisesAST, inlinedPromises, sep=",")     
+        write(line, file = "~/dataPromises",
+        append = TRUE)
+
+    }
+
+    
+    
+
     total <- 0
     class(name) <- tolower(name)
     for (i in 1:iterations) {

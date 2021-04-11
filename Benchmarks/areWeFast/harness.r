@@ -1,9 +1,27 @@
 innerBenchmarkLoop.default <- function(class, iterations) {
+
+  .Call("rirResetCreatedPromises")
+  .Call("rirResetCreatedPromisesAST")
+  .Call("rirResetInlinedPromises")
+  
+
   for (i in 1:iterations) {
+
+
     if (!verifyResult(execute(), iterations)) {
-      return(FALSE)
-    }
+        return(FALSE)
+      }
+
   }
+
+  recordMeasurement(
+  
+      .Call("rirCreatedPromises"), 
+      .Call("rirCreatedPromisesAST"),
+      .Call("rirInlinedPromises")
+      )
+
+
   return(TRUE)
 }
 
@@ -11,7 +29,23 @@ innerBenchmarkLoop <- function(x, ...) {
   UseMethod("innerBenchmarkLoop", x)
 }
 
+
 doRuns <- function(name, iterations, innerIterations) {
+
+  recordMeasurement <<- function(createdPromises,createdPromisesAST, inlinedPromises){
+
+        suite <- "are-we-fast-r"
+        benchmarkName <- tail(strsplit(name, "/")[[1]], n=1)
+            
+
+        line <- paste(suite, benchmarkName,paste(suite,benchmarkName, sep="/"),
+          createdPromises,createdPromisesAST, inlinedPromises, sep=",")     
+        write(line, file = "~/dataPromises",
+        append = TRUE)
+
+  }
+
+  
   total <- 0
   class(name) = tolower(name)
   for (i in 1:iterations) {

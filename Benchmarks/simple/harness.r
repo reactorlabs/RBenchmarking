@@ -13,56 +13,67 @@ innerBenchmarkLoop <- function(x, ...) {
 
 innerBenchmarkLoop.default <- function(class, benchmarkParameter) {
 
-    .Call("rirResetCreatedPromises")
-    .Call("rirResetCreatedPromisesAST")
-    .Call("rirResetInlinedPromises")
+    # .Call("rirResetCreatedPromises")
+    # .Call("rirResetCreatedPromisesAST")
+    # .Call("rirResetInlinedPromises")
 
     
     result <- execute(benchmarkParameter)
-    recordMeasurement(
+    # recordMeasurement(
         
-        .Call("rirCreatedPromises"),
-        .Call("rirCreatedPromisesAST"),
-        .Call("rirInlinedPromises")
-        )
+    #     .Call("rirCreatedPromises"),
+    #     .Call("rirCreatedPromisesAST"),
+    #     .Call("rirInlinedPromises")
+    #     )
 
     verifyResult(result, benchmarkParameter)
 }
 
-recordMeasurement <- function(benchmarkName, createdPromises,createdPromisesAST, inlinedPromises){
-    line <- paste(benchmarkName, createdPromises, createdPromisesAST,inlinedPromises, sep=",")
-    write(line, file = "~/dataPromises",
-    append = TRUE)
-}
+
 
 doRuns <- function(name, iterations, benchmarkParameter) {
 
-    recordMeasurement <<- function(createdPromises,createdPromisesAST, inlinedPromises){
+       recordMeasurement <<- function(GC_time){
 
-        suite <- "simple"
+        suite <- paste("simple", if (grepl("strict", name)) "_annotations" else "", sep="")
         benchmarkName <- tail(strsplit(name, "/")[[1]], n=1)
             
 
-        line <- paste(suite,  benchmarkName, paste(suite,benchmarkName, sep="/"),
-                createdPromises, createdPromisesAST, inlinedPromises, sep=",")     
-        write(line, file = "~/dataPromises",
+        line <- paste(suite,  benchmarkName, paste(suite,benchmarkName, sep="/"), 
+          GC_time, sep=",")     
+        write(line, file = "~/dataGC.csv",
         append = TRUE)
 
     }
 
     total <- 0
     class(name) <- tolower(name)
+    timeGC_start <- 0
+
     for (i in 1:iterations) {
-        startTime <- Sys.time()
+
+        if (i==6) {
+                gc()
+                timeGC_start <- gc.time(TRUE)
+        }
+
+
+        #startTime <- Sys.time()
         if (!innerBenchmarkLoop(name, benchmarkParameter)) {
             stop("Benchmark failed with incorrect result")
         }
-        endTime <- Sys.time()
-        runTime <- (as.numeric(endTime) - as.numeric(startTime)) * 1000000
+        #endTime <- Sys.time()
+        #runTime <- (as.numeric(endTime) - as.numeric(startTime)) * 1000000
 
-        cat(name, ": iterations=1 runtime: ", round(runTime), "us\n", sep = "")
-        total <- total + runTime
+        #cat(name, ": iterations=1 runtime: ", round(runTime), "us\n", sep = "")
+        #total <- total + runTime
     }
+
+
+    timeGC_end <- gc.time(TRUE)  
+    recordMeasurement(timeGC_end[[1]] -timeGC_start[[1]])
+
+
     total
 }
 

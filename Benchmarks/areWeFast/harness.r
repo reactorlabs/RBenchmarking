@@ -25,29 +25,37 @@ innerBenchmarkLoop <- function(x, ...) {
 
 doRuns <- function(name, iterations, innerIterations) {
 
-  recordMeasurement <<- function(createdPromises,createdPromisesAST, inlinedPromises){
+      recordMeasurement <<- function(GC_time){
 
-        suite <- "are-we-fast-r"
+        suite <- paste("are-we-fast-r", if (grepl("strict", name)) "_annotations" else "", sep="")
         benchmarkName <- tail(strsplit(name, "/")[[1]], n=1)
             
 
-        line <- paste(suite, benchmarkName,paste(suite,benchmarkName, sep="/"),
-            createdPromises,createdPromisesAST, inlinedPromises, sep=",")     
-        write(line, file = "~/dataPromises",
+        line <- paste(suite,  benchmarkName, paste(suite,benchmarkName, sep="/"), 
+          GC_time, sep=",")     
+        write(line, file = "~/dataGC.csv",
         append = TRUE)
 
-  }
+    }
 
   
   total <- 0
   class(name) = tolower(name)
+
+  timeGC_start <- 0
+
   for (i in 1:iterations) {
     
-    startTime =  Sys.time()
 
-    .Call("rirResetCreatedPromises")
-    .Call("rirResetCreatedPromisesAST")
-    .Call("rirResetInlinedPromises")
+    if (i==6) {
+          gc()
+          timeGC_start <- gc.time(TRUE)
+    }
+    #startTime =  Sys.time()
+
+    # .Call("rirResetCreatedPromises")
+    # .Call("rirResetCreatedPromisesAST")
+    # .Call("rirResetInlinedPromises")
   
 
     if (!innerBenchmarkLoop(name, innerIterations)) {
@@ -55,20 +63,26 @@ doRuns <- function(name, iterations, innerIterations) {
       stop ("Benchmark failed with incorrect result")
     }
 
-     recordMeasurement(
+    #  recordMeasurement(
   
-      .Call("rirCreatedPromises"), 
-      .Call("rirCreatedPromisesAST"),
-      .Call("rirInlinedPromises")
-      )
+    #   .Call("rirCreatedPromises"), 
+    #   .Call("rirCreatedPromisesAST"),
+    #   .Call("rirInlinedPromises")
+    #   )
     
-    endTime <- Sys.time()
-    runTime = (as.numeric(endTime) - as.numeric(startTime)) * 1000000 
+    #endTime <- Sys.time()
+    #runTime = (as.numeric(endTime) - as.numeric(startTime)) * 1000000 
 
-    cat(paste(paste(paste(name, ": iterations=1 runtime:", sep = ""), 
-            round(runTime)), "us\n", sep = ""))
-    total = total + runTime
+    # cat(paste(paste(paste(name, ": iterations=1 runtime:", sep = ""), 
+    #         round(runTime)), "us\n", sep = ""))
+    # total = total + runTime
   }
+
+  timeGC_end <- gc.time(TRUE)  
+  recordMeasurement(timeGC_end[[1]] -timeGC_start[[1]])
+
+
+
   return (total)
 }
 

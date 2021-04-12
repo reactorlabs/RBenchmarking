@@ -11,19 +11,22 @@ innerBenchmarkLoop <- function(x, ...) {
     UseMethod("innerBenchmarkLoop", x)
 }
 
+rir.annotateDepromised <- function(x) x
+
 innerBenchmarkLoop.default <- function(class, benchmarkParameter) {
 
-    .Call("rirResetCreatedPromises")
-    .Call("rirResetCreatedPromisesAST")
-    .Call("rirResetInlinedPromises")
+    .Internal(resetCreatedPromises())
+    #.Call("rirResetCreatedPromisesAST")
+    #.Call("rirResetInlinedPromises")
 
     
     result <- execute(benchmarkParameter)
     recordMeasurement(
         
-        .Call("rirCreatedPromises"),
-        .Call("rirCreatedPromisesAST"),
-        .Call("rirInlinedPromises")
+        .Internal(createdPromises()),
+        0,0
+        #.Call("rirCreatedPromisesAST"),
+        #.Call("rirInlinedPromises")
         )
 
     verifyResult(result, benchmarkParameter)

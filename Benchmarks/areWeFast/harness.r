@@ -21,6 +21,7 @@ innerBenchmarkLoop <- function(x, ...) {
   
 
 }
+rir.annotateDepromised <- function(x) x
 
 
 doRuns <- function(name, iterations, innerIterations) {
@@ -45,9 +46,9 @@ doRuns <- function(name, iterations, innerIterations) {
     
     startTime =  Sys.time()
 
-    .Call("rirResetCreatedPromises")
-    .Call("rirResetCreatedPromisesAST")
-    .Call("rirResetInlinedPromises")
+    .Internal(resetCreatedPromises())
+    #.Call("rirResetCreatedPromisesAST")
+    #.Call("rirResetInlinedPromises")
   
 
     if (!innerBenchmarkLoop(name, innerIterations)) {
@@ -57,9 +58,10 @@ doRuns <- function(name, iterations, innerIterations) {
 
      recordMeasurement(
   
-      .Call("rirCreatedPromises"), 
-      .Call("rirCreatedPromisesAST"),
-      .Call("rirInlinedPromises")
+      .Internal(createdPromises()), 
+      0,0
+      #.Call("rirCreatedPromisesAST"),
+      #.Call("rirInlinedPromises")
       )
     
     endTime <- Sys.time()

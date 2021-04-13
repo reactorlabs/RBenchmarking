@@ -44,6 +44,9 @@ innerBenchmarkLoop.default <- function(class, benchmarkParameter, innerIteration
 
 doRuns <- function(name, iterations, benchmarkParameter, innerIterations) {
  
+    outputFileFullPath <- Sys.getenv("MEASUREMENT_FILE")
+    stopifnot(outputFileFullPath != "")
+
     recordMeasurement <<- function(GC_time){
 
         suite <- paste("shootout", if (grepl("strict", name)) "_annotations" else "", sep="")
@@ -52,7 +55,7 @@ doRuns <- function(name, iterations, benchmarkParameter, innerIterations) {
 
         line <- paste(suite,  benchmarkName, paste(suite,benchmarkName, sep="/"), 
           GC_time, sep=",")     
-        write(line, file = "~/dataGC.csv",
+        write(line, file = outputFileFullPath,
         append = TRUE)
 
     }

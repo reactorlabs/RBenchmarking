@@ -25,7 +25,11 @@ innerBenchmarkLoop <- function(x, ...) {
 
 doRuns <- function(name, iterations, innerIterations) {
 
-      recordMeasurement <<- function(GC_time){
+  outputFileFullPath <- Sys.getenv("MEASUREMENT_FILE")
+  stopifnot(outputFileFullPath != "")
+
+
+  recordMeasurement <<- function(GC_time){
 
         suite <- paste("are-we-fast-r", if (grepl("strict", name)) "_annotations" else "", sep="")
         benchmarkName <- tail(strsplit(name, "/")[[1]], n=1)
@@ -33,7 +37,7 @@ doRuns <- function(name, iterations, innerIterations) {
 
         line <- paste(suite,  benchmarkName, paste(suite,benchmarkName, sep="/"), 
           GC_time, sep=",")     
-        write(line, file = "~/dataGC.csv",
+        write(line, file = outputFileFullPath,
         append = TRUE)
 
     }

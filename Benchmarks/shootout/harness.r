@@ -47,6 +47,12 @@ doRuns <- function(name, iterations, benchmarkParameter, innerIterations) {
     outputFileFullPath <- Sys.getenv("MEASUREMENT_FILE")
     stopifnot(outputFileFullPath != "")
 
+    if (!file.exists(outputFileFullPath)) {
+        headerLine <- paste("suite" , "benchmarkName", "benchmarkId", "gc_time", sep=",")     
+        write(headerLine, file = outputFileFullPath,
+        append = TRUE)
+    }
+
     recordMeasurement <<- function(GC_time){
 
         suite <- paste("shootout", if (grepl("strict", name)) "_annotations" else "", sep="")
@@ -67,12 +73,13 @@ doRuns <- function(name, iterations, benchmarkParameter, innerIterations) {
     class(name) <- tolower(name)
 
 
-    timeGC_start <- 0
+    timeGC_start <- timeGC_start <- gc.time(TRUE)
 
 
     for (i in 1:iterations) {
 
         if (i==6) {
+            
             gc()
             timeGC_start <- gc.time(TRUE)
         }
@@ -82,11 +89,13 @@ doRuns <- function(name, iterations, benchmarkParameter, innerIterations) {
         if (!innerBenchmarkLoop(name, benchmarkParameter, innerIterations)) {
             stop("Benchmark failed with incorrect result")
         }
+        
         #endTime <- Sys.time()
-        #runTime <- (as.numeric(endTime) - as.numeric(startTime)) * 1000000
+        runTime <- 1 #(as.numeric(endTime) - as.numeric(startTime)) * 1000000
 
-        #cat(name, ": iterations=1 runtime: ", round(runTime), "us\n", sep = "")
-        #total <- total + runTime
+        cat(name, ": iterations=1 runtime: ", round(runTime), "us\n", sep = "")
+        total <- total + runTime
+
     }
 
     timeGC_end <- gc.time(TRUE)  

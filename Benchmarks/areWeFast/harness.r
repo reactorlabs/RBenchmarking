@@ -28,6 +28,11 @@ doRuns <- function(name, iterations, innerIterations) {
   outputFileFullPath <- Sys.getenv("MEASUREMENT_FILE")
   stopifnot(outputFileFullPath != "")
 
+ if (!file.exists(outputFileFullPath)) {
+        headerLine <- paste("suite" , "benchmarkName", "benchmarkId", "gc_time", sep=",")     
+        write(headerLine, file = outputFileFullPath,
+        append = TRUE)
+ }
 
   recordMeasurement <<- function(GC_time){
 
@@ -46,7 +51,7 @@ doRuns <- function(name, iterations, innerIterations) {
   total <- 0
   class(name) = tolower(name)
 
-  timeGC_start <- 0
+  timeGC_start <- timeGC_start <- gc.time(TRUE)
 
   for (i in 1:iterations) {
     
@@ -75,11 +80,11 @@ doRuns <- function(name, iterations, innerIterations) {
     #   )
     
     #endTime <- Sys.time()
-    #runTime = (as.numeric(endTime) - as.numeric(startTime)) * 1000000 
+    runTime = 1 #(as.numeric(endTime) - as.numeric(startTime)) * 1000000 
 
-    # cat(paste(paste(paste(name, ": iterations=1 runtime:", sep = ""), 
-    #         round(runTime)), "us\n", sep = ""))
-    # total = total + runTime
+     cat(paste(paste(paste(name, ": iterations=1 runtime:", sep = ""), 
+             round(runTime)), "us\n", sep = ""))
+     total = total + runTime
   }
 
   timeGC_end <- gc.time(TRUE)  

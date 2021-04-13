@@ -79,7 +79,7 @@ doRuns <- function(name, iterations, innerIterations) {
   }
 
   timeGC_end <- gc.time(TRUE)  
-  recordMeasurement(timeGC_end[[1]] -timeGC_start[[1]])
+  recordMeasurement(timeGC_end[[3]] -timeGC_start[[3]])
 
 
 

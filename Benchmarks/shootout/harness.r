@@ -50,7 +50,9 @@ doRuns <- function(name, iterations, benchmarkParameter, innerIterations) {
     if (!file.exists(outputFileFullPath)) {
         headerLine <- paste("suite" , "benchmarkName", "benchmarkId", "gc_time", sep=",")     
         write(headerLine, file = outputFileFullPath,
-        append = TRUE)
+            append = TRUE)
+
+
     }
 
     recordMeasurement <<- function(GC_time){

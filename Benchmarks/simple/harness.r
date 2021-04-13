@@ -40,6 +40,7 @@ doRuns <- function(name, iterations, benchmarkParameter) {
         headerLine <- paste("suite" , "benchmarkName", "benchmarkId", "gc_time", sep=",")     
         write(headerLine, file = outputFileFullPath,
         append = TRUE)
+
     }
 
     recordMeasurement <<- function(GC_time){

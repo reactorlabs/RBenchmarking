@@ -40,15 +40,13 @@ doRuns <- function(name, iterations, benchmarkParameter) {
     outputFileFullPath <- Sys.getenv("MEASUREMENT_FILE")
     stopifnot(outputFileFullPath != "")
 
-    
-    headerLine <- paste("suite" , "benchmarkName", "benchmarkId", "gc_time", sep=",")     
-    write(headerLine, file = outputFileFullPath,
-    append = TRUE)
+  
 
      if (!file.exists(outputFileFullPath)) {
         headerLine <- paste("suite" , "benchmarkName", "benchmarkId", "gc_time", sep=",")     
         write(headerLine, file = outputFileFullPath,
         append = TRUE)
+
     }
 
     recordMeasurement <<- function(GC_time){

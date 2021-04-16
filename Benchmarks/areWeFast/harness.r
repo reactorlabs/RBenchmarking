@@ -35,14 +35,14 @@ doRuns <- function(name, iterations, innerIterations) {
        
  }
 
-  recordMeasurement <<- function(GC_time){
+  recordMeasurement <<- function(mkPromiseTime){
 
         suite <- paste("are-we-fast-r", if (grepl("strict", name)) "_annotations" else "", sep="")
         benchmarkName <- tail(strsplit(name, "/")[[1]], n=1)
             
 
         line <- paste(suite,  benchmarkName, paste(suite,benchmarkName, sep="/"), 
-          GC_time, sep=",")     
+          mkPromiseTime, sep=",")     
         write(line, file = outputFileFullPath,
         append = TRUE)
 
@@ -52,18 +52,18 @@ doRuns <- function(name, iterations, innerIterations) {
   total <- 0
   class(name) = tolower(name)
 
-  timeGC_start <- timeGC_start <- gc.time(TRUE)
+  #timeGC_start <- timeGC_start <- gc.time(TRUE)
 
   for (i in 1:iterations) {
     
 
-    if (i==6) {
-          gc()
-          timeGC_start <- gc.time(TRUE)
-    }
+    # if (i==6) {
+    #       gc()
+    #       timeGC_start <- gc.time(TRUE)
+    # }
     #startTime =  Sys.time()
 
-    # .Call("rirResetCreatedPromises")
+    .Call("rirResetMkPromiseTime")
     # .Call("rirResetCreatedPromisesAST")
     # .Call("rirResetInlinedPromises")
   
@@ -73,12 +73,11 @@ doRuns <- function(name, iterations, innerIterations) {
       stop ("Benchmark failed with incorrect result")
     }
 
-    #  recordMeasurement(
+     recordMeasurement(
   
-    #   .Call("rirCreatedPromises"), 
-    #   .Call("rirCreatedPromisesAST"),
-    #   .Call("rirInlinedPromises")
-    #   )
+      .Call("rirMkPromiseTime")
+      
+      )
     
     #endTime <- Sys.time()
     runTime = 1 #(as.numeric(endTime) - as.numeric(startTime)) * 1000000 
@@ -88,8 +87,8 @@ doRuns <- function(name, iterations, innerIterations) {
      total = total + runTime
   }
 
-  timeGC_end <- gc.time(TRUE)  
-  recordMeasurement(timeGC_end[[3]] -timeGC_start[[3]])
+  #timeGC_end <- gc.time(TRUE)  
+  #recordMeasurement(timeGC_end[[3]] -timeGC_start[[3]])
 
 
 

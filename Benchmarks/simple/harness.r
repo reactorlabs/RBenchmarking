@@ -13,18 +13,17 @@ innerBenchmarkLoop <- function(x, ...) {
 
 innerBenchmarkLoop.default <- function(class, benchmarkParameter) {
 
-    # .Call("rirResetCreatedPromises")
+    .Call("rirResetMkPromiseTime")
     # .Call("rirResetCreatedPromisesAST")
     # .Call("rirResetInlinedPromises")
 
     
     result <- execute(benchmarkParameter)
-    # recordMeasurement(
+    recordMeasurement(
         
-    #     .Call("rirCreatedPromises"),
-    #     .Call("rirCreatedPromisesAST"),
-    #     .Call("rirInlinedPromises")
-    #     )
+        .Call("rirMkPromiseTime")
+
+        )
 
     verifyResult(result, benchmarkParameter)
 }
@@ -36,21 +35,21 @@ doRuns <- function(name, iterations, benchmarkParameter) {
     outputFileFullPath <- Sys.getenv("MEASUREMENT_FILE")
     stopifnot(outputFileFullPath != "")
 
-    if (!file.exists(outputFileFullPath)) {
-        headerLine <- paste("suite" , "benchmarkName", "benchmarkId", "gc_time", sep=",")     
-        write(headerLine, file = outputFileFullPath,
-        append = TRUE)
+    # if (!file.exists(outputFileFullPath)) {
+    #     headerLine <- paste("suite" , "benchmarkName", "benchmarkId", "gc_time", sep=",")     
+    #     write(headerLine, file = outputFileFullPath,
+    #     append = TRUE)
 
-    }
+    # }
 
-    recordMeasurement <<- function(GC_time){
+    recordMeasurement <<- function(mkPromiseTime){
 
         suite <- paste("simple", if (grepl("strict", name)) "_annotations" else "", sep="")
         benchmarkName <- tail(strsplit(name, "/")[[1]], n=1)
             
 
         line <- paste(suite,  benchmarkName, paste(suite,benchmarkName, sep="/"), 
-          GC_time, sep=",")     
+          mkPromiseTime, sep=",")     
         write(line, file = outputFileFullPath,
         append = TRUE)
 
@@ -58,14 +57,9 @@ doRuns <- function(name, iterations, benchmarkParameter) {
 
     total <- 0
     class(name) <- tolower(name)
-    timeGC_start <- timeGC_start <- gc.time(TRUE)
-
+   
     for (i in 1:iterations) {
 
-        if (i==6) {
-                gc()
-                timeGC_start <- gc.time(TRUE)
-        }
 
 
         #startTime <- Sys.time()
@@ -80,8 +74,8 @@ doRuns <- function(name, iterations, benchmarkParameter) {
     }
 
 
-    timeGC_end <- gc.time(TRUE)  
-    recordMeasurement(timeGC_end[[3]] -timeGC_start[[3]])
+    #timeGC_end <- gc.time(TRUE)  
+    #recordMeasurement(timeGC_end[[3]] -timeGC_start[[3]])
 
 
     total

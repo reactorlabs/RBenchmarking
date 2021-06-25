@@ -1,4 +1,4 @@
-onvolveSlow <- function(x,y) {
+convolveSlow <- function(x,y) {
   nx <- length(x)
   ny <- length(y)
   z <- numeric(nx + ny - 1)
@@ -17,7 +17,7 @@ execute <- function(n) {
   b <- 1:n
   checksum <- 0
   for (i in 1:10) {
-    checksum <- checksum + convolve(a,b)[[n]]
+    checksum <- checksum + convolveSlow(a,b)[[n]]
   }
   cat("Convolution ", n, " " , checksum, ": ")
   checksum

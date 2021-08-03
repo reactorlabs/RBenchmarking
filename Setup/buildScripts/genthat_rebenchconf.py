@@ -19,7 +19,7 @@ def main(args):
         classname = testfile.relative_to(source_path).with_suffix("")
         entryname = "".join([classname.parts[-3], "::", classname.parts[-2], "__", classname.parts[-1]])
         entry = f"""\
-            - {entryname}:
+            - "{entryname}":
                  command: {classname}
                  codespeed_name: "[genthat] {entryname}"
 """

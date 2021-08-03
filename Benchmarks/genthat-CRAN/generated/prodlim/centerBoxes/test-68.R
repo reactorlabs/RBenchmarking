@@ -1,0 +1,15 @@
+library(prodlim)
+
+function_to_run <- function() {
+    Xlim <- 100
+    ncol <- 3L
+    boxesInRowNumbers <- 3
+    boxesInRow <- "box3"
+    boxCol <- structure(c(1, 3, 3), names = c("box1", "box2", "box3"))
+    box.width <- c(22.0165714285714, 22.0165714285714, 22.0165714285714)
+    prodlim:::centerBoxes(border = Xlim, len = box.width[boxesInRowNumbers], ncell = ncol, pos = boxCol[boxesInRow])
+}
+
+
+
+

@@ -15,25 +15,27 @@ export PACKAGES_FILE="$(realpath "$2")"
 download_pkg () {
   IFS=, read PKG VERSION <<< "$1"
 
+  GZFILE="$PKG_DIR/$PKG.tar.gz"
   if [[ -z $VERSION || $VERSION == "NULL" ]]; then
     printf "Downloading latest %s\n" "$PKG" &&
-    Rscript -e "genthat::download_package('$PKG', '$PKG_DIR', repos='https://cloud.r-project.org/', quiet=FALSE)"
+    Rscript -e "TMP <- remotes::download_version('$PKG', repos='https://cloud.r-project.org/', quiet=FALSE); system(paste('mv', TMP, '$GZFILE'))"
   else
     printf "Downloading %s v. %s\n" "$PKG" "$VERSION" &&
-    Rscript -e "genthat::download_package('$PKG', '$PKG_DIR', repos='https://cloud.r-project.org/', version=\"$VERSION\", quiet=FALSE)"
+    GZFILE=Rscript -e "TMP <- remotes::download_version('$PKG', repos='https://cloud.r-project.org/', version=\"$VERSION\", quiet=FALSE); system(paste('mv', TMP, '$GZFILE')"
   fi
+  
+  tar xf "$GZFILE" --directory "$PKG_DIR" && rm "$GZFILE"
 }
 export -f download_pkg
 
 install_pkg () {
   IFS=, read PKG VERSION <<< "$1"
   PKG_PATH="$PKG_DIR/$PKG"
-  Rscript -e "devtools::install_local('$PKG_PATH',force=TRUE)"
+  Rscript -e "remotes::install_local('$PKG_PATH',force=TRUE)"
 }
 export -f install_pkg
 
-R -e "install.packages('devtools', repos='https://cloud.r-project.org/')"
-R -e "devtools::install_github('PRL-PRG/genthat')"
+R -e "install.packages('remotes', repos='https://cloud.r-project.org/')"
 
 mkdir -p "$PKG_DIR" &&
 < /dev/stderr echo "Downloading all packages..."

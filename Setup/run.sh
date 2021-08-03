@@ -70,6 +70,13 @@ TMPDIR=$(mktemp -d /tmp/rbench.XXXXXX)
 pushd $TMPDIR
 
 cp "$REBENCH" .
+
+# generate the configuration part relative to the genthat testcases
+"$BUILD_SCRIPTS/genthat_rebenchconf.py" "$BENCHS_PATH/genthat-CRAN" > rebench-genthat.conf.inc
+
+# insert this configuration part into the main configuration
+sed -i.bak -e $'/%%GENTHAT_BENCHMARKS%%/{r rebench-genthat.conf.inc\n d}' rebench.conf
+
 if [[ ! -z $RIR_VM ]]; then
   sed -i.bak "s+%%RIR_VM%%+$RIR_VM+" rebench.conf
 fi 

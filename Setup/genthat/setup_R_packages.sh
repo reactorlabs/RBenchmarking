@@ -32,7 +32,7 @@ install_pkg () {
 }
 export -f install_pkg
 
-R -e "install.packages('devtools')"
+R -e "install.packages('devtools', repos='https://cloud.r-project.org/')"
 R -e "devtools::install_github('PRL-PRG/genthat')"
 
 mkdir -p "$PKG_DIR" &&

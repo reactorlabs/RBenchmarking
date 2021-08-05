@@ -29,7 +29,7 @@ required_iterations_for <- function(benchmark) {
 
   # Warmup
   for (i in 1:MIN_INNER_IT) {
-    function_to_run()
+    capture.output(function_to_run())
   }
 
   # Count number of required interations

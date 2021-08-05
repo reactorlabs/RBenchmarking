@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
-import sys
+import csv
 from pathlib import Path
+import sys
 
 
 def log(*args, **kwargs):
@@ -9,19 +10,28 @@ def log(*args, **kwargs):
 
 
 def main(args):
-    if(len(args) != 1):
-        log("Requires one argument: directory containing the genthat-benchmarks")
+    if(len(args) < 1 or len(args) > 2):
+        log("genthat_rebenchconf.py <genthat_benchmarks_dir> [genthat_n_iter.csv]")
         sys.exit(1)
 
     source_path = Path(args[0]).absolute()
 
+    genthat_n_iter = {}
+    if (len(args) >= 2):
+        reader = csv.reader(args[1])
+        genthat_n_iter = dict(reader)
+
     for testfile in source_path.glob("**/*.R"):
-        classname = testfile.relative_to(source_path).with_suffix("")
+        relative = testfile.relative_to(source_path)
+        classname = relative.with_suffix("")
         entryname = "".join([classname.parts[-3], "::", classname.parts[-2], "__", classname.parts[-1]])
+
+        n_inner_it = genthat_n_iter.get(relative, 100)
+
         entry = f"""\
             - "{entryname}":
                  command: {classname}
-                 extra_args: 1000
+                 extra_args: {n_inner_it}
                  codespeed_name: "[genthat] {entryname}"
 """
         print(entry,end="")

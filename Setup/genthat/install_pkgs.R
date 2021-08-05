@@ -2,8 +2,9 @@
 
 argv <- commandArgs(trailingOnly=TRUE)
 
-if (length(argv) < 2 || length(argv) > 3) {
-  message('install_pkgs.R <packages.txt> <pkg_installation_dest_dir> [pkg_source_dest_dir]')
+if (length(argv) < 1 || length(argv) > 3) {
+  message('install_pkgs.R <packages.txt> [pkg_installation_dest_dir] [pkg_source_dest_dir]')
+  message("By default, the packages will be installed to .libPaths(), and the source will not be saved.")
   stop("Incorrect number of arguments")
 }
 
@@ -15,7 +16,11 @@ mkdir_norm <- function(d) {
 }
 
 pkg_file <- normalizePath(argv[[1]])
-lib_path <- mkdir_norm(argv[[2]])
+
+lib_path <- .libPaths()
+if (length(argv) >= 2) {
+  lib_path <- mkdir_norm(argv[[2]])
+}
 
 cran_path <- NULL
 if (length(argv) >= 3) {

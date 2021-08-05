@@ -44,8 +44,8 @@ run <- function(args) {
     if (length(args) >= 3)
       innerIterations <- strtoi(args[[3]])
 
-    source(paste0(tolower(name), ".R"))
-		params <- readRDS(paste0(tolower(name), ".ext"))
+    source(paste0(name, ".R"))
+		params <- readRDS(paste0(name, ".ext"))
     
     total <- as.numeric(doRuns(name, numIterations, innerIterations, params));
     cat(name, ": ",

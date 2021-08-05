@@ -1,5 +1,6 @@
 #!/usr/bin/env Rscript
 
+# Get traceback
 options(error = function() {
   sink(stderr())
   on.exit(sink(NULL))
@@ -55,18 +56,12 @@ packages <- scan(pkg_file, character(), sep='\n')
 # running the tests sometimes creates files: go into a temporary directory
 setwd(tempdir())
 
-#foreach(pkg = packages) %do% {
-for (pkg in packages) {
+foreach(pkg = packages) %do% {
   options(genthat.source_paths=src_path)
-  #.libPaths(lib_path)
 
   message("Generating tests for ", pkg)
+
   # /!\ quiet = false is buggy with packages that test for interractive output
-
-
   gen_from_package(pkg, types="all", action="generate", prune_tests=TRUE,
-                   lib_paths=lib_path,output_dir=testcases_path, quiet=TRUE)
-
-  #src <- file.path(src_path, pkg)
-  #trace_from_source_package(src, types="all", action="generate", prune_tests=TRUE, output_dir=testcases_path, quiet=TRUE)
+                   lib_paths=lib_path, output_dir=testcases_path, quiet=TRUE)
 }

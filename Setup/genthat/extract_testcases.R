@@ -28,7 +28,7 @@ testcases_path <- mkdir_norm(argv[[4]])
 
 NCORES <- 1
 if(length(argv) >= 5) {
-  NCORES <- strtoi(argv[[4]])
+  NCORES <- strtoi(argv[[5]])
 }
 
 cl <- parallel::makeForkCluster(NCORES, outfile="")
@@ -47,11 +47,11 @@ setwd(tempdir())
 
 #foreach(pkg = packages) %do% {
 for (pkg in packages) {
-  .libPaths(lib_path)
   options(genthat.source_paths=src_path)
   message("Generating tests for ", pkg)
   # /!\ quiet = false is buggy with packages that test for interractive output
-  gen_from_package(pkg, types="all", action="generate", prune_tests=TRUE, output_dir=testcases_path, quiet=TRUE)
+  gen_from_package(pkg, types="all", action="generate", prune_tests=TRUE,
+                   lib_paths=lib_path, output_dir=testcases_path, quiet=TRUE)
 
   #src <- file.path(src_path, pkg)
   #trace_from_source_package(src, types="all", action="generate", prune_tests=TRUE, output_dir=testcases_path, quiet=TRUE)

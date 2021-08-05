@@ -22,16 +22,23 @@ if (length(argv) >= 3) {
   cran_path <- mkdir_norm(argv[[3]])
 }
 
-gzpath <- tempdir()
+gzpath <- mkdir_norm(file.path(tempdir(), "gzpath"))
 
 # One day before the release of R 3.6.3
 options(repos='https://cran.microsoft.com/snapshot/2020-02-28/')
 
 packages <- scan(pkg_file, character(), sep='\n')
 
+# Install packages from which tests will be extracted in lib_path
 install.packages(packages, lib=lib_path, destdir=gzpath)
 
+# Extract their source in cran_path
 for (gzfile in list.files(gzpath, full.names=TRUE)) {
   untar(gzfile, exdir = cran_path)
 }
 
+# remotes will be needed to install `genthat` but does not have to be installed in lib_path
+install.packages("remotes")
+# Install genthat and the dependancies for extract_testcases.R (outside of lib_path)
+install.packages(c("doParallel", "foreach"))
+remotes::install_github('vogr/genthat', ref='genthat-for-profiling')

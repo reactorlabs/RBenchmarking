@@ -18,15 +18,17 @@ def main(args):
 
     genthat_n_iter = {}
     if (len(args) >= 2):
-        reader = csv.reader(args[1])
+        reader = csv.reader(open(args[1]))
         genthat_n_iter = dict(reader)
+
 
     for testfile in source_path.glob("**/*.R"):
         relative = testfile.relative_to(source_path)
         classname = relative.with_suffix("")
         entryname = "".join([classname.parts[-3], "::", classname.parts[-2], "__", classname.parts[-1]])
 
-        n_inner_it = genthat_n_iter.get(relative, 100)
+        n_inner_it = genthat_n_iter.get(str(relative), 100)
+
 
         entry = f"""\
             - "{entryname}":

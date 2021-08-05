@@ -1,5 +1,15 @@
 #!/usr/bin/env Rscript
 
+options(error = function() {
+  sink(stderr())
+  on.exit(sink(NULL))
+  traceback(3, max.lines = 1L)
+  if (!interactive()) {
+    q(status = 1)
+  }
+})
+
+
 argv <- commandArgs(trailingOnly=TRUE)
 
 if (length(argv) < 4 || length(argv) > 5) {
@@ -48,10 +58,14 @@ setwd(tempdir())
 #foreach(pkg = packages) %do% {
 for (pkg in packages) {
   options(genthat.source_paths=src_path)
+  #.libPaths(lib_path)
+
   message("Generating tests for ", pkg)
   # /!\ quiet = false is buggy with packages that test for interractive output
+
+
   gen_from_package(pkg, types="all", action="generate", prune_tests=TRUE,
-                   lib_paths=lib_path, output_dir=testcases_path, quiet=TRUE)
+                   lib_paths=lib_path,output_dir=testcases_path, quiet=TRUE)
 
   #src <- file.path(src_path, pkg)
   #trace_from_source_package(src, types="all", action="generate", prune_tests=TRUE, output_dir=testcases_path, quiet=TRUE)

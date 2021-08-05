@@ -33,6 +33,9 @@ packages <- scan(pkg_file, character(), sep='\n')
 install.packages(packages, lib=lib_path, destdir=gzpath)
 
 # Extract their source in cran_path
-for (gzfile in list.files(gzpath, full.names=TRUE)) {
-  untar(gzfile, exdir = cran_path)
+if (! is.null(cran_path)) {
+  for (gzfile in list.files(gzpath, full.names=TRUE)) {
+    message(gzfile)
+    untar(gzfile, exdir = cran_path)
+  }
 }

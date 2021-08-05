@@ -21,6 +21,7 @@ def main(args):
         entry = f"""\
             - "{entryname}":
                  command: {classname}
+                 extra_args: 1000
                  codespeed_name: "[genthat] {entryname}"
 """
         print(entry,end="")

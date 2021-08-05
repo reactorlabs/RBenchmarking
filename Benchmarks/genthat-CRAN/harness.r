@@ -10,13 +10,14 @@ innerBenchmarkLoop <- function(innerIterations, params) {
     return(TRUE)
 }
 
-doRuns <- function(name, iterations, params) {
+doRuns <- function(name, iterations, innerIterations, params) {
     total <- 0
     for (i in 1:iterations) {
 				.Random.seed <<- params$.ext.seed
 
         startTime <- Sys.time()
-				res <- function_to_run()
+        for (k in 1:innerIterations)
+          res <- function_to_run()
         endTime <- Sys.time()
 
         if (!verifyResult(res, params$.ext.retv)) {
@@ -33,16 +34,20 @@ doRuns <- function(name, iterations, params) {
 }
 
 run <- function(args) {
-    if (length(args) < 2 || 2 < length(args))
+    if (length(args) < 2 || 3 < length(args))
         stop(printUsage())
 
     name <- args[[1]]
     numIterations <- strtoi(args[[2]])
 
+    innerIterations <- 1
+    if (length(args) >= 3)
+      innerIterations <- strtoi(args[[3]])
+
     source(paste0(tolower(name), ".R"))
 		params <- readRDS(paste0(tolower(name), ".ext"))
     
-    total <- as.numeric(doRuns(name, numIterations, params));
+    total <- as.numeric(doRuns(name, numIterations, innerIterations, params));
     cat(name, ": ",
         "iterations=", numIterations, "; ",
         "average: ", round(total / numIterations), " us; ",
@@ -51,10 +56,13 @@ run <- function(args) {
 }
 
 printUsage <- function() {
-    cat("harness.r benchmark num-iterations\n")
+    cat("harness.r benchmark num-iterations [inner-iterations]\n")
     cat("\n")
     cat("  benchmark           - benchmark class name\n")
     cat("  num-iterations      - number of times to execute benchmark\n")
+    cat("  inner-iterations    - number of times the benchmark is executed in an inner loop,\n")
+    cat("                        which is measured in total, default: 1\n")
+
 }
 
 run(commandArgs(trailingOnly=TRUE))

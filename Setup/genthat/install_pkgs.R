@@ -2,7 +2,7 @@
 
 argv <- commandArgs(trailingOnly=TRUE)
 
-if (length(argv) < 3 || length(argv) > 4) {
+if (length(argv) < 2 || length(argv) > 3) {
   message('install_pkgs.R <packages.txt> <pkg_installation_dest_dir> [pkg_source_dest_dir]')
   stop("Incorrect number of arguments")
 }

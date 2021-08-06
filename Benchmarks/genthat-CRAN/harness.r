@@ -13,12 +13,14 @@ doRuns <- function(name, iterations, innerIterations, params) {
         startTime <- Sys.time()
         for (k in 1:innerIterations) {
           .Random.seed <<- params$running_seed
-          results[[k]] <- function_to_run()
+          # wrap the result in a list to prevent NULL assignments
+          # from removing a cell from the vector
+          results[[k]] <- list(function_to_run())
         }
         endTime <- Sys.time()
 
         for (k in 1:innerIterations) {
-          if (!verifyResult(results[[k]], params$retv)) {
+          if (!verifyResult(results[[k]], list(params$retv))) {
               message("res=\n", res, "\n\nexpected=\n", params$retv)
               stop("Benchmark failed with incorrect result")
           }

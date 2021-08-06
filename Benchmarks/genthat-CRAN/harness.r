@@ -4,25 +4,24 @@ verifyResult <- function(res, expected_retv) {
 	isTRUE(all.equal(res, expected_retv))
 }
 
-innerBenchmarkLoop <- function(innerIterations, params) {
-    for (i in 1:innerIterations) {
-    }
-    return(TRUE)
-}
-
 doRuns <- function(name, iterations, innerIterations, params) {
     total <- 0
     for (i in 1:iterations) {
-				.Random.seed <<- params$.ext.seed
+
+        results <- vector(mode = "list", length = innerIterations)
 
         startTime <- Sys.time()
-        for (k in 1:innerIterations)
-          res <- function_to_run()
+        for (k in 1:innerIterations) {
+          .Random.seed <<- params$running_seed
+          results[[k]] <- function_to_run()
+        }
         endTime <- Sys.time()
 
-        if (!verifyResult(res, params$.ext.retv)) {
-            message("res=", res, " expected=", params$.ext.retv)
-            stop("Benchmark failed with incorrect result")
+        for (k in 1:innerIterations) {
+          if (!verifyResult(results[[k]], params$retv)) {
+              message("res=\n", res, "\n\nexpected=\n", params$retv)
+              stop("Benchmark failed with incorrect result")
+          }
         }
 
         runTime <- (as.numeric(endTime) - as.numeric(startTime)) * 1000000
@@ -44,8 +43,10 @@ run <- function(args) {
     if (length(args) >= 3)
       innerIterations <- strtoi(args[[3]])
 
-    source(paste0(name, ".R"))
 		params <- readRDS(paste0(name, ".ext"))
+
+    .Random.seed <<- params$sourcing_seed
+    source(paste0(name, ".R"))
     
     total <- as.numeric(doRuns(name, numIterations, innerIterations, params));
     cat(name, ": ",

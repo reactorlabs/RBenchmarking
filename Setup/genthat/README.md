@@ -55,6 +55,9 @@ GENTHAT_CRAN="$HOME/genthat-cran"
 ./count_tests.sh "$GENTHAT_CRAN/testcases_selected"
 ```
 
+
+Additionnaly, you should run the script in `inner_it/` to set once (and save for future use) the number of time each testcase will be run. It aims to run enough inner_iterations so that each outer_iteration takes 200ms. See the README.md in this directory for details.
+
 ## Debugging
 
 You can open a shell inside the container without running the main command using:

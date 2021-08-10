@@ -24,8 +24,8 @@ library(doParallel)
 
 globals <- new.env()
 globals$BENCH_DIR <- normalizePath(argv[[1]])
-globals$SOURCING_SEED <- integer(1234)
-globals$RUNNING_SEED <- integer(5689)
+globals$SOURCING_SEED <- as.integer(1234)
+globals$RUNNING_SEED <- as.integer(5689)
 
 NCORES <- 1
 if (length(argv) >= 2) {

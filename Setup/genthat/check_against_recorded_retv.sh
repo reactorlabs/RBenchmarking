@@ -33,7 +33,7 @@ process_benchmark () {
   "$HARNESS" "$CLASSNAME" "$OUTER_ITERATIONS" "$INNER_ITERATIONS" > /dev/null 2> /dev/null || {
     FAILED_BENCH="$BENCHMARK.failed_harness"
     FAILED_EXT="$EXTFILE.failed_harness"
-    log "%s: failed to run, or returns wrong retv in one of the iterations. Renaming to %s.\n" "$BENCHMARK" "$FAILED"
+    log "%s: failed to run, or returns wrong retv in one of the iterations. Renaming to %s.\n" "$BENCHMARK" "$FAILED_BENCH"
     mv "$BENCHMARK" "$FAILED_BENCH"
     mv "$EXTFILE" "$FAILED_EXT"
   }

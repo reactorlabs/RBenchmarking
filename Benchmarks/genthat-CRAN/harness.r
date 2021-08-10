@@ -21,7 +21,7 @@ doRuns <- function(name, iterations, innerIterations, params) {
 
         for (k in 1:innerIterations) {
           if (!verifyResult(results[[k]], list(params$retv))) {
-              message("res=\n", res, "\n\nexpected=\n", params$retv)
+              message("res=\n", results[[k]], "\n\nexpected=\n", params$retv)
               stop("Benchmark failed with incorrect result")
           }
         }

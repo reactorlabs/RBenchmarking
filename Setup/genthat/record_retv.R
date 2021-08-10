@@ -57,26 +57,26 @@ foreach (Rfile = list.files(globals$BENCH_DIR, pattern = ".*R$", full.names = TR
 
   if (file.exists(extfile)) {
     message("SKIP: Ext file exists ", extfile)
-    next
   }
+  else {
+    tryCatch(
+      {
+        # Source the file and call the function in a new R session
+        retv <- callr::r(source_reproducible, args=list(globals, Rfile), timeout=TIMEOUT)
 
-  tryCatch(
-    {
-      # Source the file and call the function in a new R session
-      retv <- callr::r(source_reproducible, args=list(globals, Rfile), timeout=TIMEOUT)
-
-      l <- list(
-        sourcing_seed=globals$SOURCING_SEED,
-        running_seed=globals$RUNNING_SEED,
-        retv=retv
-      )
-      saveRDS(l, file=extfile)
-    },
-    error=function(e) {
-      message("Failed to run ", Rfile, ": ", e)
-      failname <- paste0(Rfile, ".failing")
-      message("Renaming failing test ", Rfile, " to ", failname)
-      file.rename(Rfile, failname)
-    }
-  )
+        l <- list(
+          sourcing_seed=globals$SOURCING_SEED,
+          running_seed=globals$RUNNING_SEED,
+          retv=retv
+        )
+        saveRDS(l, file=extfile)
+      },
+      error=function(e) {
+        message("Failed to run ", Rfile, ": ", e)
+        failname <- paste0(Rfile, ".failing")
+        message("Renaming failing test ", Rfile, " to ", failname)
+        file.rename(Rfile, failname)
+      }
+    )
+  }
 }

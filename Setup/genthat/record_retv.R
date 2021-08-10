@@ -22,10 +22,16 @@ if (length(argv) < 1 || length(argv) > 2) {
 library(foreach)
 library(doParallel)
 
+
+
 globals <- new.env()
 globals$BENCH_DIR <- normalizePath(argv[[1]])
-globals$SOURCING_SEED <- as.integer(1234)
-globals$RUNNING_SEED <- as.integer(5689)
+
+set.seed(1234)
+globals$SOURCING_SEED <- .Random.seed
+
+set.seed(5678)
+globals$RUNNING_SEED <- .Random.seed
 
 NCORES <- 1
 if (length(argv) >= 2) {

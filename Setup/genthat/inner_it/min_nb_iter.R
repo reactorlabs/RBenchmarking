@@ -29,33 +29,35 @@ BENCHMARK_DIR <- normalizePath(argv[[1]])
 
 required_iterations_for <- function(benchmark) {
 
-  message("Sourcing ", benchmark)
+  env <- new.env(parent=globalenv())
+  env$benchmark <- benchmark
 
-  source(benchmark)
+  message("Processing ", benchmark)
+  
+  capture.output(
+    with(env, {
+      source(benchmark)
+      # Warmup
+      for (i in 1:MIN_INNER_IT) {
+        function_to_run()
+      }
 
+      # Count number of required interations
+      n_it <- 0
+      t0 <- Sys.time()
 
+      for (i in 1:MIN_INNER_IT) {
+        function_to_run()
+        n_it <- n_it + 1
+      }
+      while ( (Sys.time() - t0) * 1000 < MIN_LOOP_TIME) {
+        function_to_run()
+        n_it <- n_it + 1
+      }
+    })
+  )
 
-  capture.output({
-    # Warmup
-    for (i in 1:MIN_INNER_IT) {
-      function_to_run()
-    }
-
-    # Count number of required interations
-    n_it <- 0
-    t0 <- Sys.time()
-
-    for (i in 1:MIN_INNER_IT) {
-      function_to_run()
-      n_it <- n_it + 1
-    }
-    while ( (Sys.time() - t0) * 1000 < MIN_LOOP_TIME) {
-      function_to_run()
-      n_it <- n_it + 1
-    }
-  })
-
-  n_it
+  env$n_it
 }
 
 benchmarks <- list.files(BENCHMARK_DIR, "*.R", recursive=TRUE)

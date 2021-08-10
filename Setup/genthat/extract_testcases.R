@@ -53,11 +53,12 @@ testcases_path <- normalizePath(testcases_path)
 
 packages <- scan(pkg_file, character(), sep='\n')
 
-# running the tests sometimes creates files: go into a temporary directory
-setwd(tempdir())
 
 #TODO: try %dopar%
 foreach(pkg = packages) %do% {
+  # running the tests sometimes creates files: go into a temporary directory
+  setwd(tempdir())
+
   options(genthat.source_paths=src_path)
 
   message("Generating tests for ", pkg)

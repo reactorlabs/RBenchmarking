@@ -1,0 +1,13 @@
+library(fBasics)
+
+function_to_run <- function() {
+    mu <- 0
+    delta <- 1
+    beta <- 0
+    alpha <- 1
+    fBasics:::.hyp1Mode(alpha = alpha, beta = beta, delta = delta, mu = mu)
+}
+
+
+
+

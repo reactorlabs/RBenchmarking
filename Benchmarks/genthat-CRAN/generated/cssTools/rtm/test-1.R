@@ -1,0 +1,13 @@
+library(cssTools)
+
+function_to_run <- function() {
+    sampled <- c(1, 4, 5)
+    dSampled <- structure(c(0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 
+        0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 
+        1, 0, 1, 0, 1, 0), .Dim = c(5L, 5L, 3L))
+    cssTools:::rtm(d = dSampled, sampled = sampled)
+}
+
+
+
+

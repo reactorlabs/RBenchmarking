@@ -1,0 +1,57 @@
+library(dendextend)
+
+function_to_run <- function() {
+    . <- structure(list(structure(list(structure(list(structure(list(structure(15L, label = "15", members = 1L, height = 0, 
+        leaf = TRUE), structure(16L, label = "16", members = 1L, height = 0, leaf = TRUE)), members = 2L, midpoint = 0.5, 
+        height = 0.547722557505166), structure(list(structure(list(structure(6L, label = "6", members = 1L, height = 0, leaf = TRUE), 
+        structure(19L, label = "19", members = 1L, height = 0, leaf = TRUE)), members = 2L, midpoint = 0.5, height = 0.33166247903554), 
+        structure(list(structure(17L, members = 1L, height = 0, label = "17", leaf = TRUE), structure(list(structure(11L, 
+            label = "11", members = 1L, height = 0, leaf = TRUE), structure(20L, label = "20", members = 1L, height = 0, 
+            leaf = TRUE)), members = 2L, midpoint = 0.5, height = 0.331662479035541)), members = 3L, midpoint = 0.75, height = 0.387298334620742)), 
+        members = 5L, midpoint = 1.625, height = 0.632455532033676)), members = 7L, midpoint = 2.0625, height = 0.854400374531754), 
+        structure(list(structure(list(structure(9L, label = "9", members = 1L, height = 0, leaf = TRUE), structure(14L, label = "14", 
+            members = 1L, height = 0, leaf = TRUE)), members = 2L, midpoint = 0.5, height = 0.346410161513776), structure(list(structure(list(structure(8L, 
+            members = 1L, height = 0, label = "8", leaf = TRUE), structure(list(structure(5L, members = 1L, height = 0, label = "5", 
+            leaf = TRUE), structure(list(structure(1L, label = "1", members = 1L, height = 0, leaf = TRUE), structure(18L, 
+            label = "18", members = 1L, height = 0, leaf = TRUE)), members = 2L, midpoint = 0.5, height = 0.1)), members = 3L, 
+            midpoint = 0.75, height = 0.173205080756888)), members = 4L, midpoint = 0.875, height = 0.223606797749979), structure(list(structure(list(structure(7L, 
+            label = "7", members = 1L, height = 0, leaf = TRUE), structure(12L, label = "12", members = 1L, height = 0, leaf = TRUE)), 
+            members = 2L, midpoint = 0.5, height = 0.3), structure(list(structure(list(structure(10L, members = 1L, height = 0, 
+            label = "10", leaf = TRUE), structure(list(structure(2L, label = "2", members = 1L, height = 0, leaf = TRUE), 
+            structure(13L, label = "13", members = 1L, height = 0, leaf = TRUE)), members = 2L, midpoint = 0.5, height = 0.14142135623731)), 
+            members = 3L, midpoint = 0.75, height = 0.173205080756888), structure(list(structure(3L, label = "3", members = 1L, 
+            height = 0, leaf = TRUE), structure(4L, label = "4", members = 1L, height = 0, leaf = TRUE)), members = 2L, midpoint = 0.5, 
+            height = 0.244948974278318)), members = 5L, midpoint = 2.125, height = 0.331662479035541)), members = 7L, midpoint = 2.3125, 
+            height = 0.509901951359279)), members = 11L, midpoint = 3.59375, height = 0.6557438524302)), members = 13L, midpoint = 3.046875, 
+            height = 1.00995049383621)), members = 20L, midpoint = 6.0546875, height = 2.04205778566621, class = "dendrogram"), 
+        structure(list(structure(16L, members = 1L, height = 0, label = "16", leaf = TRUE), structure(list(structure(15L, 
+            members = 1L, height = 0, label = "15", leaf = TRUE), structure(list(structure(14L, members = 1L, height = 0, 
+            label = "14", leaf = TRUE), structure(list(structure(17L, members = 1L, height = 0, label = "17", leaf = TRUE), 
+            structure(list(structure(list(structure(6L, label = "6", members = 1L, height = 0, leaf = TRUE), structure(19L, 
+                label = "19", members = 1L, height = 0, leaf = TRUE)), members = 2L, midpoint = 0.5, height = 0.33166247903554), 
+                structure(list(structure(11L, members = 1L, height = 0, label = "11", leaf = TRUE), structure(list(structure(list(structure(20L, 
+                  members = 1L, height = 0, label = "20", leaf = TRUE), structure(list(structure(12L, members = 1L, height = 0, 
+                  label = "12", leaf = TRUE), structure(list(structure(8L, members = 1L, height = 0, label = "8", leaf = TRUE), 
+                  structure(list(structure(5L, members = 1L, height = 0, label = "5", leaf = TRUE), structure(list(structure(1L, 
+                    label = "1", members = 1L, height = 0, leaf = TRUE), structure(18L, label = "18", members = 1L, height = 0, 
+                    leaf = TRUE)), members = 2L, midpoint = 0.5, height = 0.1)), members = 3L, midpoint = 0.75, height = 0.141421356237309)), 
+                  members = 4L, midpoint = 0.875, height = 0.173205080756888)), members = 5L, midpoint = 0.9375, height = 0.223606797749979)), 
+                  members = 6L, midpoint = 0.96875, height = 0.264575131106459), structure(list(structure(9L, members = 1L, 
+                  height = 0, label = "9", leaf = TRUE), structure(list(structure(7L, members = 1L, height = 0, label = "7", 
+                  leaf = TRUE), structure(list(structure(list(structure(10L, members = 1L, height = 0, label = "10", leaf = TRUE), 
+                  structure(list(structure(2L, label = "2", members = 1L, height = 0, leaf = TRUE), structure(13L, label = "13", 
+                    members = 1L, height = 0, leaf = TRUE)), members = 2L, midpoint = 0.5, height = 0.14142135623731)), members = 3L, 
+                  midpoint = 0.75, height = 0.173205080756888), structure(list(structure(3L, label = "3", members = 1L, height = 0, 
+                  leaf = TRUE), structure(4L, label = "4", members = 1L, height = 0, leaf = TRUE)), members = 2L, midpoint = 0.5, 
+                  height = 0.244948974278318)), members = 5L, midpoint = 2.125, height = 0.264575131106459)), members = 6L, 
+                  midpoint = 1.5625, height = 0.264575131106459)), members = 7L, midpoint = 1.28125, height = 0.3)), members = 13L, 
+                  midpoint = 4.125, height = 0.3)), members = 14L, midpoint = 2.5625, height = 0.331662479035541)), members = 16L, 
+                midpoint = 2.53125, height = 0.346410161513775)), members = 17L, midpoint = 1.765625, height = 0.346410161513775)), 
+            members = 18L, midpoint = 1.3828125, height = 0.346410161513776)), members = 19L, midpoint = 1.19140625, height = 0.469041575982343)), 
+            members = 20L, midpoint = 1.095703125, height = 0.547722557505166, class = "dendrogram")), class = "dendlist")
+    dendextend:::set.dendlist(dend = ., "highlight_branches_col")
+}
+
+
+
+

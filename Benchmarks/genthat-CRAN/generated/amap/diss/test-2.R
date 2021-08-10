@@ -1,0 +1,10 @@
+library(amap)
+
+function_to_run <- function() {
+    data <- structure(c(1, 1, 2, 2, 1, 2, 1, 2, 3, 4, 2, 3, 1, 1, 2, 3, 4, 2, 1, 2, 3, 3, 2, 3, 1, 1, 2, 2, 1, 1), .Dim = 6:5)
+    amap:::diss(x = data)
+}
+
+
+
+

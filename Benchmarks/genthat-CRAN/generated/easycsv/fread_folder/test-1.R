@@ -1,0 +1,10 @@
+library(easycsv)
+
+function_to_run <- function() {
+    directory <- "/tmp/Rtmp5jimeT/genthat-gen_from_package220ec7e2f1b69/examples"
+    easycsv:::fread_folder(directory = directory, extension = "BOTH")
+}
+
+
+
+

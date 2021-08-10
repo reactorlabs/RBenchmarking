@@ -1,0 +1,12 @@
+library(caret)
+
+function_to_run <- function() {
+    predicted <- structure(c(1L, 1L, 1L, 1L, 1L, 2L, 2L, 2L, 3L, 2L, 3L, 3L, 3L, 3L, 3L), .Label = c("setosa", "versicolor", 
+        "virginica"), class = "factor")
+    lev <- structure(c("setosa", "versicolor", "virginica"), ordered = FALSE)
+    caret:::outcome_conversion(x = predicted, lv = lev)
+}
+
+
+
+

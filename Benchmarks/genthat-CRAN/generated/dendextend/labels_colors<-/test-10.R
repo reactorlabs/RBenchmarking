@@ -1,0 +1,53 @@
+library(dendextend)
+
+function_to_run <- function() {
+    dendextend:::`labels_colors<-`(dend = structure(list(structure(list(structure(list(structure(10L, members = 1L, height = 0, 
+        label = "37", leaf = TRUE, edgePar = list(col = "#CC476B")), structure(list(structure(3L, members = 1L, height = 0, 
+        label = "17", leaf = TRUE, edgePar = list(col = "#CC476B")), structure(list(structure(11L, label = "49", members = 1L, 
+        height = 0, leaf = TRUE, edgePar = list(col = "#CC476B")), structure(21L, label = "22", members = 1L, height = 0, 
+        leaf = TRUE, edgePar = list(col = "#CC476B"))), members = 2L, midpoint = 0.5, height = 0.282842712474619, edgePar = list(col = "#CC476B"))), 
+        members = 3L, midpoint = 0.75, height = 0.412310562561766, edgePar = list(col = "#CC476B"))), members = 4L, midpoint = 0.875, 
+        height = 0.529150262212918, edgePar = list(col = "#CC476B")), structure(list(structure(list(structure(6L, label = "10", 
+        members = 1L, height = 0, leaf = TRUE, edgePar = list(col = "#CC476B")), structure(9L, label = "31", members = 1L, 
+        height = 0, leaf = TRUE, edgePar = list(col = "#CC476B"))), members = 2L, midpoint = 0.5, height = 0.173205080756888, 
+        edgePar = list(col = "#CC476B")), structure(list(structure(13L, members = 1L, height = 0, label = "44", leaf = TRUE, 
+        edgePar = list(col = "#CC476B")), structure(list(structure(23L, members = 1L, height = 0, label = "38", leaf = TRUE, 
+        edgePar = list(col = "#CC476B")), structure(list(structure(1L, label = "50", members = 1L, height = 0, leaf = TRUE, 
+        edgePar = list(col = "#CC476B")), structure(19L, label = "12", members = 1L, height = 0, leaf = TRUE, edgePar = list(col = "#CC476B"))), 
+        members = 2L, midpoint = 0.5, height = 0.3, edgePar = list(col = "#CC476B"))), members = 3L, midpoint = 0.75, height = 0.33166247903554, 
+        edgePar = list(col = "#CC476B"))), members = 4L, midpoint = 0.875, height = 0.556776436283002, edgePar = list(col = "#CC476B"))), 
+        members = 6L, midpoint = 1.6875, height = 0.6557438524302, edgePar = list(col = "#CC476B"))), members = 10L, midpoint = 3.28125, 
+        height = 1.06301458127347, edgePar = list(col = "#CC476B")), structure(list(structure(list(structure(16L, members = 1L, 
+        height = 0, label = "145", leaf = TRUE, edgePar = list(col = "#228B00")), structure(list(structure(14L, members = 1L, 
+        height = 0, label = "119", leaf = TRUE, edgePar = list(col = "#228B00")), structure(list(structure(12L, label = "106", 
+        members = 1L, height = 0, leaf = TRUE, edgePar = list(col = "#228B00")), structure(22L, label = "136", members = 1L, 
+        height = 0, leaf = TRUE, edgePar = list(col = "#228B00"))), members = 2L, midpoint = 0.5, height = 0.547722557505166, 
+        edgePar = list(col = "#228B00"))), members = 3L, midpoint = 0.75, height = 0.894427190999916, edgePar = list(col = "#228B00"))), 
+        members = 4L, midpoint = 0.875, height = 1.72336879396141, edgePar = list(col = "#228B00")), structure(list(structure(list(structure(25L, 
+        members = 1L, height = 0, label = "70", leaf = TRUE, edgePar = list(col = "#0082CE")), structure(list(structure(7L, 
+        members = 1L, height = 0, label = "107", leaf = TRUE, edgePar = list(col = "#0082CE")), structure(list(structure(17L, 
+        label = "67", members = 1L, height = 0, leaf = TRUE, edgePar = list(col = "#0082CE")), structure(18L, label = "85", 
+        members = 1L, height = 0, leaf = TRUE, edgePar = list(col = "#0082CE"))), members = 2L, midpoint = 0.5, height = 0.199999999999999, 
+        edgePar = list(col = "#0082CE"))), members = 3L, midpoint = 0.75, height = 0.883176086632784, edgePar = list(col = "#0082CE"))), 
+        members = 4L, midpoint = 0.875, height = 1.1, edgePar = list(col = "#0082CE")), structure(list(structure(list(structure(5L, 
+        label = "76", members = 1L, height = 0, leaf = TRUE, edgePar = list(col = "#0082CE")), structure(20L, label = "77", 
+        members = 1L, height = 0, leaf = TRUE, edgePar = list(col = "#0082CE"))), members = 2L, midpoint = 0.5, height = 0.489897948556635, 
+        edgePar = list(col = "#0082CE")), structure(list(structure(list(structure(15L, label = "104", members = 1L, height = 0, 
+        leaf = TRUE, edgePar = list(col = "#0082CE")), structure(24L, label = "135", members = 1L, height = 0, leaf = TRUE, 
+        edgePar = list(col = "#0082CE"))), members = 2L, midpoint = 0.5, height = 0.53851648071345, edgePar = list(col = "#0082CE")), 
+        structure(list(structure(8L, members = 1L, height = 0, label = "84", leaf = TRUE, edgePar = list(col = "#0082CE")), 
+            structure(list(structure(2L, label = "114", members = 1L, height = 0, leaf = TRUE, edgePar = list(col = "#0082CE")), 
+                structure(4L, label = "102", members = 1L, height = 0, leaf = TRUE, edgePar = list(col = "#0082CE"))), members = 2L, 
+                midpoint = 0.5, height = 0.264575131106459, edgePar = list(col = "#0082CE"))), members = 3L, midpoint = 0.75, 
+            height = 0.547722557505166, edgePar = list(col = "#0082CE"))), members = 5L, midpoint = 1.625, height = 0.959166304662543, 
+        edgePar = list(col = "#0082CE"))), members = 7L, midpoint = 2.0625, height = 1.36014705087354, edgePar = list(col = "#0082CE"))), 
+        members = 11L, midpoint = 3.46875, height = 2.00748598998847, edgePar = list(col = "#0082CE"))), members = 15L, midpoint = 4.171875, 
+        height = 3.85486705347928)), members = 25L, midpoint = 8.7265625, height = 6.62797103192221, class = "dendrogram"), 
+        value = c("#CC476B", "#CC476B", "#CC476B", "#CC476B", "#CC476B", "#CC476B", "#CC476B", "#CC476B", "#CC476B", "#CC476B", 
+            "#228B00", "#228B00", "#228B00", "#228B00", "#0082CE", "#0082CE", "#0082CE", "#0082CE", "#0082CE", "#0082CE", 
+            "#0082CE", "#0082CE", "#0082CE", "#0082CE", "#0082CE"))
+}
+
+
+
+

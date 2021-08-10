@@ -1,0 +1,11 @@
+library(conicfit)
+
+function_to_run <- function() {
+    XY <- structure(c(1, 2, 5, 7, 9, 3, 6, 8, 7, 6, 8, 7, 5, 7, 2, 4), .Dim = c(8L, 2L))
+    ParG <- structure(c(0, 0, 2, 1, 0), .Dim = c(5L, 1L))
+    conicfit:::Residuals.parabola(XY = XY, ParG = ParG)
+}
+
+
+
+

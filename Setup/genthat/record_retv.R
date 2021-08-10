@@ -79,7 +79,7 @@ foreach (Rfile = list.files(globals$BENCH_DIR, pattern = ".*R$", full.names = TR
       },
       error=function(e) {
         message("Failed to run ", Rfile, ": ", e)
-        failname <- paste0(Rfile, ".failing")
+        failname <- paste0(Rfile, ".failed_record")
         message("Renaming failing test ", Rfile, " to ", failname)
         file.rename(Rfile, failname)
       }

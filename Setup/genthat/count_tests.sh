@@ -15,3 +15,5 @@ find "$1" -mindepth 1 -maxdepth 1 -type d -print0 | \
   xargs -r0 -n1 bash -c 'printf "%s: %s\n" "$(basename "$1")" "$(find "$1" -name "*.R" -printf . | wc -c)"' _
 
 printf "\nTOTAL: %s\n" "$(find "$1" -name "*.R" -printf . | wc -c)"
+printf "+ failed record retv: %s\n" "$(find "$1" -name "*.R.failed_record" -printf . | wc -c)"
+printf "+ failed check against retv: %s\n" "$(find "$1" -name "*.R.failed_harness" -printf . | wc -c)"

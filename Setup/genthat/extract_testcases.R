@@ -56,6 +56,7 @@ packages <- scan(pkg_file, character(), sep='\n')
 # running the tests sometimes creates files: go into a temporary directory
 setwd(tempdir())
 
+#TODO: try %dopar%
 foreach(pkg = packages) %do% {
   options(genthat.source_paths=src_path)
 

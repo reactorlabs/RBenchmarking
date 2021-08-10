@@ -47,10 +47,11 @@ source_reproducible <- function(globals, Rfile) {
 
 
 
-# running the scripts might create files in the working directory
-setwd(tempdir())
-
 foreach (Rfile = list.files(globals$BENCH_DIR, pattern = ".*R$", full.names = TRUE, recursive = TRUE)) %dopar% {
+  # running the scripts might create files in the working directory
+  # must be done in the parallel loop
+  setwd(tempdir())
+
   extfile <- gsub(".R$", ".ext", Rfile)
   message("Processing ", Rfile, " to generate ", extfile)
 

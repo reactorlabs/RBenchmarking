@@ -33,6 +33,8 @@ gzpath <- mkdir_norm(file.path(tempdir(), "gzpath"))
 options(repos='https://cran.microsoft.com/snapshot/2020-02-28/')
 
 packages <- scan(pkg_file, character(), sep='\n')
+# genthat will be needed when running the tests
+packages <- c("genthat", packages)
 
 # Install packages from which tests will be extracted in lib_path
 install.packages(packages, lib=lib_path, destdir=gzpath)

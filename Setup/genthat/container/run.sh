@@ -11,7 +11,7 @@ set -u
 /opt/setup-scripts/extract_testcases.R /opt/setup-scripts/packages.txt /opt/r_library /opt/cran /opt/testcases 4
 
 # Record the return values of the testcases to .ext files
-/opt/setup-scripts/record_retv.R /opt/testcases
+/opt/setup-scripts/record_retv.R /opt/testcases 4
 
 # Check if the return value is stable over several iterations
-/opt/setup-scripts/check_against_recorded_retv.sh /opt/testcases
+#/opt/setup-scripts/check_against_recorded_retv.sh <harness.R> /opt/testcases

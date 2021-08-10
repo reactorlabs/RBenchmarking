@@ -38,7 +38,7 @@ GENTHAT_CRAN="$HOME/genthat-cran"
 ./install_pkgs.R ./packages.txt "$GENTHAT_CRAN/MRAN-lib" "$GENTHAT_CRAN/MRAN-src"
 
 # Extract the testcases
-./extract_testcases.R ./packages.txt "$GENTHAT_CRAN/MRAN-lib" "$GENTHAT_CRAN/MRAN-src" "$GENTHAT_CRAN/testcases" 4
+./extract_testcases.R ./packages.txt "$GENTHAT_CRAN/MRAN-lib" "$GENTHAT_CRAN/MRAN-src" "$GENTHAT_CRAN/testcases" 16
 
 # Optionnaly: keep only one test per function
 # (OR: do it after `record_retv` to avoid failing testcases, but record_retv
@@ -46,13 +46,14 @@ GENTHAT_CRAN="$HOME/genthat-cran"
 ./pick_one_testcase.sh "$GENTHAT_CRAN/testcases" "$GENTHAT_CRAN/testcases_selected"
 
 # Record the return values
-./record_retv.R "$GENTHAT_CRAN/testcases_selected"
+./record_retv.R "$GENTHAT_CRAN/testcases_selected" 16
 
 # Optionnaly: check if the return value is stable over several iterations
 ./check_against_recorded_retv.sh "../../Benchmarks/genthat-CRAN/harness.r" "$GENTHAT_CRAN/testcases_selected"
 
 # Optionnaly: count the number of extracted tests
 ./count_tests.sh "$GENTHAT_CRAN/testcases_selected"
+```
 
 ## Debugging
 

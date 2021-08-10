@@ -20,9 +20,6 @@ if (length(argv) < 1 || length(argv) > 2) {
 
 
 library(foreach)
-library(doParallel)
-
-
 
 globals <- new.env()
 globals$BENCH_DIR <- normalizePath(argv[[1]])

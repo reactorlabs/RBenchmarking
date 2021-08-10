@@ -19,7 +19,6 @@ if (length(argv) < 4 || length(argv) > 5) {
 }
 
 library(genthat)
-library(doParallel)
 library(foreach)
 library(covr)
 

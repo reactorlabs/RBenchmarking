@@ -20,7 +20,7 @@ MIN_INNER_IT = 10
 argv <- commandArgs(trailingOnly=TRUE)
 
 if (length(argv) != 1) {
-  cat("iter_until_time_budget.R benchmark_dir.R\n")
+  cat("min_nb_iter.R <benchmark_dir.R>\n")
   cat("\n")
   stop("Incorrect number of arguments")
 }

@@ -2,6 +2,8 @@
 
 ## Usage
 
+### Automated, with the container
+
 ``` console
 # 1. Modifiy packages.txt as wanted
 
@@ -26,6 +28,31 @@ In the Docker container, the following scripts will be run:
 
 The files that fail to run with GNU-R can be larger in step 4 than in step 3 and 2: if the package has an internal state, the state will be preserved between the generation of the tests, and some tests will fail with an error if they are run from scratch, when this state is not identical. For instance: for the `prodlim` pkg, genthat generates test files that it can run, but that fail to run on their own because they expect `new.pdf` to have been called in the past.
 
+### Manually, with more control
+
+```
+GENTHAT_CRAN="$HOME/genthat-cran"
+
+# Install dependancy and packages
+./install_genthat.R
+./install_pkgs.R ./packages.txt "$GENTHAT_CRAN/MRAN-lib" "$GENTHAT_CRAN/MRAN-src"
+
+# Extract the testcases
+./extract_testcases.R ./packages.txt "$GENTHAT_CRAN/MRAN-lib" "$GENTHAT_CRAN/MRAN-src" "$GENTHAT_CRAN/testcases" 4
+
+# Optionnaly: keep only one test per function
+# (OR: do it after `record_retv` to avoid failing testcases, but record_retv
+# will be much slower)
+./pick_one_testcase.sh "$GENTHAT_CRAN/testcases" "$GENTHAT_CRAN/testcases_selected"
+
+# Record the return values
+./record_retv.R "$GENTHAT_CRAN/testcases_selected"
+
+# Optionnaly: check if the return value is stable over several iterations
+./check_against_recorded_retv.sh "../../Benchmarks/genthat-CRAN/harness.r" "$GENTHAT_CRAN/testcases_selected"
+
+# Optionnaly: count the number of extracted tests
+./count_tests.sh "$GENTHAT_CRAN/testcases_selected"
 
 ## Debugging
 

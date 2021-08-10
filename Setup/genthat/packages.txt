@@ -293,4 +293,3 @@ ff
 ffbase
 fields
 graphics
-packages.txt

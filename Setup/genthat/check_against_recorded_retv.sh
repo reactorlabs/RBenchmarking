@@ -24,13 +24,13 @@ TMP="$(mktemp -d)"
 pushd "$TMP"
 
 process_benchmark () {
-  BENCHMARK="$1"
-  CLASSNAME="${BENCHMARK%.*}"
-  EXTFILE="$CLASSNAME.ext"
+  EXTFILE="$1"
+  CLASSNAME="${EXTFILE%.*}"
+  BENCHMARK="$CLASSNAME.R"
 
   log "Checking %s\n" "$BENCHMARK"
 
-  "$HARNESS" "$CLASSNAME" "$OUTER_ITERATIONS" "$INNER_ITERATIONS" > /dev/null || {
+  "$HARNESS" "$CLASSNAME" "$OUTER_ITERATIONS" "$INNER_ITERATIONS" > /dev/null 2> /dev/null || {
     FAILED_BENCH="$BENCHMARK.failed_harness"
     FAILED_EXT="$EXTFILE.failed_harness"
     log "%s: failed to run, or returns wrong retv in one of the iterations. Renaming to %s.\n" "$BENCHMARK" "$FAILED"
@@ -40,6 +40,6 @@ process_benchmark () {
 }
 export -f process_benchmark
 
-find "$BENCHDIR" -name "*.R" -type f -print0 |
+find "$BENCHDIR" -name "*.ext" -type f -print0 |
   sort -z |
-  xargs -r0 -n1 bash -c 'process_benchmark "$@"' _
+  xargs -P16 -r0 -n1 bash -c 'process_benchmark "$@"' _

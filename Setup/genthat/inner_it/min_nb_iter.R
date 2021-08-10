@@ -6,6 +6,14 @@
 # happens in the first outer-iteration, no matter how long the
 # inner-iteration is.
 
+
+# Note: we are voluntarily avoiding isolation in this script to make
+# the process faster. With isolated runs, the library would need to
+# be source()-d for every script, triggering compilations.
+# Without isolation, the compiled versions of the functions are
+# kept between runs, making the warmup process much faster.
+# Ideally, the hot iteration time should not be very different.
+
 MIN_LOOP_TIME = 200 #ms
 MIN_INNER_IT = 10
 

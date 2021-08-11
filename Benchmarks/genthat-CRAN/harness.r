@@ -41,14 +41,17 @@ run <- function(args) {
     name <- args[[1]]
     numIterations <- strtoi(args[[2]])
 
+
     innerIterations <- 1
     if (length(args) >= 3)
       innerIterations <- strtoi(args[[3]])
 
-		params <- readRDS(paste0(name, ".ext"))
+    Rfile <- normalizePath(paste0(name, ".R"))
+    extfile <- normalizePath(paste0(name, ".ext"))
 
+		params <- readRDS(extfile)
     .Random.seed <<- params$sourcing_seed
-    source(paste0(name, ".R"))
+    source(Rfile)
     
     total <- as.numeric(doRuns(name, numIterations, innerIterations, params));
     cat(name, ": ",

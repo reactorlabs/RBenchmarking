@@ -1,4 +1,4 @@
-
+library(peakRAM)
 verifyResult <- function(x, ...) {
     UseMethod("verifyResult", x)
 }
@@ -16,38 +16,33 @@ rir.annotateDepromised <- function(x) x
 innerBenchmarkLoop.default <- function(class, benchmarkParameter) {
 
 
-    .Internal(resetCreatedPromises())
-    #.Call("rirResetCreatedPromisesAST")
-    #.Call("rirResetInlinedPromises")
-
-    
-    result <- execute(benchmarkParameter)
-    recordMeasurement(
   
-        .Internal(createdPromises()),
-        0,0
-        #.Call("rirCreatedPromisesAST"),
-        #.Call("rirInlinedPromises")
-        
-        )
+
+    mem <- peakRAM( 
+        result <- execute(benchmarkParameter)
+    )
+    memoryRuns <<- c(memoryRuns, mem[[4]]) 
 
     verifyResult(result, benchmarkParameter)
 }
 
 
+memoryRuns <- c()
 
 doRuns <- function(name, iterations, benchmarkParameter) {
 
-    recordMeasurement <<- function(createdPromises,createdPromisesAST, inlinedPromises){
+    memoryRuns <<- c() 
+    
+    recordMeasurement <<- function(mem){
 
-            suite <- paste("real_thing", if (grepl("strict", name)) "_annotations" else "", sep="")
-            benchmarkName <- tail(strsplit(name, "/")[[1]], n=1)
-                
+        suite <- paste("real_thing", if (grepl("strict", name)) "_annotations" else "", sep="")
+        benchmarkName <- tail(strsplit(name, "/")[[1]], n=1)
+            
 
-            line <- paste(suite, benchmarkName, paste(suite,benchmarkName, sep="/"),
-             createdPromises,createdPromisesAST, inlinedPromises, sep=",")     
-            write(line, file = "~/dataPromises",
-            append = TRUE)
+        line <- paste(suite,  benchmarkName, paste(suite,benchmarkName, sep="/"), 
+          mem, sep=",")     
+        write(line, file = "~/dataPeakMemory",
+        append = TRUE)
 
     }
 
@@ -64,6 +59,8 @@ doRuns <- function(name, iterations, benchmarkParameter) {
         cat(name, ": iterations=1 runtime: ", round(runTime), "us\n", sep = "")
         total <- total + runTime
     }
+    
+    recordMeasurement(mean(memoryRuns))
     total
 }
 

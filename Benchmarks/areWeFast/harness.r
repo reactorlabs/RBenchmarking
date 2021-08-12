@@ -1,9 +1,18 @@
+library(peakRAM)
+
 innerBenchmarkLoop.default <- function(class, iterations) {
 
 
   for (i in 1:iterations) {
 
-    if (!verifyResult(execute(), iterations)) {
+
+     mem <- peakRAM( 
+        result <- execute()
+    )
+    memoryRuns <<- c(memoryRuns, mem[[4]]) 
+
+
+    if (!verifyResult(result, iterations)) {
         return(FALSE)
     }
 
@@ -23,18 +32,21 @@ innerBenchmarkLoop <- function(x, ...) {
 }
 rir.annotateDepromised <- function(x) x
 
+memoryRuns <- c()
 
 doRuns <- function(name, iterations, innerIterations) {
 
-  recordMeasurement <<- function(createdPromises,createdPromisesAST, inlinedPromises){
+  memoryRuns <<- c() 
+
+  recordMeasurement <<- function(mem){
 
         suite <- "are-we-fast-r"
         benchmarkName <- tail(strsplit(name, "/")[[1]], n=1)
             
 
         line <- paste(suite, benchmarkName,paste(suite,benchmarkName, sep="/"),
-            createdPromises,createdPromisesAST, inlinedPromises, sep=",")     
-        write(line, file = "~/dataPromises",
+            mem, sep=",")     
+        write(line, file = "~/dataPeakMemory",
         append = TRUE)
 
   }
@@ -46,23 +58,13 @@ doRuns <- function(name, iterations, innerIterations) {
     
     startTime =  Sys.time()
 
-    .Internal(resetCreatedPromises())
-    #.Call("rirResetCreatedPromisesAST")
-    #.Call("rirResetInlinedPromises")
-  
 
     if (!innerBenchmarkLoop(name, innerIterations)) {
       
       stop ("Benchmark failed with incorrect result")
     }
 
-     recordMeasurement(
-  
-      .Internal(createdPromises()), 
-      0,0
-      #.Call("rirCreatedPromisesAST"),
-      #.Call("rirInlinedPromises")
-      )
+    
     
     endTime <- Sys.time()
     runTime = (as.numeric(endTime) - as.numeric(startTime)) * 1000000 
@@ -71,6 +73,8 @@ doRuns <- function(name, iterations, innerIterations) {
             round(runTime)), "us\n", sep = ""))
     total = total + runTime
   }
+
+  recordMeasurement(mean(memoryRuns))
   return (total)
 }
 

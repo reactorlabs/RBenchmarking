@@ -1,3 +1,4 @@
+library(peakRAM)
 
 verifyResult <- function(x, ...) {
     UseMethod("verifyResult", x)
@@ -18,20 +19,13 @@ innerBenchmarkLoop.default <- function(class, benchmarkParameter, innerIteration
     
     for (i in 1:innerIterations) {
         
-        .Internal(resetCreatedPromises())
-        #.Call("rirResetCreatedPromisesAST")
-        #.Call("rirResetInlinedPromises")
-    
-       
         
-        result <- execute(benchmarkParameter)
-        recordMeasurement(
-            .Internal(createdPromises()), 
-            0 ,0
-            #.Call("rirCreatedPromisesAST"), 
-            #.Call("rirInlinedPromises")
-            
-            )
+       
+        mem <- peakRAM(
+            result <- execute(benchmarkParameter)
+        )
+
+        memoryRuns <<- c(memoryRuns, mem[[4]]) 
 
 
         if (!verifyResult(result, benchmarkParameter)) {
@@ -42,19 +36,22 @@ innerBenchmarkLoop.default <- function(class, benchmarkParameter, innerIteration
 }
 
 
-
+memoryRuns <- c()
 
 doRuns <- function(name, iterations, benchmarkParameter, innerIterations) {
  
-    recordMeasurement <<- function(createdPromises,createdPromisesAST, inlinedPromises){
+
+    memoryRuns <<- c() 
+
+    recordMeasurement <<- function(mem){
 
         suite <- paste("shootout", if (grepl("strict", name)) "_annotations" else "", sep="")
         benchmarkName <- tail(strsplit(name, "/")[[1]], n=1)
             
 
         line <- paste(suite,  benchmarkName, paste(suite,benchmarkName, sep="/"), 
-          createdPromises, createdPromisesAST, inlinedPromises, sep=",")     
-        write(line, file = "~/dataPromises",
+          mem, sep=",")     
+        write(line, file = "~/dataPeakMemory",
         append = TRUE)
 
     }
@@ -64,17 +61,24 @@ doRuns <- function(name, iterations, benchmarkParameter, innerIterations) {
 
     total <- 0
     class(name) <- tolower(name)
+    
     for (i in 1:iterations) {
         startTime <- Sys.time()
+        
+      
         if (!innerBenchmarkLoop(name, benchmarkParameter, innerIterations)) {
             stop("Benchmark failed with incorrect result")
         }
+    
+        
         endTime <- Sys.time()
         runTime <- (as.numeric(endTime) - as.numeric(startTime)) * 1000000
 
         cat(name, ": iterations=1 runtime: ", round(runTime), "us\n", sep = "")
         total <- total + runTime
     }
+
+    recordMeasurement(mean(memoryRuns))
     total
 }
 

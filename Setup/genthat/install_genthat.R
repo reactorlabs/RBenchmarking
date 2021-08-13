@@ -6,4 +6,4 @@ options(repos='https://cran.microsoft.com/snapshot/2020-02-28/')
 # install genthat and the dependancies for extract_testcases.R (outside of lib_path)
 # remotes will be needed to install `genthat`
 install.packages(c("remotes", "doParallel", "foreach", "callr"))
-remotes::install_github('vogr/genthat', ref='genthat-for-profiling')
+remotes::install_github('PRL-PRG/genthat', ref='only-calls')

@@ -15,7 +15,7 @@ doRuns <- function(name, iterations, innerIterations, params) {
           .Random.seed <<- params$running_seed
           # wrap the result in a list to prevent NULL assignments
           # from removing a cell from the vector
-          results[[k]] <- list(function_to_run())
+          results[[k]] <- list(genthat_extracted_call())
         }
         endTime <- Sys.time()
 

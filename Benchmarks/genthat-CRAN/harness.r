@@ -12,7 +12,7 @@ doRuns <- function(name, iterations, innerIterations, params) {
 
         startTime <- Sys.time()
         for (k in 1:innerIterations) {
-          .Random.seed <<- params$running_seed
+          .Random.seed <<- params$.ext.seed
           # wrap the result in a list to prevent NULL assignments
           # from removing a cell from the vector
           results[[k]] <- list(genthat_extracted_call())
@@ -20,9 +20,10 @@ doRuns <- function(name, iterations, innerIterations, params) {
         endTime <- Sys.time()
 
         for (k in 1:innerIterations) {
-          if (!verifyResult(results[[k]], list(params$retv))) {
-              message("res=\n", results[[k]], "\n\nexpected=\n", params$retv)
-              stop("Benchmark failed with incorrect result")
+          if (!verifyResult(results[[k]], list(params$.ext.retv))) {
+              message("Benchmark failed: incorrect result")
+              message("res=\n", results[[k]], "\n\nexpected=\n", list(params$retv))
+              stop("Benchmark failed")
           }
         }
 
@@ -50,7 +51,7 @@ run <- function(args) {
     extfile <- normalizePath(paste0(name, ".ext"))
 
 		params <- readRDS(extfile)
-    .Random.seed <<- params$sourcing_seed
+    .Random.seed <<- params$.ext.seed
     source(Rfile)
     
     total <- as.numeric(doRuns(name, numIterations, innerIterations, params));
@@ -64,7 +65,7 @@ run <- function(args) {
 printUsage <- function() {
     cat("harness.r benchmark num-iterations [inner-iterations]\n")
     cat("\n")
-    cat("  benchmark           - benchmark class name\n")
+    cat("  benchmark           - benchmark class name (filename without the extension)\n")
     cat("  num-iterations      - number of times to execute benchmark\n")
     cat("  inner-iterations    - number of times the benchmark is executed in an inner loop,\n")
     cat("                        which is measured in total, default: 1\n")

@@ -1,6 +1,6 @@
-library(boot)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     Gamma <- stats::Gamma
     glm <- stats::glm
     leuk <- structure(list(wbc = c(2300L, 750L, 4300L, 2600L, 6000L, 10500L, 10000L, 17000L, 5400L, 7000L, 9400L, 32000L, 

@@ -1,6 +1,6 @@
-library(biglm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     datafun <- genthat::with_env(function(reset = FALSE) {
         if (reset) {
             cursor <<- 0

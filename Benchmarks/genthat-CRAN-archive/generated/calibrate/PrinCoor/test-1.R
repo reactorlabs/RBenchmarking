@@ -1,6 +1,6 @@
-library(calibrate)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     spaindist <- structure(list(Albacete = c(0L, 171L, 369L, 366L, 525L, 540L, 646L, 488L, 504L, 617L, 256L, 207L, 354L, 
         860L, 142L, 640L, 363L, 309L, 506L, 495L, 264L, 584L, 515L, 578L, 762L, 251L, 473L, 150L, 772L, 702L, 491L, 598L, 
         874L, 463L, 691L, 644L, 338L, 492L, 473L, 443L, 242L, 240L, 191L, 444L, 602L, 499L, 423L), Alicante = c(171L, 0L, 

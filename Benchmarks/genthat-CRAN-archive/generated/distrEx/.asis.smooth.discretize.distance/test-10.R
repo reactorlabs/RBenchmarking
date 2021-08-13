@@ -1,6 +1,6 @@
-library(distrEx)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     up.discr <- 4.26489079392283
     TruncQuantile <- 1e-05
     rel.tol <- 2.01340928767837e-05

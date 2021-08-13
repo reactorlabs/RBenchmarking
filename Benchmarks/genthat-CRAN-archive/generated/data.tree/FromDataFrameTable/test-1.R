@@ -1,6 +1,6 @@
-library(data.tree)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(list(levelName = c("Acme Inc.                       ", " ¦--Accounting                  ", " ¦   ¦--New Software            ", 
         " ¦   °--New Accounting Standards", " ¦--Research                    ", " ¦   ¦--New Product Line        ", 
         " ¦   °--New Labs                ", " °--IT                          ", "     ¦--Outsource               ", "     ¦--Go agile                ", 

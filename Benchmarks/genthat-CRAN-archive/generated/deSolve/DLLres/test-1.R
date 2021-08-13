@@ -1,6 +1,6 @@
-library(deSolve)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     y <- structure(c(2, 3, 6), names = c("A", "B", "D.K"))
     prod <- structure(c(0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 0.1, 0.14, 0.18, 0.22, 0.26, 0.3, 0.34, 0.38, 0.42, 0.46, 
         0.5), .Dim = c(11L, 2L))

@@ -1,6 +1,6 @@
-library(evd)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     fgev <- evd::fgev
     portpirie <- evd::portpirie
     m1 <- structure(list(estimate = structure(c(3.87475133256868, 0.198048878417661, -0.0501165767539704), names = c("loc", 

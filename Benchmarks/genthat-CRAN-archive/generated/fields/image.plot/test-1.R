@@ -1,6 +1,6 @@
-library(fields)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     zlim <- c(7.36495549286968, 11.9104217344847)
     ylab <- "MgCl2"
     xlab <- "KCl"

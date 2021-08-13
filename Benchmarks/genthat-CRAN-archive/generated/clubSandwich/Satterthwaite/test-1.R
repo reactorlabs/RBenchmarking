@@ -1,6 +1,6 @@
-library(clubSandwich)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     SE <- structure(c(0.0624567079108484, 0.0646356512170231, 0.085528972088702, 0.00259727584888509), names = c("log(pcap)", 
         "log(pc)", "log(emp)", "unemp"))
     P_array <- structure(c(0.00654470793805503, -0.000248186226285315, -0.000249063986324106, -0.000674207117013359, 3.91789571581846e-05, 

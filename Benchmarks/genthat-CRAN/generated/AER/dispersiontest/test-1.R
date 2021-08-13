@@ -1,6 +1,6 @@
-library(AER)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     glm <- stats::glm
     poisson <- stats::poisson
     sa <- structure(list(type = structure(c(1L, 1L, 1L, 1L, 1L, 1L, 1L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 3L, 3L, 3L, 3L, 3L, 3L, 

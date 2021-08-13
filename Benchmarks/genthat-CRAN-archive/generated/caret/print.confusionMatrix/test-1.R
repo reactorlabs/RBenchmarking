@@ -1,6 +1,6 @@
-library(caret)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(list(positive = NULL, table = structure(c(19L, 18L, 13L, 16L, 17L, 17L, 15L, 15L, 20L), .Dim = c(3L, 3L), 
         .Dimnames = list(Prediction = c("setosa", "versicolor", "virginica"), Reference = c("setosa", "versicolor", "virginica")), 
         class = "table"), overall = structure(c(0.373333333333333, 0.06, 0.295812415226385, 0.45596435920558, 0.333333333333333, 

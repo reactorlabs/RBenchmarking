@@ -1,6 +1,6 @@
-library(ape)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     X <- structure(list(structure(list(edge = structure(c(16L, 16L, 17L, 17L, 18L, 19L, 19L, 23L, 23L, 27L, 27L, 18L, 20L, 
         21L, 21L, 20L, 22L, 22L, 24L, 25L, 25L, 29L, 29L, 24L, 26L, 26L, 28L, 28L, 12L, 17L, 1L, 18L, 19L, 14L, 23L, 4L, 
         27L, 7L, 13L, 20L, 21L, 2L, 9L, 22L, 8L, 24L, 25L, 6L, 29L, 11L, 15L, 26L, 5L, 28L, 10L, 3L), .Dim = c(28L, 2L)), 

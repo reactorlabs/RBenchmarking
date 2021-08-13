@@ -1,6 +1,6 @@
-library(DT)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     style <- "default"
     DT:::DTDependency(style = style)
 }

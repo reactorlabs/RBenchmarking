@@ -1,6 +1,6 @@
-library(cluster)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     m <- "single"
     hclust <- stats::hclust
     d.a <- structure(c(7.5, 2.7, 30.4, 13.6, 4.3, 17.2, 6, 5, 2, 23.7, 3.2, 4.8, 31.9, 15.1, 3.8, 18.7, 7.5, 2.5, 6.3, 25.2, 

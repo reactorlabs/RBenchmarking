@@ -1,6 +1,6 @@
-library(clue)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     X <- list(structure(list(cluster = c(1L, 2L, 3L, 3L, 3L, 3L, 3L, 1L, 3L, 3L, 3L, 2L, 1L, 2L, 1L, 3L, 1L, 1L, 1L, 2L, 
         2L, 1L, 3L, 1L, 2L, 2L, 2L, 2L, 1L, 1L, 3L, 1L, 2L, 2L, 2L, 3L, 1L, 2L, 2L, 2L, 3L, 2L, 1L, 3L, 1L, 3L, 2L, 2L, 3L, 
         1L, 3L, 3L, 1L, 3L, 1L, 2L, 3L, 2L, 1L, 2L, 3L, 2L, 1L, 2L, 3L, 2L, 3L, 3L, 3L, 1L, 1L, 2L, 1L, 1L, 3L, 1L, 2L, 2L, 

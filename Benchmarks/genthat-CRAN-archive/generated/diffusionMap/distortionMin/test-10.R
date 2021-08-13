@@ -1,6 +1,6 @@
-library(diffusionMap)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     K <- 2
     epsilon <- 0.001
     dmap <- structure(list(X = structure(c(-5.45653694500953, -5.45653694287237, -5.45653695503876, -5.45653695472992, -5.45653694250101, 

@@ -1,6 +1,6 @@
-library(fBasics)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- -2.53814041037894
     mu <- 0
     delta <- 1

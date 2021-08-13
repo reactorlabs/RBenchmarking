@@ -1,6 +1,6 @@
-library(clusterGeneration)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     Q1 <- structure(c(0.462250163521024, 0.0924500327042048, 0.0924500327042048, 0.739600261633639), .Dim = c(2L, 2L))
     mu2 <- c(0, 0)
     mu1 <- c(10, 0)

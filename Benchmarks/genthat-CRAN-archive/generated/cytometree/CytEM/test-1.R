@@ -1,6 +1,6 @@
-library(cytometree)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     temp_node <- c(60L, 486L, 790L, 797L, 866L, 1042L, 1218L, 1257L, 1508L, 2205L, 2435L, 2580L, 2857L, 3004L, 3045L, 3119L, 
         3776L, 3963L, 4021L, 4241L, 4296L, 4330L, 4550L, 4600L, 4748L, 4754L, 4955L, 5085L, 5330L)
     t <- 0.1

@@ -1,6 +1,6 @@
-library(deSolve)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     np <- 2L
     grid <- NULL
     deSolve:::expanddotslist(dots = grid, n = np)

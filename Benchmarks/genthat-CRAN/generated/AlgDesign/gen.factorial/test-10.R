@@ -1,6 +1,6 @@
-library(AlgDesign)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     AlgDesign:::gen.factorial(levels = 3, nVars = 3, factors = "all")
 }
 

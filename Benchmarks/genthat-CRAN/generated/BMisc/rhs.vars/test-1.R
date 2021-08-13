@@ -1,6 +1,6 @@
-library(BMisc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     formla <- ~x
     BMisc:::rhs.vars(formla = formla)
 }

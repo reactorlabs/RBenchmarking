@@ -1,6 +1,6 @@
-library(deldir)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     tl <- structure(list(list(ptNum = 1L, pt = structure(c(0.914806, 0.904031), names = c("x", "y")), x = c(1, 0.910357, 
         0.827327, 0.828435, 1), y = c(1, 1, 0.835722, 0.83339, 0.894205), bp = c(TRUE, TRUE, FALSE, FALSE, TRUE), area = 0.016731), 
         list(ptNum = 2L, pt = structure(c(0.937075, 0.13871), names = c("x", "y")), x = c(1, 0.83429, 0.770209, 0.805638, 

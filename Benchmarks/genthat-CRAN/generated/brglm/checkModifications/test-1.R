@@ -1,6 +1,6 @@
-library(brglm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     br.custom.family <- genthat::with_env(function(p) {
         etas <- binomial(logexp(.days))$linkfun(p)
         list(ar = 0.5 * p/p, at = 0.5 + exp(etas) * (1 - p)/(2 * p * .days))

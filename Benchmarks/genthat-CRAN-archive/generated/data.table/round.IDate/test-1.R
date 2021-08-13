@@ -1,6 +1,6 @@
-library(data.table)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     data.table:::round.IDate(x = structure(c(11323L, 11344L, 11365L, 11386L, 11407L, 11428L, 11449L, 11470L, 11491L, 11512L, 
         11533L), class = c("IDate", "Date")), digits = "months")
 }

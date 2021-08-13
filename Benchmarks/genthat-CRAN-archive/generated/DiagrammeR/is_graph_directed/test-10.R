@@ -1,6 +1,6 @@
-library(DiagrammeR)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     graph <- structure(list(graph_info = structure(list(graph_id = "wuXGjYkt", graph_name = "graph_wuXGjYkt", graph_time = structure(1628396360.97679, 
         class = c("POSIXct", "POSIXt")), graph_tz = "Etc/UTC", write_backups = FALSE, display_msgs = FALSE), class = "data.frame", 
         row.names = c(NA, -1L)), nodes_df = structure(list(id = 1, type = NA_character_, label = NA_character_), row.names = c(NA, 

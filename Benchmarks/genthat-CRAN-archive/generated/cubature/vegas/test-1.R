@@ -1,6 +1,6 @@
-library(cubature)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     integrand <- genthat::with_env(function(arg, weight) {
         x <- arg[1]
         y <- arg[2]

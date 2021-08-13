@@ -1,6 +1,6 @@
-library(emplik)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     myfun2 <- genthat::with_env(function(t) {
         matrix(0, ncol = ncol(AA), nrow = length(t))
     }, env = list2env(list(), parent = list2env(list(myfun2 = function(t) {

@@ -1,6 +1,6 @@
-library(calibrate)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- 1.5707963267949
     calibrate:::rad2degree(x = x)
 }

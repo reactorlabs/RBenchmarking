@@ -1,6 +1,6 @@
-library(effects)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x.var <- structure(1L, names = "income")
     x <- structure(list(income = c(2000, 8000, 10000, 20000, 30000, 2000, 8000, 10000, 20000, 30000, 2000, 8000, 10000, 20000, 
         30000), type = structure(c(1L, 1L, 1L, 1L, 1L, 2L, 2L, 2L, 2L, 2L, 3L, 3L, 3L, 3L, 3L), .Label = c("bc", "prof", 

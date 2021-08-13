@@ -1,6 +1,6 @@
-library(distr)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     distr:::Weibull(shape = 1, scale = 1)
 }
 

@@ -1,6 +1,6 @@
-library(deldir)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     y <- c(1, 1, 0.688664, 0.837013)
     x <- c(0.181481, 0, 0, 0.270955)
     ry <- c(0, 1)

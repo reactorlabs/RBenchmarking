@@ -1,6 +1,6 @@
-library(bpcp)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     bpcp:::bpcp2sampControl()
 }
 

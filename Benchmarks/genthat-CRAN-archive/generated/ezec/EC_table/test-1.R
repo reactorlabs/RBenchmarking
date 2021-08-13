@@ -1,6 +1,6 @@
-library(ezec)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     dummydata <- structure(list(ID = c("Sample1", "Sample1", "Sample1", "Sample1", "Sample1", "Sample1", "Sample1", "Sample1", 
         "Sample1", "Sample1", "Sample1", "Sample1", "Sample1", "Sample1", "Sample1", "Sample1", "Sample1", "Sample1", "Sample1", 
         "Sample1", "Sample1", "Sample1", "Sample1", "Sample1", "Sample1", "Sample1", "Sample1", "Sample1", "Sample1", "Sample1", 

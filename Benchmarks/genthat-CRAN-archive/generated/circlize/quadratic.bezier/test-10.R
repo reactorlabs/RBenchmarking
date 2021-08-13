@@ -1,6 +1,6 @@
-library(circlize)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     w <- 1
     p2 <- structure(c(0.763450860705684, 0), names = c("theta", ""))
     p1 <- structure(c(0, 0.448762800274841), names = c("", "theta"))

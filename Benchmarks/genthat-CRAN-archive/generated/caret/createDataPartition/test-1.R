@@ -1,6 +1,6 @@
-library(caret)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     Sacramento <- structure(list(city = structure(c(34L, 34L, 34L, 34L, 34L, 34L, 34L, 34L, 29L, 31L, 34L, 34L, 34L, 34L, 
         34L, 34L, 31L, 5L, 34L, 31L, 5L, 34L, 24L, 34L, 24L, 1L, 34L, 34L, 34L, 34L, 10L, 24L, 34L, 11L, 10L, 34L, 24L, 34L, 
         34L, 34L, 34L, 34L, 10L, 1L, 24L, 34L, 34L, 34L, 34L, 34L, 10L, 34L, 34L, 34L, 34L, 15L, 34L, 34L, 4L, 34L, 1L, 15L, 

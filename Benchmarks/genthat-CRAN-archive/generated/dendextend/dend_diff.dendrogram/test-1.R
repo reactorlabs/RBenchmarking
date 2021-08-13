@@ -1,6 +1,6 @@
-library(dendextend)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     l2 <- 2L
     l1 <- 1L
     dend <- structure(list(structure(list(structure(list(structure(1L, label = 5L, members = 1L, height = 0, leaf = TRUE), 

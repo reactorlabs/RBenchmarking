@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     Moore <- structure(list(partner.status = structure(c(2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 
         2L, 2L, 2L, 2L, 2L, 2L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L), 
         .Label = c("high", "low"), class = "factor"), conformity = c(NA, 4L, 8L, 7L, 10L, 6L, 12L, 4L, 13L, 12L, 4L, 13L, 

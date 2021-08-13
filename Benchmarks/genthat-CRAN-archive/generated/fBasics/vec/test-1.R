@@ -1,6 +1,6 @@
-library(fBasics)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     P <- structure(c(1, 1, 1, 1, 2, 3, 1, 3, 6), .Dim = c(3L, 3L))
     fBasics:::vec(x = P)
 }

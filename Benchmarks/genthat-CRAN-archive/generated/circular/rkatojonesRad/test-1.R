@@ -1,6 +1,6 @@
-library(circular)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     r <- 0.2
     nu <- 0.785398163397448
     n <- 100

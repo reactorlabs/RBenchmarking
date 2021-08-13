@@ -1,6 +1,6 @@
-library(date)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     date:::date.ddmmmyy(sdate = 1:10)
 }
 

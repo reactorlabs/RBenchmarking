@@ -1,6 +1,6 @@
-library(biglm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     p <- 3L
     biglm:::bigqr.init(p = p)
 }

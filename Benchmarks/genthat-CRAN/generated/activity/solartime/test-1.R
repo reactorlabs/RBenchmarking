@@ -1,6 +1,6 @@
-library(activity)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     subdat <- structure(list(species = c("ocelot", "ocelot", "ocelot", "ocelot", "ocelot", "ocelot", "ocelot", "ocelot", 
         "ocelot", "ocelot", "ocelot", "ocelot", "ocelot", "ocelot", "ocelot", "ocelot", "ocelot", "ocelot", "ocelot", "ocelot", 
         "ocelot", "ocelot", "ocelot", "ocelot", "ocelot", "ocelot", "ocelot", "ocelot", "ocelot", "ocelot", "ocelot", "ocelot", 

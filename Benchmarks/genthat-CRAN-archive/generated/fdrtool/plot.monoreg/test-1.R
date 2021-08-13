@@ -1,6 +1,6 @@
-library(fdrtool)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     y <- c(1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0)
     x <- 1:12
     runif <- stats::runif

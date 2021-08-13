@@ -1,7 +1,7 @@
-library(easycsv)
 
-function_to_run <- function() {
-    filezip <- "/opt/r_library/easycsv/exampleZips/example_tables.zip"
+
+genthat_extracted_call <- function() {
+    filezip <- "/opt/r_
     easycsv:::fread_zip(filezip = filezip)
 }
 

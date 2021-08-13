@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     object <- structure(list(lambda = 0.541106032982615, gamma = 16.5676357530961, llik = -59.5433598679287, invHess = structure(c(0.0214510268584839, 
         -1.63211050615848, -1.63211050615848, 153.902751158569), .Dim = c(2L, 2L), .Dimnames = list(c("lambda", "gamma"), 
         c("lambda", "gamma"))), roundlam = 0.5, ylabs = "Y1", xqr = structure(list(qr = structure(c(-9.16515138991168, 0.109108945117996, 

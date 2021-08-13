@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     lm <- stats::lm
     Soils <- carData::Soils
     model <- structure(list(coefficients = structure(c(5.15729166666667, 0.243333333333333, 0.108333333333333, 0.429166666666666, 

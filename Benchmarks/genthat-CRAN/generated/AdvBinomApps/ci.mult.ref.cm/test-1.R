@@ -1,6 +1,6 @@
-library(AdvBinomApps)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     theta <- c(0.2, 0.4, 0.6)
     p.target <- 2e-05
     n <- c(110000, 138000, 170000)

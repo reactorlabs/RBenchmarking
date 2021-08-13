@@ -1,6 +1,6 @@
-library(EffectLiteR)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     Pkgx <- c("Pk0gx0", "Pk1gx0", "Pk0gx1", "Pk1gx1", "Pk0gx2", "Pk1gx2")
     nz <- 1L
     nk <- 2L

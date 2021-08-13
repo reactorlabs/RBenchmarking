@@ -1,6 +1,6 @@
-library(dygraphs)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     . <- structure(list(x = structure(list(attrs = list(title = "New Haven Temperatures", labels = c("year", "Temperature (F)"), 
         legend = "auto", retainDateWindow = FALSE, axes = list(x = list(pixelsPerLabel = 60)), series = list(`Temperature (F)` = list(axis = "y"))), 
         scale = "yearly", annotations = list(), shadings = list(), events = list(), format = "date", data = list(c("1912-01-01T00:00:00.000Z", 

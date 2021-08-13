@@ -1,6 +1,6 @@
-library(drc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     upper <- 1
     upFixed <- drc:::upFixed
     names <- c("b", "c", "e")

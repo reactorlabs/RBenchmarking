@@ -1,6 +1,6 @@
-library(ff)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(13:1, .Label = c("1910-01-01", "1910-01-02", "1910-01-03", "1910-01-04", "1910-01-05", "1910-01-06", "1910-01-07", 
         "1910-01-08", "1910-01-09", "1910-01-10", "1910-01-11", "1910-01-12", "1910-01-13"), class = "factor")
     ff:::ramclass.default(x = x)

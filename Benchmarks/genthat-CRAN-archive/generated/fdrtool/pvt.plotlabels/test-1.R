@@ -1,6 +1,6 @@
-library(fdrtool)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     statistic <- "normal"
     scale.param <- structure(2.14092290788808, names = "sd")
     eta0 <- structure(0.939349744698805, names = "eta0")

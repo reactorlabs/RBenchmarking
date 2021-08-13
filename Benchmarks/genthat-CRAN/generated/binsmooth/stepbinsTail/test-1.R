@@ -1,6 +1,6 @@
-library(binsmooth)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     tbRatio <- 0.8
     tailShape <- "pareto"
     pIndex <- 1.160964

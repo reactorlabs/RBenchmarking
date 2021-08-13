@@ -1,6 +1,6 @@
-library(fBasics)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     psi <- structure(4.20305801020919, names = "alpha")
     n <- 5000
     lambda <- structure(1, names = "")

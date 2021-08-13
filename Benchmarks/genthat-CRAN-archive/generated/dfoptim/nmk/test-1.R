@@ -1,6 +1,6 @@
-library(dfoptim)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     hald <- genthat::with_env(function(x) {
         i <- 1:21
         t <- -1 + (i - 1)/10

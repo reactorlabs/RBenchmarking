@@ -1,6 +1,6 @@
-library(ff)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     vw <- NULL
     pack <- FALSE
     ffdim <- c(4L, 5L, 3L)

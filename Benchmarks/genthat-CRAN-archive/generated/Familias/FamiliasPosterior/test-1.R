@@ -1,6 +1,6 @@
-library(Familias)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     mypedigrees <- list(isFather = structure(list(id = c("mother", "daughter", "AF"), findex = c(0L, 3L, 0L), mindex = c(0L, 
         1L, 0L), sex = c("female", "female", "male")), class = "FamiliasPedigree"), unrelated = structure(list(id = c("mother", 
         "daughter", "AF", "TF"), findex = c(0L, 4L, 0L, 0L), mindex = c(0L, 1L, 0L, 0L), sex = c("female", "female", "male", 

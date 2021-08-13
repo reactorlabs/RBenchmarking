@@ -1,6 +1,6 @@
-library(ape)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     TR <- list(structure(list(edge = structure(c(12L, 13L, 13L, 12L, 14L, 15L, 15L, 17L, 21L, 21L, 17L, 18L, 18L, 14L, 16L, 
         19L, 20L, 20L, 19L, 16L, 13L, 1L, 2L, 14L, 15L, 3L, 17L, 21L, 4L, 5L, 18L, 6L, 7L, 16L, 19L, 20L, 8L, 9L, 10L, 11L), 
         .Dim = c(20L, 2L)), edge.length = c(1.34471559669334, 0.596394896399582, 0.596394896399582, 1.58300308933455, 0.198599635049821, 

@@ -1,6 +1,6 @@
-library(fanplot)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     th.mcmc <- fanplot::th.mcmc
     fanplot:::fan0(data = th.mcmc)
 }

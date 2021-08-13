@@ -1,6 +1,6 @@
-library(fail)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     use.cache <- TRUE
     .self <- list(path = "/tmp/Rtmp5pSR3b/3a0e767e95e03", extension = "RData", all.files = FALSE, use.cache = FALSE, simplify = TRUE, 
         cache = list(keys = genthat::with_env(function() ls(ee, all.names = TRUE), env = list2env(list(ee = list2env(list(), 

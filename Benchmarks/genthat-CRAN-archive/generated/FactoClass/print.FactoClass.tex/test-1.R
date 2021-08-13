@@ -1,6 +1,6 @@
-library(FactoClass)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(list(file = "/tmp/Rtmp5jimeT/genthat-gen_from_package220ec26268871/examples/DogBreeds1.tex", e.values = structure(list(Eigenvalue = c(481.6, 
         384.7, 211, 157.6, 150.1, 123.3, 81.5, 45.7, 23.5, 7.7), CumInertia = c(481.6, 866.3, 1077.3, 1234.9, 1385, 1508.3, 
         1589.7, 1635.4, 1659, 1666.7), Percent = c(28.9, 23.1, 12.7, 9.5, 9, 7.4, 4.9, 2.7, 1.4, 0.5), CumPercent = c(28.9, 

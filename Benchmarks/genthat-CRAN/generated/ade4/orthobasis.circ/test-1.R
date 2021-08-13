@@ -1,6 +1,6 @@
-library(ade4)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ade4:::orthobasis.circ(n = 26)
 }
 

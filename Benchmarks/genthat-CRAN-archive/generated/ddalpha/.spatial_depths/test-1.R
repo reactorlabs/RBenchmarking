@@ -1,6 +1,6 @@
-library(ddalpha)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     i <- 2L
     ddalpha <- list(call = NULL, colnames = c("time", "status", "age", "sex", "disease", "C"), classif.formula = NULL, raw = structure(list(time = c(8L, 
         16L, 23L, 13L, 22L, 28L, 447L, 318L, 30L, 12L, 24L, 245L, 7L, 9L, 511L, 30L, 53L, 196L, 15L, 154L, 7L, 333L, 141L, 

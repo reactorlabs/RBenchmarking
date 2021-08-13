@@ -1,6 +1,6 @@
-library(chron)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     chron:::julian.default(x = 1, d = 1, y = 1970)
 }
 

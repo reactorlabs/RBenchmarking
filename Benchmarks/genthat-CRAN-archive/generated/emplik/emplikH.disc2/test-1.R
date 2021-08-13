@@ -1,6 +1,6 @@
-library(emplik)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     fun1 <- genthat::with_env(function(x) {
         as.numeric(x <= 960)
     }, env = list2env(list(), parent = baseenv()))

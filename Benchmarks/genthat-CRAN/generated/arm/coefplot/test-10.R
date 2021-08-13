@@ -1,6 +1,6 @@
-library(arm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     varnames <- c("InflMedium", "InflHigh", "TypeApartment", "TypeAtrium", "TypeTerrace", "ContHigh", "Low|Medium", "Medium|High")
     sds <- structure(c(0.104652784933519, 0.127156148851928, 0.119238013698556, 0.155173338051194, 0.151486024299045, 0.0955357985611663, 
         0.124847246308485, 0.125471940342996), names = c("InflMedium", "InflHigh", "TypeApartment", "TypeAtrium", "TypeTerrace", 

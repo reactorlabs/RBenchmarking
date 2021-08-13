@@ -1,6 +1,6 @@
-library(ellipse)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     arima0 <- stats::arima0
     USAccDeaths <- structure(c(9007, 8106, 8928, 9137, 10017, 10826, 11317, 10744, 9713, 9938, 9161, 8927, 7750, 6981, 8038, 
         8422, 8714, 9512, 10120, 9823, 8743, 9129, 8710, 8680, 8162, 7306, 8124, 7870, 9387, 9556, 10093, 9620, 8285, 8466, 

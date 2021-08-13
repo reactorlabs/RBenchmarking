@@ -1,6 +1,6 @@
-library(effects)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     term2 <- "degrees"
     term <- "tfr"
     factors <- structure(c(0L, 1L, 0L, 0L, 0L, 0L, 0L, 1L, 0L, 0L, 0L, 0L, 0L, 1L, 0L, 0L, 0L, 0L, 0L, 1L), .Dim = 5:4, .Dimnames = list(c("fconvict", 

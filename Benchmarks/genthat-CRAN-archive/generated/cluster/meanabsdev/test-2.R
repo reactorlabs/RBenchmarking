@@ -1,6 +1,6 @@
-library(cluster)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     newX <- structure(c(NA, NA, NA, NA, 18.77, NA, 53.18, 2.11, NA, NA, NA, NA, 40.25, 40.03, 49.13, NA, 0.26, NA, 61.37, 
         0.32, 64.72, 56.98, NA, NA, NA, NA, NA, NA, 53.59, 28.52, NA, 46.14, NA, NA, 48.49, NA, NA, 33.95, 57.85, NA, NA, 
         NA, NA, NA, 78.23, 0.19, NA, NA, 55.29, NA, NA, NA, NA, NA, 32.96, NA, 53.86, 23.71, NA, NA, NA, NA, 50.68, 51.09, 

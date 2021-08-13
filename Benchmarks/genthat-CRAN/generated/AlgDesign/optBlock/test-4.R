@@ -1,6 +1,6 @@
-library(AlgDesign)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     within <- structure(list(A = c(-1, 0, 1, -1, 0, 1, -1, 0, 1, -1, 0, 1, -1, 0, 1, -1, 0, 1, -1, 0, 1, -1, 0, 1, -1, 0, 
         1), B = c(-1, -1, -1, 0, 0, 0, 1, 1, 1, -1, -1, -1, 0, 0, 0, 1, 1, 1, -1, -1, -1, 0, 0, 0, 1, 1, 1), C = c(-1, -1, 
         -1, -1, -1, -1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1)), out.attrs = list(dim = structure(c(3L, 

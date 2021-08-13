@@ -1,6 +1,6 @@
-library(e1071)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     l <- structure(list(classprob = c(0.392970977511506, 0.607029022488494), p = structure(c(0.793763493750398, 0.316416475707466, 
         0.835709999082343, 0.327151120271578, 0.199761321428432, 0.691070085132924, 0.142507600770449, 0.719897455694881), 
         .Dim = c(2L, 4L), .Dimnames = list(c("1", "2"), c("1", "2", "3", "4"))), matching = c(2L, 2L, 2L, 2L, 1L, 2L, 2L, 

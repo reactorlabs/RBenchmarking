@@ -1,6 +1,6 @@
-library(ade4)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     structures <- structure(list(regions = structure(c(3L, 3L, 1L, 1L, 2L, 2L, 4L, 4L, 5L, 5L), .Label = c("1", "2", "3", 
         "4", "5"), class = "factor")), row.names = c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"), class = "data.frame")
     samples <- structure(c(32L, 0L, 1L, 0L, 2L, 4L, 0L, 0L, 2L, 2L, 0L, 0L, 0L, 0L, 0L, 1L, 1L, 1L, 0L, 0L, 0L, 0L, 0L, 0L, 

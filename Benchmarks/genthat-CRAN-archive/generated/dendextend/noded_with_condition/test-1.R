@@ -1,6 +1,6 @@
-library(dendextend)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     has_x_labels <- genthat::with_env(function(sub_dend, the_labels) all(labels(sub_dend) %in% the_labels), env = list2env(list(), 
         parent = baseenv()))
     tmp_labels <- 3:4

@@ -1,6 +1,6 @@
-library(ape)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     rcoal <- ape::rcoal
     ape:::makeNodeLabel(phy = rcoal(20))
 }

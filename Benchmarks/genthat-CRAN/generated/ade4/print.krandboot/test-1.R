@@ -1,6 +1,6 @@
-library(ade4)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     as.krandboot <- ade4::as.krandboot
     rnorm <- stats::rnorm
     x <- structure(list(obs = c(2.32505849371513, 0.524122181151092, 0.970733416408591, 0.376973397152614, -0.995933396542156, 

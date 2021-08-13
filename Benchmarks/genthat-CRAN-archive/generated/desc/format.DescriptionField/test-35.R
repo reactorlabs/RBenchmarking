@@ -1,6 +1,6 @@
-library(desc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     private <- list2env(list(notws = character(0), path = NULL, data = list(Package = structure(list(key = "Package", value = "{{ Package }}"), 
         class = c("DescriptionPackage", "DescriptionField")), Title = structure(list(key = "Title", value = "{{ Title }}"), 
         class = c("DescriptionTitle", "DescriptionField")), Version = structure(list(key = "Version", value = "1.0.0"), class = c("DescriptionVersion", 

@@ -1,6 +1,6 @@
-library(acss)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     acss:::acss(string = c("HEHHEE", "GHHGGHGHUE", "HSHSHHSHSS"), alphabet = NULL)
 }
 

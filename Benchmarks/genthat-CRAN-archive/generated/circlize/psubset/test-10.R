@@ -1,6 +1,6 @@
-library(circlize)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     link.arr.length <- structure(c(0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4), 
         .Dim = c(3L, 6L), .Dimnames = list(c("S1", "S2", "S3"), c("E1", "E2", "E3", "E4", "E5", "E6")))
     df <- structure(list(rn = c("S1", "S2", "S3", "S1", "S2", "S3", "S1", "S2", "S3", "S1", "S2", "S3", "S1", "S2", "S3", 

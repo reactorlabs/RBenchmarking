@@ -1,6 +1,6 @@
-library(chron)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     chron:::month.day.year(jul = 0)
 }
 

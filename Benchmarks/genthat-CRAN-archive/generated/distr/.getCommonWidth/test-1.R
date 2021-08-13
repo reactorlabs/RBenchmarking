@@ -1,6 +1,6 @@
-library(distr)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     w2 <- 1L
     w1 <- 1L
     tol0 <- 1e-09

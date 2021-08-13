@@ -1,6 +1,6 @@
-library(CIplot)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(list(model = structure(list(coefficients = structure(c(36.3888888888889, -10, -14.7222222222222), names = c("(Intercept)", 
         "tensionM", "tensionH")), residuals = structure(c(-10.3888888888888, -6.38888888888888, 17.6111111111111, -11.3888888888889, 
         33.6111111111111, 15.6111111111111, 14.6111111111111, -10.3888888888889, 30.6111111111111, -8.38888888888889, -5.38888888888889, 

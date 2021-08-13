@@ -1,6 +1,6 @@
-library(dendextend)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     small_iris <- structure(list(Sepal.Length = c(5, 5.7, 5.4, 5.8, 6.6, 4.9, 4.9, 6, 4.8, 5.5, 5.3, 7.6, 5, 7.7, 6.3, 6.7, 
         5.6, 5.4, 4.8, 6.8, 5.1, 7.7, 4.9, 6.1, 5.6), Sepal.Width = c(3.3, 2.5, 3.9, 2.7, 3, 3.1, 2.5, 2.7, 3.1, 3.5, 3.7, 
         3, 3.5, 2.6, 2.9, 3.3, 3, 3, 3.4, 2.8, 3.7, 3, 3.6, 2.6, 2.5), Petal.Length = c(1.4, 5, 1.3, 5.1, 4.4, 1.5, 4.5, 

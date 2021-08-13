@@ -1,6 +1,6 @@
-library(ckanr)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ckanr:::ckanr_settings()
 }
 

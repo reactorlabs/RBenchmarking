@@ -1,6 +1,6 @@
-library(corrgram)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     outer.labels <- NULL
     ord <- 1:4
     nc <- 4L

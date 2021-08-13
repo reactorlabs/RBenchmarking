@@ -1,6 +1,6 @@
-library(EffectLiteR)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     relfreq <- c("relfreq00", "relfreq01", "relfreq10", "relfreq11", "relfreq20", "relfreq21")
     nz <- 1L
     AveEffZ <- "AveEffZ1"

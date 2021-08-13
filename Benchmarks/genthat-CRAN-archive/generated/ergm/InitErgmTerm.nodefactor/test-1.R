@@ -1,6 +1,6 @@
-library(ergm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ergm:::InitErgmTerm.nodefactor(nw = structure(list(mel = list(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 
         NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, list(inl = 2L, 
             outl = 1L, atl = list(na = FALSE)), list(inl = 5L, outl = 1L, atl = list(na = FALSE)), list(inl = 3L, outl = 2L, 

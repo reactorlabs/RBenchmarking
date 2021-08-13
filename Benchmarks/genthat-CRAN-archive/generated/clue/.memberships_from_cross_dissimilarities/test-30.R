@@ -1,6 +1,6 @@
-library(clue)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     m <- 2
     dissimilarities <- structure(c(954, 954, 0, 26, 0, 0, 954, 886, 282, 32, 0, 954, 0, 954, 8, 954, 0, 954, 954, 666, 0, 
         22, 0, 626, 32, 32, 666, 954, 0, 0, 954, 954, 0, 26, 0, 0, 954, 886, 282, 32, 0, 954, 0, 954, 8, 954, 0, 954, 954, 

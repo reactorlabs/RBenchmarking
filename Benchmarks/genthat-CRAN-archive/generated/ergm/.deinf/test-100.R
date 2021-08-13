@@ -1,6 +1,6 @@
-library(ergm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     eta <- c(-0.623757817629439, -0.178327817032149, 0.0156211149791069, 0.307524001147851, 0.00348112282622934, -0.516372845749637)
     ergm:::.deinf(x = eta)
 }

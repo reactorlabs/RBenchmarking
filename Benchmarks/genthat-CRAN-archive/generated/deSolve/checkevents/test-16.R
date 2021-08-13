@@ -1,6 +1,6 @@
-library(deSolve)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     Ynames <- "C"
     times <- 1:365
     events <- list(func = genthat::with_env(function(t, y, p) y/2, env = list2env(list(), parent = baseenv())), time = c(50.1, 

@@ -1,6 +1,6 @@
-library(deSolve)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     xWhich <- list(c(2L, 4L))
     varnames <- c("time", "prey1", "prey2", "pred1", "pred2")
     obs <- list(dat = structure(list(time = c(10, 40, 70, 100, 130, 160, 190, 220, 250, 280, 310, 340, 370, 400, 430, 460, 

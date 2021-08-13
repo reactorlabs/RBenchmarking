@@ -1,6 +1,6 @@
-library(ffbase)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     warpbreaks <- datasets::warpbreaks
     ffbase:::bySum(x = warpbreaks$breaks, by = warpbreaks$wool)
 }

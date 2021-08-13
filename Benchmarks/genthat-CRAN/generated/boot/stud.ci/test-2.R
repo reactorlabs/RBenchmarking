@@ -1,6 +1,6 @@
-library(boot)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     hinv <- genthat::with_env(function(t) t, env = list2env(list(), parent = baseenv()))
     var.t0 <- 1417.71469907407
     var.t <- c(362.446180555556, 285.115740740741, 1365.44618055556, 1520.20601851852, 1677.45601851852, 106.597222222222, 

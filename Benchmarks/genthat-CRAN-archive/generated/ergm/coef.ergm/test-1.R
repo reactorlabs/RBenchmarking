@@ -1,6 +1,6 @@
-library(ergm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     object <- structure(list(coef = structure(c(-1.91214441327083, -0.0574512062500021, -0.314420369072467, 0.343451301119537), 
         names = c("edges", "nodefactor.atomic type.2", "nodefactor.atomic type.3", "gwesp.fixed.0.5")), sample = structure(c(1, 
         -1, 16, -2, -6, 0, -5, -11, -1, 7, -1, -4, -2, 9, 3, 3, 7, -2, -11, 6, 4, 1, -12, 5, 10, 6, -1, 7, 13, -2, 2, 2, 

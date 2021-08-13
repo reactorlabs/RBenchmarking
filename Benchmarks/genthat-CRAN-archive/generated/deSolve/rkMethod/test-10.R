@@ -1,6 +1,6 @@
-library(deSolve)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     deSolve:::rkMethod(method = "ode45")
 }
 

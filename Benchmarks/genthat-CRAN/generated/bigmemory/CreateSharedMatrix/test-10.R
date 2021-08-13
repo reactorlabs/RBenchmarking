@@ -1,6 +1,6 @@
-library(bigmemory)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     typeVal <- 1
     separated <- FALSE
     rownames <- NULL

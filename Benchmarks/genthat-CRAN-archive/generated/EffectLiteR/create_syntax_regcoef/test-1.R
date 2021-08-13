@@ -1,6 +1,6 @@
-library(EffectLiteR)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     z <- "z1"
     y <- "dv"
     nz <- 1L

@@ -1,6 +1,6 @@
-library(chron)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     chron:::as.chron.Date(x = Sys.Date())
 }
 

@@ -1,6 +1,6 @@
-library(drc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     drm <- drc::drm
     etmotc <- drc::etmotc
     LL.4 <- drc::LL.4

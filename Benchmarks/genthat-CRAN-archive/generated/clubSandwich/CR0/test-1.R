@@ -1,6 +1,6 @@
-library(clubSandwich)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     clubSandwich:::CR0(J = 8L)
 }
 

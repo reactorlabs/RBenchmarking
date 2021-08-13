@@ -1,6 +1,6 @@
-library(extrafont)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     extrafont:::font_import()
 }
 

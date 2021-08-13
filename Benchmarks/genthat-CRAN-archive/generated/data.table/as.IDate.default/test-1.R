@@ -1,6 +1,6 @@
-library(data.table)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     data.table:::as.IDate.default(x = "2001-08-03")
 }
 

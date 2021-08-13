@@ -1,6 +1,6 @@
-library(bibtex)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     out <- list(structure(list(structure(list(author = structure(list(list(given = c("G.", "A."), family = "Smith", role = NULL, 
         email = NULL, comment = NULL), list(given = "Stanley", family = "G.", role = NULL, email = NULL, comment = NULL)), 
         class = "person"), year = "1983", title = "Clocking g: relating intelligence and measures of timed performance", 

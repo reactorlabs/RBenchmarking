@@ -1,6 +1,6 @@
-library(BinNor)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     var.nor <- c(4, 2)
     no.nor <- 2
     mean.vec.nor <- c(3, 1)

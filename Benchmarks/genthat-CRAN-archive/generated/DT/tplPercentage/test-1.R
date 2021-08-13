@@ -1,6 +1,6 @@
-library(DT)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     rownames <- FALSE
     names <- c("A", "B", "C", "D", "E")
     i <- 3

@@ -1,6 +1,6 @@
-library(Amelia)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     splinetime <- NULL
     priors <- NULL
     polytime <- NULL

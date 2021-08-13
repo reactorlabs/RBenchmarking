@@ -1,6 +1,6 @@
-library(assertive.sets)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     y <- 5:1
     x <- 1:5
     .yname <- "5:1"

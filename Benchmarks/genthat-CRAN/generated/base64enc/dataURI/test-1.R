@@ -1,6 +1,6 @@
-library(base64enc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     base64enc:::dataURI(data = as.raw(1:10))
 }
 

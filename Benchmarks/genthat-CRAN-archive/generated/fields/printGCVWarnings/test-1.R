@@ -1,6 +1,6 @@
-library(fields)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     method <- "GCV"
     gcv.out <- list(gcv.grid = structure(list(lambda = c(2.03703736643538e-05, 2.19096639173533e-05, 2.34706876260994e-05, 
         2.50532750287761e-05, 2.66576430034157e-05, 2.82822963609083e-05, 2.993424740637e-05, 3.16071304796533e-05, 3.33033343493612e-05, 

@@ -1,6 +1,6 @@
-library(ellipse)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ellipse:::ellipse.default(x = 0.8)
 }
 

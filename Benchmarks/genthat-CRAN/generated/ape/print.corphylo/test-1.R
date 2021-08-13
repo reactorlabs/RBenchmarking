@@ -1,6 +1,6 @@
-library(ape)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(list(cor.matrix = structure(c(1, -0.00855799269777019, -0.00855799269777019, 1), .Dim = c(2L, 2L)), d = c(3.03249442391965e-21, 
         1.59813883158643e-13), B = structure(c(0.469680658443518, -0.529262205126488, 0.00714715793311151), .Dim = c(3L, 
         1L), .Dimnames = list(c("B1.0", "B2.0", "B2.1"), NULL)), B.se = structure(c(0.431922190346223, 0.618754609261248, 

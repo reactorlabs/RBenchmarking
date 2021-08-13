@@ -1,6 +1,6 @@
-library(caret)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     trainSet <- c(49L, 65L, 74L, 146L, 122L, 150L, 128L, 47L, 24L, 71L, 100L, 89L, 110L, 20L, 114L, 111L, 131L, 41L, 139L, 
         27L, 109L, 5L, 84L, 34L, 92L, 104L, 3L, 58L, 97L, 42L, 142L, 30L, 43L, 15L, 22L, 123L, 8L, 36L, 68L, 86L, 18L, 130L, 
         126L, 69L, 4L, 98L, 50L, 99L, 88L, 87L, 145L, 26L, 6L, 105L, 2L, 124L, 21L, 96L, 115L, 10L, 40L, 129L, 33L, 140L, 

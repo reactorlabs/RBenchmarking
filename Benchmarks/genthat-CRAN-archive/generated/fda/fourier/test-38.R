@@ -1,6 +1,6 @@
-library(fda)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     period <- 1
     nderiv <- 1
     nbasis <- 5

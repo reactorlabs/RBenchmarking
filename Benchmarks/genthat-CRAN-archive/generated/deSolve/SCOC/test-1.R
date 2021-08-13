@@ -1,6 +1,6 @@
-library(deSolve)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     times <- 1:365
     parms <- structure(0.01, names = "k")
     Flux <- structure(c(1, 11, 21, 41, 73, 83, 93, 103, 113, 123, 133, 143, 153, 163, 173, 183, 194, 204, 214, 224, 234, 

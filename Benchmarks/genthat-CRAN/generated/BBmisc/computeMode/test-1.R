@@ -1,6 +1,6 @@
-library(BBmisc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     BBmisc:::computeMode(x = c(1, 2, 3, 3))
 }
 

@@ -1,6 +1,6 @@
-library(coin)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     asat <- coin::asat
     coin:::normal_test.formula(formula = asat ~ group, data = asat, distribution = "exact", alternative = "greater")
 }

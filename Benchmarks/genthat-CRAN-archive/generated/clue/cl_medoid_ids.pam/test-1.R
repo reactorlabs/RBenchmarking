@@ -1,6 +1,6 @@
-library(clue)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     as.dist <- stats::as.dist
     dissimilarities <- structure(c(0, 55, 52, 44, 52, 52, 50, 40, 56, 56, 59, 56, 58, 57, 50, 56, 52, 52, 56, 56, 56, 56, 
         56, 56, 56, 56, 56, 56, 56, 56, 56, 58, 58, 56, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 52, 54, 52, 44, 44, 48, 

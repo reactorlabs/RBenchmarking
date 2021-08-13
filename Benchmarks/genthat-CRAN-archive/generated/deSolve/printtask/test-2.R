@@ -1,6 +1,6 @@
-library(deSolve)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     jacvec <- genthat::with_env(function(time, Y, j, pars) {
         with(as.list(pars), {
             PDJ <- rep(0, n)

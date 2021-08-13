@@ -1,6 +1,6 @@
-library(distrEx)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     lth <- 1L
     distrEx:::EuclCondition(dimension = floor(lth))
 }

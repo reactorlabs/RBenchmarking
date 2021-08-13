@@ -1,6 +1,6 @@
-library(effects)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     typical <- genthat::with_env(function(x, ...) UseMethod("mean"), env = .BaseNamespaceEnv)
     glm <- stats::glm
     Hartnagel <- carData::Hartnagel

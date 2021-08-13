@@ -1,6 +1,6 @@
-library(DySeq)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     second <- 50:97
     first <- 2:49
     data <- structure(list(code = c(1, 7, 8, 9, 10, 13, 19, 21, 22, 26, 28, 30, 32, 36, 37, 38, 40, 42, 46, 55, 59, 63, 64, 

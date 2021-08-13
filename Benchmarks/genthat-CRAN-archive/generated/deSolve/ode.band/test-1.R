@@ -1,6 +1,6 @@
-library(deSolve)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     Aphid <- genthat::with_env(function(t, APHIDS, parameters) {
         deltax <- c(0.5 * delx, rep(delx, numboxes - 1), 0.5 * delx)
         Flux <- -D * diff(c(0, APHIDS, 0))/deltax

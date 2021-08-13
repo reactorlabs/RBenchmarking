@@ -1,6 +1,6 @@
-library(AUC)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     roc <- AUC::roc
     churn <- structure(list(predictions = c(0, 0, 0, 0.216, 0, 0.298, 0.326, 0, 0, 0, 0, 0.03, 0, 0.004, 0, 1, 0, 0.096, 
         0.032, 0, 0.022, 0.246, 0.008, 0.024, 0, 0, 0, 0.028, 0.066, 0.008, 0.39, 0.378, 0, 0.034, 0.15, 0.09, 0.39, 0, 0.008, 

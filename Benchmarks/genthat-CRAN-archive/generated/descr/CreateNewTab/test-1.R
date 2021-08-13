@@ -1,6 +1,6 @@
-library(descr)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(list(tab = structure(c(4L, 4L, 3L, 4L, 4L, 4L, 4L, 3L, 4L, 4L, 4L, 4L, 4L, 4L, 4L, 4L, 4L, 3L, 4L, 4L, 
         3L, 4L, 2L, 2L), .Dim = c(4L, 6L), .Dimnames = list(x = c("0-39g/day", "40-79", "80-119", "120+"), y = c("25-34", 
         "35-44", "45-54", "55-64", "65-74", "75+")), class = "table"), prop.row = structure(c(0.173913043478261, 0.173913043478261, 

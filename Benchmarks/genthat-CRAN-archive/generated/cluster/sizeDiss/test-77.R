@@ -1,6 +1,6 @@
-library(cluster)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     cluster:::sizeDiss(d = 1:10)
 }
 

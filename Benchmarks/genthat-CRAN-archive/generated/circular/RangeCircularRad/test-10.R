@@ -1,6 +1,6 @@
-library(circular)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     X <- c(6.19591884457987, 0.0870996848923629)
     circular:::RangeCircularRad(x = X[1:2], test = FALSE)
 }

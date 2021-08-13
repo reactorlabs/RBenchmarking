@@ -1,6 +1,6 @@
-library(deSolve)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     parleg <- c(0.8704, 0.9004, 0.241885714285714, 0.805542857142857)
     dotmain <- list(xlab = "x", ylab = "y", mfrow = 2, main = "Prey", zlim = c(0, 1), col = c("#00007F", "#000089", "#000093", 
         "#00009E", "#0000A8", "#0000B2", "#0000BD", "#0000C7", "#0000D1", "#0000DC", "#0000E6", "#0000F0", "#0000FB", "#0006FF", 

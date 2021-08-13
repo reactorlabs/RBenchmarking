@@ -1,6 +1,6 @@
-library(brglm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     binomial <- stats::binomial
     brglm <- brglm::brglm
     lizards <- structure(list(grahami = c(20, 8, 4, 13, 8, 12, 8, 4, 5, 6, 1, 34, 69, 18, 31, 55, 13, 17, 60, 8, 12, 21, 

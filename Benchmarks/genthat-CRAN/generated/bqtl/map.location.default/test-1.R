@@ -1,6 +1,6 @@
-library(bqtl)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     y <- "m.12"
     x <- structure(list(marker.name = structure(c("m.1", "m.2", "m.3", "m.3.1", "m.3.2", "m.3.3", "m.3.4", "m.3.5", "m.3.6", 
         "m.3.7", "m.4", "m.5", "m.6", "m.7", "m.7.1", "m.7.2", "m.7.3", "m.7.4", "m.8", "m.8.1", "m.8.2", "m.9", "m.10", 

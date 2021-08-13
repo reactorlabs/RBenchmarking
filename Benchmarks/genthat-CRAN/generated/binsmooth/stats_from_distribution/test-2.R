@@ -1,6 +1,6 @@
-library(binsmooth)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     stepfit <- list(stepPDF = genthat::with_env(function(v) .approxfun(x, y, v, method, yleft, yright, f), env = list2env(list(yright = 0, 
         yleft = 0, y = c(8.13496233632037e-06, 1.00562825041919e-05, 1.06040802879037e-05, 1.04197252645391e-05, 9.38145016656502e-06, 
             9.7280582665154e-06, 9.0564276127677e-06, 9.34488900226751e-06, 8.24340646771128e-06, 7.93093244911776e-06, 6.72801161832554e-06, 

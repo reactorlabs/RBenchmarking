@@ -1,6 +1,6 @@
-library(fields)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     tol <- 1e-05
     l2 <- 0.0009765625
     l1 <- 1

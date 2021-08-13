@@ -1,6 +1,6 @@
-library(EasyABC)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     prior_test <- NULL
     prior <- list(list(sampling = genthat::with_env(function() {
         do.call(sampleName, as.list(as.numeric(sampleArgs)))

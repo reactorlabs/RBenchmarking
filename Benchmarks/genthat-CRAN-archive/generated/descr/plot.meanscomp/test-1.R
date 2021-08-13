@@ -1,6 +1,6 @@
-library(descr)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     tab <- structure(c(496.195007720895, 500.495498626725, 498.34525317381, 900, 900, 1800, 98.0762870561468, 101.316127212701, 
         99.7048524571158), .Dim = c(3L, 3L), .Dimnames = list(c("F", "M", "Total"), c("Mean", "N", "Std. Dev.")), row.name = "sex", 
         column.name = "income", row.label = "Sex", column.label = "Income", maxlevels = 60, col = "lightgray", width = structure(c(900, 

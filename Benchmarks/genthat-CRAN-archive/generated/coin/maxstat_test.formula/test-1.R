@@ -1,6 +1,6 @@
-library(coin)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     trafo <- coin::trafo
     logrank_trafo <- coin::logrank_trafo
     hohnloser <- coin::hohnloser

@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     vcov. <- structure(c(29085.2912319592, 23.5816947941348, -12.6832939949302, 23.5816947941348, 0.187721091972858, -0.0315363433589021, 
         -12.6832939949302, -0.0315363433589021, 0.00889943538342655), .Dim = c(3L, 3L), .Dimnames = list(c("(Intercept)", 
         "t1", "t2"), c("(Intercept)", "t1", "t2")))

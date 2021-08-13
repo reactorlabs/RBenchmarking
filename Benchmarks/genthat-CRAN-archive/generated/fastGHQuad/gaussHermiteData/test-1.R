@@ -1,6 +1,6 @@
-library(fastGHQuad)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     fastGHQuad:::gaussHermiteData(n = 10)
 }
 

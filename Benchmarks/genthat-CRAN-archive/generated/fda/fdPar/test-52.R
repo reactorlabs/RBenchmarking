@@ -1,6 +1,6 @@
-library(fda)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     fda:::fdPar(fdobj = seq(-3, 3, length = 11))
 }
 

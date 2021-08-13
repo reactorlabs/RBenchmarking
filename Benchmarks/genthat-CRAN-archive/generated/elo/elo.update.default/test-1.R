@@ -1,6 +1,6 @@
-library(elo)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     wins.A <- c(1, 0)
     k <- 20
     elo.B <- c(1500, 1600)

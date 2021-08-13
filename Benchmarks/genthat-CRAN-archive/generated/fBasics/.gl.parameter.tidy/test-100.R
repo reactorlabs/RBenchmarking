@@ -1,6 +1,6 @@
-library(fBasics)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     param <- "rs"
     lambda5 <- NULL
     lambda4 <- NULL

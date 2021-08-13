@@ -1,6 +1,6 @@
-library(BenfordTests)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     pvalsims <- 10000
     n <- 20L
     digits <- 1

@@ -1,6 +1,6 @@
-library(dichromat)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     redgreen <- genthat::with_env(function(n) {
         x <- ramp(seq.int(0, 1, length.out = n))
         if (ncol(x) == 4L) 

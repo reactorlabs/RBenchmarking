@@ -1,6 +1,6 @@
-library(calibrate)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     Y <- structure(list(Tractions = c(5L, 2L, 12L, 12L, 13L, 4L, 8L, 6L, 15L, 17L, 17L, 13L, 14L, 1L, 6L, 12L, 4L, 11L, 15L, 
         2L), Flexions = c(162L, 110L, 101L, 105L, 155L, 101L, 101L, 125L, 200L, 251L, 120L, 210L, 215L, 50L, 70L, 210L, 60L, 
         230L, 225L, 110L), Sauts = c(60L, 60L, 101L, 37L, 58L, 42L, 38L, 40L, 40L, 250L, 38L, 115L, 105L, 50L, 31L, 120L, 

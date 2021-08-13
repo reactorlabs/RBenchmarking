@@ -1,6 +1,6 @@
-library(BBmisc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     kill <- genthat::with_env(function(clear = FALSE) {
         if (clear) 
             clear(newline = TRUE)

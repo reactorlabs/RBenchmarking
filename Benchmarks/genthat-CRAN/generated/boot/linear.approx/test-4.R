@@ -1,6 +1,6 @@
-library(boot)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     boot <- boot::boot
     city <- boot::city
     ratio <- genthat::with_env(function(d, w) sum(d$x * w)/sum(d$u * w), env = list2env(list(), parent = baseenv()))

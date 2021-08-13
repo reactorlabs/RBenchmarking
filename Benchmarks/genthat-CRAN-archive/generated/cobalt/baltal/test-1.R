@@ -1,6 +1,6 @@
-library(cobalt)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     s <- list(threshold = structure(0.1, names = "m"), Names = "Means", Threshold = "M.Threshold", Stat = "Diff")
     out <- list(Balance = structure(list(Type = c("Distance", "Contin.", "Contin.", "Binary", "Binary", "Binary", "Binary", 
         "Binary", "Contin.", "Contin."), M.0.Un = c(0.182224764762874, 28.030303030303, 10.2354312354312, 0.202797202797203, 

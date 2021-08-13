@@ -1,6 +1,6 @@
-library(distr)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     Pois <- distr::Pois
     Norm <- distr::Norm
     Exp <- distr::Exp

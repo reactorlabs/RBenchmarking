@@ -1,6 +1,6 @@
-library(fdrtool)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     age <- c(14, 14, 8, 8, 8, 10, 10, 10, 12, 12, 12)
     monoreg <- fdrtool::monoreg
     size <- c(23.5, 25, 21, 23.5, 23, 24, 21, 25, 21.5, 22, 19)

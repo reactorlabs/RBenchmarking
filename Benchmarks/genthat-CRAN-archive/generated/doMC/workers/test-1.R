@@ -1,6 +1,6 @@
-library(doMC)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     data <- 2
     doMC:::workers(cores = data)
 }

@@ -1,6 +1,6 @@
-library(cfa)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     sorton <- "label"
     sort.descending <- TRUE
     format.labels <- TRUE

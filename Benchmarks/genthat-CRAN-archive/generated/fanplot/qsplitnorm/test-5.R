@@ -1,6 +1,6 @@
-library(fanplot)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     p <- c(0.05, 0.2, 0.4, 0.6, 0.8, 0.95)
     i <- 1L
     boe0 <- structure(list(time0 = c(2013.75, 2013.75, 2013.75, 2013.75, 2013.75, 2013.75, 2013.75, 2013.75, 2013.75, 2013.75, 

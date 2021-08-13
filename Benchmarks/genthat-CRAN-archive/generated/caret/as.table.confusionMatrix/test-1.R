@@ -1,6 +1,6 @@
-library(caret)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     results <- structure(list(positive = "abnormal", table = structure(c(231L, 27L, 32L, 54L), .Dim = c(2L, 2L), .Dimnames = list(pred = c("abnormal", 
         "normal"), truth = c("abnormal", "normal")), class = "table"), overall = structure(c(0.828488372093023, 0.533596837944664, 
         0.784413437985499, 0.866798520709829, 0.75, 0.00030969833403687, 0.602537006105314), names = c("Accuracy", "Kappa", 

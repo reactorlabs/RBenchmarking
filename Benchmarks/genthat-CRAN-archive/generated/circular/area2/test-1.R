@@ -1,6 +1,6 @@
-library(circular)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     adjust <- 1
     bw <- 50
     density.circular <- circular::density.circular

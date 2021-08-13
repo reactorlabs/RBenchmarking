@@ -1,6 +1,6 @@
-library(assertive.reflection)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     assertive.reflection:::not_this_os(os = "Windows")
 }
 

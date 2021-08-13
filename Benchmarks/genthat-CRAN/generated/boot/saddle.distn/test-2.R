@@ -1,6 +1,6 @@
-library(boot)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     var.L <- 725269.066647058
     t0 <- 1417.71469907407
     strata <- c(1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L)

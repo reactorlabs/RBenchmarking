@@ -1,6 +1,6 @@
-library(caret)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     preProc <- structure(list(dim = c(135L, 4L), bc = NULL, yj = NULL, et = NULL, invHyperbolicSine = NULL, mean = structure(c(5.84814814814815, 
         3.0637037037037, 3.76518518518519, 1.20222222222222), names = c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width")), 
         std = structure(c(0.832443969864016, 0.444133805205682, 1.77550995485209, 0.766214445905602), names = c("Sepal.Length", 

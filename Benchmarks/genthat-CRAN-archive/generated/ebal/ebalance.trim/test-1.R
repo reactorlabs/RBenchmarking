@@ -1,6 +1,6 @@
-library(ebal)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     eb.out <- structure(list(target.margins = structure(c(30, 14.4954245036083, 10.7637555163548, 14.7840989869953), names = c("", 
         "x1", "x2", "x3")), co.xdata = structure(c(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1.37095844714667, -0.564698171396089, 

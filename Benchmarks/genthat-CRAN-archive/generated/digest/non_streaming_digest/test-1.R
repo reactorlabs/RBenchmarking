@@ -1,6 +1,6 @@
-library(digest)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     errormode <- "stop"
     algoint <- 1
     algo <- "md5"

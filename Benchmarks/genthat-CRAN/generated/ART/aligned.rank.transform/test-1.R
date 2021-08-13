@@ -1,6 +1,6 @@
-library(ART)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     data.higgins1990 <- structure(list(Row = c(1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 
         2L, 2L, 2L, 2L, 2L, 3L, 3L, 3L, 3L, 3L, 3L, 3L, 3L, 3L, 3L, 3L, 3L), Column = c(1L, 1L, 1L, 1L, 2L, 2L, 2L, 2L, 3L, 
         3L, 3L, 3L, 1L, 1L, 1L, 1L, 2L, 2L, 2L, 2L, 3L, 3L, 3L, 3L, 1L, 1L, 1L, 1L, 2L, 2L, 2L, 2L, 3L, 3L, 3L, 3L), Response = c(11.5, 

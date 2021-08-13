@@ -1,6 +1,6 @@
-library(fdrtool)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     statistic <- "correlation"
     fdrtool:::get.nullmodel(statistic = statistic)
 }

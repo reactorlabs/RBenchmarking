@@ -1,6 +1,6 @@
-library(drc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     drm <- drc::drm
     EXD.2 <- drc::EXD.2
     na.omit <- stats::na.omit

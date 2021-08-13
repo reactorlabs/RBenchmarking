@@ -1,6 +1,6 @@
-library(distr)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x.u <- 0
     p.u <- 0
     nm <- 1

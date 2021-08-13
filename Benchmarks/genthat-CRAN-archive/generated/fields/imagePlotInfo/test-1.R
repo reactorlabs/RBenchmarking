@@ -1,6 +1,6 @@
-library(fields)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     nlevel <- 64
     breaks <- NULL
     fields:::imagePlotInfo(c(10, 10.506329113924, 11.0126582278481, 11.5189873417722, 12.0253164556962, 12.5316455696203, 

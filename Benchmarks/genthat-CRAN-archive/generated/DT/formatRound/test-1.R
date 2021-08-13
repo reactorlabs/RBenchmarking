@@ -1,6 +1,6 @@
-library(DT)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     . <- structure(list(x = structure(list(filter = "none", data = structure(list(A = c(1470958.44714667, -464698.171396089, 
         463128.411337339, 732862.60496104, 504268.323140999, -6124.51609148402, 1611521.99743894, 5340.96158690244, 2118423.71387704, 
         37285.900947579, 1404869.65422349, 2386645.39270111, -1288860.70111234, -178788.766817371, -33321.336393658, 735950.398070074, 
@@ -38,12 +38,12 @@ function_to_run <- function() {
         height = NULL, sizingPolicy = list(defaultWidth = NULL, defaultHeight = NULL, padding = NULL, viewer = list(defaultWidth = NULL, 
             defaultHeight = NULL, padding = NULL, fill = TRUE, suppress = FALSE, paneHeight = NULL), browser = list(defaultWidth = NULL, 
             defaultHeight = NULL, padding = NULL, fill = FALSE, external = FALSE), knitr = list(defaultWidth = "100%", defaultHeight = "auto", 
-            figure = FALSE)), dependencies = list(structure(list(name = "dt-core", version = "1.10.20", src = list(file = "/opt/r_library/DT/htmlwidgets/lib/datatables"), 
+            figure = FALSE)), dependencies = list(structure(list(name = "dt-core", version = "1.10.20", src = list(file = "/opt/r_
             meta = NULL, script = "js/jquery.dataTables.min.js", stylesheet = c("css/jquery.dataTables.min.css", "css/jquery.dataTables.extra.css"), 
             head = NULL, attachment = NULL, package = NULL, all_files = FALSE), class = "html_dependency"), structure(list(name = "jquery", 
-            version = "1.11.3", src = list(file = "/opt/r_library/crosstalk/lib/jquery"), meta = NULL, script = "jquery.min.js", 
+            version = "1.11.3", src = list(file = "/opt/r_
             stylesheet = NULL, head = NULL, attachment = NULL, package = NULL, all_files = TRUE), class = "html_dependency"), 
-            structure(list(name = "crosstalk", version = "1.0.0", src = list(file = "/opt/r_library/crosstalk/www"), meta = NULL, 
+            structure(list(name = "crosstalk", version = "1.0.0", src = list(file = "/opt/r_
                 script = "js/crosstalk.min.js", stylesheet = "css/crosstalk.css", head = NULL, attachment = NULL, package = NULL, 
                 all_files = TRUE), class = "html_dependency")), elementId = NULL, preRenderHook = genthat::with_env(function(instance) {
             data <- instance[["x"]][["data"]]

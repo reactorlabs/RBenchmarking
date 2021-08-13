@@ -1,6 +1,6 @@
-library(circlize)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x2 <- c(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1)
     space <- "sRGB"
     l <- c(FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE)

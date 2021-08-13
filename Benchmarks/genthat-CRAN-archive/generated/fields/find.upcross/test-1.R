@@ -1,6 +1,6 @@
-library(fields)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     tol <- 1e-05
     shat.pure.error <- 0.825298038376556
     Krig.fs2hat <- fields::Krig.fs2hat

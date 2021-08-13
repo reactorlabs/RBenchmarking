@@ -1,6 +1,6 @@
-library(BenfordTests)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     BenfordTests:::qbenf(digits = 1)
 }
 

@@ -1,6 +1,6 @@
-library(bqtl)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     method <- "BC1"
     marker.levels <- structure(c("AA", "Aa", "nil", "nil", "nil", "--"), names = c("AA", "Aa", "", "", "", "miss.val"))
     make.marker.numeric <- bqtl:::make.marker.numeric

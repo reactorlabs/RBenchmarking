@@ -1,6 +1,6 @@
-library(ade4)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ylim <- NULL
     yax <- 2
     xlim <- NULL

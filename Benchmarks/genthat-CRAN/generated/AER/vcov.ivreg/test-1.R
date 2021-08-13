@@ -1,6 +1,6 @@
-library(AER)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ivreg <- AER::ivreg
     usc <- structure(list(income = c(6284L, 6390L, 6476L, 6640L, 6628L, 6879L, 7080L, 7114L, 7113L, 7256L, 7264L, 7382L, 
         7583L, 7718L, 8140L, 8508L, 8822L, 9114L, 9399L, 9606L, 9875L, 10111L, 10414L, 11013L, 10832L, 10906L, 11192L, 11406L, 

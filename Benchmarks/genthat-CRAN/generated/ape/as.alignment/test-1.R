@@ -1,6 +1,6 @@
-library(ape)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(c("n", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "n", "a", "a", "n", "t", "t", "t", "t", "t", 
         "t", "t", "t", "t", "t", "t", "n", "t", "t", "n", "t", "t", "t", "t", "t", "t", "t", "t", "t", "t", "t", "n", "t", 
         "t", "n", "c", "c", "c", "c", "c", "c", "c", "c", "c", "c", "c", "n", "c", "c", "c", "g", "g", "g", "g", "g", "g", 

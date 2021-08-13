@@ -1,6 +1,6 @@
-library(coin)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     trafo <- coin::trafo
     of_trafo <- coin::of_trafo
     jobsatisfaction <- structure(c(1L, 2L, 0L, 0L, 3L, 3L, 1L, 2L, 11L, 17L, 8L, 4L, 2L, 3L, 5L, 2L, 1L, 0L, 0L, 0L, 1L, 

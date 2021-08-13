@@ -1,6 +1,6 @@
-library(coin)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(c(1L, 2L, 3L, 4L, 1L, 2L, 3L, 4L, 1L, 2L, 3L, 4L, 1L, 2L, 3L, 4L, 1L, 2L, 3L, 4L, 1L, 2L, 3L, 4L, 1L, 
         2L, 3L, 4L, 1L, 2L, 3L, 4L), .Label = c("<5000", "5000-15000", "15000-25000", ">25000"), class = "factor")
     minprob <- 0.1

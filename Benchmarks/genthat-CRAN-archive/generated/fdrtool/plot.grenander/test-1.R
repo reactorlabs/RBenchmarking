@@ -1,6 +1,6 @@
-library(fdrtool)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     g <- structure(list(F = genthat::with_env(function(v) .approxfun(x, y, v, method, yleft, yright, f), env = list2env(list(yright = 1, 
         yleft = 0, y = c(0.0333333333333333, 0.0666666666666667, 0.1, 0.133333333333333, 0.166666666666667, 0.2, 0.233333333333333, 
             0.266666666666667, 0.3, 0.333333333333333, 0.366666666666667, 0.4, 0.433333333333333, 0.466666666666667, 0.5, 

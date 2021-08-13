@@ -1,6 +1,6 @@
-library(ddalpha)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     k <- 0.05
     ddalpha:::.longtoint(k = k)
 }

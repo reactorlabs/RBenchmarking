@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     Duncan <- carData::Duncan
     lm <- stats::lm
     model <- structure(list(coefficients = structure(c(-6.06466292210332, 0.598732821529495, 0.54583390940088), names = c("(Intercept)", 

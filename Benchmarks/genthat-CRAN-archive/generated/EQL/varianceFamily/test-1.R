@@ -1,6 +1,6 @@
-library(EQL)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     varf <- genthat::with_env(function(y, theta) y^theta, env = list2env(list(), parent = baseenv()))
     validmuf <- genthat::with_env(function(mu, theta) {
         if (theta == 0) {

@@ -1,6 +1,6 @@
-library(biglm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     bigglm <- biglm::bigglm
     gg <- log(Volume) ~ log(Girth) + log(Height) + offset(2 * log(Girth) + log(Height))
     trees <- structure(list(Girth = c(8.3, 8.6, 8.8, 10.5, 10.7, 10.8, 11, 11, 11.1, 11.2, 11.3, 11.4, 11.4, 11.7, 12, 12.9, 

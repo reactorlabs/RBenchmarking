@@ -1,6 +1,6 @@
-library(ExPosition)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     jocn.2005.fmri <- list(images = list(data = structure(list(Face = c(0, 4.52, 4.08, 4.08, 4.52, 3.97, 3.87, 3.73), House = c(4.52, 
         0, 2.85, 4.52, 4.52, 4.52, 4.08, 4.52), Cat = c(4.08, 2.85, 0, 1.61, 2.92, 2.81, 1.96, 3.17), Chair = c(4.08, 4.52, 
         1.61, 0, 2.82, 2.89, 2.91, 3.97), Shoes = c(4.52, 4.52, 2.92, 2.82, 0, 3.55, 3.26, 4.52), Scissors = c(3.97, 4.52, 

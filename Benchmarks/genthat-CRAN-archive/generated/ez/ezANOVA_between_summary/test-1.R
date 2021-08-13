@@ -1,6 +1,6 @@
-library(ez)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     white.adjust <- FALSE
     from_Anova <- structure(list(`Sum Sq` = c(179.041120399352, 174.858201788386), Df = c(1, 18), `F value` = c(18.4305919552376, 
         NA), `Pr(>F)` = c(0.000437756150454231, NA)), class = c("anova", "data.frame"), row.names = c("group", "Residuals"), 

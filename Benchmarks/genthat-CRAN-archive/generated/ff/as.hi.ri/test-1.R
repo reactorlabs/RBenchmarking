@@ -1,6 +1,6 @@
-library(ff)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     rownam <- NULL
     nvw <- list(n = 150L, vw = NULL)
     i <- structure(c(101L, 150L, 150L), class = "ri")

@@ -1,6 +1,6 @@
-library(assertive.numbers)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     assertive.numbers:::assert_all_are_positive(x = 1:10)
 }
 

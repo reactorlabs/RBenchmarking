@@ -1,6 +1,6 @@
-library(emplik)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     funlogrank <- genthat::with_env(function(t) {
         sqrt(119/(76 * 43)) * fR1(t) * fR2(t)/(fR1(t) + fR2(t))
     }, env = list2env(list(fR2 = genthat::with_env(function(v) .approxfun(x, y, v, method, yleft, yright, f), env = list2env(list(yright = 0, 

@@ -1,6 +1,6 @@
-library(ddalpha)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     settings <- list(name = "depth.Mahalanobis", method = "depth.Mahalanobis", mah.estimate = "moment", mah.classes = list(list(index = 1L, 
         prior = 0.51875, mean = structure(c(2.00766957093196, 1.95158850695424), names = c("V1", "V2")), cov = structure(c(0.873215700456705, 
             1.07577625055209, 1.07577625055209, 3.69931413394777), .Dim = c(2L, 2L), .Dimnames = list(c("V1", "V2"), c("V1", 

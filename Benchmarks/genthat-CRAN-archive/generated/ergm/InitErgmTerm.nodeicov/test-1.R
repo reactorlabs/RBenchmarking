@@ -1,6 +1,6 @@
-library(ergm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ergm:::InitErgmTerm.nodeicov(nw = structure(list(mel = list(list(inl = 42L, outl = 1L, atl = list(na = FALSE)), list(inl = 7L, 
         outl = 2L, atl = list(na = FALSE)), list(inl = 37L, outl = 2L, atl = list(na = FALSE)), list(inl = 40L, outl = 3L, 
         atl = list(na = FALSE)), list(inl = 46L, outl = 3L, atl = list(na = FALSE)), list(inl = 50L, outl = 3L, atl = list(na = FALSE)), 

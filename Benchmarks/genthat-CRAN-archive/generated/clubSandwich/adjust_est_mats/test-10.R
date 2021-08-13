@@ -1,6 +1,6 @@
-library(clubSandwich)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     vcov <- structure(c(0.3178238357024, -0.0828564582529782, 0.027747888270151, -0.0828564582529682, 0.0345320414186933, 
         -0.0300992277694537, 0.0277478882701514, -0.0300992277694582, 0.0429223306563563), .Dim = c(3L, 3L), .Dimnames = list(c("(Intercept)", 
         "log(rprice)", "log(rincome)"), c("(Intercept)", "log(rprice)", "log(rincome)")), type = "CR2", cluster = structure(c(1L, 

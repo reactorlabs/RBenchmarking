@@ -1,6 +1,6 @@
-library(fields)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     transform <- list(dim = c(147L, 2L), x.center = c(0, 0), x.scale = c(1, 1), x.scale.type = "unscaled")
     out.des <- structure(c(-89.586, -89.606, -90.199, -89.811, -91.662, -93.467, -88.393, -91.229, -83.787, -91.404, -90.431, 
         -86.838, -88.926, -83.041, -88.622, -88.529, -86.567, -89.335, -86.236, -85.102, -84.467, -84.394, -88.549, -87.673, 

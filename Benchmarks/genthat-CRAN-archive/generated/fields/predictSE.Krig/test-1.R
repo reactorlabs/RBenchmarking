@@ -1,6 +1,6 @@
-library(fields)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ChicagoO3 <- fields::ChicagoO3
     Krig <- fields::Krig
     xnew <- structure(c(10, 20, -10, 15), .Dim = c(2L, 2L))

@@ -1,6 +1,6 @@
-library(e1071)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(list(logl = c(-2605.25539931118, -2614.71768363868, -2639.51774919997), loglsat = c(-2596.22320296243, 
         -2610.93321403509, -2622.59638310232), lratio = c(18.064392697499, 7.56893920718085, 33.8427321953013), lratiomean = 19.8253546999937, 
         lratiosd = 13.2251196545182, lratioorg = 45.2990931604418, zratio = 1.9261631747691, pvalzratio = 0.0270420011881536, 

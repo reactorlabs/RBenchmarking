@@ -1,6 +1,6 @@
-library(data.table)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- list(NAME = "DT", NROW = 5L, NCOL = 2L, MB = 0, COLS = list(c("A", "B")), KEY = list("B"), INDICES = NULL)
     nd <- list(vnames = c("NAME", "NROW", "NCOL", "MB", "COLS", "KEY", "INDICES"), .named = c(TRUE, TRUE, TRUE, TRUE, TRUE, 
         TRUE, TRUE))

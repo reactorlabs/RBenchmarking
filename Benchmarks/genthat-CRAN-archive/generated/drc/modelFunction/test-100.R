@@ -1,6 +1,6 @@
-library(drc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     parm2mat <- genthat::with_env(function(parm) {
         for (i in 1:numNames) {
             parmMatrix[, i] <- pmodelsList2[[i]] %*% parm[parmIndex[[i]]]

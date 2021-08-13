@@ -1,6 +1,6 @@
-library(ergm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     model <- structure(list(formula = molecule ~ edges + nodefactor("atomic type") + gwesp(0.5, fixed = TRUE), coef.names = c("edges", 
         "nodefactor.atomic type.2", "nodefactor.atomic type.3", "gwesp.fixed.0.5"), offset = c(FALSE, FALSE, FALSE), terms = list(list(name = "edges", 
         coef.names = "edges", dependence = FALSE, minval = 0, maxval = 190, conflicts.constraints = "edges", pkgname = "ergm", 

@@ -1,6 +1,6 @@
-library(drc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     drm <- drc::drm
     H.virescens <- drc::H.virescens
     LL.2 <- drc::LL.2

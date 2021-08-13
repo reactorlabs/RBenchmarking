@@ -1,6 +1,6 @@
-library(dendextend)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     the_attrib <- "edgePar"
     dend <- structure(list(structure(list(structure(7L, members = 1L, height = 0, label = "123", leaf = TRUE), structure(list(structure(4L, 
         label = "111", members = 1L, height = 0, leaf = TRUE), structure(8L, label = "145", members = 1L, height = 0, leaf = TRUE)), 

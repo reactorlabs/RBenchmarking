@@ -1,6 +1,6 @@
-library(bqtl)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     mode.mat <- structure(c(1, -1), .Dim = 2:1, .Dimnames = list(structure(c("AA", "Aa"), names = c("AA", "Aa")), NULL))
     m.state.matrix <- structure(c(0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0.00856312578180474, 1, 0, 0, 1, 1, 
         0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0.991436874218195, 0, 1, 0, 0.991436874218195, 0, 

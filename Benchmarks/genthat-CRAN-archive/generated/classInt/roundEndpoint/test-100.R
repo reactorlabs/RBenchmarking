@@ -1,6 +1,6 @@
-library(classInt)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     intervalClosure <- "left"
     i <- 6L
     dataPrecision <- NULL

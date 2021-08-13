@@ -1,6 +1,6 @@
-library(DySeq)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     my.trans <- structure(list(structure(c(21, 0, 0, 0, 0, 1, 1, 24), .Dim = c(4L, 2L), .Dimnames = list(c("1-1", "1-0", 
         "0-1", "0-0"), c("1", "0"))), structure(c(10, 1, 4, 2, 2, 3, 2, 23), .Dim = c(4L, 2L), .Dimnames = list(c("1-1", 
         "1-0", "0-1", "0-0"), c("1", "0"))), structure(c(14, 2, 0, 1, 2, 1, 2, 25), .Dim = c(4L, 2L), .Dimnames = list(c("1-1", 

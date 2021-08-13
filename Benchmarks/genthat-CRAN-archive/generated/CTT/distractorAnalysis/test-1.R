@@ -1,6 +1,6 @@
-library(CTT)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     CTTkey <- c("D", "C", "A", "D", "D", "A", "D", "B", "D", "A", "A", "D", "C", "C", "B", "C", "D", "A", "A", "B")
     CTTdata <- structure(list(i1 = c("A", "C", "B", "C", "A", "A", "A", "A", "D", "C", "D", "A", "D", "D", "D", "B", "D", 
         "C", "D", "A", "D", "B", "B", "A", "D", "A", "B", "D", "D", "B", "D", "B", "B", "D", "B", "A", "D", "D", "B", "D", 

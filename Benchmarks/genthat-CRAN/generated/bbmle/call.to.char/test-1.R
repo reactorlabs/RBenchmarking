@@ -1,6 +1,6 @@
-library(bbmle)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     bbmle:::call.to.char(x = y ~ x)
 }
 

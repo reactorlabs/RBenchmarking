@@ -1,6 +1,6 @@
-library(digest)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     serializeVersion <- 2L
     object <- 1:5
     ascii <- FALSE

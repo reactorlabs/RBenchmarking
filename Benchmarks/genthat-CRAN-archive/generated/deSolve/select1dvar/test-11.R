@@ -1,6 +1,6 @@
-library(deSolve)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     Which <- 1L
     varnames <- "Aphid"
     att <- list(dim = c(201L, 61L), dimnames = list(NULL, c("time", "APHIDS1", "APHIDS2", "APHIDS3", "APHIDS4", "APHIDS5", 

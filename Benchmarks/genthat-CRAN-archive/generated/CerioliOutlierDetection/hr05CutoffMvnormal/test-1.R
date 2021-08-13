@@ -1,6 +1,6 @@
-library(CerioliOutlierDetection)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     v <- 5L
     n <- 200L
     mcd.alpha <- 0.515

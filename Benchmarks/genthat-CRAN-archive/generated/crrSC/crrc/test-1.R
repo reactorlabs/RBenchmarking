@@ -1,6 +1,6 @@
-library(crrSC)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     cdata <- structure(list(ftime = c(959L, 383L, 1034L, 83L, 20L, 20L, 20L, 20L, 374L, 39L, 7L, 3L, 177L, 34L, 149L, 670L, 
         996L, 446L, 1L, 20L, 2L, 1L, 20L, 20L, 20L, 20L, 20L, 20L, 20L, 20L, 7L, 1L, 92L, 20L, 72L, 20L, 1L, 20L, 20L, 20L, 
         20L, 20L, 20L, 20L, 20L, 20L, 20L, 93L, 1158L, 286L, 450L, 366L, 20L, 20L, 262L, 640L, 20L, 20L, 20L, 20L, 34L, 632L, 

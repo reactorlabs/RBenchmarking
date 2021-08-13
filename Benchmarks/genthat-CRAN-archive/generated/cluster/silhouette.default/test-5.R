@@ -1,6 +1,6 @@
-library(cluster)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     pam <- cluster::pam
     ruspini <- structure(list(x = c(4L, 5L, 10L, 9L, 13L, 13L, 12L, 15L, 18L, 19L, 22L, 27L, 28L, 24L, 27L, 28L, 30L, 31L, 
         32L, 36L, 28L, 32L, 35L, 33L, 38L, 41L, 38L, 38L, 32L, 34L, 44L, 44L, 44L, 46L, 47L, 49L, 50L, 53L, 52L, 55L, 54L, 

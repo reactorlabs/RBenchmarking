@@ -1,6 +1,6 @@
-library(bibtex)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     bibtex:::read.bib(package = "datasets")
 }
 

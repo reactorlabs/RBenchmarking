@@ -1,6 +1,6 @@
-library(ape)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     Y <- c(4.74493, 3.3322, 3.3673, 2.89037, 2.30259)
     X <- c(4.09434, 3.61092, 2.37024, 2.02815, -1.46968)
     vcv.phylo <- ape::vcv.phylo

@@ -1,6 +1,6 @@
-library(DBItest)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     DBItest:::make_placeholder_fun(pattern = ":name")
 }
 

@@ -1,6 +1,6 @@
-library(e1071)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     obj3 <- structure(list(best.parameters = structure(list(minsplit = 5), out.attrs = list(dim = structure(3L, names = "minsplit"), 
         dimnames = list(minsplit = c("minsplit= 5", "minsplit=10", "minsplit=15"))), row.names = 1L, class = "data.frame"), 
         best.performance = 12.1322452509947, method = "rpart.wrapper", nparcomb = 3L, train.ind = structure(list(`(0.969,4.1]` = c(5L, 

@@ -1,6 +1,6 @@
-library(cpk)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     dr <- 1.42
     di <- 4
     cpk:::dm.fn(dr = dr, di = di)

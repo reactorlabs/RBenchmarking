@@ -1,6 +1,6 @@
-library(cobalt)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     facet <- "which"
     cobalt:::f.build(y = ".", rhs = facet)
 }

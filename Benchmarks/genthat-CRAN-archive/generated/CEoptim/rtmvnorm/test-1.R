@@ -1,6 +1,6 @@
-library(CEoptim)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     Sigma <- structure(c(12.0126119156892, 0, 0, 15.0270631872919), .Dim = c(2L, 2L))
     N <- 100L
     mu <- c(0.867954479877742, -2.37374983441288)

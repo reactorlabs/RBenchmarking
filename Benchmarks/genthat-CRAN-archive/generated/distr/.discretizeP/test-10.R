@@ -1,6 +1,6 @@
-library(distr)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     upper <- 10.1885218236247
     lower <- -10.1885218236247
     h <- 0.00497486417169173

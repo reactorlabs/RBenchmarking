@@ -1,6 +1,6 @@
-library(circular)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     bw.cv.ml3 <- 23.0746261294806
     density.circular <- circular::density.circular
     theta3 <- structure(c(2.7047266765797, 3.22191701095794, 3.40154986178463, 5.12745087784331, 3.12730930922671, 1.03057894167412, 

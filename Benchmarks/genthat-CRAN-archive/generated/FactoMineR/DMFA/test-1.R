@@ -1,6 +1,6 @@
-library(FactoMineR)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     iris <- datasets::iris
     FactoMineR:::DMFA(don = iris, num.fact = 5)
 }

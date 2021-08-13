@@ -1,6 +1,6 @@
-library(circlize)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     j <- 738L
     i <- 46L
     gr2 <- structure(list(start = c(74399L, 232857L, 729922L, 962880L, 1114423L, 1321963L, 1578359L, 2040798L, 2234627L, 

@@ -1,6 +1,6 @@
-library(ape)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     t2 <- structure(list(edge = structure(c(3L, 3L, 1L, 2L), .Dim = c(2L, 2L)), edge.length = c(1, 1), Nnode = 1L, tip.label = c("b", 
         "a")), class = "phylo", order = "cladewise")
     t1 <- structure(list(edge = structure(c(3L, 3L, 1L, 2L), .Dim = c(2L, 2L)), edge.length = c(1, 1), Nnode = 1L, tip.label = c("a", 

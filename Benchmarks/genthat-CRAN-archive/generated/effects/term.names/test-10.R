@@ -1,6 +1,6 @@
-library(effects)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     lm <- stats::lm
     NLSY <- structure(list(math = c(50, 28.57, 50, 32.14, 21.43, 15.48, 20.24, 34.52, 29.76, 14.29, 26.19, 69.05, 19.05, 
         36.9, 21.43, 32.14, 20.24, 17.86, 35.71, 28.57, 30.95, 26.19, 22.62, 17.86, 32.14, 23.81, 21.43, 27.38, 11.9, 35.71, 

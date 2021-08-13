@@ -1,6 +1,6 @@
-library(ff)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ret <- c(FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE)
     index <- structure(list(x = structure(list(first = 1L, dat = structure(list(lengths = 11L, values = 1L), class = "rle"), 
         last = 12L), class = "rlepack"), ix = NULL, re = FALSE, minindex = 1L, maxindex = 12L, length = 12L, dim = NULL, 

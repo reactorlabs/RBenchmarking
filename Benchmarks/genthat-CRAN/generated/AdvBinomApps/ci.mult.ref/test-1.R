@@ -1,6 +1,6 @@
-library(AdvBinomApps)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     p.target <- 2e-05
     n <- c(110000, 138000)
     k <- c(1, 2)

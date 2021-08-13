@@ -1,6 +1,6 @@
-library(BBmisc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- 1
     BBmisc:::save2(file = tempfile(), y = x)
 }

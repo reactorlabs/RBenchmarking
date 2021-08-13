@@ -1,6 +1,6 @@
-library(circlize)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     track.start <- 0.99
     track.index <- 1
     track.height <- 0.5

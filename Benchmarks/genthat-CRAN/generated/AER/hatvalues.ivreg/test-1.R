@@ -1,6 +1,6 @@
-library(AER)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     c1995 <- structure(list(state = structure(1:48, .Label = c("AL", "AR", "AZ", "CA", "CO", "CT", "DE", "FL", "GA", "IA", 
         "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD", "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ", 
         "NM", "NV", "NY", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VA", "VT", "WA", "WI", "WV", "WY"), 

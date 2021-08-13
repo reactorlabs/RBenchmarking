@@ -1,6 +1,6 @@
-library(capushe)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     n <- 1000
     data <- structure(list(model = c("K=1", "K=2", "K=3", "K=4", "K=5", "K=6", "K=7", "K=8", "K=9", "K=10", "K=11", "K=12", 
         "K=13", "K=14", "K=15", "K=16", "K=17", "K=18", "K=19", "K=20", "K=21", "K=22", "K=23", "K=24", "K=25", "K=26", "K=27", 

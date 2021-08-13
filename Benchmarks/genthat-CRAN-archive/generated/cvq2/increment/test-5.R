@@ -1,6 +1,6 @@
-library(cvq2)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     iRun <- 2
     cvq2:::increment(x = iRun)
 }

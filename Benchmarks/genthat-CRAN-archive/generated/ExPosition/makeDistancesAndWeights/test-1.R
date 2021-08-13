@@ -1,6 +1,6 @@
-library(ExPosition)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     method <- "euclidean"
     masses <- NULL
     DATA <- structure(c(5.1, 4.9, 4.7, 4.6, 5, 5.4, 4.6, 5, 4.4, 4.9, 5.4, 4.8, 4.8, 4.3, 5.8, 5.7, 5.4, 5.1, 5.7, 5.1, 5.4, 

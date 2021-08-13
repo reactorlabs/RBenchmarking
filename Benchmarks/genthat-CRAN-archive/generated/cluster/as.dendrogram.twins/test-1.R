@@ -1,6 +1,6 @@
-library(cluster)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     agnes <- cluster::agnes
     daisy <- cluster::daisy
     votes.repub <- structure(list(X1856 = c(NA, NA, NA, NA, 18.77, NA, 53.18, 2.11, NA, NA, NA, NA, 40.25, 40.03, 49.13, 

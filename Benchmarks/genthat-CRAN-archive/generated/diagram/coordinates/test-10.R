@@ -1,6 +1,6 @@
-library(diagram)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     relsize <- 1
     pos <- NULL
     ncomp <- 4L

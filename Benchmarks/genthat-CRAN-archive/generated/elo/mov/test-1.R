@@ -1,6 +1,6 @@
-library(elo)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     out <- c(-8, 3, 4, -2, 9, -2, -2, 13, 9, 5, 4, 5, -12, 7, -1, 6, 7, 10, 0, 11, 0, 5, 4, 7, -9, 7, 6, 1, 3, 10, -3, 3, 
         11, 1, 0, -7, -1, 9, 7, 2, 4, 3, 0, -7, -1, 6, 0, 5, 4, -8, 11, 9, -1, -1, -2, 7)
     elo:::mov(score.A = out)

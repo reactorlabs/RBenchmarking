@@ -1,6 +1,6 @@
-library(bbmle)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     d <- structure(list(x = 1:20, y = c(1L, 0L, 3L, 2L, 1L, 1L, 2L, 1L, 2L, 2L, 4L, 3L, 3L, 4L, 2L, 2L, 3L, 1L, 2L, 0L)), 
         class = "data.frame", row.names = c(NA, -20L))
     glm <- stats::glm

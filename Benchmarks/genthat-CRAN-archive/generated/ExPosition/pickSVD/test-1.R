@@ -1,6 +1,6 @@
-library(ExPosition)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     k <- 0
     is.mds <- FALSE
     decomp.approach <- "svd"

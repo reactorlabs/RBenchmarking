@@ -1,6 +1,6 @@
-library(chemometrics)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ash <- structure(list(SOT = c(680L, 680L, 680L, 1070L, 1350L, 730L, 1250L, 1320L, 760L, 1000L, 1050L, 1290L, 750L, 960L, 
         1020L, 980L, 960L, 910L, 760L, 1170L, 680L, 960L, 1050L, 990L, 940L, 900L, 830L, 860L, 760L, 870L, 880L, 820L, 840L, 
         860L, 900L, 1020L, 1030L, 1040L, 1020L, 1040L, 980L, 1030L, 1070L, 1080L, 1060L, 1100L, 1020L, 930L, 1180L, 1120L, 

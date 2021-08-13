@@ -1,6 +1,6 @@
-library(chemometrics)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     opt <- "median"
     n.comp <- 3L
     fairct <- 4

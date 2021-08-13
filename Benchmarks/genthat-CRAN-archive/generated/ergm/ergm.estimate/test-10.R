@@ -1,6 +1,6 @@
-library(ergm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     verbose <- FALSE
     statsmatrix.obs <- NULL
     statsmatrix <- structure(c(-14, -4, 6, 7, 0, 3, 3, -17, -9, -3, -10, -10, 0, -22, -9, 4, -16, -3, 1, -9, -10, -13, -10, 

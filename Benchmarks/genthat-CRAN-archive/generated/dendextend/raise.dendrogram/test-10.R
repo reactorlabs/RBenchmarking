@@ -1,6 +1,6 @@
-library(dendextend)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     i <- 1L
     heiget_to_add <- 100
     dend <- structure(list(structure(8L, members = 1L, height = 0, label = "Florida", leaf = TRUE), structure(list(structure(list(structure(2L, 

@@ -1,6 +1,6 @@
-library(drc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     drm <- drc::drm
     LN.3 <- drc::LN.3
     P.promelas <- drc::P.promelas

@@ -1,6 +1,6 @@
-library(bbmle)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     scale.z <- genthat::with_env(function(X) {
         X$z <- X$z - min.z
         X

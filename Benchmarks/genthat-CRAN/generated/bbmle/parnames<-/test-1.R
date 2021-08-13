@@ -1,6 +1,6 @@
-library(bbmle)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     bbmle:::`parnames<-`(obj = genthat::with_env(function(p) {
         a <- p[1]
         b <- p[2]

@@ -1,6 +1,6 @@
-library(bpcp)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(list(cens = numeric(0), surv = c(1, 0.75, 0.5, 0.25, 0), lower = c(0.397635364383525, 0.194120449683244, 
         0.0675859864885431, 0.00630946320970989, 0), upper = c(1, 0.99369053679029, 0.932414013511457, 0.805879550316756, 
         0.602364635616474), L = c(0, 3, 7, 8, 14), Lin = c(TRUE, TRUE, TRUE, TRUE, TRUE), R = c(3, 7, 8, 14, Inf), Rin = c(FALSE, 

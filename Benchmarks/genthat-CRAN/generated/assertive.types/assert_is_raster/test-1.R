@@ -1,6 +1,6 @@
-library(assertive.types)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     m <- structure(c("#C54E6D", "#E16A86", "#FE86A1", "#FFA2BC", "#C54E6D", "#E16A86", "#FE86A1", "#FFA2BC", "#C54E6D", "#E16A86", 
         "#FE86A1", "#FFA2BC", "#C54E6D", "#E16A86", "#FE86A1", "#FFA2BC", "#C54E6D", "#E16A86", "#FE86A1", "#FFA2BC"), .Dim = 4:5)
     as.raster <- grDevices::as.raster

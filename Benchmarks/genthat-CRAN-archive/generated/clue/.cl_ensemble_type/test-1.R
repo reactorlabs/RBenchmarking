@@ -1,6 +1,6 @@
-library(clue)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     clusterings <- structure(list(`1975` = structure(list(.Data = structure(c(0.72, 0.04, 0.99, 0.59, 0.04, 0.98, 0.38, 0.11, 
         0.01, 0.96, 0.85, 0.82, 0.46, 0.63, 0.88, 0.06, 0.92, 0.94, 0.91, 0.61, 0.64, 0.28, 0.96, 0.01, 0.41, 0.96, 0.02, 
         0.62, 0.89, 0.99, 0.04, 0.15, 0.18, 0.54, 0.37, 0.12, 0.94, 0.08, 0.06, 0.09, 0.39, 0.36), n_of_classes = 2L, is_cl_hard_partition = FALSE, 

@@ -1,6 +1,6 @@
-library(circular)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     X <- list(control = structure(c(0.349065850398866, 0.174532925199433, 0.174532925199433, 0.0872664625997166, 0.0872664625997166, 
         0, 6.19591884457987, 6.19591884457987), names = c("control1", "control2", "control3", "control4", "control5", "control6", 
         "control7", "control8")), experimental = structure(c(1.48352986419518, 1.48352986419518, 1.30899693899575, 0.610865238198015, 

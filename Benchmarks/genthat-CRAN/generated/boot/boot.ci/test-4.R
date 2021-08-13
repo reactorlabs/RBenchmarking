@@ -1,6 +1,6 @@
-library(boot)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     aircondit <- boot::aircondit
     boot <- boot::boot
     mean.fun <- genthat::with_env(function(d, i) {

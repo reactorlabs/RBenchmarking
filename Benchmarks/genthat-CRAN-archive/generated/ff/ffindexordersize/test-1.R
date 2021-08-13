@@ -1,6 +1,6 @@
-library(ff)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     v <- "integer"
     n <- 8L
     BATCHBYTES <- 536870912

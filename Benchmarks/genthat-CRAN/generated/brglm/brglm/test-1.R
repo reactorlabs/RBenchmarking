@@ -1,6 +1,6 @@
-library(brglm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     lizards <- structure(list(grahami = c(20, 8, 4, 13, 8, 12, 8, 4, 5, 6, 1, 34, 69, 18, 31, 55, 13, 17, 60, 8, 12, 21, 
         4), opalinus = c(2, 1, 4, 0, 0, 0, 3, 1, 3, 0, 1, 11, 20, 10, 5, 4, 3, 15, 32, 8, 1, 5, 4), height = structure(c(1L, 
         1L, 1L, 2L, 2L, 2L, 1L, 1L, 1L, 2L, 2L, 1L, 1L, 1L, 2L, 2L, 2L, 1L, 1L, 1L, 2L, 2L, 2L), class = "factor", .Label = c("<5ft", 

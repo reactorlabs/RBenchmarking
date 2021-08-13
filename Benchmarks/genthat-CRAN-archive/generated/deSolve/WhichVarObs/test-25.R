@@ -1,6 +1,6 @@
-library(deSolve)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     which <- NULL
     varnames <- "Aphid"
     obs <- list(dat = NULL, pos = NULL, name = NULL, length = 0)

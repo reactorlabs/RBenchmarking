@@ -1,6 +1,6 @@
-library(evd)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     model <- "amix"
     beta <- structure(0, names = "beta")
     alpha <- structure(0.921799668311595, names = "alpha")

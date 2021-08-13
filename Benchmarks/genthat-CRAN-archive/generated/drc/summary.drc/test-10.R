@@ -1,6 +1,6 @@
-library(drc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     drm <- drc::drm
     LL.3 <- drc::LL.3
     ryegrass <- drc::ryegrass

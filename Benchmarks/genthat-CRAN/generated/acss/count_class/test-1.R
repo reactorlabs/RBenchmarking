@@ -1,6 +1,6 @@
-library(acss)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     acss:::count_class(string = c("HUHHEGGTE", "EGGHHU"), alphabet = 5)
 }
 

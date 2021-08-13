@@ -1,6 +1,6 @@
-library(deSolve)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     np <- 1L
     ldots <- list(type = "l", mfrow = NULL)
     ask <- NULL

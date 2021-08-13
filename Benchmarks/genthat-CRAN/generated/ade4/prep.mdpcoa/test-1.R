@@ -1,6 +1,6 @@
-library(ade4)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     rhizobium <- list(dnaobj = list(EXO.aa = structure(list(FTmdc1203 = structure(as.raw(c(24, 136, 40, 24, 136, 40, 136, 
         24, 136, 72, 136, 136, 136, 136, 40, 136, 72, 24, 24, 24, 40, 136, 40, 72, 72, 136, 40, 136, 136, 24, 40, 136, 72, 
         136, 136, 40, 136, 40, 40, 72, 40, 40, 72, 40, 24, 24, 72, 136, 24, 40, 136, 136, 136, 72, 40, 72, 40, 136, 72, 24, 

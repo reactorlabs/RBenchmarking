@@ -1,6 +1,6 @@
-library(Brobdingnag)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- .ext.1
     Brobdingnag:::.Brob.print(x = x)
 }

@@ -1,6 +1,6 @@
-library(emplik)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     y2 <- -Inf
     newdata2 <- list(value = c(0.5, 0.5, 1.5, 2.5, 2.5, 3.5, 3.5, 4.5, 5.5, 6.5, 6.5, 7.5, 8.5, 9.5, 10.5, 11.5, 12.5, 14.5, 
         15.5, 16.5, 18.5, 19.5, 20.5, 22.5, 24.5, 25.5, 26.5, 28.5), dd = c(1L, 0L, 0L, 1L, 0L, 1L, 0L, 0L, 0L, 1L, 0L, 0L, 

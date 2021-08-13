@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ylab <- "Density"
     xlab <- "income"
     response <- 1L

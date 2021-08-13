@@ -1,6 +1,6 @@
-library(coin)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     GTSG <- coin::GTSG
     coin:::logrank_test.formula(formula = Surv(time, event) ~ group, data = GTSG, type = "Prentice")
 }

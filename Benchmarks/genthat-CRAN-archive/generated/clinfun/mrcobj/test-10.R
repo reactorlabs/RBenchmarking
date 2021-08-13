@@ -1,6 +1,6 @@
-library(clinfun)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     par <- c(0.130908903270275, 0.424904882167082, 0.296490165258187)
     clinfun:::mrcobj(coefs = par, xmat = structure(c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 

@@ -1,7 +1,7 @@
-library(dygraphs)
 
-function_to_run <- function() {
-    plotterDependency <- structure(list(name = "Dygraph.Plotters.CandlestickPlotter", version = "1.0", src = list(file = "/opt/r_library/dygraphs/plotters"), 
+
+genthat_extracted_call <- function() {
+    plotterDependency <- structure(list(name = "Dygraph.Plotters.CandlestickPlotter", version = "1.0", src = list(file = "/opt/r_
         meta = NULL, script = "candlestick.js", stylesheet = NULL, head = NULL, attachment = NULL, package = NULL, all_files = FALSE), 
         class = "html_dependency")
     dygraph <- structure(list(x = structure(list(attrs = list(labels = c("day", "Open", "High", "Low", "Close"), legend = "auto", 

@@ -1,6 +1,6 @@
-library(emplik)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     theta <- 0
     rsk2 <- c(76, 56, 49, 35, 14)
     rsk1 <- c(43, 40, 36, 33, 25, 22, 20, 18, 11, 10, 9, 4, 2)

@@ -1,6 +1,6 @@
-library(assertive.properties)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- NULL
     assertive.properties:::DIM(x = x)
 }

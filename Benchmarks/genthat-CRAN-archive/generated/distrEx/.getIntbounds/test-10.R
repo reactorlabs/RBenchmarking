@@ -1,6 +1,6 @@
-library(distrEx)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     upperTruncQuantile <- 1e-07
     upp <- Inf
     object <- .ext.1

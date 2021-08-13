@@ -1,6 +1,6 @@
-library(Cubist)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- c("id=\"Cubist 2.07 GPL Edition 2021-08-07\"", "prec=\"1\" globalmean=\"22.53281\" extrap=\"1\" insts=\"1\" nn=\"1\" maxd=\"2.6\" ceiling=\"95\" floor=\"0\"", 
         "att=\"outcome\" mean=\"22.53\" sd=\"9.197105\" min=\"5\" max=\"50\"", "att=\"crim\" mean=\"3.613523\" sd=\"8.601546\" min=\"0.00632\" max=\"88.9762\"", 
         "att=\"zn\" mean=\"11.36\" sd=\"23.32245\" min=\"0\" max=\"100\"", "att=\"indus\" mean=\"11.136\" sd=\"6.860354\" min=\"0.46\" max=\"27.74\"", 

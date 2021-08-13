@@ -1,6 +1,6 @@
-library(ecolMod)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ecolMod:::dilution(main = c("Stock", "Stirred tank"), int = "Flow,Q")
 }
 

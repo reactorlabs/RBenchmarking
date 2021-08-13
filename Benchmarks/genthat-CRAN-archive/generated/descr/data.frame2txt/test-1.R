@@ -1,6 +1,6 @@
-library(descr)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     CO2 <- structure(list(Plant = structure(c(1L, 1L, 1L, 1L, 1L, 1L, 1L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 3L, 3L, 3L, 3L, 3L, 
         3L, 3L, 4L, 4L, 4L, 4L, 4L, 4L, 4L, 6L, 6L, 6L, 6L, 6L, 6L, 6L, 5L, 5L, 5L, 5L, 5L, 5L, 5L, 9L, 9L, 9L, 9L, 9L, 9L, 
         9L, 8L, 8L, 8L, 8L, 8L, 8L, 8L, 7L, 7L, 7L, 7L, 7L, 7L, 7L, 12L, 12L, 12L, 12L, 12L, 12L, 12L, 10L, 10L, 10L, 10L, 

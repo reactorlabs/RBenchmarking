@@ -1,6 +1,6 @@
-library(assertthat)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     assertthat:::`on_failure<-`(x = genthat::with_env(function(x) {
         assert_that(is.numeric(x), length(x) == 1)
         x%%2 == 1

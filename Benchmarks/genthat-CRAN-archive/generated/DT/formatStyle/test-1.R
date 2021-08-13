@@ -1,6 +1,6 @@
-library(DT)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     styleInterval <- DT::styleInterval
     . <- structure(list(x = structure(list(filter = "none", data = structure(list(` ` = c("1", "2", "3", "4", "5", "6", "7", 
         "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", 
@@ -50,12 +50,12 @@ function_to_run <- function() {
         padding = NULL, viewer = list(defaultWidth = NULL, defaultHeight = NULL, padding = NULL, fill = TRUE, suppress = FALSE, 
             paneHeight = NULL), browser = list(defaultWidth = NULL, defaultHeight = NULL, padding = NULL, fill = FALSE, external = FALSE), 
         knitr = list(defaultWidth = "100%", defaultHeight = "auto", figure = FALSE)), dependencies = list(structure(list(name = "dt-core", 
-        version = "1.10.20", src = list(file = "/opt/r_library/DT/htmlwidgets/lib/datatables"), meta = NULL, script = "js/jquery.dataTables.min.js", 
+        version = "1.10.20", src = list(file = "/opt/r_
         stylesheet = c("css/jquery.dataTables.min.css", "css/jquery.dataTables.extra.css"), head = NULL, attachment = NULL, 
         package = NULL, all_files = FALSE), class = "html_dependency"), structure(list(name = "jquery", version = "1.11.3", 
-        src = list(file = "/opt/r_library/crosstalk/lib/jquery"), meta = NULL, script = "jquery.min.js", stylesheet = NULL, 
+        src = list(file = "/opt/r_
         head = NULL, attachment = NULL, package = NULL, all_files = TRUE), class = "html_dependency"), structure(list(name = "crosstalk", 
-        version = "1.0.0", src = list(file = "/opt/r_library/crosstalk/www"), meta = NULL, script = "js/crosstalk.min.js", 
+        version = "1.0.0", src = list(file = "/opt/r_
         stylesheet = "css/crosstalk.css", head = NULL, attachment = NULL, package = NULL, all_files = TRUE), class = "html_dependency")), 
         elementId = NULL, preRenderHook = genthat::with_env(function(instance) {
             data <- instance[["x"]][["data"]]

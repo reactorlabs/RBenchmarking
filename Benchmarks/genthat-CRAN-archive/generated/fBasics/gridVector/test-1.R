@@ -1,6 +1,6 @@
-library(fBasics)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     fBasics:::gridVector(x = (0:10)/10)
 }
 

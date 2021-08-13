@@ -1,6 +1,6 @@
-library(ape)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     g <- structure(c(9L, 9L, 9L, 9L, 38L, 16L, 5L, 72L, 72L, 72L, 22L, 48L, 67L, 18L, 18L, 11L, 12L, 61L, 68L, 68L, 66L, 
         60L, 8L, 54L, 47L, 57L, 4L, 45L, 45L, 45L, 45L, 45L, 45L, 45L, 45L, 45L, 71L, 40L, 40L, 40L, 40L, 27L, 64L, 26L, 
         33L, 53L, 42L, 41L, 65L, 43L, 62L, 36L, 36L, 36L, 37L, 6L, 19L, 69L, 13L, 70L, 25L, 25L, 56L, 46L, 3L, 52L, 52L, 

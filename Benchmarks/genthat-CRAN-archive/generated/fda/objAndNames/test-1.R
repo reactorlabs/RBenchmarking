@@ -1,6 +1,6 @@
-library(fda)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     fda:::objAndNames(object = 1:2, preferred = list(letters[1:2], LETTERS[1:2]), default = anything)
 }
 

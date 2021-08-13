@@ -1,6 +1,6 @@
-library(distances)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     indices <- NULL
     distances:::coerce_integer(x = indices)
 }

@@ -1,6 +1,6 @@
-library(AdvBinomApps)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     theta <- c(0.8, 0.7)
     n <- c(110000, 150000, 220000)
     K <- structure(c(1, 0, 0, 0, 0, 1), .Dim = 3:2)

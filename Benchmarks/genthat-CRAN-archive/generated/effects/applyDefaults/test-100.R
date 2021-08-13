@@ -1,6 +1,6 @@
-library(effects)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(list(term = "recipe*temperature", formula = angle ~ recipe * temperature, response = "angle", variables = list(recipe = list(name = "recipe", 
         is.factor = TRUE, levels = c("A", "B", "C")), temperature = list(name = "temperature", is.factor = TRUE, levels = c("175", 
         "185", "195", "205", "215", "225"))), fit = structure(c(29.1333333333333, 26.8666666666667, 27.9333333333333, 31.5333333333333, 

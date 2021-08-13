@@ -1,6 +1,6 @@
-library(bit)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- c(3L, 5L, 1L, 3L, 5L, 8L, 6L, 7L, 10L, 7L, 9L, 9L, 9L, 3L, 2L, 5L, 9L, 4L, 9L, 6L, 8L, 1L, 6L, 9L, 6L, 10L, 6L, 
         6L, 4L, 7L, 6L, 10L, 5L, 5L, 2L, 9L, 6L, 1L, 1L, 2L, 7L, 2L, 10L, 10L, 4L, 4L, 7L, 1L, 5L, 6L, 4L, 2L, 10L, 9L, 6L, 
         10L, 9L, 7L, 10L, 3L, 9L, 3L, 5L, 4L, 10L, 6L, 9L, 6L, 1L, 5L, 5L, 6L, 9L, 10L, 8L, 2L, 7L, 7L, 5L, 3L, 10L, 9L, 

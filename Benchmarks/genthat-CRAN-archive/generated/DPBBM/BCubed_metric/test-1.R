@@ -1,6 +1,6 @@
-library(DPBBM)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     L <- c(1, 1, 2, 1, 1, 2, 2)
     C <- c(2, 2, 1, 2, 2, 1, 1)
     alpha <- 0.5

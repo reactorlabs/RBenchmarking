@@ -1,6 +1,6 @@
-library(emplik)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     xvec <- c(3, 5.3, 6.4, 9.1, 14.1, 15.4, 18.1, 15.3, 14, 5.8, 7.3, 14.4)
     xc <- 1:12
     funx <- structure(c(-1.238543, -0.361371999999999, -0.684200999999999, -0.829858999999999, 1.324483, -0.221174999999999, 

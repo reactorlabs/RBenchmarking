@@ -1,6 +1,6 @@
-library(DiagrammeR)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     DiagrammeR:::value_per_node_functions()
 }
 

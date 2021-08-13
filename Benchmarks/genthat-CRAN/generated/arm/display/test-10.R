@@ -1,6 +1,6 @@
-library(arm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     bayespolr <- arm::bayespolr
     housing <- MASS::housing
     M2 <- structure(list(coefficients = structure(c(0.566418924402236, 1.28877487515823, -0.572302477416164, -0.366279483715455, 

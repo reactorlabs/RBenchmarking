@@ -1,6 +1,6 @@
-library(elo)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     k <- 20
     elo:::remove_elo_k(x = k)
 }

@@ -1,6 +1,6 @@
-library(dygraphs)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     strokePattern <- "dashed"
     dygraphs:::resolveStrokePattern(strokePattern = strokePattern)
 }

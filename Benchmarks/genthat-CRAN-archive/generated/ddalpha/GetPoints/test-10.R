@@ -1,6 +1,6 @@
-library(ddalpha)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     the.args <- list(instance = "avr", numFcn = 2, numDer = 2)
     labels <- list("girl", "girl", "girl", "girl", "girl", "girl", "girl", "girl", "girl", "girl", "girl", "girl", "girl", 
         "girl", "girl", "girl", "girl", "girl", "girl", "girl", "girl", "girl", "girl", "girl", "girl", "girl", "girl", "girl", 

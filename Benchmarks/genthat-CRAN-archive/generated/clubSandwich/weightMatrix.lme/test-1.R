@@ -1,6 +1,6 @@
-library(clubSandwich)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     BodyWeight <- nlme::BodyWeight
     lme.formula <- nlme::lme.formula
     obj <- structure(list(modelStruct = structure(list(reStruct = structure(list(Rat = structure(c(2.1178038218304, -2.89537218832273, 

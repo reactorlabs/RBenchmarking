@@ -1,6 +1,6 @@
-library(assertthat)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     assertthat:::is.scalar(x = "a")
 }
 

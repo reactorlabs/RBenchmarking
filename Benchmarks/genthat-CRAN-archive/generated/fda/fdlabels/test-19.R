@@ -1,6 +1,6 @@
-library(fda)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     nvar <- 1
     nrep <- 4L
     fdnames <- list(c("const", "sin1", "cos1", "sin2", "cos2", "sin3", "cos3", "sin4", "cos4", "sin5", "cos5", "sin6", "cos6", 

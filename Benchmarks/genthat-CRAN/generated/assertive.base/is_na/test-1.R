@@ -1,6 +1,6 @@
-library(assertive.base)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- c(TRUE, FALSE, NA)
     assertive.base:::is_na(x = x)
 }

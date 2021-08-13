@@ -1,6 +1,6 @@
-library(base64url)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- "plain text"
     base64url:::base32_encode(x = x)
 }

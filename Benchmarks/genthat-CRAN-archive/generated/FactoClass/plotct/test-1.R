@@ -1,6 +1,6 @@
-library(FactoClass)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     mycolors <- c("white", "blue", "brown", "burlywood", "chocolate", "coral", "cyan", "darkblue", "darkcyan", "darkgreen", 
         "darkgrey", "darkmagenta", "darkolivegreen3", "darkred")
     Bogota <- structure(list(NoSTR = c(327L, 113L, 91L, 150L, 244L, 50L, 219L, 471L, 357L, 334L, 453L, 98L, 148L, 79L, 61L, 

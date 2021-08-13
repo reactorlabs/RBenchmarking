@@ -1,6 +1,6 @@
-library(ClustMMDD)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     S <- c(TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE)
     ploidy <- 2L
     n_levels <- c(10L, 10L, 10L, 10L, 10L, 10L, 10L, 10L, 10L, 10L)

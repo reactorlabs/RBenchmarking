@@ -1,6 +1,6 @@
-library(ff)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- 1:60
     vw <- NULL
     vectorIndex2arrayIndex <- ff::vectorIndex2arrayIndex

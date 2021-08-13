@@ -1,6 +1,6 @@
-library(backports)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     backports:::lengths(x = list(1:3, 2))
 }
 

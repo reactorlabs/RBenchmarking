@@ -1,6 +1,6 @@
-library(bacr)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     thin <- 1
     predictorsY <- c("V1", "V2", "V3", "V4", "X:V1", "X:V2", "X:V3", "X:V4", "X")
     population <- c(TRUE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, 

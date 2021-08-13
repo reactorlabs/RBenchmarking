@@ -1,6 +1,6 @@
-library(ade4)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     sub <- NULL
     possub <- "bottomright"
     csub <- 1.25

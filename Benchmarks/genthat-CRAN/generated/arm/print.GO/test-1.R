@@ -1,6 +1,6 @@
-library(arm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(NA, class = "GO")
     arm:::print.GO(x = x)
 }

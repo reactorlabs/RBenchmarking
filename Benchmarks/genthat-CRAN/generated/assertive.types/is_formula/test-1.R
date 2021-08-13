@@ -1,6 +1,6 @@
-library(assertive.types)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- ~x
     .xname <- "~x"
     assertive.types:::is_formula(x = x, .xname = .xname)

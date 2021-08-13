@@ -1,6 +1,6 @@
-library(digest)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     key <- "Jefe"
     algo <- "sha1"
     digest:::padWithZeros(k = key, algo = algo)

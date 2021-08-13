@@ -1,6 +1,6 @@
-library(ddalpha)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     outsider.settings <- NULL
     outsider.methods <- "depth.Mahalanobis"
     ddalpha <- list(call = NULL, colnames = NULL, classif.formula = NULL, raw = structure(list(V1 = c(0.856612449129426, 

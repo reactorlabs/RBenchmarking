@@ -1,6 +1,6 @@
-library(bit64)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     what <- c("match", "%in%", "duplicated", "unique", "unipos", "table", "rank", "quantile")
     bit64:::`%in%.default`(x = "rank", table = what)
 }

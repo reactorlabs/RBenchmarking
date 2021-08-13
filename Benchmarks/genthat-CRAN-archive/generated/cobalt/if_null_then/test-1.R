@@ -1,6 +1,6 @@
-library(cobalt)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     s.d.denom.list <- NULL
     s.d.denom <- structure("1", names = "Adj")
     i <- "Adj"

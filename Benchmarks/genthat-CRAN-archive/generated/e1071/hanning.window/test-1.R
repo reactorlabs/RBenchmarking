@@ -1,6 +1,6 @@
-library(e1071)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     e1071:::hanning.window(n = 10)
 }
 

@@ -1,6 +1,6 @@
-library(desc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     cmd <- "!new"
     desc:::is_constructor_cmd(x = cmd)
 }

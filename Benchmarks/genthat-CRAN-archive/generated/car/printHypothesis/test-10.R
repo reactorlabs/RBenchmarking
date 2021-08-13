@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     rhs <- c(0, 1)
     L <- structure(c(1, 0, 0, 1), .Dim = c(2L, 2L), .Dimnames = list(c("(Intercept) = 0", "repwt = 1"), c("(Intercept)", 
         "repwt")))

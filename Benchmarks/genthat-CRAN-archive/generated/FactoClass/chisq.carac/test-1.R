@@ -1,6 +1,6 @@
-library(FactoClass)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     DogBreeds <- structure(list(SIZE = structure(c(3L, 1L, 2L, 3L, 1L, 3L, 3L, 2L, 1L, 2L, 1L, 1L, 1L, 3L, 1L, 1L, 2L, 1L, 
         1L, 3L, 2L, 1L, 1L, 1L, 1L, 3L, 1L), .Label = c("lar", "med", "sma"), class = "factor"), WEIG = structure(c(2L, 3L, 
         3L, 2L, 1L, 2L, 2L, 2L, 3L, 3L, 3L, 1L, 3L, 2L, 3L, 3L, 3L, 3L, 1L, 2L, 3L, 3L, 3L, 3L, 1L, 2L, 1L), .Label = c("hea", 

@@ -1,6 +1,6 @@
-library(fields)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     Tps <- fields::Tps
     tps.out <- structure(list(call = Tps(x = ChicagoO3$x, Y = ChicagoO3$y), cov.function.name = "Rad.cov", null.function.name = "Krig.null.function", 
         args = list(p = 2), null.args = list(m = 2), m = 2, chol.args = list(pivot = FALSE), offset = 0, cost = 1, lambda = 0.0410731297190913, 

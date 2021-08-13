@@ -1,6 +1,6 @@
-library(ade4)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     tabC <- structure(list(fo = c(5L, 4L, 6L, 4L, 3L, 4L, 4L, 6L, 8L, 4L, 5L, 6L, 5L, 1L, 5L, 5L, 5L, 7L, 5L, 5L, 3L, 6L, 
         4L, 5L, 4L, 5L, 5L, 4L, 6L, 5L, 5L, 5L, 3L, 9L, 6L, 6L, 5L, 4L, 6L, 5L, 3L, 6L, 6L, 5L, 5L, 5L, 6L, 5L, 2L, 3L, 4L, 
         3L, 5L, 3L, 8L, 4L, 5L, 5L, 5L, 5L, 6L, 5L, 6L, 5L, 5L, 1L, 6L, 6L, 5L, 5L, 6L, 4L, 5L, 3L, 7L, 7L, 6L, 3L, 4L, 4L)), 

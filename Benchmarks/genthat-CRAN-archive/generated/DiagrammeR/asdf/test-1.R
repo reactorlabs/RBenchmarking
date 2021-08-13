@@ -1,6 +1,6 @@
-library(DiagrammeR)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     . <- structure(list(attr = c("layout", "outputorder", "bgcolor", "fontname", "fontsize", "shape", "fixedsize", "width", 
         "style", "fillcolor", "color", "fontcolor", "fontname", "fontsize", "len", "color", "arrowsize"), value = c("neato", 
         "edgesfirst", "white", "Helvetica", "10", "circle", "true", "0.5", "filled", "aliceblue", "gray70", "gray50", "Helvetica", 

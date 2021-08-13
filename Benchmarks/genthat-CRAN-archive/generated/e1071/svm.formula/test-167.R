@@ -1,6 +1,6 @@
-library(e1071)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     wts <- structure(c(2, 1), class = "table", .Dim = 2L, .Dimnames = list(c("setosa", "versicolor")))
     i2 <- structure(list(Sepal.Length = c(5.1, 4.9, 4.7, 4.6, 5, 5.4, 4.6, 5, 4.4, 4.9, 5.4, 4.8, 4.8, 4.3, 5.8, 5.7, 5.4, 
         5.1, 5.7, 5.1, 5.4, 5.1, 4.6, 5.1, 4.8, 5, 5, 5.2, 5.2, 4.7, 4.8, 5.4, 5.2, 5.5, 4.9, 5, 5.5, 4.9, 4.4, 5.1, 5, 4.5, 

@@ -1,6 +1,6 @@
-library(DiceDesign)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     DiceDesign:::nolhDesign(dimension = 8)
 }
 

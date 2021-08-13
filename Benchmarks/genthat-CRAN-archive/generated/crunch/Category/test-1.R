@@ -1,6 +1,6 @@
-library(crunch)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     crunch:::Category(name = "Second", id = 2)
 }
 

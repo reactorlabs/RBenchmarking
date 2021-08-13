@@ -1,6 +1,6 @@
-library(caret)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     caret:::twoClassSim(n = 100, linearVars = 1)
 }
 

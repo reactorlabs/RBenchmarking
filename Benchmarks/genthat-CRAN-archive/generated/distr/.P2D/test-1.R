@@ -1,6 +1,6 @@
-library(distr)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     up1 <- 4.26489079392384
     p <- distr::p
     ngrid <- 4096

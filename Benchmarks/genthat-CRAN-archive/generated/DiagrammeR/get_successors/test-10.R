@@ -1,6 +1,6 @@
-library(DiagrammeR)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     paths <- list(c(1, 2), c(1, 3))
     i <- 1L
     graph <- structure(list(graph_info = structure(list(graph_id = "wkAYJjR5", graph_name = "graph_wkAYJjR5", graph_time = structure(1628396827.92827, 

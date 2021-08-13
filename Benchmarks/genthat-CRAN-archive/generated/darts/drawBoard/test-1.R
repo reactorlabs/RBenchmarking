@@ -1,6 +1,6 @@
-library(darts)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     darts:::drawBoard(new = TRUE)
 }
 

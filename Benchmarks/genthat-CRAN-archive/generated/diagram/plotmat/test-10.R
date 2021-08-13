@@ -1,6 +1,6 @@
-library(diagram)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     M <- structure(c("0", "f1", "f1", "0", "0", "0", "0", "f1", "0", "0", "0", "f1", "0", "0", "0", "0"), .Dim = c(4L, 4L))
     col <- structure(c("red", "blue", "blue", "red", "red", "red", "red", "red", "red", "red", "red", "red", "red", "red", 
         "red", "red"), .Dim = c(4L, 4L))

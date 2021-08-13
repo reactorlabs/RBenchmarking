@@ -1,6 +1,6 @@
-library(bit)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     bit <- bit::bit
     bit:::physical.default(x = bit(12))
 }

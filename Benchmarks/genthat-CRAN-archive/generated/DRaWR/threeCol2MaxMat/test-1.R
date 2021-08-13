@@ -1,6 +1,6 @@
-library(DRaWR)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     newedges <- structure(list(src = structure(c(3L, 7L, 5L, 6L, 1L, 9L, 2L, 2L, 1L, 4L, 13L, 13L, 13L, 2L, 4L, 7L, 14L, 
         14L, 14L, 1L, 5L, 9L), .Label = c("G1", "G10", "G2", "G3", "G4", "G5", "G6", "G7", "G8", "G9", "P1", "P2", "P3", 
         "P4", "P5"), class = "factor"), target = structure(c(1L, 1L, 2L, 2L, 3L, 4L, 5L, 6L, 7L, 9L, 2L, 4L, 7L, 13L, 13L, 

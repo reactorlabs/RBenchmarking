@@ -1,6 +1,6 @@
-library(DT)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     i <- TRUE
     data <- structure(list(` ` = c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", 
         "17", "18", "19"), temperature = c(0, 20, 40, 60, 80, 100, 120, 140, 160, 180, 200, 220, 240, 260, 280, 300, 320, 

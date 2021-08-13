@@ -1,6 +1,6 @@
-library(bit64)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ret <- structure(4.94065645841247e-324, class = "integer64")
     bit64:::remcache(x = ret)
 }

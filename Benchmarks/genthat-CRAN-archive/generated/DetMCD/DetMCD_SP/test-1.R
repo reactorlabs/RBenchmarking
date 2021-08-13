@@ -1,6 +1,6 @@
-library(DetMCD)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     tol <- 1e-07
     scale_est <- "qn"
     Data <- structure(c(-0.635254881937497, -0.177538255787234, -0.755379740778364, -0.509103948157641, 0.422984524631893, 

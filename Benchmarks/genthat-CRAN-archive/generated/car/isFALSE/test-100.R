@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     id <- list(method = "mahal", n = 5, cex = 1, col = c("blue", "magenta", "cyan", "orange", "gray", "green3", "red"), location = "lr", 
         labels = c("Afghanistan", "Albania", "Algeria", "American Samoa", "Angola", "Anguilla", "Argentina", "Armenia", "Aruba", 
             "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", 

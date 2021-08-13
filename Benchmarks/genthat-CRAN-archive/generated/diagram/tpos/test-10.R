@@ -1,6 +1,6 @@
-library(diagram)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     pos <- 2.5
     mid <- c(0.8, 0.6)
     dtext <- 0.025

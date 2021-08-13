@@ -1,6 +1,6 @@
-library(dygraphs)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     labels <- c("month", "ldeaths", "mdeaths", "fdeaths")
     dygraph <- structure(list(x = structure(list(attrs = list(title = "Deaths from Lung Disease (UK)", labels = c("month", 
         "ldeaths", "mdeaths", "fdeaths"), legend = "auto", retainDateWindow = FALSE, axes = list(x = list(pixelsPerLabel = 60))), 

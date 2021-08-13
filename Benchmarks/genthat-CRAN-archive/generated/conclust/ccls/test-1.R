@@ -1,6 +1,6 @@
-library(conclust)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     mustLink <- structure(c(1, 2), .Dim = 1:2)
     k <- 2
     data <- structure(c(0, 1, 1, 0, 0, 0, 1, 1), .Dim = c(4L, 2L))

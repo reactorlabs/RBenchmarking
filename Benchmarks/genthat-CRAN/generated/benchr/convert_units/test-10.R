@@ -1,6 +1,6 @@
-library(benchr)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(list(expr = structure(1:5, .Label = c("rchisq(100, 0)", "rchisq(100, 1)", "rchisq(100, 2)", "rchisq(100, 3)", 
         "rchisq(100, 5)"), class = "factor"), n.eval = c(1000, 1000, 1000, 1000, 1000), min = c(2.655e-06, 8.889e-06, 8.894e-06, 
         7.725e-06, 7.37e-06), lw.qu = c(2.981e-06, 1.07825e-05, 1.1297e-05, 1.087575e-05, 1.08425e-05), median = c(4.45e-06, 

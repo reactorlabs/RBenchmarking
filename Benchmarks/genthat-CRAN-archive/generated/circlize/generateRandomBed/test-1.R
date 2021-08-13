@@ -1,6 +1,6 @@
-library(circlize)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     runif <- stats::runif
     circlize:::generateRandomBed(fun = function(k) runif(k))
 }

@@ -1,6 +1,6 @@
-library(ade4)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x.area <- structure(list(V1 = structure(c(1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 
         1L, 1L, 1L, 12L, 12L, 12L, 12L, 12L, 12L, 12L, 12L, 12L, 12L, 12L, 12L, 12L, 12L, 12L, 12L, 12L, 12L, 12L, 12L, 12L, 
         12L, 22L, 22L, 22L, 22L, 22L, 22L, 22L, 22L, 22L, 22L, 22L, 22L, 22L, 22L, 22L, 22L, 22L, 22L, 22L, 22L, 22L, 22L, 

@@ -1,6 +1,6 @@
-library(circular)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     n <- 100
     circular:::RuniformRad(n = n)
 }

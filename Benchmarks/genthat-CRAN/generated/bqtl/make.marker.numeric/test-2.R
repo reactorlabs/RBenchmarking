@@ -1,6 +1,6 @@
-library(bqtl)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     marker.levels <- structure(c("AA", "Aa", "nil", "nil", "nil", "--"), names = c("AA", "Aa", "", "", "", "miss.val"))
     m.frame <- structure(list(m.11 = structure(c(1L, 1L, 1L, 1L, 2L, 1L, 1L, 1L, 2L, 2L, 1L, 1L, 1L, 1L, 1L, 1L, 2L, 2L, 
         1L, 1L, 1L, 2L, 1L, NA, NA, 1L, 1L, 1L, 1L, 2L, 2L, 2L, 2L, 1L, 1L, 2L, 1L, 1L, NA, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 

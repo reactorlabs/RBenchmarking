@@ -1,6 +1,6 @@
-library(doParallel)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     doParallel:::evalWrapper(args = base::quote(list()))
 }
 

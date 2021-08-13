@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(list(SSP = list(`(Intercept)` = structure(108900, .Dim = c(1L, 1L), .Dimnames = list("(Intercept)", "(Intercept)")), 
         treatment = structure(3169.29744525548, .Dim = c(1L, 1L), .Dimnames = list("(Intercept)", "(Intercept)")), gender = structure(874.297445255475, 
             .Dim = c(1L, 1L), .Dimnames = list("(Intercept)", "(Intercept)")), `treatment:gender` = structure(1953.61922141119, 

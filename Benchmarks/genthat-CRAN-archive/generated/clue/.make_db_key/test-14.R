@@ -1,6 +1,6 @@
-library(clue)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     type <- "partition"
     name <- "SE"
     clue:::.make_db_key(name = tolower(name), type = type)

@@ -1,6 +1,6 @@
-library(drc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     names <- c("b", "d", "e")
     lowFixed <- drc:::lowFixed
     fixed <- c(NA, NA, NA)

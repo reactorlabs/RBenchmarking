@@ -1,6 +1,6 @@
-library(ff)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ff:::cfun(`1` = structure(c(-2.55382485095083, -0.396574836110409, 0.148127133085435, 0.105442069713146, 0.771857690054912, 
         2.42216335525159), names = c("Min.", "1st Qu.", "Median", "Mean", "3rd Qu.", "Max."), class = c("summaryDefault", 
         "table")), `2` = structure(c(-1.94978379604199, -0.605482288055242, -0.0305561467452468, -0.0192668275337842, 0.597759187859753, 

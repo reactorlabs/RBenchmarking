@@ -1,6 +1,6 @@
-library(corpcor)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     m <- 9L
     lambda <- 0.23
     C <- structure(c(52.4634055848026, -3.56856086698964e-15, 4.30439717620539e-16, -6.29311031869245e-15, -3.63384409586299e-15, 

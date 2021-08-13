@@ -1,6 +1,6 @@
-library(clustMixType)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     s_d <- 28.3062028082662
     object <- structure(list(cluster = structure(c(5L, 5L, 5L, 5L, 5L, 5L, 5L, 5L, 5L, 5L, 2L, 4L, 2L, 2L, 4L, 4L, 4L, 4L, 
         4L, 2L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 3L, 3L, 3L, 3L, 3L, 3L, 3L, 3L, 3L, 3L), names = c("1", "2", "3", 

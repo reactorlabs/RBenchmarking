@@ -1,6 +1,6 @@
-library(dendextend)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x2 <- 11
     x1 <- 10
     subtree <- structure(8L, members = 1L, height = 0, label = "8", leaf = TRUE, class = "dendrogram")

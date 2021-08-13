@@ -1,6 +1,6 @@
-library(ca)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(list(scree = structure(c(1, 2, 3, 4, 5, 6, 0.076455, 0.05822, 0.009197, 0.00567, 0.001172, 7e-06, 44.9, 
         34.2, 5.4, 3.3, 0.7, 0, 44.9, 79.1, 84.5, 87.8, 88.5, 88.5), .Dim = c(6L, 4L), .Dimnames = list(NULL, c("", "", "values2", 
         "values3"))), rows = NULL, columns = structure(list(name = structure(1:20, .Label = c("A:1", "A:2", "A:3", "A:4", 

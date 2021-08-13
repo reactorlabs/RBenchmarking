@@ -1,6 +1,6 @@
-library(credule)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     yieldcurveTenor <- c(1, 2, 3, 4, 5, 7)
     yieldcurveRate <- c(0.005, 0.007, 0.008, 0.01, 0.012, 0.015)
     RR <- 0.4

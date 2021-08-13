@@ -1,6 +1,6 @@
-library(ergm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     g.sim <- structure(list(structure(list(mel = list(list(inl = 2L, outl = 1L, atl = list(na = FALSE)), list(inl = 4L, outl = 1L, 
         atl = list(na = FALSE)), list(inl = 15L, outl = 1L, atl = list(na = FALSE)), list(inl = 12L, outl = 2L, atl = list(na = FALSE)), 
         list(inl = 12L, outl = 3L, atl = list(na = FALSE)), list(inl = 13L, outl = 3L, atl = list(na = FALSE)), list(inl = 7L, 

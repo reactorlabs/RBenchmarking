@@ -1,6 +1,6 @@
-library(evd)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     portpirie <- evd::portpirie
     evd:::mrlplot(data = portpirie)
 }

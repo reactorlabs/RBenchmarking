@@ -1,6 +1,6 @@
-library(ade4)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- 3L
     wt.list <- list(spring = structure(c(48, 12, 17, 18, 24, 45), names = c("sp_1", "sp_2", "sp_3", "sp_4", "sp_5", "sp_6")), 
         summer = structure(c(44, 9, 16, 32, 33, 41), names = c("su_1", "su_2", "su_3", "su_4", "su_5", "su_6")), autumn = structure(c(53, 

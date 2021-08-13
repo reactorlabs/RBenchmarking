@@ -1,6 +1,6 @@
-library(extrafont)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     extrafont:::choose_font(fonts = c("GillSans", "Verdana", "sans"), quiet = TRUE)
 }
 

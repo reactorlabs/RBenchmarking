@@ -1,6 +1,6 @@
-library(binsmooth)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     binsmooth:::simcounty(numCounties = 1)
 }
 

@@ -1,6 +1,6 @@
-library(checkmate)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     f <- Species ~ Sepal.Length + Sepal.Width
     checkmate:::checkFormula(x = f)
 }

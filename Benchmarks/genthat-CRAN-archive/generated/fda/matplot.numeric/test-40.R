@@ -1,6 +1,6 @@
-library(fda)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     fda:::matplot.numeric(x = (-4:5)^2, main = "Quadratic")
 }
 

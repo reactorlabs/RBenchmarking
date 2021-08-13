@@ -1,6 +1,6 @@
-library(ergm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ergm:::InitErgmTerm.degree(nw = structure(list(mel = list(list(inl = 3L, outl = 1L, atl = list(na = FALSE)), list(inl = 5L, 
         outl = 1L, atl = list(na = FALSE)), list(inl = 13L, outl = 1L, atl = list(na = FALSE)), list(inl = 6L, outl = 2L, 
         atl = list(na = FALSE)), list(inl = 14L, outl = 2L, atl = list(na = FALSE)), list(inl = 6L, outl = 3L, atl = list(na = FALSE)), 

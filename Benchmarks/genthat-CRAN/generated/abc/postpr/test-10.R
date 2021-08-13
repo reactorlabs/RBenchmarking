@@ -1,6 +1,6 @@
-library(abc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     mytol <- 0.05
     mytarget <- structure(list(pi = structure(0.0026528896, names = "146"), TajD.m = structure(0.0753506, names = "146"), 
         TajD.v = structure(0.533008746504874, names = "146")), row.names = "146", class = "data.frame")

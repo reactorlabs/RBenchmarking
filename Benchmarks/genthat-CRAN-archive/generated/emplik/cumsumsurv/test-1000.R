@@ -1,6 +1,6 @@
-library(emplik)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     pnew <- c(0.0370285067063568, 0.0416777298213259, 0.0628916813950415, 0.0836674554585568, 0.115112218830841, 0.148963699461876, 
         0.148963699461876, 0.361695008864127)
     emplik:::cumsumsurv(x = pnew)

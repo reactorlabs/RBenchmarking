@@ -1,6 +1,6 @@
-library(dygraphs)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     . <- structure(list(x = structure(list(attrs = list(labels = c("day", "O", "H", "L", "C", "Open", "High", "Low", "Close"), 
         legend = "auto", retainDateWindow = FALSE, axes = list(x = list(pixelsPerLabel = 60, drawAxis = TRUE), y = list(drawAxis = TRUE)), 
         stackedGraph = FALSE, fillGraph = FALSE, fillAlpha = 0.15, stepPlot = FALSE, drawPoints = FALSE, pointSize = 1, drawGapEdgePoints = FALSE, 

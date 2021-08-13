@@ -1,6 +1,6 @@
-library(coin)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     trafo <- coin::trafo
     rank_trafo <- coin::rank_trafo
     gerig <- structure(list(y1 = c(0.547, 1.811, 2.561, 1.706, 2.509, 1.414, -0.288, 2.524, 3.31, 1.417, 0.703, 0.961, 0.878, 

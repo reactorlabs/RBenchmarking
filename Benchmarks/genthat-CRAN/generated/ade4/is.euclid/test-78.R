@@ -1,6 +1,6 @@
-library(ade4)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     triinftodist <- genthat::with_env(function(x) {
         n0 <- length(x)
         n <- sqrt(1 + 8 * n0)

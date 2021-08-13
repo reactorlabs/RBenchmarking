@@ -1,6 +1,6 @@
-library(coin)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     weights <- NULL
     subset <- NULL
     formula <- asat ~ group

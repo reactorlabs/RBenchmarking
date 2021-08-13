@@ -1,6 +1,6 @@
-library(ade4)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     lizards <- list(traits = structure(list(mean.L = c(69.2, 48.4, 168.4, 66.1, 70.1, 55.2, 49.6, 61.3, 63.1, 58.5, 53.5, 
         65, 71.9, 55.5, 53, 68.4, 108.5, 98.5), matur.L = c(58L, 42L, 132L, 56L, 60L, 44L, 39L, 49L, 53L, 49L, 46L, 56L, 
         61L, 44L, 43L, 62L, 91L, 84L), max.L = c(82L, 56L, 190L, 72L, 81L, 64L, 57L, 67L, 71L, 65L, 64L, 76L, 84L, 70L, 63L, 

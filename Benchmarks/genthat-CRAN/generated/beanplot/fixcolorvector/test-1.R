@@ -1,6 +1,6 @@
-library(beanplot)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     X <- list("black")
     i <- 1L
     beanplot:::fixcolorvector(col = X[[i]])

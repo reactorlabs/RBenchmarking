@@ -1,6 +1,6 @@
-library(boot)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     vitz <- c(150, 35, 75, 5)
     vity <- c(10, 10, 75, 100)
     vitx <- c(50, 3, 150, 100)

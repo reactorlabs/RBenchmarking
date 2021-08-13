@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ylab <- "income"
     xlab <- "type"
     X <- structure(list(income = c(12351L, 25879L, 9271L, 8865L, 8403L, 11030L, 8258L, 14163L, 11377L, 11023L, 5902L, 7059L, 

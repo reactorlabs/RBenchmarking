@@ -1,6 +1,6 @@
-library(assertive.files)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     assertive.files:::is_dir(x = "/usr/lib/R", .xname = "R.home()")
 }
 

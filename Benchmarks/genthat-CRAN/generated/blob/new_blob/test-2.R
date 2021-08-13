@@ -1,6 +1,6 @@
-library(blob)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     blob:::new_blob()
 }
 

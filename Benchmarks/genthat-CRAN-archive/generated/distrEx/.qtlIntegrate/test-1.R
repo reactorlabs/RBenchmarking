@@ -1,6 +1,6 @@
-library(distrEx)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     fun <- genthat::with_env(function(x) {
         2 * x^2
     }, env = list2env(list(), parent = baseenv()))

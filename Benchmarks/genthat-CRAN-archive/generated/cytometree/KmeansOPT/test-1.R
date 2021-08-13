@@ -1,6 +1,6 @@
-library(cytometree)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     partitions3gr <- list(c(1, 2, 3, 3), c(1, 2, 2, 3), c(1, 1, 2, 3))
     M_j <- c(251L, 93L, 300L, 438L, 128L, 288L, 430L, 330L, 336L, 309L, 371L, 414L, 383L, 357L, 230L, 58L, 258L, 205L, 330L, 
         218L, 475L, 320L, 324L, 481L, 389L, 467L, 292L, 335L, 387L, 282L, 412L, 282L, 465L, 350L, 145L, 148L, 320L, 341L, 

@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     car:::brief.matrix(object = matrix(1:500, 10, 50))
 }
 

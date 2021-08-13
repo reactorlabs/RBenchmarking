@@ -1,6 +1,6 @@
-library(EffectLiteR)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ncells <- 2
     names <- c("eta", "xi", "mf")
     indicators <- list(eta = c("y12", "y22"), xi = c("y11", "y21"), mf = c("y12", "y22"))

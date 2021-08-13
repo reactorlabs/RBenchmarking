@@ -1,6 +1,6 @@
-library(effects)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     y <- c(1.82742049102017, 1.76437318879011, 1.66980223544502, 1.57523128209992, 1.51218397986986)
     x <- structure(c(0, 20, 50, 80, 100), class = "AsIs")
     use.splines <- TRUE

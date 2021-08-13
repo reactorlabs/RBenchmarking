@@ -1,6 +1,6 @@
-library(CIplot)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     xlog <- TRUE
     xlab <- "Odds Ratio"
     v <- 1

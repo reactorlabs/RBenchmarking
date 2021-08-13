@@ -1,6 +1,6 @@
-library(Amelia)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(list(year = c(1981L, 1982L, 1983L, 1984L, 1985L, 1986L, 1987L, 1988L, 1989L, 1990L, 1991L, 1992L, 1993L, 
         1994L, 1995L, 1996L, 1997L, 1998L, 1999L, 1981L, 1982L, 1983L, 1984L, 1985L, 1986L, 1987L, 1988L, 1989L, 1990L, 1991L, 
         1992L, 1993L, 1994L, 1995L, 1996L, 1997L, 1998L, 1999L, 1981L, 1982L, 1983L, 1984L, 1985L, 1986L, 1987L, 1988L, 1989L, 

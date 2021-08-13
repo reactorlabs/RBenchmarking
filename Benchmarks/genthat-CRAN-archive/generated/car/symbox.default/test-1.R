@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ylab <- "Transformations of income"
     mf <- structure(list(income = c(12351L, 25879L, 9271L, 8865L, 8403L, 11030L, 8258L, 14163L, 11377L, 11023L, 5902L, 7059L, 
         8425L, 8049L, 7405L, 6336L, 19263L, 6112L, 9593L, 4686L, 12480L, 5648L, 8034L, 25308L, 14558L, 17498L, 4614L, 3485L, 

@@ -1,6 +1,6 @@
-library(crank)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     crank:::permute(x = c(5, 8, 3, 9))
 }
 

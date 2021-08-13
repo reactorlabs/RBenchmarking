@@ -1,6 +1,6 @@
-library(caret)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     y <- structure(c(1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 
         1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 2L, 2L, 2L, 2L, 
         2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 
@@ -150,7 +150,7 @@ function_to_run <- function() {
         ica = NULL, wildcards = list(PCA = character(0), ICA = character(0)), k = 5, knnSummary = genthat::with_env(function(x, 
             ...) UseMethod("mean"), env = .BaseNamespaceEnv), bagImp = NULL, median = NULL, data = NULL, rangeBounds = c(0, 
             1), call = "scrubed"), class = "preProcess"))
-    method <- list(label = "k-Nearest Neighbors", library = NULL, loop = NULL, type = c("Classification", "Regression"), 
+    method <- list(label = "k-Nearest Neighbors", 
         parameters = structure(list(parameter = structure(1L, .Label = "k", class = "factor"), class = structure(1L, .Label = "numeric", 
             class = "factor"), label = structure(1L, .Label = "#Neighbors", class = "factor")), class = "data.frame", row.names = c(NA, 
             -1L)), grid = genthat::with_env(function(x, y, len = NULL, search = "grid") {

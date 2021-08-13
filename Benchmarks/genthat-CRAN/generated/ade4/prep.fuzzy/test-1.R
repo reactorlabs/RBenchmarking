@@ -1,6 +1,6 @@
-library(ade4)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     bsetal97 <- list(species.names = c("Acilius.sulcatus", "Agabus.erichsoni", "Agabus.undulatus", "Colymbetes.fuscus", "Cybister.lateralimarginalis", 
         "Dytiscus.marginalis", "Dytiscus.semisulcatus", "Elmis.aenea", "Stenelmis.sexlineata", "Gyrinus.substriatus", "Orectochilus.villosus", 
         "Enochrus.quadripunctatus", "Hydrobius.fuscipes", "Hydrochara.caraboides", "Hydrophilus.piceus", "Hydrophilus.triangularis", 

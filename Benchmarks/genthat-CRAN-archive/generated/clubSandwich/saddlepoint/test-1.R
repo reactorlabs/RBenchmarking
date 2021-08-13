@@ -1,6 +1,6 @@
-library(clubSandwich)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     SE <- structure(c(0.658006122335905, 0.101641412245692, 0.000722572888797289, 0.14339750615382, 0.0378744671266134), 
         names = c("X.Intercept.", "binge", "followup", "sreport", "age"))
     P_array <- structure(c(0.00908945566357332, -0.000634812999327881, -0.000448641977043921, -0.00035899051127626, -0.00091456639609266, 

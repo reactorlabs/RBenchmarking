@@ -1,6 +1,6 @@
-library(DiagrammeR)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     valid_edges <- structure(list(id = c(1L, 3L, 4L), from = c(1L, 2L, 2L), to = c(2L, 4L, 5L), rel = c(NA, "B", "C"), values = c(6, 
         4.72, 6.02)), row.names = c(NA, -3L), class = "data.frame")
     graph <- structure(list(graph_info = structure(list(graph_id = "jNUsya78", graph_name = "graph_jNUsya78", graph_time = structure(1628397130.76014, 

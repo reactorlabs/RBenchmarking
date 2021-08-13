@@ -1,6 +1,6 @@
-library(blob)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     blob:::as.blob.default(x = c("Good morning", "Good evening"))
 }
 

@@ -1,6 +1,6 @@
-library(arules)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- .ext.1
     transactions <- .ext.2
     reuse <- TRUE

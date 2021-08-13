@@ -1,6 +1,6 @@
-library(ExPosition)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     design <- structure(c("setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", 
         "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", 
         "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", 

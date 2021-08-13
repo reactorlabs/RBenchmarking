@@ -1,6 +1,6 @@
-library(fBasics)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     pascal <- fBasics::pascal
     fBasics:::isPositiveDefinite(x = pascal(3))
 }

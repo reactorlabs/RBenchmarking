@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(list(SSP = list(measure = structure(c(4753.05882352941, 18066.3529411765, 18066.3529411765, 68670.1176470588), 
         .Dim = c(2L, 2L), .Dimnames = list(c("WL", "SE"), c("WL", "SE"))), `group:measure` = structure(c(116.524509803921, 
         49.4803921568627, 49.4803921568627, 21.0656862745098), .Dim = c(2L, 2L), .Dimnames = list(c("WL", "SE"), c("WL", 

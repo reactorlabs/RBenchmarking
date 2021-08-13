@@ -1,6 +1,6 @@
-library(ape)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     sel <- TRUE
     i <- 4L
     gr <- structure(list(Genus = structure(c(9L, 9L, 9L, 9L, 38L, 16L, 5L, 72L, 72L, 72L, 22L, 48L, 67L, 18L, 18L, 11L, 12L, 

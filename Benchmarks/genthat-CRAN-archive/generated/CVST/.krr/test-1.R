@@ -1,6 +1,6 @@
-library(CVST)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     params <- list(kernel = "rbfdot", sigma = 100, lambda = 0.001)
     kernel <- stats::kernel
     getN <- CVST::getN

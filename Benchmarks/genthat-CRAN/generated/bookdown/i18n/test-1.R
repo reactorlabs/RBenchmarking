@@ -1,6 +1,6 @@
-library(bookdown)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     type <- "tab"
     dict <- list(fig = "Figure ", tab = "Table ", eq = "Equation ", thm = "Theorem ", lem = "Lemma ", cor = "Corollary ", 
         prp = "Proposition ", cnj = "Conjecture ", def = "Definition ", exm = "Example ", exr = "Exercise ")

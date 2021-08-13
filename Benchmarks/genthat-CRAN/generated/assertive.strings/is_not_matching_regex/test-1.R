@@ -1,6 +1,6 @@
-library(assertive.strings)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     assertive.strings:::is_not_matching_regex(x = LETTERS, pattern = "[AEIOU]")
 }
 

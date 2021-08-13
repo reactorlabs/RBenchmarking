@@ -1,6 +1,6 @@
-library(clue)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ids <- c(2L, 3L, 1L, 1L, 1L, 1L, 2L, 2L, 1L, 1L, 1L, 2L, 1L, 3L, 1L, 2L, 1L, 3L, 2L, 2L, 1L, 1L, 1L, 1L, 1L, 1L, 3L, 
         2L, 1L, 1L)
     dissimilarities <- structure(c(950, 950, 8, 18, 8, 8, 950, 886, 286, 24, 8, 950, 8, 950, 0, 950, 8, 950, 950, 658, 8, 

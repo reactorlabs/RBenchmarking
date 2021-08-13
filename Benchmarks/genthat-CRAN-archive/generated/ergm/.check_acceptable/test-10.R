@@ -1,6 +1,6 @@
-library(ergm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     object <- ~Grade
     accept <- "character"
     . <- structure(c(7, 7, 11, 8, 10, 10, 8, 11, 9, 9, 9, 11, 9, 11, 8, 10, 10, 7, 10, 7, 12, 8, 8, 9, 7, 9, 9, 9, 8, 11, 

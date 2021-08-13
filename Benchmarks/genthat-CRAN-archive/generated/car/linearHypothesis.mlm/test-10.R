@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     lm <- stats::lm
     OBrienKaiser <- carData::OBrienKaiser
     V <- structure(c(0.0671296296296296, -0.00115740740740741, -0.0173611111111111, 0.00231481481481482, -0.00578703703703704, 

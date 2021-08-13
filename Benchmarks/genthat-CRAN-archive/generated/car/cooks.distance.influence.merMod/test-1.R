@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     model <- structure(list(fixed.effects = structure(c(251.405104848484, 10.4672859595964), names = c("(Intercept)", "Days")), 
         `fixed.effects[-Subject]` = structure(c(251.829365775398, 254.131584812833, 254.22398010695, 249.153340855614, 249.385465989304, 
             250.649427807483, 250.016045989305, 252.06641016043, 250.721011443851, 249.128691764705, 253.540006737968, 252.909251978609, 

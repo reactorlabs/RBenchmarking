@@ -1,6 +1,6 @@
-library(ff)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ret <- structure(633:640, .Dim = c(8L, 1L, 1L))
     ixre <- FALSE
     index <- list(structure(list(x = structure(list(first = 1L, dat = structure(list(lengths = 7L, values = 1L), class = "rle"), 

@@ -1,6 +1,6 @@
-library(brglm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     brglm:::brglm.control()
 }
 

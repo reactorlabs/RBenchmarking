@@ -1,6 +1,6 @@
-library(data.table)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     V1 <- c(3, 5, 5)
     data.table:::forder(-V1)
 }

@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(list(type = "II", repeated = FALSE, multivariate.tests = NULL, univariate.tests = NULL, pval.adjustments = NULL, 
         sphericity.tests = NULL, univaov = structure(list(SS = structure(c(3, 2, 3, 6, 33, 1.23247291666667, 0.2606625, 14.9589729166667, 
             0.515870833333333, 4.24730208333333, 0.00382572916666668, 0.0054845, 0.1637140625, 0.00308849999999999, 0.0358700208333333, 

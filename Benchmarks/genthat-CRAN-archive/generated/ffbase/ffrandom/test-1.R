@@ -1,6 +1,6 @@
-library(ffbase)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     runif <- stats::runif
     ffbase:::ffrandom(n = 10, rfun = runif)
 }

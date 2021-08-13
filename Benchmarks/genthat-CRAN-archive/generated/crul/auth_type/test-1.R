@@ -1,6 +1,6 @@
-library(crul)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     auth <- "any"
     crul:::auth_type(x = auth)
 }

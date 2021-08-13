@@ -1,6 +1,6 @@
-library(bit)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     bit:::rlepack.integer(x = rep(0L, 10))
 }
 

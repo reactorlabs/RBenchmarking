@@ -1,6 +1,6 @@
-library(elliplot)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     elliplot:::ninenum(x = 1:999)
 }
 

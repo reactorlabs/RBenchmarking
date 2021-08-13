@@ -1,6 +1,6 @@
-library(fields)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     smallplot <- NULL
     legend.width <- 1.2
     legend.shrink <- 0.9

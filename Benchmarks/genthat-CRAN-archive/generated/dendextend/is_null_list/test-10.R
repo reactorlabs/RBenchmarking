@@ -1,6 +1,6 @@
-library(dendextend)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     X <- list(structure(list(structure(list(structure(5L, label = 5L, members = 1L, height = 0, leaf = TRUE, edgePar = list(col = "#CC476B")), 
         structure(6L, label = 6L, members = 1L, height = 0, leaf = TRUE, edgePar = list(col = "#CC476B"))), members = 2L, 
         midpoint = 0.5, height = 1, edgePar = list(col = "#CC476B")), structure(list(structure(list(structure(1L, label = 1L, 

@@ -1,6 +1,6 @@
-library(data.table)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     varnames <- c("v1", "v2", "v3", "v4")
     formula <- ... ~ v3
     allvars <- c("v3", "v4")

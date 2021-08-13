@@ -1,6 +1,6 @@
-library(circlize)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     track.index <- 1:4
     circlize:::continuousIndexSegment(x = track.index)
 }

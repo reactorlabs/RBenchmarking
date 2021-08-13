@@ -1,6 +1,6 @@
-library(ape)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     tre <- structure(list(edge = structure(c(26L, 27L, 28L, 28L, 29L, 29L, 30L, 31L, 31L, 30L, 27L, 32L, 33L, 34L, 34L, 33L, 
         35L, 35L, 32L, 36L, 37L, 37L, 36L, 38L, 38L, 39L, 40L, 41L, 42L, 42L, 41L, 40L, 39L, 26L, 43L, 44L, 45L, 45L, 46L, 
         46L, 47L, 47L, 44L, 48L, 49L, 49L, 48L, 43L, 27L, 28L, 1L, 29L, 2L, 30L, 31L, 3L, 4L, 5L, 32L, 33L, 34L, 6L, 7L, 

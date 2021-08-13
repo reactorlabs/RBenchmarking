@@ -1,6 +1,6 @@
-library(ade4)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     dunedata <- list(envir = structure(list(A1 = c(2.8, 3.5, 4.3, 4.2, 6.3, 4.3, 2.8, 4.2, 3.7, 3.3, 3.5, 5.8, 6, 9.3, 11.5, 
         5.7, 4, 4.6, 3.7, 3.5), moisture = c(1L, 1L, 2L, 2L, 1L, 1L, 1L, 5L, 4L, 2L, 1L, 4L, 5L, 5L, 5L, 5L, 2L, 1L, 5L, 
         5L), manure = c(4L, 2L, 4L, 4L, 2L, 2L, 3L, 3L, 1L, 1L, 1L, 2L, 3L, 0L, 0L, 3L, 0L, 0L, 0L, 0L), use = structure(c(2L, 

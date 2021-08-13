@@ -1,6 +1,6 @@
-library(combinat)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     combinat:::nsimplex(p = 3, n = 5)
 }
 

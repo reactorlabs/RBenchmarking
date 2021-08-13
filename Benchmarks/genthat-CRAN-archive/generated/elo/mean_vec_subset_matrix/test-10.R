@@ -1,6 +1,6 @@
-library(elo)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     vec <- structure(c(0.75, 0.285714285714286, 0.571428571428571, 0.178571428571429, 0.535714285714286, 0.642857142857143, 
         0.571428571428571, 0.464285714285714), names = c("Athletic Armadillos", "Blundering Baboons", "Cunning Cats", "Defense-less Dogs", 
         "Elegant Emus", "Fabulous Frogs", "Gallivanting Gorillas", "Helpless Hyenas"))

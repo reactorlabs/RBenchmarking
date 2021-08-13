@@ -1,6 +1,6 @@
-library(CTT)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     rxx1 <- c(0.8, 0.8, 0.81, 0.9)
     new.rxx1 <- c(0.9, 0.97, 0.8, 0.7)
     cor1 <- structure(c(1, 0.2439129, 0.2812319, 0.0525105, 0.24391288, 1, 0.1652985, 0.08126448, 0.2812319, 0.1652985, 1, 

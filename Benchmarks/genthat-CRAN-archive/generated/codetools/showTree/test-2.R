@@ -1,6 +1,6 @@
-library(codetools)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     codetools:::showTree(e = quote(-3))
 }
 

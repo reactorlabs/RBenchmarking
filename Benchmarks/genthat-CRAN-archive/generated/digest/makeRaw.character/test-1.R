@@ -1,6 +1,6 @@
-library(digest)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     object <- "Hi There"
     digest:::makeRaw.character(object = object)
 }

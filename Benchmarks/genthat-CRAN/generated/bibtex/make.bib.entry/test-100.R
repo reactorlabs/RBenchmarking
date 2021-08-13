@@ -1,6 +1,6 @@
-library(bibtex)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     X <- structure(list(structure(c("Sakamoto, Y. and Ishiguro, M. and Kitagawa G.", "1986", "Akaike Information Criterion Statistics", 
         "Reidel Publishing Company"), entry = "book", names = c("author", "year", "title", "publisher"), key = "sakamoto+ishiguro+kitagawa:1986"), 
         structure(c("Chambers, J. M. and Freeny, A. and Heiberger, R. M.", "Statistical Models in S", "Analysis of variance; designed experiments", 

@@ -1,6 +1,6 @@
-library(clue)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     y <- structure(list(.Data = structure(c(0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 
         0, 1, 1, 1), n_of_classes = 2L, is_cl_hard_partition = TRUE, class = "cl_membership", .Dim = c(15L, 2L), .Dimnames = list(c("grandfather", 
         "grandmother", "granddaughter", "grandson", "brother", "sister", "father", "mother", "daughter", "son", "nephew", 

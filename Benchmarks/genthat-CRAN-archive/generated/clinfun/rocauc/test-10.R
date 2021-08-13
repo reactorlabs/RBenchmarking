@@ -1,6 +1,6 @@
-library(clinfun)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     nn <- 112L
     n <- 206L
     marker <- structure(c(1.68863912555436, 1.69174618110553, 1.57968468968124, 1.83446468921497, 1.59317193888638, 1.48902381744898, 

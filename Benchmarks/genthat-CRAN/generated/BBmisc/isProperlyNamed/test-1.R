@@ -1,6 +1,6 @@
-library(BBmisc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     BBmisc:::isProperlyNamed(x = list(a = 1, 2))
 }
 

@@ -1,6 +1,6 @@
-library(effects)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     neffects <- 3L
     effects:::mfrow(n = neffects)
 }

@@ -1,6 +1,6 @@
-library(BSDA)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     Disposal <- BSDA::Disposal
     BSDA:::EDA(x = Disposal$pounds)
 }

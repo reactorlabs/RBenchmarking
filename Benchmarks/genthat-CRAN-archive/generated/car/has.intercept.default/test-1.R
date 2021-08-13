@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     model <- ~phase * hour
     car:::has.intercept.default(model = model)
 }

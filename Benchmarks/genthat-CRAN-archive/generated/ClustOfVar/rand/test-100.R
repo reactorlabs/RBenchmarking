@@ -1,6 +1,6 @@
-library(ClustOfVar)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     i <- 8L
     clusmatboot <- structure(c(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 1, 1, 3, 1, 3, 1, 1, 1, 3, 3, 1, 1, 3, 8, 3, 8, 
         1, 2, 3, 3, 1, 1, 3, 8, 3, 8, 1, 2, 3, 3, 1, 1, 3, 8, 9, 8, 1, 2, 3, 3, 1, 1, 7, 8, 9, 8, 1, 2, 3, 3, 5, 1, 7, 8, 

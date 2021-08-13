@@ -1,6 +1,6 @@
-library(ExPosition)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     res <- structure(list(fi = structure(c(0.239767473136446, 0.189518958383072, 0.10330548680492, -0.0918118833493732, -0.224269920650726, 
         0.0475390901828867, 0.0740878384135639, 0.107109285203541, -0.029711901424966, 0.00166787208848225, 0.0631132948209885, 
         -0.196253875482298), .Dim = c(6L, 2L), .Dimnames = list(c("Rousseau", "Chateaubriand", "Hugo", "Zola", "Proust", 

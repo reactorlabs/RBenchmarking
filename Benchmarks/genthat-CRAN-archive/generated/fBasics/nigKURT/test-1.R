@@ -1,6 +1,6 @@
-library(fBasics)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     fBasics:::nigKURT(alpha = 1, beta = 0, delta = 1, mu = 0)
 }
 

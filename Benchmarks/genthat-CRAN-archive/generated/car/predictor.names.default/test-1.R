@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     lm <- stats::lm
     Prestige <- carData::Prestige
     model <- structure(list(coefficients = structure(c(-0.62292916498012, 0.00101319314602932, 3.67316605193644, 6.03897065089485, 

@@ -1,6 +1,6 @@
-library(effects)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     eff.edu <- structure(list(read = structure(list(term = "educ", formula = read ~ income + educ, response = "read", variables = list(educ = list(name = "educ", 
         is.factor = FALSE, levels = c(6, 9.5, 13, 16, 20))), fit = structure(c(21.9406782395347, 25.2639275248688, 28.5871768102028, 
         31.435676197632, 35.2336753808709), .Dim = c(5L, 1L), .Dimnames = list(c("1", "2", "3", "4", "5"), NULL)), x = structure(list(educ = c(6, 

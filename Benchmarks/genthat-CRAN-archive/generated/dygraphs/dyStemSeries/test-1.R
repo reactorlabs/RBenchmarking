@@ -1,6 +1,6 @@
-library(dygraphs)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     . <- structure(list(x = structure(list(attrs = list(labels = c("month", "fdeaths", "mdeaths", "ldeaths", "foo", "bar"), 
         legend = "auto", retainDateWindow = FALSE, axes = list(x = list(pixelsPerLabel = 60)), showRangeSelector = TRUE, 
         rangeSelectorHeight = 40, rangeSelectorPlotFillColor = " #A7B1C4", rangeSelectorPlotStrokeColor = "#808FAB", interactionModel = structure("Dygraph.Interaction.defaultModel", 

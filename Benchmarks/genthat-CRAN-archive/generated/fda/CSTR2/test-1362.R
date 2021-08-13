@@ -1,6 +1,6 @@
-library(fda)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     time <- 0
     state <- structure(c(1.5965, 341.3754), names = c("Conc", "Temp"))
     parms <- list(fitstruct = list(V = 1, Cp = 1, rho = 1, delH = -130, Cpc = 1, rhoc = 1, Tref = 350, kref = 0.461, EoverR = 0.83301, 

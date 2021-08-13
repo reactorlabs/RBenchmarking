@@ -1,6 +1,6 @@
-library(circular)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ylim <- c(-1, 1)
     ylab <- ""
     xlim <- c(-1, 1)

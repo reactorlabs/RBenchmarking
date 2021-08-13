@@ -1,6 +1,6 @@
-library(bbmle)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     trace <- FALSE
     start <- list(slope = 1)
     parnames <- NULL

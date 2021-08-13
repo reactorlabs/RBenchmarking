@@ -1,6 +1,6 @@
-library(brglm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     nobs <- 23L
     pl <- FALSE
     family <- structure(list(family = "binomial", link = "probit", linkfun = genthat::with_env(function(mu) qnorm(mu), env = getNamespace("stats")), 

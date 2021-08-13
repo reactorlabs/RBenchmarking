@@ -1,6 +1,6 @@
-library(assertive.files)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     assertive.files:::is_terminal_connection(x = structure(2L, class = c("terminal", "connection")), .xname = "stderr()")
 }
 

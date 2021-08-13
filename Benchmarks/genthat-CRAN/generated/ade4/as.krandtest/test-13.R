@@ -1,6 +1,6 @@
-library(ade4)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     test.names <- c("Clay", "Silt", "Sand", "K2O", "Mg++", "Na+/100g", "K+", "Conductivity", "Retention", "Na+/l", "Elevation")
     res <- list(param = c(97L, 11L, 999L), data = c(0.839625068935629, 0.972702898489152, 0.906163983712391, -2.48732066990244, 
         0.839625068935629, 0.773086154158868, -0.557692141376362, -1.22308128914398, 0.906163983712391, -0.4911532265996, 

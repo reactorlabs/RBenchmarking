@@ -1,6 +1,6 @@
-library(bacr)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     thin <- 1
     temp <- list(models = structure(c(1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 
         0, 1, 0, 0, 1, 1, 1, 1), .Dim = c(4L, 9L)), counts = structure(c(2L, 1L, 1L, 1L), .Dim = 4L, .Dimnames = list(bb = c("1 1 0 1 1 1 0 0 1", 

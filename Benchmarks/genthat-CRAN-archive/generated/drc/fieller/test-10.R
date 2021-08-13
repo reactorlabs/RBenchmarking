@@ -1,6 +1,6 @@
-library(drc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     vcMat <- structure(c(35.0301591086752, 2.06840861403593e-10, 2.06840861403593e-10, 0.1136705992067), .Dim = c(2L, 2L))
     muVec <- c(11.8898012173981, 1.2044794446681)
     level <- 0.95

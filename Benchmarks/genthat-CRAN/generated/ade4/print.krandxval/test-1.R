@@ -1,6 +1,6 @@
-library(ade4)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     as.krandxval <- ade4::as.krandxval
     rnorm <- stats::rnorm
     x <- structure(list(RMSEc = structure(c(1.37095844714667, -0.564698171396089, 0.363128411337339, 0.63286260496104, 0.404268323140999, 

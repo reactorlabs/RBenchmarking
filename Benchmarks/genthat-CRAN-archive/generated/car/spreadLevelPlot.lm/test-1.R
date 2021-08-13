@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     car:::spreadLevelPlot.lm(x = structure(list(coefficients = structure(c(11.2668650632667, 0.00080956306455959, -17.8139207483181, 
         -4.70873494685515, 5.15273675904612, 0.877662598959975, 1.14866108020045, 1.49147724288474, 4.88031744069163, 6.17133071475055, 
         8.22830724526912, -1.2413191992248, -5.77518117384795, -8.61807116362865), names = c("(Intercept)", "assets", "sectorBNK", 

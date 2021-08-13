@@ -1,6 +1,6 @@
-library(DT)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     DT:::coerceValue(val = "FALSE", old = TRUE)
 }
 

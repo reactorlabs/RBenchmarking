@@ -1,6 +1,6 @@
-library(ergm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     update <- list(s = structure(c(-41, 4, -53.9867100900723, -41, -41), .Dim = c(1L, 5L), .Dimnames = list(NULL, c("edges", 
         "isolates", "gwesp.fixed.0.2", "edges", "edges")), mcpar = c(3665, 3665, 1), class = "mcmc"), newnwtails = c(162L, 
         1L, 1L, 1L, 1L, 1L, 1L, 2L, 2L, 2L, 3L, 4L, 4L, 5L, 6L, 7L, 8L, 8L, 9L, 9L, 11L, 11L, 11L, 12L, 12L, 12L, 13L, 13L, 

@@ -1,6 +1,6 @@
-library(CVST)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     svm <- structure(list(learn = genthat::with_env(function(data, params) {
         stopifnot(isClassification(data))
         kpar <- params[setdiff(names(params), c("kernel", "nu"))]

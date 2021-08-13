@@ -1,6 +1,6 @@
-library(ade4)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     w <- structure(c(48, 12, 17, 18, 24, 45, 44, 9, 16, 32, 33, 41, 53, 1, 26, 47, 58, 63, 45, 22, 5, 32, 53, 52), names = c("sp_1", 
         "sp_2", "sp_3", "sp_4", "sp_5", "sp_6", "su_1", "su_2", "su_3", "su_4", "su_5", "su_6", "au_1", "au_2", "au_3", "au_4", 
         "au_5", "au_6", "wi_1", "wi_2", "wi_3", "wi_4", "wi_5", "wi_6"))

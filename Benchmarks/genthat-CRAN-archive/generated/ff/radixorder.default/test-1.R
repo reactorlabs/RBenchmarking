@@ -1,6 +1,6 @@
-library(ff)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- c(88L, 16L, 97L, 65L, 33L, 41L, 40L, 42L, 8L, 52L, 1L, 77L, 4L, 60L, 3L, 33L, 92L, 48L, 38L, 32L, 80L, 1L, 6L, 60L, 
         95L, 26L, 55L, 3L, 1L, 96L, 16L, 78L, 69L, 34L, 2L, 10L, 34L, 3L, 91L, 95L, 37L, 84L, 34L, 60L, 15L, 75L, 77L, 30L, 
         18L, 61L, 96L, 52L, 64L, 39L, 46L, 78L, 68L, 20L, 51L, 44L, 90L, 30L, 66L, 4L, 99L, 65L, 93L, 94L, 21L, 83L, 47L, 

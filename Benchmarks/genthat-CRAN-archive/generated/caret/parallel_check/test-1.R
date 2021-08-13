@@ -1,7 +1,7 @@
-library(caret)
 
-function_to_run <- function() {
-    models <- list(label = "k-Nearest Neighbors", library = NULL, loop = NULL, type = c("Classification", "Regression"), 
+
+genthat_extracted_call <- function() {
+    models <- list(label = "k-Nearest Neighbors", 
         parameters = structure(list(parameter = structure(1L, .Label = "k", class = "factor"), class = structure(1L, .Label = "numeric", 
             class = "factor"), label = structure(1L, .Label = "#Neighbors", class = "factor")), class = "data.frame", row.names = c(NA, 
             -1L)), grid = genthat::with_env(function(x, y, len = NULL, search = "grid") {

@@ -1,6 +1,6 @@
-library(deSolve)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     Which <- 1:2
     varnames <- c("Prey", "Pred")
     att <- list(dim = c(51L, 5001L), istate = c(0L, 74L, 446L, NA, NA, NA, NA, NA, NA, NA, NA, NA, 1L, NA, NA, NA, NA, 4L, 

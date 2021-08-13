@@ -1,6 +1,6 @@
-library(descr)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     opinion <- structure(c(1L, 2L, 1L, 2L, 2L, 2L, 3L, 2L, 2L, 2L, 2L, 1L, 2L, 2L, 2L, 1L, 1L, 2L, 2L, 1L, 2L, 2L, 2L, 3L, 
         2L, 1L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 3L, 1L, 2L, 1L, 1L, 2L, 2L, 1L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 1L, 2L, 2L, 2L, 
         2L, 2L, 1L, 2L, 2L, 1L, 1L, 1L, 2L, 2L, 1L, 2L, 2L, 1L, 2L, 1L, 1L, 2L, 1L, 2L, 2L, 1L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 

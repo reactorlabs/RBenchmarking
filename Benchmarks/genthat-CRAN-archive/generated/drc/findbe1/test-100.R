@@ -1,6 +1,6 @@
-library(drc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ytrans <- genthat::with_env(function(y, cVal, dVal) {
         log((dVal - y)/(y - cVal))
     }, env = list2env(list(), parent = baseenv()))

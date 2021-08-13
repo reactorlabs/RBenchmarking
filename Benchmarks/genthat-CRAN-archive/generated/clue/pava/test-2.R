@@ -1,6 +1,6 @@
-library(clue)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     fitter <- genthat::with_env(function(x, w) mean(x), env = list2env(list(), parent = baseenv()))
     xlist <- list(0.568, 0.577, 0.658, 0.662, c(0.771, 0.759), 0.849, c(0.79, 0.855), 0.864, 0.885, c(0.894, 0.911, 0.861, 
         0.875), c(0.943, 0.899, 0.923, 0.921, 0.876, 0.916), c(0.934, 0.843, 0.95, 0.948, 0.937, 0.97, 0.952, 0.95, 0.962, 

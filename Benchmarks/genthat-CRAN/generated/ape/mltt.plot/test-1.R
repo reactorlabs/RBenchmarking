@@ -1,6 +1,6 @@
-library(ape)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     TR <- structure(list(`random tree 1` = structure(list(edge = structure(c(24L, 25L, 28L, 28L, 33L, 33L, 25L, 26L, 27L, 
         32L, 32L, 27L, 26L, 30L, 31L, 34L, 35L, 43L, 43L, 35L, 44L, 44L, 34L, 36L, 36L, 40L, 41L, 41L, 45L, 45L, 40L, 31L, 
         37L, 37L, 39L, 39L, 30L, 24L, 29L, 38L, 42L, 42L, 38L, 29L, 25L, 28L, 1L, 33L, 2L, 3L, 26L, 27L, 32L, 4L, 5L, 6L, 

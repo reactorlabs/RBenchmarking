@@ -1,6 +1,6 @@
-library(cluster)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     clara <- cluster::clara
     xclara <- structure(list(V1 = c(2.072345, 17.93671, 1.083576, 11.12067, 23.71155, 24.16993, 21.66578, 4.693684, 19.21191, 
         4.230391, 9.12713, 0.4075031, 7.314846, -3.438403, 17.63935, 4.415292, 11.94122, 0.7258532, 8.185273, -5.773587, 

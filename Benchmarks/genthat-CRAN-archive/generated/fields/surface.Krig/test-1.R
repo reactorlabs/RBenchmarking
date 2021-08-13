@@ -1,6 +1,6 @@
-library(fields)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     BD <- fields::BD
     Tps <- fields::Tps
     fit <- structure(list(call = Tps(x = BD[, 1:4], Y = BD$lnya, scale.type = "range"), cov.function.name = "Rad.cov", null.function.name = "Krig.null.function", 

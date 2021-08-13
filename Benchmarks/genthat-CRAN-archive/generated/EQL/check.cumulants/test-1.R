@@ -1,6 +1,6 @@
-library(EQL)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     cc <- structure(list(K = genthat::with_env(function(x) cgf.deriv(0, x, ...), env = list2env(list(cgf.deriv = genthat::with_env(function(n, 
         x, mu, sigma2) {
         if (n <= 2) {

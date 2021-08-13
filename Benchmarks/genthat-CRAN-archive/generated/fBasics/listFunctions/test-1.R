@@ -1,6 +1,6 @@
-library(fBasics)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     package <- "fBasics"
     fBasics:::listFunctions(package = package, character.only = TRUE)
 }

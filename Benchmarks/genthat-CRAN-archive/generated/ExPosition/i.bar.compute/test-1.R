@@ -1,6 +1,6 @@
-library(ExPosition)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     num_variables <- 10L
     num_columns <- 22L
     eigvals <- c(0.853210235484582, 0.2, 0.115113575929253, 0.0316761885861652)

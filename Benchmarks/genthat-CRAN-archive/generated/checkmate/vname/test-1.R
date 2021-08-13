@@ -1,6 +1,6 @@
-library(checkmate)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- "a"
     checkmate:::vname(x = x)
 }

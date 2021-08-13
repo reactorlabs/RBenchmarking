@@ -1,6 +1,6 @@
-library(elo)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     t2 <- structure(c("Athletic Armadillos", "Cunning Cats", "Elegant Emus", "Gallivanting Gorillas", "Athletic Armadillos", 
         "Blundering Baboons", "Elegant Emus", "Fabulous Frogs", "Athletic Armadillos", "Blundering Baboons", "Elegant Emus", 
         "Fabulous Frogs", "Athletic Armadillos", "Blundering Baboons", "Cunning Cats", "Defense-less Dogs", "Athletic Armadillos", 

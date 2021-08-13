@@ -1,6 +1,6 @@
-library(drc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     sigma <- 0.519625568483239
     noSim <- 2
     mpar <- structure(c(2.98221907127499, 0.481413188446089, 7.79295829369992, 3.05795496654811), names = c("b:(Intercept)", 

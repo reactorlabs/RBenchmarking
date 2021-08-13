@@ -1,6 +1,6 @@
-library(crunchy)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     shinyUser <- crunchy::shinyUser
     email <- crunch::email
     crunchy:::setCrunchyAuthorization(func = function(input, output, session) {

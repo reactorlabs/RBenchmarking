@@ -1,6 +1,6 @@
-library(data.table)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- "status"
     data.table:::as_list(x = x)
 }

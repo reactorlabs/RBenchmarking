@@ -1,6 +1,6 @@
-library(ade4)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     as.randtest <- ade4::as.randtest
     rnorm <- stats::rnorm
     x0 <- 5.4

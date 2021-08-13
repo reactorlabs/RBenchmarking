@@ -1,6 +1,6 @@
-library(distr)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     object <- .ext.1
     distr:::.logExact(object = object)
 }

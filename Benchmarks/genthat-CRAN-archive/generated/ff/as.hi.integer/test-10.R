@@ -1,6 +1,6 @@
-library(ff)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- c("a", "b", "c")
     vw.convert <- TRUE
     vw <- NULL

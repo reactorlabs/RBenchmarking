@@ -1,6 +1,6 @@
-library(etm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     tra <- structure(c(FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE, FALSE, 
         FALSE), .Dim = c(4L, 4L))
     state.names <- c("0", "1", "2", "3")

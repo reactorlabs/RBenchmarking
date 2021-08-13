@@ -1,6 +1,6 @@
-library(dimRed)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     iris <- datasets::iris
     dimRed:::dimRedData(iris[, 1:4])
 }

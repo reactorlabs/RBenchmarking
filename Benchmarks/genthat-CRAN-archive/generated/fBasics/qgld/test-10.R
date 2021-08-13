@@ -1,6 +1,6 @@
-library(fBasics)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     p <- 0.625
     lambda4 <- -0.125
     lambda3 <- -0.125

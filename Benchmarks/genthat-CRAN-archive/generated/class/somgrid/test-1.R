@@ -1,6 +1,6 @@
-library(class)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     class:::somgrid(topo = "hexagonal")
 }
 

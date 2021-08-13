@@ -1,6 +1,6 @@
-library(binom)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     binom:::binom.sim(p = 0.95, methods = "lrt")
 }
 

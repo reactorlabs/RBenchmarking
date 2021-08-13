@@ -1,6 +1,6 @@
-library(AnnotationBustR)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     mtDNAterms <- structure(list(Locus = structure(c(30L, 30L, 30L, 15L, 15L, 15L, 15L, 15L, 15L, 15L, 15L, 15L, 15L, 15L, 
         15L, 15L, 15L, 15L, 36L, 36L, 36L, 36L, 16L, 16L, 16L, 16L, 16L, 16L, 16L, 16L, 16L, 16L, 16L, 16L, 16L, 16L, 16L, 
         16L, 16L, 16L, 16L, 16L, 16L, 16L, 16L, 16L, 8L, 8L, 8L, 8L, 8L, 8L, 8L, 8L, 8L, 8L, 26L, 26L, 26L, 26L, 22L, 22L, 

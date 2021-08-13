@@ -1,6 +1,6 @@
-library(AID)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     out <- structure(list(method = "MLEFR", lambda.hat = 0.0700000000000003, lambda2 = 0, shapiro = structure(list(Level = c("rural interstate", 
         "rural noninterstate", "urban interstate", "urban noninterstate"), statistic = c(0.961686341310061, 0.958380674564949, 
         0.92596021158619, 0.963606255055201), p.value = c(0.826003293228548, 0.0510872770864362, 0.164813548090174, 0.234779307209341), 

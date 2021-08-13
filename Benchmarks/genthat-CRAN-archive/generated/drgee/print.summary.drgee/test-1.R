@@ -1,6 +1,6 @@
-library(drgee)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     drgee <- drgee::drgee
     formula <- stats::formula
     simdata <- structure(list(y = c(-1.13800878823762, 2.07624011709801, 2.29167386861927, -0.187688179288565, -2.62674642623538, 

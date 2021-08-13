@@ -1,6 +1,6 @@
-library(collpcm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     n <- 18L
     d <- 2
     control <- list(verbose = TRUE, sample = 2500, interval = 1, burn = 500)

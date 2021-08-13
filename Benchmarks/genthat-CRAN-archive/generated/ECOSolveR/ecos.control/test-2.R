@@ -1,6 +1,6 @@
-library(ECOSolveR)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ECOSolveR:::ecos.control()
 }
 

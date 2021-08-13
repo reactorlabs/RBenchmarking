@@ -1,6 +1,6 @@
-library(fields)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     m <- 2
     ltheta <- 1.50464799752971
     info <- list(x = structure(list(lon = c(-109.1, -103.17, -105.85, -105.53, -105.88, -106.83, -105.48, -105.78, -105.52, 

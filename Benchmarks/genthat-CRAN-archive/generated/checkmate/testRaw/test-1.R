@@ -1,6 +1,6 @@
-library(checkmate)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     checkmate:::testRaw(x = as.raw(2), min.len = 1L)
 }
 

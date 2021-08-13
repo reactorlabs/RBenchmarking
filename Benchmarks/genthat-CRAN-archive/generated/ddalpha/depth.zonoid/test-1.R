@@ -1,6 +1,6 @@
-library(ddalpha)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     trainIndices <- 1:100
     propertyVars <- 1:2
     data <- list(train = structure(c(2.423172962193, -0.606187043758014, -0.717812013627064, -1.26550933629627, 1.34335546359675, 

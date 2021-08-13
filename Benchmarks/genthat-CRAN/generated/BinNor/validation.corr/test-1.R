@@ -1,6 +1,6 @@
-library(BinNor)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     prop.vec.bin <- c(0.4, 0.7)
     no.nor <- 2
     no.bin <- 2

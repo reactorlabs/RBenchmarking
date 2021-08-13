@@ -1,6 +1,6 @@
-library(drc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     p2 <- 3
     p1 <- -2
     names <- c("b", "c", "d", "e")

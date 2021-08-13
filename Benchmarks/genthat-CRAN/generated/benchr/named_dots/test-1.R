@@ -1,6 +1,6 @@
-library(benchr)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     benchr:::named_dots(NULL, NULL)
 }
 

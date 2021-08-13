@@ -1,6 +1,6 @@
-library(ergm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ergm:::InitErgmTerm.triangles(nw = structure(list(mel = list(list(inl = 9L, outl = 1L, atl = list(na = FALSE)), list(inl = 6L, 
         outl = 2L, atl = list(na = FALSE)), list(inl = 7L, outl = 2L, atl = list(na = FALSE)), list(inl = 9L, outl = 2L, 
         atl = list(na = FALSE)), list(inl = 5L, outl = 3L, atl = list(na = FALSE)), list(inl = 9L, outl = 3L, atl = list(na = FALSE)), 

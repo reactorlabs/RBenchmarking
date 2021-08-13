@@ -1,6 +1,6 @@
-library(fda)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     wtroot <- c(1, 1, 1, 1)
     lambda <- 1e-04
     Kmat <- structure(c(0.000171857396551395, -0.000121732322557238, -4.53512574232848e-05, -4.77381657087209e-06, 0, 0, 

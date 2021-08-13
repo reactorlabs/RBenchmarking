@@ -1,6 +1,6 @@
-library(ade4)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     meau <- list(env = structure(list(Temp = c(10L, 11L, 11L, 12L, 13L, 11L, 13L, 13L, 15L, 16L, 15L, 13L, 1L, 3L, 2L, 3L, 
         2L, 4L, 3L, 3L, 3L, 3L, 2L, 3L), Flow = c(41L, 158L, 198L, 280L, 322L, 303L, 62L, 80L, 100L, 140L, 160L, 310L, 25L, 
         63L, 79L, 85L, 72L, 181L, 118L, 252L, 315L, 498L, 390L, 480L), pH = c(8.5, 8.3, 8.5, 8.6, 8.5, 8.5, 8.3, 7.6, 7.8, 

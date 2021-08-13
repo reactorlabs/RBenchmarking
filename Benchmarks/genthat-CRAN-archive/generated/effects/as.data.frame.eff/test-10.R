@@ -1,6 +1,6 @@
-library(effects)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(list(term = "education", formula = prestige ~ income + education, response = "prestige", variables = list(education = list(name = "education", 
         is.factor = FALSE, levels = c(6.38, 6.47686868686869, 6.57373737373737, 6.67060606060606, 6.76747474747475, 6.86434343434343, 
             6.96121212121212, 7.05808080808081, 7.15494949494949, 7.25181818181818, 7.34868686868687, 7.44555555555556, 7.54242424242424, 

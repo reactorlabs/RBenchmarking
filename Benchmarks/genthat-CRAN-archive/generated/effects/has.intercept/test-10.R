@@ -1,6 +1,6 @@
-library(effects)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     glm <- stats::glm
     Hartnagel <- carData::Hartnagel
     model <- structure(list(coefficients = structure(c(83.3402783908116, 0.0756859982251426, -0.0399869996514317, 0.287611776910874, 

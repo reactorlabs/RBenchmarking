@@ -1,6 +1,6 @@
-library(ape)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     tree.bird2 <- structure(list(edge = structure(c(19L, 19L, 20L, 20L, 21L, 22L, 22L, 23L, 24L, 24L, 23L, 25L, 25L, 21L, 
         26L, 26L, 27L, 27L, 28L, 28L, 29L, 30L, 31L, 31L, 30L, 32L, 32L, 29L, 33L, 34L, 34L, 35L, 35L, 33L, 1L, 20L, 2L, 
         21L, 22L, 3L, 23L, 24L, 4L, 5L, 25L, 6L, 7L, 26L, 8L, 27L, 9L, 28L, 10L, 29L, 30L, 31L, 11L, 12L, 32L, 13L, 14L, 

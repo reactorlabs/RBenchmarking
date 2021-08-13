@@ -1,6 +1,6 @@
-library(akima)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     fn <- 4L
     ds <- 3L
     data <- list(ds1 = structure(list(x = c(0.022703, 0.021701, 0.001903, 0.039541, 0.031583, 0.132419, 0.125444, 0.076758, 

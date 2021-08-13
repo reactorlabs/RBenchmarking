@@ -1,6 +1,6 @@
-library(elo)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     k <- c(20, 20)
     elo:::k(x = k)
 }

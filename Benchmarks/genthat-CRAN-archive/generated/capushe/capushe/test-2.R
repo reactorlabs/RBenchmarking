@@ -1,6 +1,6 @@
-library(capushe)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     datapartialcapushe <- structure(list(model = c("K=1", "K=2", "K=3", "K=4", "K=5", "K=6", "K=7", "K=8", "K=9", "K=10", 
         "K=11", "K=12", "K=13", "K=14", "K=15", "K=16", "K=17", "K=18", "K=19", "K=20", "K=21"), pen = c(0.004, 0.009, 0.014, 
         0.019, 0.024, 0.029, 0.034, 0.039, 0.044, 0.049, 0.054, 0.059, 0.064, 0.069, 0.074, 0.079, 0.084, 0.089, 0.094, 0.099, 

@@ -1,6 +1,6 @@
-library(circular)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     r <- 872L
     i <- structure(c(15L, 19L, 21L, 2L, 16L, 3L, 5L, 20L, 18L, 3L, 19L, 15L, 7L, 23L, 6L, 25L, 24L, 20L, 19L, 15L, 19L, 9L, 
         24L, 10L, 12L, 14L, 11L, 7L, 16L, 12L, 10L, 18L, 8L, 10L, 21L, 5L, 17L, 7L, 19L, 3L, 16L, 21L, 7L, 18L, 17L, 13L, 

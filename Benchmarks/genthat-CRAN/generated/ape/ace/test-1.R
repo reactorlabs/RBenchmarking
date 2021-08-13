@@ -1,6 +1,6 @@
-library(ape)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(c(1L, 1L, 1L, 1L, 1L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L), .Label = c("0", 
         "1"), class = "factor")
     bird.orders <- structure(list(edge = structure(c(24L, 25L, 26L, 26L, 25L, 27L, 28L, 28L, 27L, 24L, 29L, 29L, 30L, 30L, 

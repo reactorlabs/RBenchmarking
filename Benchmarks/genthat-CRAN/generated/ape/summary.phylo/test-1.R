@@ -1,6 +1,6 @@
-library(ape)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     bird.families <- structure(list(edge = structure(c(138L, 139L, 140L, 141L, 142L, 142L, 141L, 143L, 143L, 140L, 139L, 
         144L, 145L, 146L, 146L, 145L, 147L, 148L, 148L, 147L, 144L, 149L, 150L, 150L, 149L, 151L, 151L, 138L, 152L, 152L, 
         153L, 154L, 155L, 155L, 154L, 156L, 156L, 157L, 157L, 153L, 158L, 159L, 160L, 160L, 159L, 161L, 162L, 163L, 163L, 

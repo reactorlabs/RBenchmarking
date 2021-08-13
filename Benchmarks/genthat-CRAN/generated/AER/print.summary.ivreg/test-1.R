@@ -1,6 +1,6 @@
-library(AER)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ivreg <- AER::ivreg
     WeakInstrument <- structure(list(y = c(2.829, 2.681, 0.873, 0.39, 0.457, -3.841, -2.51, -0.263, 2.21, -1.051, 1.442, 
         0.503, 0.11, -0.552, -1.373, -6.339, -0.215, 1.916, -0.66, 1.645, 1.985, 2.762, -0.042, 2.163, 1.239, -0.52, 1.584, 

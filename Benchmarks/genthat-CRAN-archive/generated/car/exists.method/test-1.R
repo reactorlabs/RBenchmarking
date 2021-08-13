@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     lm <- stats::lm
     Ornstein <- carData::Ornstein
     object <- structure(list(coefficients = structure(c(-40.8799006498379, 7.33326408114582), names = c("(Intercept)", "log(assets)")), 

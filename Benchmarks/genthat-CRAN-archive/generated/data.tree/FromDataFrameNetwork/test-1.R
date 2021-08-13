@@ -1,6 +1,6 @@
-library(data.tree)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(list(from = c("Acme Inc.", "Acme Inc.", "Acme Inc.", "Accounting", "Accounting", "Research", "Research", 
         "IT", "IT", "IT"), to = c("Accounting", "Research", "IT", "New Software", "New Accounting Standards", "New Product Line", 
         "New Labs", "Outsource", "Go agile", "Switch to R"), p = c(NA, NA, NA, 0.5, 0.75, 0.25, 0.9, 0.2, 0.05, 1), cost = c(NA, 

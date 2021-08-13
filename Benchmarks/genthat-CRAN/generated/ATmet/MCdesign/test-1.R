@@ -1,6 +1,6 @@
-library(ATmet)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- list("X1", "X2", "X3", "X4")
     N <- 100
     k <- 4

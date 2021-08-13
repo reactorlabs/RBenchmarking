@@ -1,6 +1,6 @@
-library(ExPosition)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     weights <- NULL
     masses <- NULL
     DATA <- structure(c(-0.897673879196766, -1.13920048346495, -1.38072708773314, -1.50149038986724, -1.01843718133086, -0.535383972794483, 

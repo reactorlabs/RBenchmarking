@@ -1,6 +1,6 @@
-library(ape)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     tree.hiv <- structure(list(edge = structure(c(194L, 195L, 196L, 197L, 198L, 199L, 200L, 201L, 202L, 203L, 204L, 204L, 
         203L, 205L, 205L, 202L, 201L, 206L, 206L, 200L, 199L, 207L, 207L, 208L, 208L, 209L, 209L, 198L, 210L, 211L, 212L, 
         212L, 211L, 210L, 213L, 214L, 215L, 216L, 216L, 215L, 214L, 217L, 217L, 213L, 218L, 219L, 220L, 221L, 222L, 223L, 

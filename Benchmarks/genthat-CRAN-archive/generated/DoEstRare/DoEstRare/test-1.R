@@ -1,6 +1,6 @@
-library(DoEstRare)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     position <- c(353L, 202L, 435L, 41L, 52L, 368L, 404L, 494L, 285L, 64L, 424L, 77L, 109L, 132L, 66L, 262L, 384L, 433L, 
         12L, 340L, 155L, 499L, 467L, 261L, 253L, 95L, 71L, 176L, 500L, 113L)
     pheno <- c(0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 

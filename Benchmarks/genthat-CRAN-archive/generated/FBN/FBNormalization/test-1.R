@@ -1,6 +1,6 @@
-library(FBN)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     rawDataFileName <- "./../data/hmcls.txt"
     normDataFileName <- "hmcls_NORM.txt"
     fishProbesFileName <- "./../data/FISHprobes.txt"

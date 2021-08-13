@@ -1,6 +1,6 @@
-library(ddalpha)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ddalpha.train <- ddalpha::ddalpha.train
     mtcars <- datasets::mtcars
     ddalpha <- list(call = ddalpha.train(formula = I(mpg >= 19.2) ~ log(disp) + I(disp^2) + disp + I(disp * drat), data = mtcars, 

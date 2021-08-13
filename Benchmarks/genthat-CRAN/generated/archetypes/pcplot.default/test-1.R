@@ -1,6 +1,6 @@
-library(archetypes)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     data.lwd <- 1
     data.col <- c("#0000FF33", "#0000FF33", "#0000FF33", "#0000FF33", "#0000FF33", "#0000FF33", "#0000FF33", "#0000FF33", 
         "#0000FF33", "#0000FF33", "#0000FF33", "#0000FF33", "#0000FF33", "#0000FF33", "#0000FF33", "#0000FF33", "#0000FF33", 

@@ -1,6 +1,6 @@
-library(bacr)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     Yvar <- "Y"
     Xvar <- c("V1", "V2", "V3", "V4", "X")
     M1 <- c(1, 1, 1, 1, 1)

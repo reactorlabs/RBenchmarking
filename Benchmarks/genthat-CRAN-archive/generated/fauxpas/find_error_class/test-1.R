@@ -1,6 +1,6 @@
-library(fauxpas)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     fauxpas:::find_error_class(status_code = 418)
 }
 

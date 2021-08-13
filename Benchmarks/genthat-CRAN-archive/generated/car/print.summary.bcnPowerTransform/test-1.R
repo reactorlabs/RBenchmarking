@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(list(label = "bcnPower transformation to Multinormality \n", result = structure(c(0.554018414632489, 0.515961498008488, 
         0.5, 0.5, 0.312108491637075, 0.22038014632955, 0.795928337627904, 0.811542849687425), .Dim = c(2L, 4L), .Dimnames = list(c("Y1", 
         "Y2"), c("Est Power", "Rounded Pwr", "Wald Lwr Bnd", "Wald Upr Bnd"))), result.gamma = structure(c(13.5843560280003, 

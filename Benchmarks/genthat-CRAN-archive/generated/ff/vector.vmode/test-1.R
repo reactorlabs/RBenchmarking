@@ -1,6 +1,6 @@
-library(ff)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     vmode <- "integer"
     ff:::vector.vmode(vmode = vmode, length = 1)
 }

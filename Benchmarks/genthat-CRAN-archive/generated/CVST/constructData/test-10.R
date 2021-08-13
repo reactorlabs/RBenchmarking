@@ -1,6 +1,6 @@
-library(CVST)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     y <- structure(c(1L, 1L, 1L, 2L, 1L, 1L, 2L, 2L, 2L, 1L, 2L, 1L, 2L, 1L, 1L, 1L, 1L, 1L, 1L, 2L), .Label = c("FALSE", 
         "TRUE"), class = "factor")
     x <- structure(c(18.2716286158153, 4.96073841980998, 11.2792068811546, 20.2831236611722, 24.3732097654471, 17.7074877666845, 

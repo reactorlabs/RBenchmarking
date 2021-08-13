@@ -1,6 +1,6 @@
-library(drc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     CRS.4c <- drc::CRS.4c
     drm <- drc::drm
     leaflength <- drc::leaflength

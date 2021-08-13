@@ -1,6 +1,6 @@
-library(bigmemory)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     typeLength <- 4
     readOnly <- FALSE
     info <- list(sharedType = "SharedMemory", sharedName = "VWoRHAMhIKxLWnyWYgyDVhZX", totalRows = 3L, totalCols = 3L, rowOffset = c(0, 

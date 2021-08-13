@@ -1,6 +1,6 @@
-library(ape)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     X <- structure(c("t29", "t5", "t16", "t10", "t36", "t17", "t34", "t39", "t15", "t28", "t20", "t33", "t25", "t18", "t37", 
         "t12", "t7", "t4", "t3", "t21", "t29", "t5", "t16", "t10", "t36", "t17", "t34", "t39", "t15", "t28", "t20", "t33", 
         "t25", "t18", "t37", "t12", "t7", "t4", "t3", "t21"), .Dim = c(20L, 2L))

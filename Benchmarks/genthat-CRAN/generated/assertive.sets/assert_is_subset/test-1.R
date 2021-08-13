@@ -1,6 +1,6 @@
-library(assertive.sets)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     assertive.sets:::assert_is_subset(x = 1:4, y = 1:5)
 }
 

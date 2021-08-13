@@ -1,6 +1,6 @@
-library(ape)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     species <- c("gorilla", "spp.", "sapiens", "pygmaeus")
     geo <- c("Africa", "Africa", "World", "Asia")
     genus <- c("Gorilla", "Pan", "Homo", "Pongo")

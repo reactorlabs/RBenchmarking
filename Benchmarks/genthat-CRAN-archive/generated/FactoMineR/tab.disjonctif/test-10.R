@@ -1,6 +1,6 @@
-library(FactoMineR)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     facAct <- structure(4L, names = "Drift")
     base <- structure(list(Block.size.median = c(41.9, 15.5, 11.9, 3.9, 4.01, 7.26, 6.33, 11.2, 8.6, 10.3, 5.45, 7.55, 7.25, 
         10.8, 17.1, 3.2, 4.45, 7.7, 5.8, 7.4, 7.6, 9.9, 6.05, 10.4, 8.1, 13.4, 7.55, 9.95, 13, 34.55, 17.3, 6.8, 6, 7.65, 

@@ -1,6 +1,6 @@
-library(ExPosition)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     y_axis <- 2
     x_axis <- 1
     results <- structure(list(fi = structure(c(0.239767473136446, 0.189518958383072, 0.10330548680492, -0.0918118833493732, 

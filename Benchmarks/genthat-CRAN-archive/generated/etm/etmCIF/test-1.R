@@ -1,6 +1,6 @@
-library(etm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     abortion <- structure(list(id = 1:1186, entry = c(6L, 9L, 29L, 32L, 11L, 10L, 16L, 13L, 9L, 16L, 10L, 12L, 14L, 11L, 
         8L, 39L, 16L, 18L, 16L, 39L, 5L, 15L, 7L, 12L, 10L, 6L, 6L, 25L, 6L, 27L, 8L, 38L, 10L, 11L, 13L, 6L, 9L, 11L, 13L, 
         6L, 7L, 6L, 9L, 5L, 33L, 8L, 6L, 14L, 20L, 18L, 14L, 16L, 18L, 8L, 6L, 10L, 9L, 24L, 14L, 6L, 5L, 22L, 16L, 4L, 10L, 

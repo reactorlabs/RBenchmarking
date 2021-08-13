@@ -1,6 +1,6 @@
-library(elo)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     mf <- structure(list(elo.A = c("Blundering Baboons", "Defense-less Dogs", "Fabulous Frogs", "Helpless Hyenas", "Cunning Cats", 
         "Defense-less Dogs", "Gallivanting Gorillas", "Helpless Hyenas", "Defense-less Dogs", "Cunning Cats", "Helpless Hyenas", 
         "Gallivanting Gorillas", "Elegant Emus", "Fabulous Frogs", "Gallivanting Gorillas", "Helpless Hyenas", "Fabulous Frogs", 

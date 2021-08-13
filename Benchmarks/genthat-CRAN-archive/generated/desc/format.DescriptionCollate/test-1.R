@@ -1,7 +1,7 @@
-library(desc)
 
-function_to_run <- function() {
-    private <- list2env(list(notws = character(0), path = "/opt/r_library/desc/DESCRIPTION", data = list(Package = structure(list(key = "Package", 
+
+genthat_extracted_call <- function() {
+    private <- list2env(list(notws = character(0), path = "/opt/r_
         value = "desc"), class = c("DescriptionPackage", "DescriptionField")), Title = structure(list(key = "Title", value = "Manipulate DESCRIPTION Files"), 
         class = c("DescriptionTitle", "DescriptionField")), Version = structure(list(key = "Version", value = "1.2.0"), class = c("DescriptionVersion", 
         "DescriptionField")), `Authors@R` = structure(list(key = "Authors@R", value = "c(\n    person(\"Gábor\", \"Csárdi\",, \"csardi.gabor@gmail.com\", role = c(\"aut\", \"cre\")),\n    person(\"Kirill\", \"Müller\", role = c(\"aut\")),\n    person(\"Jim\", \"Hester\", email = \"james.f.hester@gmail.com\", role = c(\"aut\")))"), 

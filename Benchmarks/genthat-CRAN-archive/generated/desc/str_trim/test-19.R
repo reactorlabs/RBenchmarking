@@ -1,6 +1,6 @@
-library(desc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- "*"
     desc:::str_trim(x = x)
 }

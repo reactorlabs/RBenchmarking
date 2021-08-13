@@ -1,6 +1,6 @@
-library(circular)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     circular:::lm.circular.cl(y = structure(c(3.47941346738894, 2.35448087115882, 2.94096514994146, 3.32027318975017, 8.75731193841824, 
         8.62184772964391, 4.00388753189708, -1.94716525867994, 3.96592281922882, 3.44820566563364), circularp = list(type = "angles", 
         units = "radians", template = "none", modulo = "asis", zero = 0, rotation = "counter"), class = c("circular", "numeric")), 

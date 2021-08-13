@@ -1,6 +1,6 @@
-library(ape)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(list(formula = Y ~ X1, B = structure(c(0.023358905726393, -0.0656143776599706), .Dim = 2:1, .Dimnames = list(c("(Intercept)", 
         "X1"), NULL)), B.se = structure(c(0.519188496842104, 0.221974712273411), .Dim = 2:1, .Dimnames = list(c("(Intercept)", 
         "X1"), NULL)), B.cov = structure(c(0.269556695253163, -0.00288040113677029, -0.00288040113677029, 0.0492727728888636), 

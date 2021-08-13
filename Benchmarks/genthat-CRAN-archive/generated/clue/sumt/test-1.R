@@ -1,6 +1,6 @@
-library(clue)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     P <- genthat::with_env(function(m) {
         sum(pmin(m, 0)^2) + sum((rowSums(matrix(m, nr)) - 1)^2)
     }, env = list2env(list(nr = 15L), parent = baseenv()))

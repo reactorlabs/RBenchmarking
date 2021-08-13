@@ -1,6 +1,6 @@
-library(dygraphs)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     . <- structure(list(x = structure(list(attrs = list(axes = list(x = list(pixelsPerLabel = 60), y = list(valueRange = c(0, 
         100))), title = "Presidential Approval", labels = c("quarter", "V1"), legend = "auto", retainDateWindow = FALSE), 
         scale = "quarterly", annotations = list(), shadings = list(), events = list(), format = "date", data = list(c("1945-01-01T00:00:00.000Z", 

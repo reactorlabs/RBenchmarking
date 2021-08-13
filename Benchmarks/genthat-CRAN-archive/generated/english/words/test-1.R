@@ -1,6 +1,6 @@
-library(english)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     english:::words(x = 10006)
 }
 

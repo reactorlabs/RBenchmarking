@@ -1,6 +1,6 @@
-library(ade4)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ours <- structure(list(altit = structure(c(2L, 1L, 3L, 3L, 3L, 3L, 2L, 1L, 2L, 2L, 1L, 2L, 2L, 1L, 2L, 3L, 3L, 3L, 2L, 
         2L, 2L, 1L, 2L, 1L, 2L, 2L, 2L, 3L, 2L, 1L, 3L, 3L, 3L, 3L, 1L, 2L, 3L, 2L), .Label = c("1", "2", "3"), class = "factor"), 
         deniv = structure(c(3L, 2L, 3L, 3L, 3L, 3L, 2L, 1L, 3L, 2L, 1L, 2L, 3L, 3L, 2L, 3L, 1L, 2L, 1L, 1L, 1L, 1L, 2L, 1L, 

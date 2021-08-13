@@ -1,6 +1,6 @@
-library(catdap)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     Titanic <- datasets::Titanic
     catdap:::catdap1c(ctable = Titanic, response.names = "Survived")
 }

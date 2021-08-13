@@ -1,6 +1,6 @@
-library(dfoptim)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     rosbkext <- genthat::with_env(function(x) {
         n <- length(x)
         sum(100 * (x[1:(n - 1)]^2 - x[2:n])^2 + (x[1:(n - 1)] - 1)^2)

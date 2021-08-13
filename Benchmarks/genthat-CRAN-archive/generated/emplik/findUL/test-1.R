@@ -1,6 +1,6 @@
-library(emplik)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     myfun6 <- genthat::with_env(function(theta, x, d) {
         el.cen.EM2(x, d, fun = function(t) {
             t

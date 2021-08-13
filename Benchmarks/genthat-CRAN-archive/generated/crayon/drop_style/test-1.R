@@ -1,6 +1,6 @@
-library(crayon)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     crayon:::drop_style(style = "new_style")
 }
 

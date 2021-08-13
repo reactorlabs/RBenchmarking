@@ -1,6 +1,6 @@
-library(cpk)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     msc <- 50
     mec <- 20
     ke <- 0.2078

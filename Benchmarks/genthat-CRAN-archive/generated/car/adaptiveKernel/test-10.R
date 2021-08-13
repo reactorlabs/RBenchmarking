@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- c(62L, 72L, 75L, 55L, 64L, 21L, 64L, 80L, 67L, 72L, 42L, 76L, 76L, 41L, 48L, 76L, 53L, 60L, 42L, 78L, 29L, 48L, 
         55L, 29L, 21L, 47L, 81L, 36L, 22L, 44L, 15L, 7L, 42L, 9L, 21L, 21L, 16L, 16L, 9L, 14L, 12L, 17L, 7L, 34L, 8L)
     args <- list(bw = genthat::with_env(function(x) {

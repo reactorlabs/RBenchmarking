@@ -1,6 +1,6 @@
-library(CCA)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     res <- list(cor = c(0.99069925749082, 0.984873538722848, 0.938886363429689, 0.919107320857084, 0.814974162345862, 0.723467897714781, 
         0.64132479517059, 0.605753450276824, 0.546984228882549, 0.360764132685016), names = list(Xnames = c("X36b4", "ACAT1", 
         "ACAT2", "ACBP", "ACC1", "ACC2", "ACOTH", "ADISP", "ADSS1", "ALDH3"), Ynames = c("C14.0", "C16.0", "C18.0", "C16.1n.9", 

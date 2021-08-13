@@ -1,6 +1,6 @@
-library(DiffNet)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     std_perm <- 0
     mu_perm <- 0
     ghd_val <- 0

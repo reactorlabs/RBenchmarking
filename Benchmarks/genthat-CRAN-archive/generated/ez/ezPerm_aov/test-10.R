@@ -1,6 +1,6 @@
-library(ez)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     sim_data <- structure(list(subnum = structure(1:20, .Label = c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", 
         "12", "13", "14", "15", "16", "17", "18", "19", "20"), class = "factor"), group = structure(c(2L, 1L, 2L, 1L, 1L, 
         1L, 1L, 1L, 2L, 2L, 1L, 1L, 2L, 1L, 2L, 2L, 2L, 2L, 1L, 2L), .Label = c("Control", "Treatment"), class = "factor"), 

@@ -1,6 +1,6 @@
-library(doParallel)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     pkgname <- NULL
     doParallel:::getparentenv(pkgname = pkgname)
 }

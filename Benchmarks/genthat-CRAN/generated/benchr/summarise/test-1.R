@@ -1,6 +1,6 @@
-library(benchr)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     fun <- genthat::with_env(function(x) {
         if (anyNA(x)) 
             x <- x[!is.na(x)]

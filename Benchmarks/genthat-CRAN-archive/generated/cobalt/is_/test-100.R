@@ -1,6 +1,6 @@
-library(cobalt)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     X <- list(age = c(37L, 22L, 30L, 27L, 33L, 22L, 23L, 32L, 22L, 33L, 19L, 21L, 18L, 27L, 17L, 19L, 27L, 23L, 40L, 26L, 
         23L, 41L, 38L, 24L, 18L, 29L, 25L, 27L, 17L, 24L, 17L, 48L, 25L, 20L, 25L, 42L, 25L, 23L, 46L, 24L, 21L, 19L, 17L, 
         18L, 20L, 25L, 17L, 17L, 25L, 23L, 28L, 31L, 18L, 25L, 30L, 17L, 37L, 41L, 42L, 22L, 17L, 29L, 35L, 27L, 29L, 28L, 

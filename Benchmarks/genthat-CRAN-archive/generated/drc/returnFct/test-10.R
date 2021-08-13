@@ -1,6 +1,6 @@
-library(drc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     pchisq <- stats::pchisq
     gofTest <- c(35.2355300914723, 28)
     drc:::returnFct(dfModel = c(NA, NA), loglik = c(NA, NA), dfDiff = c(NA, gofTest[2]), testStat = c(NA, gofTest[1]), pVal = c(NA, 

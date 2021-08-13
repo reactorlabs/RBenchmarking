@@ -1,6 +1,6 @@
-library(BetaBit)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     BetaBit:::frequon()
 }
 

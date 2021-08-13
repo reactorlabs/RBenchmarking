@@ -1,6 +1,6 @@
-library(ClustOfVar)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     part_init <- structure(c(1L, 1L, 2L, 2L, 1L, 1L, 2L, 3L, 4L, 5L), names = c("100m", "Long.jump", "Shot.put", "High.jump", 
         "400m", "110m.hurdle", "Discus", "Pole.vault", "Javeline", "1500m"))
     decathlon <- structure(list(`100m` = c(11.04, 10.76, 11.02, 11.02, 11.34, 11.11, 11.13, 10.83, 11.64, 11.37, 11.33, 11.33, 

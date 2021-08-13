@@ -1,6 +1,6 @@
-library(cobalt)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     unique.treats <- c("0", "1")
     s.d.denom <- "pooled"
     allowable.s.d.denoms <- c("pooled", "all", "weighted", "treated", "control")

@@ -1,6 +1,6 @@
-library(fda)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     path2fdaM <- ""
     fda:::dirs(path = path2fdaM)
 }

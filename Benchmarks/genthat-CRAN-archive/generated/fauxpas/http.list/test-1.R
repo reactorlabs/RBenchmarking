@@ -1,6 +1,6 @@
-library(fauxpas)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     res <- list(url = "https://httpbin.org/status/418", status_code = 418L, type = NA_character_, headers = as.raw(c(72, 
         84, 84, 80, 47, 50, 32, 52, 49, 56, 32, 13, 10, 100, 97, 116, 101, 58, 32, 83, 117, 110, 44, 32, 48, 56, 32, 65, 
         117, 103, 32, 50, 48, 50, 49, 32, 50, 49, 58, 48, 51, 58, 49, 53, 32, 71, 77, 84, 13, 10, 99, 111, 110, 116, 101, 

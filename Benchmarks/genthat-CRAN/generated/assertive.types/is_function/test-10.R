@@ -1,6 +1,6 @@
-library(assertive.types)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- genthat::with_env(function(formula, data, subset, weights, na.action, method = "qr", model = TRUE, x = FALSE, y = FALSE, 
         qr = TRUE, singular.ok = TRUE, contrasts = NULL, offset, ...) {
         ret.x <- x

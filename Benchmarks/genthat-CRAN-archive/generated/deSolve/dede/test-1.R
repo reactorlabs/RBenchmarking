@@ -1,6 +1,6 @@
-library(deSolve)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     derivs <- genthat::with_env(function(t, y, parms) {
         if (t < 1) 
             dy <- -1

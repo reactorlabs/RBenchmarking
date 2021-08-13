@@ -1,6 +1,6 @@
-library(doMC)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     .foreachGlobals <- foreach:::.foreachGlobals
     doMC:::info(data = .foreachGlobals$data, item = "name")
 }

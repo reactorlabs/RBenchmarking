@@ -1,6 +1,6 @@
-library(ade4)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     macroloire <- list(fau = structure(list(S1 = c(0L, 0L, 0L, 0L, 1L, 0L, 0L, 2L, 0L, 0L, 1L, 0L, 0L, 0L, 0L, 0L, 0L, 0L, 
         0L, 0L, 0L, 12L, 1L, 0L, 0L, 0L, 0L, 0L, 0L, 0L, 0L, 0L, 0L, 8L, 0L, 0L, 0L, 0L, 0L, 2L), S2 = c(0L, 0L, 0L, 0L, 
         5L, 0L, 0L, 118L, 0L, 3L, 1L, 0L, 0L, 0L, 0L, 0L, 0L, 0L, 1L, 0L, 0L, 61L, 0L, 0L, 0L, 0L, 4L, 1L, 0L, 1L, 0L, 0L, 

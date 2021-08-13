@@ -1,6 +1,6 @@
-library(cobalt)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     s.keep <- c(TRUE, FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE)
     s.balance <- structure(list(`1` = structure(list(Type = c("Distance", "Contin.", "Contin.", "Binary", "Binary", "Binary", 
         "Binary", "Binary", "Contin.", "Contin."), M.0.Adj = c(0.0762673421725219, 28.4595375722543, 10.2543352601156, 0.0144508670520231, 

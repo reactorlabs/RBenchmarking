@@ -1,6 +1,6 @@
-library(amap)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(list(eig = c(15.3718790246167, 10.6712607550959, 6.59847491263613, 4.78909333264703, 3.46559935705195, 
         3.05677348264633), sdev = structure(c(1.79914235560127, 1.24897660080547, 0.772293073519821, 0.560520977682349, 0.405617724471533, 
         0.357768275127638), names = c("Comp 1", "Comp 2", "Comp 3", "Comp 4", "Comp 5", "Comp 6")), scores = structure(c(-1.19256725741626, 

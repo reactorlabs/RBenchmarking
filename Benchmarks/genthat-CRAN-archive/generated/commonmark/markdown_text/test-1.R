@@ -1,6 +1,6 @@
-library(commonmark)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     md <- c("# CHANGES IN knitr VERSION 1.34", "", "## NEW FEATURES", "", "- Added a package option `latex.tilde` so that users can customize the tilde symbol, e.g., you can set `knitr::opts_knit$set(latex.tilde = \"\\\\hlopt{\\\\scriptsize{\\\\ensuremath{\\\\sim}}}\")`. This is because the default tilde is too high in the PDF output, and it's often more desirable to use a middle tilde instead (thanks, @brry #1992, @jaredlander #492).", 
         "", "- For the `tikz` engine, the class options of the `standalone` document classs can be specified via the chunk option `engine.opts$classoption` (thanks, @XiangyunHuang, #1985). The default value is `tikz`, i.e., `\\documentclass[tikz]{standalone}` is used by default.", 
         "", "- Added a new `targets` engine (https://github.com/ropensci/targets/issues/503, @wlandau). Details: https://books.ropensci.org/targets/markdown.html.", 
@@ -200,7 +200,7 @@ function_to_run <- function() {
         "", "- the default value of the `quiet` argument of `plot_crop()` was changed from `!opts_knit$get('progress')` to `TRUE`, i.e., by default the messages from cropping images are suppressed", 
         "", "## BUG FIXES", "", "- the chunk option `cache.vars` did not really behave like what was documented (thanks, @simonkth, #1280)", 
         "", "- `asis_output()` should not be merged with normal character output when `results='hold'` (thanks, @kevinushey, #1310)", 
-        "", "# CHANGES IN knitr VERSION 1.14", "", "## NEW FEATURES", "", "- improved caching for Rcpp code chunks: the shared library built from the C++ code will be preserved on disk and reloaded the next time if caching is enabled (chunk option `cache = TRUE`), so that the exported R functions are still usable in later R code chunks; note this feature requires Rcpp >= 0.12.5.6 (thanks, @jjallaire, #1239)", 
+        "", "# CHANGES IN knitr VERSION 1.14", "", "## NEW FEATURES", "", "- improved caching for Rcpp code chunks: the shared 
         "", "- added a helper function `all_rcpp_labels()`, which is simply `all_labels(engine == 'Rcpp')` and can be used to extract all chunk labels of Rcpp chunks", 
         "", "- added a new engine named `sql` that uses the **DBI** package to execute SQL queries, and optionally assign the result to a variable in the **knitr** session; see https://rmarkdown.rstudio.com/authoring_knitr_engines.html for details (#1241)", 
         "", "- `fig.keep` now accepts numeric values to index low-level plots to keep (#1265)", "", "## BUG FIXES", "", "- fixed #1211: `pandoc('foo.md')` generates foo_utf8.html instead of foo.html by default", 
@@ -585,7 +585,7 @@ function_to_run <- function() {
         "", "- the chunk options `eval`, `echo` and `results` are also respected when the language is not R, e.g. for a Python code chunk with `eval=FALSE`, the code will not be evaluated, or for a Ruby chunk with `results='hide'`, the output will be hidden (#293) (thanks, Ramnath Vaidyanathan)", 
         "", "- chunk options `out.width`, `out.height` and `out.extra` also work for plots in HTML and Markdown output now, e.g. `out.width='200px'` or `out.extra='style=\"display:block;\"'` (#297) (thanks, Taiyun Wei and Alan Severini)", 
         "", "- the hook function to create animations in HTML output is exported now as `hook_ffmpeg_html()`", "", "- added a package option `opts_knit$get('animation.fun')` which defaults to `hook_ffmpeg_html`; this option is used to create animations in HTML output so that we do not have to use FFmpeg", 
-        "", "- added two functions `hook_r2swf()` and `hook_scianimator()` which can be set as the package option `opts_knit$get('animation.fun')` and create animations via the **R2SWF** package or the **SciAnimator** library (see `animation::saveHTML`) (thanks, Taiyun Wei)", 
+        "", "- added two functions `hook_r2swf()` and `hook_scianimator()` which can be set as the package option `opts_knit$get('animation.fun')` and create animations via the **R2SWF** package or the **SciAnimator** 
         "", "- a new function `image_uri()` to create data URIs for image files; we can set `opts_knit$set(upload.fun = image_uri)` so that images are embedded in the HTML output as data URIs (hence the HTML page does not depend on external images) (#298, #324) (thanks, Wush Wu)", 
         "", "- added a new object `opts_template` which can be used to set a group of chunk options and they can be referenced later with the new chunk option `opts.label`; see `?opts_template` for examples; this makes it easy to reuse groups of frequently used chunk options (#316, #320) (thanks, Cassio Pereira)", 
         "", "- a new function `dep_prev()` to build chunk cache dependencies so that all later chunks will depend on previous chunks; if any of a previous chunk is updated, the cache of all chunks after it will be updated as well (#285) (thanks, @muelleki)", 

@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     Duncan <- carData::Duncan
     lm <- stats::lm
     mod.duncan.2 <- structure(list(coefficients = structure(c(-3.95054285747495, 32.0078058559505, -7.04320281454587, 0.783410908118913, 

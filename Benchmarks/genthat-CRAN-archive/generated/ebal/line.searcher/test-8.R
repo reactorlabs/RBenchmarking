@@ -1,6 +1,6 @@
-library(ebal)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     val <- 0.68298028594842
     ebal:::line.searcher(Base.weight = c(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), Co.x = structure(c(1, 1, 1, 1, 1, 1, 1, 1, 

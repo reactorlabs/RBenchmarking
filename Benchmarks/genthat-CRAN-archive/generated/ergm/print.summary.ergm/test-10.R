@@ -1,6 +1,6 @@
-library(ergm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(list(formula = flomarriage ~ edges + kstar(2), correlation = FALSE, degeneracy.value = NULL, offset = c(FALSE, 
         FALSE), drop = c(0, 0), estimable = c(TRUE, TRUE), covariance = FALSE, pseudolikelihood = FALSE, independence = FALSE, 
         estimate = "MLE", control = structure(list(drop = TRUE, init = structure(c(-1.66453403847315, 0.0117727437777857), 

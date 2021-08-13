@@ -1,6 +1,6 @@
-library(fBasics)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- c(1.37095844714667, -0.564698171396089, 0.363128411337339, 0.63286260496104, 0.404268323140999)
     fBasics:::colVec(x = x)
 }

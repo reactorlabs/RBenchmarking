@@ -1,6 +1,6 @@
-library(awsMethods)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     awsMethods:::setCores(n = 12)
 }
 

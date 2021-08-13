@@ -1,6 +1,6 @@
-library(assertive.models)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     lm <- stats::lm
     model <- structure(list(coefficients = structure(c(19.5002898063634, 0.0177305871993836), names = c("(Intercept)", "conc")), 
         residuals = structure(c(-5.18469559030483, 7.79685743374453, 10.8670633937907, 11.4940046738524, 6.93441659394482, 

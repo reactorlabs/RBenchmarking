@@ -1,6 +1,6 @@
-library(circlize)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     w2 <- 1
     w <- 1
     theta22 <- structure(6.19736842105269, names = "theta")

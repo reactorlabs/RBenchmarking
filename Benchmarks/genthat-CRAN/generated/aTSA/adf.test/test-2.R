@@ -1,6 +1,6 @@
-library(aTSA)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     co2 <- datasets::co2
     aTSA:::adf.test(x = co2)
 }

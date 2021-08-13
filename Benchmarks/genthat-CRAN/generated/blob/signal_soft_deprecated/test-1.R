@@ -1,6 +1,6 @@
-library(blob)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     blob:::signal_soft_deprecated(msg = "as.blob() is deprecated, use as_blob().")
 }
 

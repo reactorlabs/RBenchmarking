@@ -1,6 +1,6 @@
-library(BsMD)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     BM86.data <- structure(list(X1 = c(-1L, 1L, -1L, 1L, -1L, 1L, -1L, 1L, -1L, 1L, -1L, 1L, -1L, 1L, -1L, 1L), X2 = c(-1L, 
         -1L, 1L, 1L, -1L, -1L, 1L, 1L, -1L, -1L, 1L, 1L, -1L, -1L, 1L, 1L), X3 = c(1L, -1L, -1L, 1L, 1L, -1L, -1L, 1L, 1L, 
         -1L, -1L, 1L, 1L, -1L, -1L, 1L), X4 = c(-1L, -1L, -1L, -1L, 1L, 1L, 1L, 1L, -1L, -1L, -1L, -1L, 1L, 1L, 1L, 1L), 

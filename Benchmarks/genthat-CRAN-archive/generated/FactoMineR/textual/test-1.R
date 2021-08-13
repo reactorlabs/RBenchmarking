@@ -1,6 +1,6 @@
-library(FactoMineR)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     poison.text <- structure(list(Sick = structure(c(2L, 1L, 2L, 1L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 1L, 1L, 2L, 2L, 
         2L, 2L, 1L, 2L, 2L, 2L, 2L, 2L, 1L, 2L, 2L, 1L, 2L, 2L, 1L, 1L, 1L, 2L, 2L, 2L, 1L, 2L, 2L, 2L, 1L, 2L, 2L, 2L, 2L, 
         1L, 1L, 1L, 2L, 1L, 2L, 1L, 2L, 2L), .Label = c("healthy", "sick"), class = "factor"), Sex = structure(c(1L, 1L, 

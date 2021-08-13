@@ -1,6 +1,6 @@
-library(drc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     multCurves2 <- genthat::with_env(function(dose, parm) {
         drcFct1(dose, parm)
     }, env = list2env(list(drcFct1 = genthat::with_env(function(dose, parm) {

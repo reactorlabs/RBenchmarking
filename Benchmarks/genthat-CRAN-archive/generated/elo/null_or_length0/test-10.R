@@ -1,6 +1,6 @@
-library(elo)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     grp.col <- 4L
     elo:::null_or_length0(x = grp.col)
 }

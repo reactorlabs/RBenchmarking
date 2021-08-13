@@ -1,6 +1,6 @@
-library(data.tree)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     nameName <- "name"
     mode <- "explicit"
     childrenName <- "children"

@@ -1,6 +1,6 @@
-library(clubSandwich)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     Z_list <- list(structure(c(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 8, 15, 22, 29, 36, 43, 44, 50, 57, 64), .Dim = c(11L, 
         2L), .Dimnames = list(NULL, c("(Intercept)", "Time"))), structure(c(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 8, 15, 22, 
         29, 36, 43, 44, 50, 57, 64), .Dim = c(11L, 2L), .Dimnames = list(NULL, c("(Intercept)", "Time"))), structure(c(1, 

@@ -1,6 +1,6 @@
-library(egg)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     unit <- grid::unit
     rasterGrob <- grid::rasterGrob
     dummy <- structure(list(f = structure(1:4, .Label = c("a", "b", "c", "d"), class = "factor"), data = structure(list(structure(c("black", 

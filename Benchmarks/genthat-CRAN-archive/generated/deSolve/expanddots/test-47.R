@@ -1,6 +1,6 @@
-library(deSolve)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     nx <- 1
     ldots <- list()
     deSolve:::expanddots(dots = ldots$bg, default = 1:nx, n = nx)

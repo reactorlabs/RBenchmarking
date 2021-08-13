@@ -1,6 +1,6 @@
-library(BBmisc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     BBmisc:::clipString(x = "abcdef", len = 5)
 }
 

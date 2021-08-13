@@ -1,6 +1,6 @@
-library(d3Network)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     NodesDF <- structure(list(name = structure(c(63L, 64L, 51L, 57L, 21L, 33L, 12L, 23L, 20L, 65L, 44L, 74L, 49L, 55L, 39L, 
         34L, 72L, 45L, 27L, 6L, 30L, 24L, 77L, 28L, 59L, 71L, 19L, 40L, 29L, 4L, 66L, 70L, 69L, 75L, 43L, 11L, 9L, 13L, 17L, 
         67L, 8L, 26L, 1L, 76L, 61L, 37L, 42L, 54L, 32L, 35L, 48L, 52L, 58L, 53L, 46L, 50L, 5L, 47L, 25L, 18L, 68L, 31L, 22L, 

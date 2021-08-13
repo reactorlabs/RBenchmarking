@@ -1,6 +1,6 @@
-library(C50)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     stp <- 154L
     srt <- 140L
     output <- c("", "C5.0 [Release 2.07 GPL Edition]  \tSat Aug  7 07:34:10 2021", "-------------------------------", "", 

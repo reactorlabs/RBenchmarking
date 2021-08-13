@@ -1,6 +1,6 @@
-library(drc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     AR.3 <- drc::AR.3
     drm <- drc::drm
     methionine <- drc::methionine

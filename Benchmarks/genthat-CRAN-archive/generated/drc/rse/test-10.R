@@ -1,6 +1,6 @@
-library(drc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     BC.4 <- drc::BC.4
     drm <- drc::drm
     lettuce <- drc::lettuce

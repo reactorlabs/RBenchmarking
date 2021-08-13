@@ -1,6 +1,6 @@
-library(classInt)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     pal1 <- c("wheat1", "red3")
     jenks71 <- structure(list(jenks71 = c(50.12, 83.9, 76.43, 71.61, 79.66, 84.84, 87.87, 92.45, 119.9, 155.3, 131.5, 111.8, 
         96.78, 86.75, 62.41, 96.37, 75.51, 77.29, 85.41, 116.4, 58.5, 75.29, 66.32, 62.65, 80.45, 72.76, 63.67, 60.27, 68.45, 

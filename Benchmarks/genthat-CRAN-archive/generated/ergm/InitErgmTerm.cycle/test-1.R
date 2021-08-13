@@ -1,6 +1,6 @@
-library(ergm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ergm:::InitErgmTerm.cycle(nw = structure(list(mel = list(list(inl = 1L, outl = 10L, atl = list(na = FALSE)), list(inl = 1L, 
         outl = 15L, atl = list(na = FALSE)), list(inl = 1L, outl = 31L, atl = list(na = FALSE)), list(inl = 1L, outl = 44L, 
         atl = list(na = FALSE)), list(inl = 1L, outl = 45L, atl = list(na = FALSE)), list(inl = 2L, outl = 14L, atl = list(na = FALSE)), 

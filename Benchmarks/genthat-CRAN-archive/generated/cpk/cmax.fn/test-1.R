@@ -1,6 +1,6 @@
-library(cpk)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     wtkg <- 86
     vd <- 2.8
     f <- 0.74

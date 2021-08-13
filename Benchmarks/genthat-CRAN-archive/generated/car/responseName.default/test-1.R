@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     contr.sum <- stats::contr.sum
     lm <- stats::lm
     Moore <- carData::Moore

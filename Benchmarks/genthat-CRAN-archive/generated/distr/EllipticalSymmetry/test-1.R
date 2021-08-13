@@ -1,6 +1,6 @@
-library(distr)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     distr:::EllipticalSymmetry(SymmCenter = 2)
 }
 

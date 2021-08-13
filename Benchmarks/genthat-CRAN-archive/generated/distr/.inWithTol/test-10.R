@@ -1,6 +1,6 @@
-library(distr)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     tol0 <- 1e-09
     supp0 <- c(-5, -4, -3, -2, -1, 0, 1, 2)
     sup1 <- 0:2

@@ -1,6 +1,6 @@
-library(cytometree)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     cellevents <- structure(list(FL1 = c(416L, 210L, 387L, 403L, 399L, 538L, 368L, 282L, 505L, 395L, 423L, 451L, 341L, 381L, 
         350L, 270L, 426L, 332L, 427L, 359L, 472L, 400L, 368L, 490L, 400L, 399L, 294L, 437L, 387L, 384L, 520L, 432L, 393L, 
         451L, 252L, 454L, 456L, 311L, 444L, 304L, 406L, 490L, 455L, 375L, 448L, 341L, 430L, 514L, 445L, 459L, 380L, 422L, 

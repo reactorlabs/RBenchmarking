@@ -1,6 +1,6 @@
-library(contfrac)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     contfrac:::CF(a = rep(1, 100))
 }
 

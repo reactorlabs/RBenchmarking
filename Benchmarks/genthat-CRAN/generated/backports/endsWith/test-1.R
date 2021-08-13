@@ -1,6 +1,6 @@
-library(backports)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     backports:::endsWith(x = c("aabb", "bbcc"), suffix = "bb")
 }
 

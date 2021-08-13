@@ -1,6 +1,6 @@
-library(drc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     daphnids <- drc::daphnids
     drm <- drc::drm
     LL.2 <- drc::LL.2

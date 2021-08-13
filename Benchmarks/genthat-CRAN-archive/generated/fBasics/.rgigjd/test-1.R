@@ -1,6 +1,6 @@
-library(fBasics)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     psi <- 0.91
     n <- 5000
     lambda <- -0.5

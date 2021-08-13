@@ -1,6 +1,6 @@
-library(dotCall64)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     dotCall64:::vector_dc(mode = "integer", length = 20)
 }
 

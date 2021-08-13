@@ -1,6 +1,6 @@
-library(bookdown)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     refs <- list(character(0), "@ref(tab:foo)")
     ref_table <- structure("1", names = "tab:foo")
     i <- 2L

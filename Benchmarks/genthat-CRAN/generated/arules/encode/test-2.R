@@ -1,6 +1,6 @@
-library(arules)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     iLabels <- c("age=Young", "age=Middle-aged", "age=Senior", "age=Old", "workclass=Federal-gov", "workclass=Local-gov", 
         "workclass=Never-worked", "workclass=Private", "workclass=Self-emp-inc", "workclass=Self-emp-not-inc", "workclass=State-gov", 
         "workclass=Without-pay", "education=Preschool", "education=1st-4th", "education=5th-6th", "education=7th-8th", "education=9th", 

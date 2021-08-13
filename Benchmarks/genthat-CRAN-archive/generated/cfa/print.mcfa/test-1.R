@@ -1,6 +1,6 @@
-library(cfa)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(list(table = structure(list(label = structure(c(3L, 3L, 3L, 3L, 1L, 3L, 8L, 3L, 3L, 1L, 3L, 1L, 4L, 1L, 
         11L, 3L, 8L, 11L, 1L, 8L, 5L, 1L, 1L, 1L, 8L, 1L, 8L, 8L, 3L, 9L, 3L, 5L, 3L, 1L, 8L, 3L, 1L, 2L, 10L, 1L, 1L, 10L, 
         2L, 8L, 3L, 1L, 8L, 1L, 1L, 1L, 9L, 3L, 1L, 1L, 1L, 4L, 8L, 1L, 3L, 1L, 10L, 3L, 1L, 8L, 5L, 4L, 1L, 1L, 1L, 1L, 

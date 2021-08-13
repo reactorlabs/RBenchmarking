@@ -1,6 +1,6 @@
-library(chemometrics)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     mt <- SOT ~ P2O5 + SiO2 + Fe2O3 + Al2O3 + CaO + MgO + Na2O + K2O + `log(P2O5)` + `log(SiO2)` + `log(Fe2O3)` + `log(Al2O3)` + 
         `log(CaO)` + `log(MgO)` + `log(Na2O)` + `log(K2O)`
     model.matrix <- stats::model.matrix

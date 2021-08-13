@@ -1,6 +1,6 @@
-library(caret)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     obj <- genthat::with_env(function(u) {
         `__genthat_captured_seed` <- get(".Random.seed", envir = globalenv())
         ""

@@ -1,6 +1,6 @@
-library(AdvBinomApps)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     tailcut <- 1e-08
     prec <- 2
     n.new <- c(110000, 211598)

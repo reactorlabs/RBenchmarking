@@ -1,6 +1,6 @@
-library(ade4)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     xlim <- NULL
     sub <- NULL
     score <- c(1.67030806951771, 1.50715612821567, 1.20083284194756, 1.79554982484412, 1.67147707369278, 1.86779140104866, 

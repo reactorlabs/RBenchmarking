@@ -1,6 +1,6 @@
-library(checkmate)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     dn <- "/tmp/RtmpshYJaD"
     checkmate:::checkAccess(x = dn, access = "w")
 }

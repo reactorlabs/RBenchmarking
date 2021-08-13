@@ -1,6 +1,6 @@
-library(emplik)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     wd1new <- c(1.68910433405394, 1.62641880051172, 1.49211939713584, 1.43057768690324, 1.78737287607565, 3.4650837019362, 
         1.64298899309526)
     mu <- 3.5

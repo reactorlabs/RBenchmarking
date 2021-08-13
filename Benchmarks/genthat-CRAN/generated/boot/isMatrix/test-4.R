@@ -1,6 +1,6 @@
-library(boot)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     weights <- NULL
     boot:::isMatrix(x = weights)
 }

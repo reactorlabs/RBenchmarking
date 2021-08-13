@@ -1,6 +1,6 @@
-library(AID)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     out <- structure(list(method = "Estimating Box-Cox transformation parameter via Shapiro-Wilk test statistic", lambda.hat = -0.0600000000000001, 
         lambda2 = 0, statistic = 0.987761871717613, p.value = 0.982130774663243, alpha = 0.05, tf.data = c(5.39133940823823, 
             4.9782241275446, 4.81100550547226, 4.9146134986242, 4.74448180943269, 4.57418070360849, 4.41988954169425, 4.14864124521681, 

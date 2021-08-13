@@ -1,6 +1,6 @@
-library(coin)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     pq <- 12L
     p <- 0.95
     corr <- structure(c(1, -0.203194316300479, -0.512231836341979, -0.499248684774682, -0.542766881022911, 0.110287145299994, 

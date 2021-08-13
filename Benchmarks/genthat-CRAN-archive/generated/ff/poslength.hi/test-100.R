@@ -1,6 +1,6 @@
-library(ff)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     X <- list(structure(list(x = structure(list(first = 1L, dat = structure(list(lengths = 2L, values = 1L), class = "rle"), 
         last = 3L), class = "rlepack"), ix = NULL, re = FALSE, minindex = 1L, maxindex = 3L, length = 3L, dim = NULL, dimorder = NULL, 
         symmetric = FALSE, fixdiag = NULL, vw = NULL, NAs = NULL), class = "hi"), structure(list(x = structure(list(first = 1L, 

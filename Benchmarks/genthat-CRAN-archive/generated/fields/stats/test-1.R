@@ -1,6 +1,6 @@
-library(fields)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ChicagoO3 <- fields::ChicagoO3
     Tps <- fields::Tps
     tps.out <- structure(list(call = Tps(x = ChicagoO3$x, Y = ChicagoO3$y), cov.function.name = "Rad.cov", null.function.name = "Krig.null.function", 

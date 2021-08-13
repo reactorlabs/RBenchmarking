@@ -1,6 +1,6 @@
-library(boot)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     sim <- "geom"
     R <- 99
     n.sim <- 114

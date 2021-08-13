@@ -1,6 +1,6 @@
-library(ddalpha)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     settingsOutsider <- list(list(name = "mahd1", method = "depth.Mahalanobis", mah.estimate = "MCD", mcd.alpha = 0.75, priors = c(0.5, 
         0.5)), list(name = "rand1", method = "RandEqual"))
     ddalpha <- list(call = NULL, colnames = NULL, classif.formula = NULL, raw = structure(list(V1 = c(2.423172962193, -0.606187043758014, 

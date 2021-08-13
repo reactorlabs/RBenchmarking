@@ -1,6 +1,6 @@
-library(dendextend)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     dendextend:::`order.dendrogram<-`(object = structure(list(structure(42L, members = 1L, height = 0, label = "42", leaf = TRUE, 
         edgePar = list(col = "#008FB7")), structure(list(structure(list(structure(list(structure(list(structure(30L, label = "30", 
         members = 1L, height = 0, leaf = TRUE, edgePar = list(col = "#008FB7")), structure(31L, label = "31", members = 1L, 

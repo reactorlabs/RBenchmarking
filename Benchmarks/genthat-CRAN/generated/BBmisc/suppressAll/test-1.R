@@ -1,6 +1,6 @@
-library(BBmisc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     BBmisc:::suppressAll(expr = {
         print("foo")
         message("foo")

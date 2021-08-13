@@ -1,6 +1,6 @@
-library(BBmisc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     init <- 7
     BBmisc:::isScalarValue(x = init)
 }

@@ -1,6 +1,6 @@
-library(dfexplore)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     dataframe_with_matrix <- structure(list(subject = 1:100, initial = c("ph", "pf", "kf", "og", "mk", "ml", "ni", "ji", 
         "nh", "nb", "lh", "nj", "pi", "kg", "lh", "ph", "qa", "jg", "lh", "mj", "pg", "jg", "rh", "qh", "ii", "mg", "lk", 
         "pl", "lf", "oi", "nk", "oh", "lh", "nk", "fj", "oh", "gj", "je", "pi", "mh", "le", "ld", "hg", "qi", "li", "qj", 

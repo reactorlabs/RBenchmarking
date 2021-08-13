@@ -1,6 +1,6 @@
-library(assertive.files)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     assertive.files:::warn_about_file.access_under_windows()
 }
 

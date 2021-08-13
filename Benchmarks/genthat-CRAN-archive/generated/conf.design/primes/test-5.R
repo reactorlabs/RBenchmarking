@@ -1,6 +1,6 @@
-library(conf.design)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     conf.design:::primes(n = 1:50)
 }
 

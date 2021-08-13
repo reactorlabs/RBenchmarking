@@ -1,6 +1,6 @@
-library(deSolve)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     diffusion3D <- genthat::with_env(function(t, Y, par) {
         mbind <- function(Mat1, Array, Mat2, along = 1) {
             dimens <- dim(Array) + c(0, 0, 2)

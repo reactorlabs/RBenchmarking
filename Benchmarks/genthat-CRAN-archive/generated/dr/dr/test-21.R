@@ -1,6 +1,6 @@
-library(dr)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     dr.slices.arc <- dr::dr.slices.arc
     ais <- dr::ais
     dr:::dr(formula = LBM ~ log(SSF) + log(Wt) + log(Hg) + log(Ht) + log(WCC) + log(RCC) + log(Hc) + log(Ferr), data = ais, 

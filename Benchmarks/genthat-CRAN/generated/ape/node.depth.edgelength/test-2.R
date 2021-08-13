@@ -1,6 +1,6 @@
-library(ape)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     t <- structure(list(edge = structure(c(101L, 102L, 103L, 103L, 104L, 105L, 106L, 107L, 108L, 108L, 107L, 109L, 109L, 
         106L, 110L, 111L, 111L, 110L, 112L, 112L, 113L, 114L, 114L, 113L, 105L, 115L, 116L, 117L, 118L, 118L, 119L, 119L, 
         120L, 120L, 117L, 121L, 122L, 122L, 121L, 116L, 115L, 123L, 124L, 125L, 125L, 124L, 126L, 126L, 123L, 127L, 128L, 

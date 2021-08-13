@@ -1,6 +1,6 @@
-library(ExPosition)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     mRP <- list(rowCenter = structure(c(0.297259344356402, 0.564217997671499, 0.138522657972099), names = c("PERIOD", "COMMA", 
         "OTHER")), masses = structure(c(0.0189297737255527, 0.139268648535985, 0.252206567103009, 0.396616445056707, 0.109440956215337, 
         0.0835376093634097), names = c("Rousseau", "Chateaubriand", "Hugo", "Zola", "Proust", "Giraudoux")), weights = structure(c(3.36406581991595, 

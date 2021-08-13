@@ -1,6 +1,6 @@
-library(drc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     type <- "relative"
     respl <- 45.701863367275
     reference <- "control"

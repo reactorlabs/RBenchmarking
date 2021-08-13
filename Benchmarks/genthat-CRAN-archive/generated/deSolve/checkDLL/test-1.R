@@ -1,6 +1,6 @@
-library(deSolve)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     verbose <- FALSE
     outnames <- c("Mineralisation", "Depo")
     nout <- 2

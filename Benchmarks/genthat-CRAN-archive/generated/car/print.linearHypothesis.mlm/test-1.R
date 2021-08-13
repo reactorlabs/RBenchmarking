@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(list(type = "II", repeated = FALSE, multivariate.tests = list(Site = structure(list(SSPH = structure(c(175.610318681319, 
         -149.295532967033, -130.809706593407, -5.88916373626373, -5.37226483516484, -149.295532967033, 134.221615824176, 
         117.745035164835, 4.82178659340659, 5.32594912087912, -130.809706593407, 117.745035164835, 103.350527032967, 4.20916131868132, 

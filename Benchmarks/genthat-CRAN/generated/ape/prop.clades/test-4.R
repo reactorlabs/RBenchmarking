@@ -1,6 +1,6 @@
-library(ape)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     tr <- structure(list(edge = structure(c(11L, 12L, 13L, 14L, 14L, 15L, 15L, 13L, 12L, 16L, 17L, 17L, 16L, 18L, 18L, 19L, 
         19L, 11L, 12L, 13L, 14L, 1L, 15L, 2L, 3L, 4L, 16L, 17L, 5L, 6L, 18L, 7L, 19L, 8L, 9L, 10L), .Dim = c(18L, 2L)), tip.label = c("t7", 
         "t2", "t3", "t8", "t1", "t5", "t6", "t9", "t10", "t4"), edge.length = c(0.380035179434344, 0.777445221319795, 0.934705231105909, 

@@ -1,6 +1,6 @@
-library(boot)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     boot <- boot::boot
     grav1 <- structure(list(g = c(82, 79, 81, 79, 77, 79, 79, 78, 79, 82, 76, 73, 64, 84, 86, 85, 82, 77, 76, 77, 80, 83, 
         81, 78, 78, 78), series = structure(c(7L, 7L, 7L, 7L, 7L, 7L, 7L, 7L, 7L, 7L, 7L, 7L, 7L, 8L, 8L, 8L, 8L, 8L, 8L, 

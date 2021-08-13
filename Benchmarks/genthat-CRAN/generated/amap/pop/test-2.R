@@ -1,6 +1,6 @@
-library(amap)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     diss <- amap::diss
     data <- structure(c(1, 1, 2, 2, 1, 2, 1, 2, 3, 4, 2, 3, 1, 1, 2, 3, 4, 2, 1, 2, 3, 3, 2, 3, 1, 1, 2, 2, 1, 1), .Dim = 6:5)
     amap:::pop(x = diss(data))

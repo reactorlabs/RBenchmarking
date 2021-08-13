@@ -1,6 +1,6 @@
-library(DT)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     names <- c(" ", "temperature", "pressure")
     escape <- TRUE
     DT:::escapeColNames(colnames = names, i = escape)

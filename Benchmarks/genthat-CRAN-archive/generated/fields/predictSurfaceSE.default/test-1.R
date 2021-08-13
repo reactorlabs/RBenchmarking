@@ -1,6 +1,6 @@
-library(fields)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ChicagoO3 <- fields::ChicagoO3
     Krig <- fields::Krig
     fit <- structure(list(call = Krig(x = ChicagoO3$x, Y = ChicagoO3$y, theta = 20), cov.function.name = "stationary.cov", 

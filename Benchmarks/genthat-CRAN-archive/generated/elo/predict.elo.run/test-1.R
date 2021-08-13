@@ -1,6 +1,6 @@
-library(elo)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     t2 <- structure(list(team.Home = c("Cunning Cats", "Blundering Baboons", "Athletic Armadillos"), team.Visitor = c("Fabulous Frogs", 
         "Gallivanting Gorillas", "Helpless Hyenas"), points.Home = c(14, 17, 19), points.Visitor = c(15, 19, 12), week = c(14, 
         14, 14), half = c("Second Half of Season", "Second Half of Season", "Second Half of Season")), row.names = 54:56, 

@@ -1,6 +1,6 @@
-library(cluster)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     sk <- c(0.5, 0.5, 1, 0.5, 0.5, 1.5, 0.5, 0.5)
     SEf <- 4
     M <- "globalSEmax"

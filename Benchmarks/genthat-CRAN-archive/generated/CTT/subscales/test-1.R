@@ -1,6 +1,6 @@
-library(CTT)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     q <- structure(c(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 
         1, 1, 1, 1, 1, 1), .Dim = c(20L, 2L))
     CTTkey <- c("D", "C", "A", "D", "D", "A", "D", "B", "D", "A", "A", "D", "C", "C", "B", "C", "D", "A", "A", "B")

@@ -1,6 +1,6 @@
-library(fda)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     fda:::create.bspline.basis(breaks = 0:1)
 }
 

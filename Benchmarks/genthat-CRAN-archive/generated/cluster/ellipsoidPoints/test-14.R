@@ -1,6 +1,6 @@
-library(cluster)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     loc <- structure(c(278.667609709739, 0, 67.9982578011491, 0), .Dim = c(2L, 2L))
     i <- 1L
     d2 <- c(2, 0)

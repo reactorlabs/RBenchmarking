@@ -1,6 +1,6 @@
-library(DT)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     styles <- structure(c("isNaN(parseFloat(value)) ? '' : value <= 3.4 ? \"red\" : \"white\"", "isNaN(parseFloat(value)) ? '' : value <= 3.4 ? \"yellow\" : \"gray\""), 
         names = c("color", "backgroundColor"))
     DT:::upperToDash(x = names(styles))

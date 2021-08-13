@@ -1,6 +1,6 @@
-library(CEoptim)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     res <- structure(list(optimizer = list(continuous = c(-0.00939003401921286, 1.58140514288993), discrete = logical(0)), 
         optimum = 8.10621352294348, termination = list(niter = 7, nfe = 700, convergence = "Variance converged"), states = structure(c(0, 
             1, 2, 3, 4, 5, 6, 2.28024511904325, 4.0839408625989, 7.50802802585969, 8.09493347858898, 8.10611902875787, 8.10620142975348, 

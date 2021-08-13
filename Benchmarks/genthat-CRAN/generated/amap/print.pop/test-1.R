@@ -1,6 +1,6 @@
-library(amap)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(list(1L, 1L, 1L, n = 6L, couts = c(9, 7, 1, 5, 5, -5, 7, 9, -5, 1, -7, 5, 1, -5, 9, 7, 5, -7, 5, 1, 7, 
         9, -3, -5, 5, -7, 5, -3, 9, 3, -5, 5, -7, -5, 3, 9), ysave = c(1L, 0L, 1L, 1L, 1L, 0L, 0L, 2L, 0L, 0L, 0L, 1L, 0L, 
         0L, 1L, 1L, 1L, 0L, 0L, 0L, 0L, 1L, 1L, 0L, 0L, 0L, 0L, 0L, 1L, 0L, 0L, 0L, 0L, 0L, 0L, 2L), y = c(1L, 0L, 1L, 1L, 

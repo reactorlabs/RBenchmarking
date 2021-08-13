@@ -1,6 +1,6 @@
-library(fields)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     tol <- 1e-05
     starts <- c(0.0616043910766778, 0.0762465380049923, 0.0964568870424554)
     Krig.fgcv.one <- fields::Krig.fgcv.one

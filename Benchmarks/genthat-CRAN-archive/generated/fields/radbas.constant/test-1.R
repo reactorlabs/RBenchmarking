@@ -1,6 +1,6 @@
-library(fields)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     m <- 3
     d <- 4L
     fields:::radbas.constant(m = m, d = d)

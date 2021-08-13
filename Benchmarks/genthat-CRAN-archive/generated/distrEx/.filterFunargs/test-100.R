@@ -1,6 +1,6 @@
-library(distrEx)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     f <- genthat::with_env(function(x, c00) abs(d2(x) - c00 * d1(x)), env = list2env(list(d2 = genthat::with_env(function(x, 
         log = FALSE) {
         dt(x, df = 10, ncp = 0, log = log)

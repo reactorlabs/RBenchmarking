@@ -1,6 +1,6 @@
-library(ExPosition)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     MW <- list(M = c(0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125), W = c(0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 
         0.125, 0.125))
     k <- 0

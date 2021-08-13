@@ -1,6 +1,6 @@
-library(fail)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     Ls <- fail:::Ls
     keys <- c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species")
     .self <- list(path = "/tmp/Rtmp5pSR3b/3a0e767e95e03", extension = "RData", all.files = FALSE, use.cache = FALSE, simplify = TRUE, 

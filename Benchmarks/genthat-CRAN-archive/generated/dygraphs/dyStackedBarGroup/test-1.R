@@ -1,6 +1,6 @@
-library(dygraphs)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     . <- structure(list(x = structure(list(attrs = list(labels = c("month", "fdeaths", "mdeaths", "additive", "line", "ldeaths"), 
         legend = "auto", retainDateWindow = FALSE, axes = list(x = list(pixelsPerLabel = 60)), series = list(line = list(axis = "y", 
             strokePattern = c(7, 3)), ldeaths = list(axis = "y", stepPlot = TRUE))), scale = "monthly", annotations = list(), 

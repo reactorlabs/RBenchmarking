@@ -1,6 +1,6 @@
-library(clubSandwich)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     iris <- datasets::iris
     lm <- stats::lm
     obj <- structure(list(coefficients = structure(c(3.68298201121157, -1.59836150227761, -2.11264678141447, 0.90594586699544, 

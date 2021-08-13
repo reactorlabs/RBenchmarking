@@ -1,6 +1,6 @@
-library(circular)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     prop <- 0.5
     n <- 150
     mu2 <- 4.71238898038469

@@ -1,6 +1,6 @@
-library(BsMD)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     injectionMolding.MD <- structure(list(NSTART = 4L, NRUNS = 1L, ITMAX = 0L, INITDES = 0L, N0 = 16L, IND = 0L, X = structure(c(-1, 
         -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1, 1, -1, 1, -1, 1, 1, -1, 1, -1, 1, -1, 1, -1, 
         -1, -1, -1, -1, 1, 1, 1, 1, 1, 1, 1, 1, -1, -1, -1, -1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, 1, 1, -1, 1, -1, 1, 

@@ -1,6 +1,6 @@
-library(chron)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     e2 <- 7
     chron:::origin(x = e2)
 }

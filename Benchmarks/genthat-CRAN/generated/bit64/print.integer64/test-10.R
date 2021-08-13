@@ -1,6 +1,6 @@
-library(bit64)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(c(4.94065645841247e-324, 9.88131291682493e-324, 4.94065645841247e-324, 9.88131291682493e-324, 4.94065645841247e-324, 
         9.88131291682493e-324, 4.94065645841247e-324, 9.88131291682493e-324, 0, 0, 0, 0, 0), class = "integer64")
     bit64:::print.integer64(x = x)

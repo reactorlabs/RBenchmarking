@@ -1,6 +1,6 @@
-library(d3Network)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     CanadaPC <- list(name = "Canada", children = list(list(name = "Newfoundland", children = list(list(name = "St. John's"))), 
         list(name = "PEI", children = list(list(name = "Charlottetown"))), list(name = "Nova Scotia", children = list(list(name = "Halifax"))), 
         list(name = "New Brunswick", children = list(list(name = "Fredericton"))), list(name = "Quebec", children = list(list(name = "Montreal"), 

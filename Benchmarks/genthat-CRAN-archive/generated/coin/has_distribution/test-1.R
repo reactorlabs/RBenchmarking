@@ -1,6 +1,6 @@
-library(coin)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     args <- list(teststat = "scalar", distribution = "exact", alternative = c("two.sided", "less", "greater"), xtrafo = genthat::with_env(function(data, 
         numeric_trafo = id_trafo, factor_trafo = f_trafo, ordered_trafo = of_trafo, surv_trafo = logrank_trafo, var_trafo = NULL, 
         block = NULL) {

@@ -1,6 +1,6 @@
-library(BLModel)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     w_m <- c(0.333333333333333, 0.333333333333333, 0.333333333333333)
     tau <- 0.02
     SR <- 0.5

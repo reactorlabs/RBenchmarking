@@ -1,6 +1,6 @@
-library(checkmate)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     checkFalse <- genthat::with_env(function(x) if (!identical(x, FALSE)) 
         "Must be FALSE"
     else TRUE, env = list2env(list(), parent = baseenv()))

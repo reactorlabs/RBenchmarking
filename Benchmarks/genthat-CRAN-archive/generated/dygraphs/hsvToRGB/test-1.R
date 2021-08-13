@@ -1,6 +1,6 @@
-library(dygraphs)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     val <- 0.5
     sat <- 1
     hue <- 0.25

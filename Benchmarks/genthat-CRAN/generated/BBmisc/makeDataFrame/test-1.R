@@ -1,6 +1,6 @@
-library(BBmisc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     BBmisc:::makeDataFrame(nrow = 3, ncol = 2, col.types = c("logical", "numeric"))
 }
 

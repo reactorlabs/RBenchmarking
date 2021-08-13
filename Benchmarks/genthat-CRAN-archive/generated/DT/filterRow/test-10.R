@@ -1,6 +1,6 @@
-library(DT)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     rn <- NULL
     filter <- list(position = "none", clear = TRUE, plain = FALSE)
     data <- structure(list(A = c(1470958.44714667, -464698.171396089, 463128.411337339, 732862.60496104, 504268.323140999, 

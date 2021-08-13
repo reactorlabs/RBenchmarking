@@ -1,6 +1,6 @@
-library(drc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     y <- c(0.0291970802919708, 0, 0.174603174603175, 0.151724137931034, 0.244094488188976, 0.75, 0.965116279069767, 1)
     x <- c(0, 5, 25, 50, 100, 200, 400, 800)
     drc:::findcd(x = x, y = y)

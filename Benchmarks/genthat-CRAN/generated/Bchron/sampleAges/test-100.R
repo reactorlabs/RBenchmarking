@@ -1,6 +1,6 @@
-library(Bchron)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     calDate <- structure(list(Date1 = list(ages = 11254, ageSds = 25, calCurves = "intcal13", ageGrid = c(13053, 13054, 13055, 
         13056, 13057, 13058, 13059, 13060, 13061, 13062, 13063, 13064, 13065, 13066, 13067, 13068, 13069, 13070, 13071, 13072, 
         13073, 13074, 13075, 13076, 13077, 13078, 13079, 13080, 13081, 13082, 13083, 13084, 13085, 13086, 13087, 13088, 13089, 

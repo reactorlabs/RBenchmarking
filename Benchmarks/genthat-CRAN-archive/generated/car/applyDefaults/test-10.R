@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     id <- list(method = "mahal", n = 2, cex = 1, col = c("blue", "blue"), labels = c("gov.administrators", "general.managers", 
         "accountants", "purchasing.officers", "chemists", "physicists", "biologists", "architects", "civil.engineers", "mining.engineers", 
         "surveyors", "draughtsmen", "computer.programers", "economists", "psychologists", "social.workers", "lawyers", "librarians", 

@@ -1,6 +1,6 @@
-library(CBPS)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     i <- 17L
     CBPS:::integer.base.b(x = i)
 }

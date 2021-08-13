@@ -1,6 +1,6 @@
-library(FactoMineR)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     row.w <- c(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
     ncp <- 5
     ind.sup <- NULL

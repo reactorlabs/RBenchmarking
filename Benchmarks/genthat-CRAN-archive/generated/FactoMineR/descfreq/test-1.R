@@ -1,6 +1,6 @@
-library(FactoMineR)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     children <- structure(list(unqualified = c(51L, 53L, 71L, 1L, 7L, 7L, 21L, 12L, 10L, 4L, 8L, 25L, 18L, 35L, 2L, 2L, 1L, 
         3L), cep = c(64L, 90L, 111L, 7L, 11L, 13L, 37L, 35L, 7L, 7L, 22L, 45L, 27L, 61L, 4L, 8L, 5L, 3L), bepc = c(32L, 78L, 
         50L, 5L, 4L, 12L, 14L, 19L, 7L, 7L, 7L, 38L, 20L, 29L, 3L, 2L, 4L, 1L), high_school_diploma = c(29L, 75L, 40L, 5L, 

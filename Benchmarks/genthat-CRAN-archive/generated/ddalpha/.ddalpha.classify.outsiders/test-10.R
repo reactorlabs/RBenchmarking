@@ -1,6 +1,6 @@
-library(ddalpha)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     i <- 1L
     freePoints <- structure(c(3.83093804758755, -0.361788317843634, 1.86115923645761, 5.86038282408658, 2.93255187424746, 
         -1.56139255533249), .Dim = 3:2)

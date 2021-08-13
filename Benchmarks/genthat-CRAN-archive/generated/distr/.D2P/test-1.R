@@ -1,6 +1,6 @@
-library(distr)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     d1 <- genthat::with_env(function(x, log = FALSE) {
         d00 <- d0(x, log = log)
         d00 <- if (log) 

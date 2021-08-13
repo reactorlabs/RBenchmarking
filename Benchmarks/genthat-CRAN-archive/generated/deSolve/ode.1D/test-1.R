@@ -1,6 +1,6 @@
-library(deSolve)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     lvmod <- genthat::with_env(function(time, state, parms, N, rr, ri, dr, dri) {
         with(as.list(parms), {
             PREY <- state[1:N]

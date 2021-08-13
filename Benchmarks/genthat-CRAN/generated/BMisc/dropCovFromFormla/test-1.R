@@ -1,6 +1,6 @@
-library(BMisc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     formla <- y ~ x + w + z
     BMisc:::dropCovFromFormla(covs = list("w", "z"), formla = formla)
 }

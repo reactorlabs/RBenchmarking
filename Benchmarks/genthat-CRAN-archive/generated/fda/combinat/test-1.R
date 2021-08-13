@@ -1,6 +1,6 @@
-library(fda)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     n <- 50L
     fda:::combinat(n = n, p = 2)
 }

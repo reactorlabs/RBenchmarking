@@ -1,6 +1,6 @@
-library(ExPosition)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     authors <- list(ca = list(data = structure(list(PERIOD = c(7836L, 53655L, 115615L, 161926L, 38177L, 46371L), COMMA = c(13112L, 
         102383L, 184541L, 340479L, 105101L, 58367L), OTHER = c(6026L, 42413L, 59226L, 62754L, 12670L, 14299L)), class = "data.frame", 
         row.names = c("Rousseau", "Chateaubriand", "Hugo", "Zola", "Proust", "Giraudoux"))), mca = list(data = structure(list(PERIOD = c(7836L, 

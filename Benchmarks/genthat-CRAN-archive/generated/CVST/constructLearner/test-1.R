@@ -1,6 +1,6 @@
-library(CVST)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     predict.svm <- genthat::with_env(function(model, newData) {
         stopifnot(isClassification(newData))
         return(predict(model, newData$x))

@@ -1,6 +1,6 @@
-library(distr)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     rp2 <- genthat::with_env(function(n) {
         rpois(n, lambda = 1)^2
     }, env = list2env(list(rpois = stats::rpois), parent = baseenv()))

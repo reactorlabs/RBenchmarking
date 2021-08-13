@@ -1,6 +1,6 @@
-library(english)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- 0
     english:::split_digits(x = x)
 }

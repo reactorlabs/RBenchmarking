@@ -1,6 +1,6 @@
-library(e1071)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     obj <- structure(list(best.parameters = structure(list(gamma = 0.0625, cost = 1), out.attrs = list(dim = structure(c(4L, 
         4L), names = c("gamma", "cost")), dimnames = list(gamma = c("gamma= 0.00390625", "gamma= 0.06250000", "gamma= 1.00000000", 
         "gamma=16.00000000"), cost = c("cost=0.00390625", "cost=0.06250000", "cost=0.25000000", "cost=1.00000000"))), row.names = 14L, 

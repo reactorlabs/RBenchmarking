@@ -1,6 +1,6 @@
-library(data.table)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     sep <- "_"
     lvals <- list("d1")
     fun.call <- list(sum, mean)

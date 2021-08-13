@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     lm <- stats::lm
     Pottery <- carData::Pottery
     model <- structure(list(coefficients = structure(c(17.32, -5.62, 0.86, -4.75571428571429, 1.512, 3.903, 0.199999999999999, 

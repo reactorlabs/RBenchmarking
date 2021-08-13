@@ -1,6 +1,6 @@
-library(drc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     robustFct <- genthat::with_env(function(x) {
         x * x
     }, env = list2env(list(), parent = baseenv()))

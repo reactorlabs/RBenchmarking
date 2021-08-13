@@ -1,6 +1,6 @@
-library(drc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     startVec <- c(2.39932135682289, 8.363691111556, 3.45649646537463)
     robust <- "mean"
     numObs <- 24L

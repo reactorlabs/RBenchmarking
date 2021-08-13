@@ -1,6 +1,6 @@
-library(fBasics)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     .froot <- genthat::with_env(function(x, alpha, beta, delta, mu, p) pnig(q = x, alpha = alpha, beta = beta, delta = delta, 
         mu = mu) - p, env = list2env(list(pnig = fBasics::pnig), parent = baseenv()))
     upper <- 1

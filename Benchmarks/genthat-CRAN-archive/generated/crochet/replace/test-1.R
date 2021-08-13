@@ -1,6 +1,6 @@
-library(crochet)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     replace_vector <- genthat::with_env(function(x, i, value) {
         .GlobalEnv$i <- i
         .GlobalEnv$value <- value

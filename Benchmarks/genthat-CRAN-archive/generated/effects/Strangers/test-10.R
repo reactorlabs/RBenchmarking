@@ -1,6 +1,6 @@
-library(effects)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     lm <- stats::lm
     Prestige <- structure(list(education = c(13.11, 12.26, 12.77, 11.42, 14.62, 15.64, 15.09, 15.44, 14.52, 14.64, 12.39, 
         12.3, 13.83, 14.44, 14.36, 14.21, 15.77, 14.15, 15.22, 14.5, 15.97, 13.62, 15.08, 15.96, 15.94, 14.71, 12.46, 9.45, 

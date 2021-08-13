@@ -1,6 +1,6 @@
-library(archetypes)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     k <- 1:10
     i <- 7L
     archetypes:::archetypes(data = structure(c(8.74942324604762, 4.96505038561584, 10.0920569433465, 17.0689657139593, 13.591362630864, 

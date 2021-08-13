@@ -1,6 +1,6 @@
-library(clue)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     dist <- stats::dist
     hclust <- stats::hclust
     USArrests <- datasets::USArrests

@@ -1,6 +1,6 @@
-library(dfexplore)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     dfexplore:::simulate_dataframe(includeMatrix = TRUE)
 }
 

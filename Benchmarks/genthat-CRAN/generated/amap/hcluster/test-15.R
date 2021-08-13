@@ -1,6 +1,6 @@
-library(amap)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     distfun <- genthat::with_env(function(u) {
         u
     }, env = list2env(list(), parent = baseenv()))

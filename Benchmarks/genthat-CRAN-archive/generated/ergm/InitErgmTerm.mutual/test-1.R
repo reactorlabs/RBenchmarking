@@ -1,6 +1,6 @@
-library(ergm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ergm:::InitErgmTerm.mutual(nw = structure(list(mel = list(list(inl = 4L, outl = 1L, atl = list(na = FALSE)), list(inl = 5L, 
         outl = 1L, atl = list(na = FALSE)), list(inl = 7L, outl = 1L, atl = list(na = FALSE)), list(inl = 8L, outl = 1L, 
         atl = list(na = FALSE)), list(inl = 11L, outl = 1L, atl = list(na = FALSE)), list(inl = 12L, outl = 1L, atl = list(na = FALSE)), 

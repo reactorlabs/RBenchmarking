@@ -1,6 +1,6 @@
-library(ergm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ergm:::InitErgmTerm.kstar(nw = structure(list(mel = list(list(inl = 2L, outl = 1L, atl = list(na = FALSE)), list(inl = 9L, 
         outl = 1L, atl = list(na = FALSE)), list(inl = 5L, outl = 2L, atl = list(na = FALSE)), list(inl = 7L, outl = 2L, 
         atl = list(na = FALSE)), list(inl = 12L, outl = 2L, atl = list(na = FALSE)), list(inl = 4L, outl = 3L, atl = list(na = FALSE)), 

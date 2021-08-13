@@ -1,6 +1,6 @@
-library(BsMD)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     y <- c(56L, 93L, 67L, 60L, 77L, 65L, 95L, 49L, 44L, 63L, 63L, 61L)
     X <- structure(c(1L, 1L, -1L, 1L, 1L, 1L, -1L, -1L, -1L, 1L, -1L, -1L, -1L, 1L, 1L, -1L, 1L, 1L, 1L, -1L, -1L, -1L, 1L, 
         -1L, 1L, -1L, 1L, 1L, -1L, 1L, 1L, 1L, -1L, -1L, -1L, -1L, -1L, 1L, -1L, 1L, 1L, -1L, 1L, 1L, 1L, -1L, -1L, -1L, 

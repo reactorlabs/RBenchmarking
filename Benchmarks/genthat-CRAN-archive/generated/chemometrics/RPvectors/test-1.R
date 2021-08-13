@@ -1,6 +1,6 @@
-library(chemometrics)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     chemometrics:::RPvectors(a = 5, m = 10)
 }
 

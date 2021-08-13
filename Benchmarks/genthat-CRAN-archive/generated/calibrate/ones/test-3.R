@@ -1,6 +1,6 @@
-library(calibrate)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     calibrate:::ones(n = 3)
 }
 

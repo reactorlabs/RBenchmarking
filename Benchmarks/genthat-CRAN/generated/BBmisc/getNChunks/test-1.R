@@ -1,6 +1,6 @@
-library(BBmisc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     shuffle <- FALSE
     nx <- 10L
     n.chunks <- 2L

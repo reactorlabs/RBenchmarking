@@ -1,6 +1,6 @@
-library(crochet)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     extract_vector <- genthat::with_env(function(x, i) {
         b[i, drop = FALSE]
     }, env = list2env(list(b = structure(c(1.37095844714667, -0.564698171396089, 0.363128411337339, 0.63286260496104, 0.404268323140999, 

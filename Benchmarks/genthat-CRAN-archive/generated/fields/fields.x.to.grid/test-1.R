@@ -1,6 +1,6 @@
-library(fields)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     BD <- fields::BD
     Tps <- fields::Tps
     xy <- c(1, 2)

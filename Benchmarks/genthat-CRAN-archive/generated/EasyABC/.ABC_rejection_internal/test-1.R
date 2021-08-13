@@ -1,6 +1,6 @@
-library(EasyABC)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     model <- genthat::with_env(function(x) {
         2 * x + 5 + rnorm(1, 0, 0.1)
     }, env = list2env(list(rnorm = stats::rnorm), parent = baseenv()))

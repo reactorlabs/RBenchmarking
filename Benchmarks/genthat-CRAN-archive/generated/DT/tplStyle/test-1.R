@@ -1,6 +1,6 @@
-library(DT)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     rownames <- TRUE
     names <- c(" ", "Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species")
     i <- 1

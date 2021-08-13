@@ -1,6 +1,6 @@
-library(catdap)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     z1 <- structure(list(tway.table = list(list(list(res = "Survived", n = structure(c(122L, 167L, 528L, 673L, 203L, 118L, 
         178L, 212L), .Dim = c(4L, 2L), .Dimnames = list(c("1st", "2nd", "3rd", "Crew"), c("No", "Yes"))), p = structure(c(37.5384635925293, 
         58.596492767334, 74.7875366210938, 76.0451965332031, 62.461540222168, 41.403507232666, 25.2124652862549, 23.9548015594482), 

@@ -1,6 +1,6 @@
-library(ergm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ergm:::InitErgmTerm.esp(nw = structure(list(mel = list(list(inl = 11L, outl = 1L, atl = list(na = FALSE)), list(inl = 3L, 
         outl = 2L, atl = list(na = FALSE)), list(inl = 7L, outl = 2L, atl = list(na = FALSE)), list(inl = 11L, outl = 2L, 
         atl = list(na = FALSE)), list(inl = 13L, outl = 2L, atl = list(na = FALSE)), list(inl = 9L, outl = 3L, atl = list(na = FALSE)), 

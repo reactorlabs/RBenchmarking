@@ -1,6 +1,6 @@
-library(elo)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     half <- c("First Half of Season", "First Half of Season", "First Half of Season", "First Half of Season", "First Half of Season", 
         "First Half of Season", "First Half of Season", "First Half of Season", "First Half of Season", "First Half of Season", 
         "First Half of Season", "First Half of Season", "First Half of Season", "First Half of Season", "First Half of Season", 

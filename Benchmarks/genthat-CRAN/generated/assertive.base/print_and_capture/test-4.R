@@ -1,6 +1,6 @@
-library(assertive.base)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ok <- FALSE
     assertive.base:::print_and_capture(x = ok)
 }

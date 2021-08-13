@@ -1,6 +1,6 @@
-library(fastGHQuad)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     g <- genthat::with_env(function(x) exp(-abs(x)), env = list2env(list(), parent = baseenv()))
     rule10 <- list(x = c(-3.43615911883774, -2.53273167423279, -1.75668364929988, -1.03661082978951, -0.342901327223705, 
         0.342901327223705, 1.03661082978951, 1.75668364929988, 2.53273167423279, 3.43615911883774), w = c(7.6404328552326e-06, 

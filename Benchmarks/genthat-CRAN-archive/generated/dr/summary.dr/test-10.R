@@ -1,6 +1,6 @@
-library(dr)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     dr.slices.arc <- dr::dr.slices.arc
     dr <- dr::dr
     ais <- dr::ais

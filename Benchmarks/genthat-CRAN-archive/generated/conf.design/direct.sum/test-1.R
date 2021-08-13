@@ -1,6 +1,6 @@
-library(conf.design)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     d2 <- structure(list(Blocks = structure(c(1L, 1L, 1L, 2L, 2L, 2L, 3L, 3L, 3L), .Label = c("0", "1", "2"), class = "factor"), 
         D = structure(c(1L, 3L, 2L, 2L, 1L, 3L, 3L, 2L, 1L), .Label = c("0", "1", "2"), class = "factor"), E = structure(c(1L, 
             2L, 3L, 1L, 2L, 3L, 1L, 2L, 3L), .Label = c("0", "1", "2"), class = "factor")), class = "data.frame", row.names = c(NA, 

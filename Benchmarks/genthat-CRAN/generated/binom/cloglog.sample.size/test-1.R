@@ -1,6 +1,6 @@
-library(binom)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     binom:::cloglog.sample.size(p.alt = 0.8)
 }
 

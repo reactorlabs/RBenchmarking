@@ -1,6 +1,6 @@
-library(circular)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     V <- 0.887399279370291
     circular:::A1inv(x = V)
 }

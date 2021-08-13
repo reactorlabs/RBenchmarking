@@ -1,6 +1,6 @@
-library(entropy)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     y <- c(4, 2, 3, 0, 2, 4, 0, 0, 2, 1, 1)
     entropy:::entropy(y = y, method = "ML")
 }

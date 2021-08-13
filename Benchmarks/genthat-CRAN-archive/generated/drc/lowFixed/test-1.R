@@ -1,6 +1,6 @@
-library(drc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     drc:::lowFixed(modelStr = "Log-logistic (ED50 as parameter)")
 }
 

@@ -1,6 +1,6 @@
-library(bigmemory)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(1:30, .Dim = c(10L, 3L))
     testCol <- 1:2
     opVal <- 1

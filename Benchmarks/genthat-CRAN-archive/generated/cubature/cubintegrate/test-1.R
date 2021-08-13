@@ -1,6 +1,6 @@
-library(cubature)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     I.1d_v <- genthat::with_env(function(x) {
         matrix(apply(x, 2, function(z) sin(4 * z) * z * ((z * (z * (z * z - 4) + 1) - 1))), ncol = ncol(x))
     }, env = list2env(list(), parent = baseenv()))

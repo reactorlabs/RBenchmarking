@@ -1,6 +1,6 @@
-library(clue)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     w <- c(0.2, 0.2, 0.2, 0.2, 0.2)
     permutations <- list(`1975` = structure(c(1, 2), class = "solve_LSAP"), `1980` = structure(c(2, 3, 1), class = "solve_LSAP"), 
         `1985` = structure(c(1, 2), class = "solve_LSAP"), `1990` = structure(c(2, 3, 1), class = "solve_LSAP"), `1995` = structure(c(1, 

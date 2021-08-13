@@ -1,6 +1,6 @@
-library(dr)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ais <- dr::ais
     dr:::dr.weights(formula = LBM ~ Ht + Wt + RCC + WCC, data = ais)
 }

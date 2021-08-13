@@ -1,6 +1,6 @@
-library(assertive.base)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     assertive.base:::is_identical_to_na(x = NaN, allow_attributes = FALSE, .xname = "NaN")
 }
 

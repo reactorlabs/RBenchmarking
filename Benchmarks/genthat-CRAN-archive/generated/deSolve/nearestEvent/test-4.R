@@ -1,6 +1,6 @@
-library(deSolve)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     times <- 1:365
     eventtimes <- c(50.1, 200, 210.5)
     deSolve:::nearestEvent(times = times, eventtimes = eventtimes)

@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     binomial <- stats::binomial
     glm <- stats::glm
     Mroz <- carData::Mroz

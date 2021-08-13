@@ -1,6 +1,6 @@
-library(ff)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- c(5, -5, Inf, 5, 5, 0, -Inf, -5, 5, NaN, NaN, NA, Inf, 0, Inf, -Inf, -Inf, NA, Inf, NA, NA, 5, 0, 0, -5, Inf, 0, 
         NaN, 5, -Inf, NA, NA, NaN, NaN, NaN, 0, -5, -Inf, -Inf, 0, NA, 0, Inf, -5, -5, NA, 5, NaN, NA, NA, 0, 0, 0, 0, Inf, 
         -5, -Inf, -Inf, 5, Inf, 5, NA, NA, -5, NaN, -5, Inf, -Inf, -5, Inf, 0, 0, 5, -5, NA, 5, NA, 5, NA, 0, -5, -Inf, NaN, 

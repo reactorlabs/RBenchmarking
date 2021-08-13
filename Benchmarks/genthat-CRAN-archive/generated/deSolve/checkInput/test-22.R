@@ -1,6 +1,6 @@
-library(deSolve)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     func <- genthat::with_env(function(t, y, p) {
         yd1 <- -p["k1"] * y[1] + p["k2"] * y[2] * y[3]
         yd3 <- p["k3"] * y[2]^2

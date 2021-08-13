@@ -1,6 +1,6 @@
-library(circular)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     X <- 2.50420235068907
     i <- 1L
     circular:::DvonmisesRad(x = X[[i]], mu = c(2.54787454095117, 3.83479591780005, 3.17969287752822, 3.14033982477349, 2.66093289506296, 

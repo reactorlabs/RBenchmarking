@@ -1,6 +1,6 @@
-library(cssTools)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     sampled <- c(2, 4, 5, 8, 9, 10, 11, 14, 18, 19)
     k <- 3L
     d <- structure(c(0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 

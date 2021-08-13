@@ -1,6 +1,6 @@
-library(ClustOfVar)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     kmeansvar <- ClustOfVar::kmeansvar
     X.quali <- structure(list(Label = structure(c(1L, 1L, 1L, 1L, 1L, 2L, 2L, 3L, 3L, 2L, 1L), .Label = c("Saumur", "Bourgueuil", 
         "Chinon"), class = "factor"), Soil = structure(c(3L, 3L, 3L, 1L, 1L, 2L, 1L, 1L, 3L, 2L, 4L), .Label = c("Reference", 

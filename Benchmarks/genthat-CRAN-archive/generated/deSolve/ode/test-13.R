@@ -1,6 +1,6 @@
-library(deSolve)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     Rotate <- genthat::with_env(function(t, x, p) list(c(x[2], -x[1])), env = list2env(list(), parent = baseenv()))
     rootfun <- genthat::with_env(function(t, x, p) x[2], env = list2env(list(), parent = baseenv()))
     times <- c(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 

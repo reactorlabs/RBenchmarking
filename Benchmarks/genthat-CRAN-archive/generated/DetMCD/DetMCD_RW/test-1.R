@@ -1,6 +1,6 @@
-library(DetMCD)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     X <- 1:5
     i <- 1L
     DetMCD:::DetMCD_RW(ll = X[[i]], hlst = c(53, 62, 72, 81, 91, 101), Xw = structure(c(-0.775839140665419, -0.347800248462702, 

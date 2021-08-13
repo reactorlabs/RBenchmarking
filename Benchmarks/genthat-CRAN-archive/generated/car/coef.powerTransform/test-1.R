@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     p1 <- structure(list(value = 122.944147256479, counts = structure(c(3L, 3L), names = c("function", "gradient")), convergence = 0L, 
         message = "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH", hessian = structure(267.744548978044, .Dim = c(1L, 1L)), 
         start = -0.0591347105917664, lambda = structure(-0.0591581442222316, names = "Y1"), roundlam = structure(0, names = "Y1"), 

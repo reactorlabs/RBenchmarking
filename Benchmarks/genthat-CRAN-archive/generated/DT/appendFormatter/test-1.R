@@ -1,6 +1,6 @@
-library(DT)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     template <- genthat::with_env(function(cols, valueCols, target, styles, ...) {
         `__genthat_captured_seed` <- get(".Random.seed", envir = globalenv())
         ""

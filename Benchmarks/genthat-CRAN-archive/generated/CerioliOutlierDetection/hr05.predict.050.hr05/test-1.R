@@ -1,6 +1,6 @@
-library(CerioliOutlierDetection)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     p.dim <- 20
     n.obs <- 1000
     m.asy <- 282.873045700194

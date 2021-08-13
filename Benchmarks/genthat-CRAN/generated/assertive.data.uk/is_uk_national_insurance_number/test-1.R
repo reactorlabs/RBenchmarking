@@ -1,6 +1,6 @@
-library(assertive.data.uk)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     assertive.data.uk:::is_uk_national_insurance_number(x = c("AA 00 00 00 A", "AA 00 00 00", "AA000000A", "ZZ 99 99 99 M", 
         "ZZ 99 99 99", "ZZ999999M", "DA 00 00 00", "FA 00 00 00", "IA 00 00 00", "QA 00 00 00", "UA 00 00 00", "VA 00 00 00", 
         "AD 00 00 00", "AF 00 00 00", "AI 00 00 00", "AO 00 00 00", "AQ 00 00 00", "AU 00 00 00", "AV 00 00 00", "AA 00 00 00 E", 

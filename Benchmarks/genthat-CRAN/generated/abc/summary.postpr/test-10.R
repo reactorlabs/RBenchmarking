@@ -1,6 +1,6 @@
-library(abc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     kernel <- "epanechnikov"
     method <- "rejection"
     myindex <- c("const", "const", "const", "const", "const", "const", "const", "const", "const", "const", "const", "const", 

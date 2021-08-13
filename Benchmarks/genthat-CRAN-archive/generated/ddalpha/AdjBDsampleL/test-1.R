@@ -1,6 +1,6 @@
-library(ddalpha)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     K <- 1
     J <- 2
     B <- structure(c(4355, 4466, 1327, 2502, 808, 12184, 226, 473, 60, 8872, 20897, 1113, 8986, 5734, 3605, 14, 413, 734, 

@@ -1,6 +1,6 @@
-library(catdap)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     plot <- 1
     catdap2.out <- list(title = c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species"), accuracy = c(0.1, 
         0.1, 0.1, 0.1, 0), ires = 4L, print.level = 0, tway.table = list(list(res = "Petal.Width", n = structure(c(45L, 3L, 

@@ -1,6 +1,6 @@
-library(ergm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     object <- structure(list(coef = structure(c(-1.65816169385355, 0.0107969962199571), names = c("edges", "kstar2")), sample = structure(c(4, 
         3, 1, -5, -1, 8, 7, 2, 1, -8, 11, -3, 6, -6, -5, 9, -2, 0, -8, -2, -7, -3, -6, -4, 2, 7, 4, 2, -2, -2, 1, 1, 3, 2, 
         5, -1, 0, -5, 4, 8, 6, -2, 3, 5, 1, 4, -4, -1, 0, 0, -2, 1, -3, 2, 1, 4, 0, -6, -2, -4, -1, -1, 3, 0, 19, -1, 2, 

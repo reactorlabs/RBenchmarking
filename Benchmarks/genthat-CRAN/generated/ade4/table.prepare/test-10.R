@@ -1,6 +1,6 @@
-library(ade4)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     y <- 1:8
     x <- 1:8
     row.labels <- c("f0", "f12", "f34", "f56", "f78", "f9a", "fbc", "fcd")

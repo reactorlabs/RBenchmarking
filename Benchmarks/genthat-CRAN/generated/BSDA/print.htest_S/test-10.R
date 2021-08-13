@@ -1,6 +1,6 @@
-library(BSDA)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(list(statistic = structure(17L, names = "s"), parameter = NULL, p.value = 1.52587890633882e-05, conf.int = structure(c(263.492243051067, 
         1149.20168067227), conf.level = 0.9), estimate = structure(450L, names = "median of x"), null.value = structure(0, 
         names = "median"), alternative = "two.sided", method = "One-sample Sign-Test", data.name = "Malpract$award", Confidence.Intervals = structure(c(0.8565, 

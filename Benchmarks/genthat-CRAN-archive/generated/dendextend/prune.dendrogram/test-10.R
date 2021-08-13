@@ -1,6 +1,6 @@
-library(dendextend)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     ss_labels_to_prune_1 <- c(FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, 
         FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE)
     labels_dend1 <- c("15", "16", "6", "19", "17", "11", "20", "9", "14", "8", "5", "1", "18", "7", "12", "10", "2", "13", 

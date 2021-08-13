@@ -1,6 +1,6 @@
-library(fail)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     dots <- list(fn = c("/tmp/Rtmp5pSR3b/3a0e767e95e03/Sepal.Length.RData", "/tmp/Rtmp5pSR3b/3a0e767e95e03/Sepal.Width.RData", 
         "/tmp/Rtmp5pSR3b/3a0e767e95e03/Petal.Length.RData", "/tmp/Rtmp5pSR3b/3a0e767e95e03/Petal.Width.RData", "/tmp/Rtmp5pSR3b/3a0e767e95e03/Species.RData"), 
         key = c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species"), value = list(Sepal.Length = c(5.1, 

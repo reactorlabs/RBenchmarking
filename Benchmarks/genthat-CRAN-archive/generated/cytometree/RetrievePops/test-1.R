@@ -1,6 +1,6 @@
-library(cytometree)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     phenotypes <- list(structure(c("FL2", "FL4", "1", "0"), .Dim = c(2L, 2L)), structure(c("FL2", "FL4", "0", "1"), .Dim = c(2L, 
         2L)), structure(c("FL2", "FL4", "1", "1"), .Dim = c(2L, 2L)))
     Annot <- structure(list(combinations = structure(list(FL1 = c(0, 0, 0, 1), FL2 = c(1, 0, 1, 1), FL4 = c(0, 1, 1, 1), 

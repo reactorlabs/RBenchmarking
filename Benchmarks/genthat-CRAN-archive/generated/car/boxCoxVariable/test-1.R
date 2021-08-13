@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     interlocks <- c(87L, 107L, 94L, 48L, 66L, 69L, 46L, 16L, 77L, 6L, 18L, 29L, 36L, 20L, 13L, 6L, 31L, 27L, 23L, 13L, 32L, 
         28L, 4L, 42L, 17L, 40L, 29L, 29L, 21L, 3L, 32L, 29L, 40L, 5L, 33L, 21L, 18L, 18L, 13L, 2L, 22L, 13L, 2L, 0L, 18L, 
         9L, 31L, 16L, 28L, 34L, 33L, 7L, 12L, 15L, 13L, 16L, 27L, 12L, 11L, 0L, 16L, 17L, 55L, 15L, 44L, 18L, 20L, 19L, 9L, 

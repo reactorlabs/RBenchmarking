@@ -1,6 +1,6 @@
-library(assertive.types)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- genthat::with_env(function(x, recursive = TRUE, use.names = TRUE) {
         if (.Internal(islistfactor(x, recursive))) {
             URapply <- if (recursive) 

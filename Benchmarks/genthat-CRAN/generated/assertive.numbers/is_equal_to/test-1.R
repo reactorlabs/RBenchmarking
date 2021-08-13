@@ -1,6 +1,6 @@
-library(assertive.numbers)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- 2
     assertive.numbers:::is_equal_to(x = x, y = 2, tol = 0)
 }

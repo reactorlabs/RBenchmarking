@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     rhs <- NULL
     hypothesis.matrix <- c("typeprof", "typewc", "income", "education", "typeprof:income", "typewc:income", "typeprof:education", 
         "typewc:education")

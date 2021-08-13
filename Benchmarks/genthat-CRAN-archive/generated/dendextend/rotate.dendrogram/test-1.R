@@ -1,6 +1,6 @@
-library(dendextend)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     random_weights <- c(7L, 8L, 3L, 6L, 2L, 4L, 5L, 1L)
     dend <- structure(list(structure(list(structure(list(structure(3L, label = "Arizona", members = 1L, height = 0, leaf = TRUE, 
         nodePar = list(lab.col = "#CC476B", pch = NA), edgePar = list(col = "#CC476B")), structure(5L, label = "California", 

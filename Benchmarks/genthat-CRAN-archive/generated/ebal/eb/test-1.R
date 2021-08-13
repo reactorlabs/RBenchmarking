@@ -1,6 +1,6 @@
-library(ebal)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     tr.total <- structure(c(30, 14.4954245036083, 10.7637555163548, 14.7840989869953), names = c("", "x1", "x2", "x3"))
     print.level <- 0
     max.iterations <- 200

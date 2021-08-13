@@ -1,6 +1,6 @@
-library(drc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     drm <- drc::drm
     finney.ex19 <- structure(list(logdose = c(2.17, 2, 1.68, 1.08, -Inf, 1.79, 1.66, 1.49, 1.17, 0.57), n = c(142, 127, 128, 
         126, 129, 125, 117, 127, 51, 132), r = c(142, 126, 115, 58, 21, 125, 115, 114, 40, 37), treatment = structure(c(1L, 

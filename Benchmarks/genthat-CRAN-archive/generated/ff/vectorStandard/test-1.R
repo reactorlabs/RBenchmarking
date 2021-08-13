@@ -1,6 +1,6 @@
-library(ff)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     dimorder <- NULL
     bydim <- NULL
     ff:::vectorStandard(dimorder = dimorder, bydim = bydim)

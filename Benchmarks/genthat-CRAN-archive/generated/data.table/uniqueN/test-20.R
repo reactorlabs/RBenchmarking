@@ -1,6 +1,6 @@
-library(data.table)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- "year"
     data.table:::uniqueN(x = x)
 }

@@ -1,6 +1,6 @@
-library(elo)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     naaction <- NULL
     mf <- structure(list(`score(points.Home, points.Visitor)` = c(0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0.5, 
         1, 0.5, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0.5, 0, 0, 1, 1, 1, 1, 1, 0.5, 0, 0, 1, 0.5, 1, 1, 0, 1, 1, 0, 0, 

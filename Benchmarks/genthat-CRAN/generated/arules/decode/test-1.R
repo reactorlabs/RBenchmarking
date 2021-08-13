@@ -1,6 +1,6 @@
-library(arules)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     list <- list(c(2L, 11L, 26L, 33L, 36L, 51L, 60L, 62L, 64L, 66L, 70L, 111L, 114L), c(3L, 10L, 26L, 31L, 39L, 50L, 60L, 
         62L, 63L, 66L, 69L, 111L, 114L), c(2L, 8L, 21L, 29L, 41L, 51L, 60L, 62L, 63L, 66L, 70L, 111L, 114L), c(3L, 8L, 19L, 
         31L, 41L, 50L, 58L, 62L, 63L, 66L, 70L, 111L, 114L), c(2L, 8L, 26L, 31L, 45L, 55L, 58L, 61L, 63L, 66L, 70L, 77L, 

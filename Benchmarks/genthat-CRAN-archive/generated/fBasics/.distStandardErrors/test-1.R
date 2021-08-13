@@ -1,6 +1,6 @@
-library(fBasics)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     obj <- genthat::with_env(function(x, y = x, trace) {
         if (abs(x[2]) >= x[1]) 
             return(1e+09)

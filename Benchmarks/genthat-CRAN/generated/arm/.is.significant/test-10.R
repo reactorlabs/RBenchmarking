@@ -1,6 +1,6 @@
-library(arm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     j <- 5L
     i <- 1L
     bayes.pvalue <- structure(c(0.5, 1, 1, 1, 0.99, 0.63, 1, 0, 0.5, 0.64, 0.22, 0.01, 0.18, 0.86, 0, 0.36, 0.5, 0.22, 0.01, 

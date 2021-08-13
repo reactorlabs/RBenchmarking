@@ -1,6 +1,6 @@
-library(ergm)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     termIndices <- c(1L, 4L)
     t <- 1L
     item <- structure(list(list(structure(list(structure("b1cov(attr)", Rd_tag = "RCODE")), Rd_tag = "\\code"), structure("  (binary) (undirected) (bipartite) (dyad-independent) (quantitative nodalattribute) (frequently-used),\n", 

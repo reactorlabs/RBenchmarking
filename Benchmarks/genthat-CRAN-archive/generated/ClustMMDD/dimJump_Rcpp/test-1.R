@@ -1,6 +1,6 @@
-library(ClustMMDD)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     vectDim <- c(909L, 909L, 909L, 909L, 909L, 909L, 909L, 909L, 909L, 747L, 747L, 528L, 382L, 382L, 382L, 382L, 382L, 382L, 
         382L, 382L, 382L, 382L, 346L, 346L, 346L, 346L, 346L, 346L, 346L, 346L, 346L, 346L, 346L, 310L, 310L, 310L, 310L, 
         310L, 310L, 310L, 310L, 310L, 310L, 310L, 310L, 310L, 310L, 310L, 310L, 310L, 310L, 310L, 310L, 310L, 310L, 310L, 

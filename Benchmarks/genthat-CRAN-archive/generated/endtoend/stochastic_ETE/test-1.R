@@ -1,6 +1,6 @@
-library(endtoend)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     p22 <- 1
     p21 <- 3
     p12 <- 0.6

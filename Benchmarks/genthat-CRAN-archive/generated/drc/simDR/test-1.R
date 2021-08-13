@@ -1,6 +1,6 @@
-library(drc)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     drm <- drc::drm
     ryegrass <- drc::ryegrass
     ryegrass.m1 <- structure(list(varParm = NULL, fit = list(par = c(2.98221907127499, 0.481413188446089, 7.79295829369992, 

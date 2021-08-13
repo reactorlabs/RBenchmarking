@@ -1,6 +1,6 @@
-library(boot)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     enj <- c(200, 6000, 3000, -200)
     fat <- c(800, 6000, 1000, 400)
     simplex <- boot::simplex

@@ -1,6 +1,6 @@
-library(distr)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     pnew.c <- genthat::with_env(function(q, lower.tail = TRUE, log.p = FALSE) {
         p0 <- as.vector(matrix(unlist(lapply(mixDistr, function(x) {
             p.lr <- if (pmatch(leftright, table = c("left", "right"), nomatch = 2) == 2) 

@@ -1,6 +1,6 @@
-library(estimability)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     lm <- stats::lm
     warpbreaks <- datasets::warpbreaks
     warp.lm1 <- structure(list(coefficients = structure(c(44.5555555555556, -6.93650793650793, -20.5555555555556, -18.8412698412698, 

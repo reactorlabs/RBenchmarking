@@ -1,6 +1,6 @@
-library(bacr)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     tuning <- 1
     predictorsX <- c("V1", "V2", "V3", "V4")
     M1X <- c(1, 1, 0, 1)

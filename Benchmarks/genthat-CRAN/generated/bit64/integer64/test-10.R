@@ -1,6 +1,6 @@
-library(bit64)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     nunique <- 5203L
     bit64:::integer64(length = nunique)
 }

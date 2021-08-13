@@ -1,6 +1,6 @@
-library(effects)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(list(term = "Europe*political.knowledge", formula = vote ~ age + gender + economic.cond.national + economic.cond.household + 
         Blair + Hague + Kennedy + Europe * political.knowledge, response = "vote", y.levels = c("Conservative", "Labour", 
         "Liberal Democrat"), variables = list(Europe = list(name = "Europe", is.factor = FALSE, levels = 1:11), political.knowledge = list(name = "political.knowledge", 

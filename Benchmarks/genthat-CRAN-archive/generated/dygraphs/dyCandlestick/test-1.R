@@ -1,6 +1,6 @@
-library(dygraphs)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     . <- structure(list(x = structure(list(attrs = list(labels = c("day", "Open", "High", "Low", "Close"), legend = "auto", 
         retainDateWindow = FALSE, axes = list(x = list(pixelsPerLabel = 60))), scale = "daily", annotations = list(), shadings = list(), 
         events = list(), format = "date", data = list(c("2007-01-02T00:00:00.000Z", "2007-01-03T00:00:00.000Z", "2007-01-04T00:00:00.000Z", 

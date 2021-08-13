@@ -1,6 +1,6 @@
-library(bibtex)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     package <- "methods"
     bibtex:::findBibFile(package = package)
 }

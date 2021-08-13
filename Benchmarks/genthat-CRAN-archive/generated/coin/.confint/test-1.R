@@ -1,6 +1,6 @@
-library(coin)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     parm <- "location"
     object1 <- .ext.1
     level <- 0.95

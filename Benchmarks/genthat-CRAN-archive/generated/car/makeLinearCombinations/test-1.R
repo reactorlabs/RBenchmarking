@@ -1,6 +1,6 @@
-library(car)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     Duncan <- carData::Duncan
     lm <- stats::lm
     vcov. <- structure(c(18.2494813986373, -0.151845007749969, -0.15070602453529, -0.151845007749969, 0.0143202746111123, 

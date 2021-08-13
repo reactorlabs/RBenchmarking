@@ -1,6 +1,6 @@
-library(effects)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(list(header = "\n neuroticism*extraversion effect\n", offset = 0, effect = structure(c(-2.13606238897425, 
         -2.09016325262407, -2.04426411627389, -1.99836497992371, -1.95246584357353, -1.90656670722335, -1.86066757087318, 
         -1.814768434523, -1.76886929817282, -1.72297016182264, -1.67707102547246, -1.63117188912228, -1.5852727527721, -1.53937361642193, 

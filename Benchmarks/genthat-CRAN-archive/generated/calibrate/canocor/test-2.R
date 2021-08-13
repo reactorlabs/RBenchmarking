@@ -1,6 +1,6 @@
-library(calibrate)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     Y <- structure(c(179L, 201L, 185L, 188L, 171L, 192L, 190L, 189L, 197L, 187L, 186L, 174L, 185L, 195L, 187L, 161L, 183L, 
         173L, 182L, 165L, 185L, 178L, 176L, 200L, 187L, 145L, 152L, 149L, 149L, 142L, 152L, 149L, 152L, 159L, 151L, 148L, 
         147L, 152L, 157L, 158L, 130L, 158L, 148L, 146L, 137L, 152L, 147L, 143L, 158L, 150L), .Dim = c(25L, 2L))

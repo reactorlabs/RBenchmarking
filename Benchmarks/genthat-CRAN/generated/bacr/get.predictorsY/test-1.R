@@ -1,6 +1,6 @@
-library(bacr)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     interactions <- 1:4
     exposure <- "X"
     confounders <- c("V1", "V2", "V3", "V4")

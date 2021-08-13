@@ -1,6 +1,6 @@
-library(crrSC)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(list(coef = c(0.0581940958203325, 0.013854601325255), loglik = 180.872562795567, score = c(3.23513330680036e-07, 
         -2.52867481398411e-08), inf = structure(c(19.1050237498474, 0.124308224138258, 0.124308224138258, 15.7701890117802), 
         .Dim = c(2L, 2L)), var = structure(c(0, 0, 0, 0), .Dim = c(2L, 2L)), h = structure(c(0.0523449383608944, -0.000412608011572261, 

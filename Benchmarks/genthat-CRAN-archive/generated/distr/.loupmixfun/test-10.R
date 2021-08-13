@@ -1,6 +1,6 @@
-library(distr)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     mixDistr <- list(.ext.1)
     distr:::.loupmixfun(mixDistr = mixDistr)
 }

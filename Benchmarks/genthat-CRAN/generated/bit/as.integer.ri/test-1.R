@@ -1,6 +1,6 @@
-library(bit)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     x <- structure(c(2L, 5L, 10L), class = "ri")
     bit:::as.integer.ri(x = x)
 }

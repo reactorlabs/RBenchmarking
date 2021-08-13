@@ -1,6 +1,6 @@
-library(ade4)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     taxo.eg <- list(structure(list(genre = structure(c(2L, 1L, 1L, 1L, 1L, 8L, 8L, 3L, 7L, 6L, 5L, 4L, 1L, 1L, 1L), .Label = c("g1", 
         "g2", "g3", "g4", "g5", "g6", "g7", "g8"), class = "factor"), famille = structure(c(2L, 1L, 1L, 1L, 1L, 5L, 5L, 2L, 
         4L, 4L, 3L, 3L, 1L, 1L, 1L), .Label = c("fam1", "fam2", "fam3", "fam4", "fam5"), class = "factor"), ordre = structure(c(2L, 

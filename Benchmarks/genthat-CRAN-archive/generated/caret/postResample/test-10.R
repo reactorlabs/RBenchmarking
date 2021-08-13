@@ -1,6 +1,6 @@
-library(caret)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     data <- structure(list(pred = structure(c(1L, 1L, 1L, 1L, 1L, 2L, 2L, 2L, 2L, 2L, 3L, 3L, 3L, 3L, 3L), .Label = c("setosa", 
         "versicolor", "virginica"), class = "factor"), obs = structure(c(1L, 1L, 1L, 1L, 1L, 2L, 2L, 2L, 2L, 2L, 3L, 3L, 
         3L, 3L, 3L), .Label = c("setosa", "versicolor", "virginica"), class = "factor"), rowIndex = c(1L, 22L, 32L, 33L, 

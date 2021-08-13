@@ -1,6 +1,6 @@
-library(DPBBM)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     S <- 4
     prob <- c(1, 1, 1)
     nb_size <- 0.8

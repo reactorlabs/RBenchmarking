@@ -1,6 +1,6 @@
-library(CCA)
 
-function_to_run <- function() {
+
+genthat_extracted_call <- function() {
     Ynames <- NULL
     Xnames <- NULL
     var.label <- FALSE

@@ -63,8 +63,6 @@ bilinear <- function(data, x0, y0) {
     result
 }
 
-volcano <- volcano[1:10, 1:10]
-
 points <- rep(181L, 10) # 181 takes the longest to compute
 
 execute <- function(n) {

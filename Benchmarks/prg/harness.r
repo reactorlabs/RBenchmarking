@@ -16,11 +16,11 @@ findBenchmark <- function(name) {
   hits[[1]]
 }
 
-doRuns <- function(name, iterations) {
+doRuns <- function(name, iterations, benchmarkParameter) {
   total <- 0
   for (i in 1:iterations) {
     startTime <- Sys.time()
-    invisible(execute())
+    invisible(execute(benchmarkParameter))
     endTime <- Sys.time()
     runTime <- (as.numeric(endTime) - as.numeric(startTime)) * 1000000
 
@@ -31,15 +31,16 @@ doRuns <- function(name, iterations) {
 }
 
 run <- function(args) {
-  if (length(args) < 1 || 2 < length(args))
+  if (length(args) < 3 || 3 < length(args))
     stop(printUsage())
 
   name <- args[[1]]
-  numIterations <- if (length(args) > 1) strtoi(args[[2]]) else 1
+  numIterations <- strtoi(args[[2]])
+  benchmarkParameter <- strtoi(args[[3]])
 
   source(findBenchmark(name))
 
-  total <- as.numeric(doRuns(name, numIterations))
+  total <- as.numeric(doRuns(name, numIterations, benchmarkParameter))
   cat(name, ": ",
       "iterations=", numIterations, "; ",
       "average: ", round(total / numIterations), " us; ",
@@ -47,10 +48,11 @@ run <- function(args) {
 }
 
 printUsage <- function() {
-  cat("harness.r benchmark [num-iterations]\n")
+  cat("harness.r benchmark num-iterations benchmark-parameter\n")
   cat("\n")
-  cat("  benchmark      - benchmark name (file <name>.R defining execute())\n")
-  cat("  num-iterations - number of times to execute benchmark, default: 1\n")
+  cat("  benchmark            - benchmark name (file <name>.R defining execute())\n")
+  cat("  num-iterations       - number of times to execute benchmark\n")
+  cat("  benchmark-parameter  - size parameter passed to execute()\n")
 }
 
 run(commandArgs(trailingOnly = TRUE))

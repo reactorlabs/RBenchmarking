@@ -26,7 +26,7 @@ mandelbrot_ascii <- function(args) {
         }
         bits <- as.integer(abs(z) <= lim)
         bytes <- as.raw(colSums(matrix(c(bits * p, pads), 8L)))
-	cat(bytes,"\n")
+	cat(paste(bytes, collapse=" "), "\n")
     }
 }
 

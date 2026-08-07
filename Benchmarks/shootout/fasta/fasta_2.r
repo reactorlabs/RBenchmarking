@@ -54,7 +54,7 @@ repeat_fasta <- function(s, count) {
     while (count) {
         line <- min(width, count)
         next_pos <- pos + line
-        cat(s2[pos:(next_pos - 1)], "\n", sep="")
+        cat(paste(s2[pos:(next_pos - 1)], collapse=""), "\n", sep="")
         pos <- next_pos
         if (pos > len) pos <- pos - len
         count <- count - line
@@ -76,7 +76,7 @@ random_fasta <- function(genelist, count) {
         while (length(inds <- which(psum[lo] < rs)))
             lo[inds] <- lo[inds] + 1L
 
-        cat(genelist[2, lo], "\n", sep='')
+        cat(paste(genelist[2, lo], collapse=""), "\n", sep='')
         count <- count - line
     }
 }
